@@ -152,43 +152,41 @@ public class auto extends Application {
 
         }
 
-
         Boolean check = true;
         List<String> xAxis = new ArrayList<String>();
         List<String> yAxis = new ArrayList<String>();
         //Prepare XYChart.Series objects by setting data
-        XYChart.Series series = new XYChart.Series();
+        XYChart.Series series  = new XYChart.Series();
         //Creating the Scatter chart
 
-        final NumberAxis xxis = new NumberAxis(0, 10, 1);
-        final NumberAxis yxis = new NumberAxis(-100, 500, 100);
+        final NumberAxis xxis = new NumberAxis(0, 100, 10);
+        final NumberAxis yxis = new NumberAxis(0, 100, 10);
         final ScatterChart<Number,Number> sc = new
                 ScatterChart<Number,Number>(xxis,yxis);
-
         sc.setTitle("Investment Overview");
 
 
         for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
-
- //           System.out.println(entry.getValue());
-           // System.out.println(" ");
                     if(check){
                         xAxis = entry.getValue();
                         check = false;
-//
                     }else{
                         yAxis = entry.getValue();
                         check = true;
                         //plot here then
-                           xxis.setLabel(xAxis.get(0));
-                           yxis.setLabel(yAxis.get(0));
+                        xxis.setLabel(xAxis.get(0));
+                        yxis.setLabel(yAxis.get(0));
 
-                        for (int j = 1; j < xAxis.size(); j++) {
-
-                            series.getData().add(new XYChart.Data(xAxis.get(j), yAxis.get(j)));
+                        series.getData().clear();
+                        //xAxis.size()
+                        for (int j = 1; j < 20 ; j++) {
+                            String trim = xAxis.get(j).trim();
+                            String trim2 = yAxis.get(j).trim();
+                            float a = Float.parseFloat(trim);
+                            float b = Float.parseFloat(trim2);
+                            series.getData().add(new XYChart.Data(a , b));
                         }
-
-
+                        //sc.getData().clear();
                         sc.getData().addAll(series);
                         Scene scene  = new Scene(sc, 500, 400);
                         stage.setScene(scene);
