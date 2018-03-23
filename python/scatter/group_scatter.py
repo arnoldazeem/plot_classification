@@ -29,7 +29,7 @@ for fname in glob.glob(path):
 
             plt.legend(loc='best')
             plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + df1.columns.values[a]  + '.jpg')
-            sns.plt.show()
+            plt.show()
 
 
 
