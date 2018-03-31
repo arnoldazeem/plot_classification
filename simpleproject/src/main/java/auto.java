@@ -31,7 +31,6 @@ public class auto extends Application {
 
         try {
 
-
             final BufferedReader input =  new BufferedReader(new FileReader(fileName));
 
             String line = null;
@@ -66,69 +65,6 @@ public class auto extends Application {
                     some.put(d,somerow);
                 }
 
-
-//                for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
-//
-//                    ArrayList<String> s = (ArrayList<String>)entry.getValue();
-//
-//                    String pattern = "[^\\d]";
-//                    try{
-//
-//                        Float.parseFloat(s.get(1));
-//
-//                    }catch (Exception e){
-//
-//                        some.remove(entry.getKey());
-//                    }
-//
-//
-//                    System.out.println(entry.getValue());
-//
-//                }
-
-
-//                Boolean check = true;
-//                List<String> xAxis = new ArrayList<String>();
-//                List<String> yAxis = new ArrayList<String>();
-//                //Prepare XYChart.Series objects by setting data
-//                XYChart.Series series = new XYChart.Series();
-//                //Creating the Scatter chart
-//
-//                final NumberAxis xxis = new NumberAxis(0, 10, 1);
-//                final NumberAxis yxis = new NumberAxis(-100, 500, 100);
-//                final ScatterChart<Number,Number> sc = new
-//                        ScatterChart<Number,Number>(xxis,yxis);
-//
-//                sc.setTitle("Investment Overview");
-
-//                for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
-//
-//                    System.out.println(entry.getValue());
-//                    System.out.println(" ");
-//
-////                    if(check){
-////                        xAxis = entry.getValue();
-////                        check = false;
-////
-////                    }else{
-////                        yAxis = entry.getValue();
-////                        check = true;
-////                        //plot here then
-////                           xxis.setLabel(xAxis.get(0));
-////                           yxis.setLabel(yAxis.get(0)));
-////                        for (int j = 1; j < xAxis.size(); j++) {
-////                            series.getData().add(new XYChart.Data(xAxis.get(j), yAxis.get(j)));
-////                        }
-////                    }
-//                }
-
-
-//                sc.getData().addAll(series);
-              //  Scene scene  = new Scene(sc, 500, 400);
-              //  stage.setScene(scene);
-               // stage.show();
-
-       ////////////     }
 
         } catch (IOException e) {
             System.err.println("Caught IOException: " + e.getMessage());
@@ -168,8 +104,10 @@ public class auto extends Application {
 
         for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
                     if(check){
+
                         xAxis = entry.getValue();
                         check = false;
+
                     }else{
                         yAxis = entry.getValue();
                         check = true;
@@ -177,25 +115,27 @@ public class auto extends Application {
                         xxis.setLabel(xAxis.get(0));
                         yxis.setLabel(yAxis.get(0));
 
-                        series.getData().clear();
+                        //clear the series everytime
                         //xAxis.size()
                         for (int j = 1; j < 20 ; j++) {
                             String trim = xAxis.get(j).trim();
                             String trim2 = yAxis.get(j).trim();
                             float a = Float.parseFloat(trim);
                             float b = Float.parseFloat(trim2);
+
                             series.getData().add(new XYChart.Data(a , b));
+
                         }
-                        //sc.getData().clear();
-                        sc.getData().addAll(series);
+
                         Scene scene  = new Scene(sc, 500, 400);
+                        sc.getData().addAll(series);
                         stage.setScene(scene);
                         stage.show();
                     }
+
         }
 
     }
-
 
 
     public static void main(String[] args) throws IOException {
