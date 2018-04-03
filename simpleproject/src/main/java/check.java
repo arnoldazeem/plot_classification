@@ -1,6 +1,4 @@
-import javafx.scene.Scene;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.ScatterChart;
+import org.knowm.xchart.BitmapEncoder;
 import org.knowm.xchart.QuickChart;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
@@ -12,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
+import java.util.*;
 /**
  * Creates a simple Chart using QuickChart
  */
@@ -20,12 +18,8 @@ public class check {
 
     public static void main(String[] args) throws Exception {
 
-        double[] xData = new double[] { 0.0, 1.0, 2.0 };
-        double[] yData = new double[] { 2.0, 1.0, 0.0 };
 
-        String labelx;
-        String labely;
-        String data = "";
+//....
         String fileName = "3.csv";
         Map<Integer,ArrayList<String>> some= null;
 
@@ -92,41 +86,42 @@ public class check {
         List<String> xAxis = new ArrayList<String>();
         List<String> yAxis = new ArrayList<String>();
         //Prepare XYChart.Series objects by setting data
+        List<Float> list = new ArrayList<Float>();
+        List<Float> lister = new ArrayList<Float>();
 
         for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
+
 
             if(check){
 
                 xAxis = entry.getValue();
                 check = false;
 
+
             }else{
 
+                System.out.println(yAxis);
                 yAxis = entry.getValue();
-                check = true;
-
                 //clear the series everytime
                 //xAxis.size()
-                for (int j = 1; j < 20 ; j++) {
+                for (int j = 1; j < 3 ; j++) {
                     String trim = xAxis.get(j).trim();
                     String trim2 = yAxis.get(j).trim();
                     float a = Float.parseFloat(trim);
                     float b = Float.parseFloat(trim2);
-
-
-
+                    list.add(a);
+                    lister.add(b);
                 }
 
 
-                double[] xDta = new double[] { 0.0, 1.0, 2.0 };
-                double[] yDta = new double[] { 2.0, 1.0, 0.0 };
-
                 // Create Chart
-                XYChart chart = QuickChart.getChart("Sample Chart", "X", "Y", "y(x)", xDta, yDta);
-
+                XYChart chart = QuickChart.getChart(fileName, xAxis.get(0), yAxis.get(0), xAxis.get(0), list, lister);
                 // Show it
                 new SwingWrapper(chart).displayChart();
 
+                //BitmapEncoder.saveBitmap(chart, xAxis + "./Sample_Chart", BitmapEncoder.BitmapFormat.PNG);
+
+                xAxis = yAxis;
 
             }
 

@@ -79,6 +79,26 @@ citecolor = black]{hyperref}
 	\label{fig:1}
 \end{figure}
 
+\chapter{ABSTRACT}
+Distinct visualization techniques are used in scientific research publications to summarize large amount of data and also represent a variety of data. These visualizations help to communicate complex information and support the arguments presented in the paper in a easy to understand and follow way.
+These figures tend to reveal trends,patterns or relations that might otherwise be difficult to grasp using only text. In this context, classifying these visualizations is really relevant since there is a variety of visualizations and each one will have a different approach to processing it, example is extracting the raw data from it. 
+
+\chapter{INTRODUCTION}
+A picture tells a thousand words even though a cliché stands to be very true especially when it comes to presenting complex findings in scientific research publications. The importance of these figures in papers cannot be undermined since they provide a way to easily interpret,find patterns and relations in the data which would have otherwise been more complex relying on  only textual data. Processing of these figures could lead to data extraction and analysis which would further improve research. In this work we present a way to automatically detect various types of graphs. This goes a long way to assist in further processing since each type of visualization allows a specific way of processing. 
+
+
+\chapter{MOTIVATION}
+Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand way compared to textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher, this data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a different background as opposed to the audience which the visualizations were created for, Also when comparing two plots the raw data helps make a better decision than just the figures. 
+
+
+The diagram below shows vision of this work, starts from getting the research paper to the point
+where the raw data is obtained. But this work mainly focuses on the red dotted lines shown below in
+the diagram.
+
+
+\chapter{LITERATURE REVIEW}
+
+
 
 \chapter{CREATING PLOTS}
 The dataset consists of images of plots which are automatically created and labeled. Scripts are created in Python, Matlab,R language and Java. This is done to make our model very robust since plots used in scientific papers could be created in any of the above programming languages. The dummy data used in creating these plots are all in csv format. All the csv files are put into one folder and each is read at a time. For each csv file the script reads the first column and discards it if it contains any string values except in its header. Its saves this column into an array as the x-axis and saves the next column into an array as the y-axis if it does not also contain string values in the column. This two arrays are then used to 
