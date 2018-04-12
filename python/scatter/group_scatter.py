@@ -7,7 +7,7 @@ import random
 import seaborn as sns
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 
 for fname in glob.glob(path):
@@ -28,8 +28,8 @@ for fname in glob.glob(path):
             sns.lmplot(x=df1.columns.values[a], y = df1.columns.values[a+1], data=df1, fit_reg=False)
 
             plt.legend(loc='best')
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + df1.columns.values[a]  + '.jpg')
-            plt.show()
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + 'group'  + df1.columns.values[a]  + '.jpg')
+            #plt.show()
 
 
 

@@ -5,7 +5,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/data/*.csv"
 
 for fname in glob.glob(path):
     df = (pd.read_csv(fname))
@@ -40,9 +40,11 @@ for fname in glob.glob(path):
 
             plt.subplots_adjust(left=0.25)
 
+
             plt.grid(b=None, which='major', axis='both')
 
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + df1.columns.values[
+
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/' + df1.columns.values[
                     a] +'vetical'+ '.jpg', bbox_inches='tight')
 
             plt.show()

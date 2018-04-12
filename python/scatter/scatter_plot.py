@@ -5,55 +5,57 @@ import matplotlib.pyplot as plt
 from pandas.api.types import is_numeric_dtype
 import random
 import seaborn as sns
+import matplotlib.pyplot
+import pylab
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/good/*.csv"
 
 def plotfunction(x, y, x_axis, y_axis, name,makr):
-    plt.scatter(x, y, marker= makr)
+    plt.scatter(x, y, marker= makr,color='k', s=25,)
     plt.title(graph_name)
     plt.xlabel(x_axis)
     plt.ylabel(y_axis)
-    plt.grid(False)
-    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + name + '.jpg')
+    plt.legend()
+    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + 'now' + name + '.jpg')
     plt.show()
 
-col_1 = 0
-
 for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
+    print(fname)
+    df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
+    df1 = df._get_numeric_data()
     graph_name = (os.path.basename(fname))
-    mark = ['o', '*', '.', '+']
+    mark = ['o', '*', '.', '+','x']
+
+    final = df1.columns[-1]
 
     # whole of the csv file
-    for a in df:
-
-        marker = random.choice(mark)
-        #you are sure its not the last column
-        #else no need to go into loop
-        if (df.columns[-1] != df.columns[col_1]):
-
-            #check to see if it numeric
-            if is_numeric_dtype(df.iloc[:10, col_1]):
-                #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-                x_axis = df.iloc[:10, col_1].values.tolist()
-                # make them positve
-                x_label = df.columns[col_1]
-                col_2 = col_1 + 1
+    for a, b in enumerate(df1):
 
 
-                if is_numeric_dtype(df.iloc[:10, col_2]):
-                    y_axis = df.iloc[:10, col_2].values.tolist()
-                    # make them positve
-                    y_label = df.columns[col_2]
-                    # plot
-                    plotfunction(x_axis, y_axis, x_label, y_label, x_label,marker)
-                    col_1 = col_2
+        if (df1.columns.values[a] != final):
 
-                else:
-                    print("not numeric")
-                    col_2 = col_1 + 1
-            else:
-                col_1 += 1
-                # end
+            #x_axis = df.iloc[:10, col_1].abs().values.tolist()
+            x_axis = df1.iloc[:20, a].values.tolist()
+            # make them positve
+            x_label = df1.columns[a]
+
+
+            y_axis = df1.iloc[:20, a+ 1].values.tolist()
+            # make them positve
+            y_label = df1.columns[a+1]
+
+            marker = random.choice(mark)
+
+            # plot
+            plotfunction(x_axis, y_axis, x_label, y_label, x_label,marker)
+
+
+
+
+            #matplotlib.pyplot.scatter(x_axis,y_axis,marker=marker)
+
+            #matplotlib.pyplot.show()
+
+
 
