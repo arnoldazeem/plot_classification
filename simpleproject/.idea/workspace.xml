@@ -30,8 +30,8 @@
       <file leaf-file-name="check.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/check.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="117" column="74" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="130" selection-end-column="1" />
+            <state relative-caret-position="1680">
+              <caret line="117" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="130" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="scatter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/scatter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-94">
-              <caret line="97" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="143" selection-end-column="1" />
+            <state relative-caret-position="1376">
+              <caret line="97" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="143" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,7 +55,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/bar.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="182">
-              <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="52" />
+              <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -161,7 +161,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,6 +230,7 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -589,11 +589,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -616,6 +616,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3271028" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -939,18 +940,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/library.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="57" column="15" lean-forward="false" selection-start-line="57" selection-start-column="15" selection-end-line="57" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/library.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/scatter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-94">
-          <caret line="97" column="18" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="143" selection-end-column="1" />
+        <state relative-caret-position="1376">
+          <caret line="97" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="143" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -959,8 +953,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/check.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="117" column="74" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="130" selection-end-column="1" />
+        <state relative-caret-position="1680">
+          <caret line="117" column="74" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="130" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -970,7 +964,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/bar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
-          <caret line="114" column="36" lean-forward="true" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="52" />
+          <caret line="114" column="36" lean-forward="false" selection-start-line="114" selection-start-column="36" selection-end-line="114" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -7,67 +7,52 @@ import random
 import numpy as np
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
-
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
+    df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
     graph_name = (os.path.basename(fname))
 
-    # gets you only the numeric data
-    #df1 = df.select_dtypes(['number'])
     df1 = df._get_numeric_data()
 
     listhem = []
     final = df1.columns[-1]
 
-
-col_1 = 0
-
-for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
-    graph_name = (os.path.basename(fname))
-
-    mark = ['-', '--', '-.', ':']
-
-
     groups = 4
 
-    bar_width = 0.35
+    bar_width = 0.50
     # whole of the csv file
-    for a in df:
+    for a, b in enumerate(df1):
 
-        marker = random.choice(mark)
-        #you are sure its not the last column
-        if (df.columns[-1] != df.columns[col_1]):
+        if (df1.columns.values[a] != final):
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df.iloc[:4, col_1].values.tolist()
+            x_axis = df1.iloc[:4, a].values.tolist()
             # make them positve
-            x_label = df.columns[col_1]
+            x_label = df1.columns[a]
 
-            col_2 = col_1 + 1
 
-            y_axis = df.iloc[:4, col_2].values.tolist()
+            y_axis = df1.iloc[5:9, a+1].values.tolist()
             # make them positve
-            y_label = df.columns[col_2]
+            y_label = df1.columns[a+1]
 
             index=np.arange(4)
             # plot
 
+            plt.bar(index, x_axis,label=x_label)
 
-            plt.bar(index, x_axis,bar_width,align='center',alpha=0.6, label=x_label)
-            plt.bar(index+bar_width, y_axis, align='center', alpha=0.6, label=y_label)
+            plt.bar(index+bar_width, y_axis,label=y_label)
 
             plt.xlabel(x_label)
             plt.ylabel(y_label)
 
             plt.title(graph_name)
 
-
             plt.legend()
-            plt.show()
 
-            col_1 = col_2
+            plt.savefig(
+                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'goop' + x_label + '.jpg')
+
+            plt.show()
 
         else:
             print('done')

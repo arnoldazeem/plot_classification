@@ -7,61 +7,49 @@ import random
 import seaborn as sns
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 
 for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
+
+    df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
     graph_name = (os.path.basename(fname))
 
-    # gets you only the numeric data
-    #df1 = df.select_dtypes(['number'])
     df1 = df._get_numeric_data()
 
     listhem = []
+
     final = df1.columns[-1]
 
 
-col_1 = 0
+    final = df1.columns[-1]
 
-for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
-    graph_name = (os.path.basename(fname))
+    for a, b in enumerate(df1):
 
-    mark = ['-', '--', '-.', ':']
+        if (df1.columns.values[a] != final):
 
 
-
-    # whole of the csv file
-    for a in df:
-
-        marker = random.choice(mark)
-        #you are sure its not the last column
-        if (df.columns[-1] != df.columns[col_1]):
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df.iloc[:5, col_1].values.tolist()
+            x_axis = df1.iloc[:5, a].values.tolist()
             # make them positve
-            x_label = df.columns[col_1]
+            x_label = df1.columns[a]
 
-            col_2 = col_1 + 1
-
-            y_axis = df.iloc[:5, col_2].values.tolist()
+            y_axis = df1.iloc[:5, a+1].values.tolist()
             # make them positve
-            y_label = df.columns[col_2]
+            y_label = df1.columns[a+1]
             # plot
-            plt.barh(x_axis,y_axis, label=df.columns[col_1],align='center',alpha=0.5)
+            plt.barh(x_axis,y_axis, label=df1.columns[a],align='center',alpha=0.5)
 
-            xn_axis = df.iloc[5:10, col_1].values.tolist()
+            xn_axis = df1.iloc[5:10, a].values.tolist()
             # make them positve
-            xn_label = df.columns[col_1]
+            xn_label = df1.columns[a]
 
-            col_2 = col_1 + 1
 
-            yn_axis = df.iloc[:10, col_2].values.tolist()
+            yn_axis = df1.iloc[:10,a+1].values.tolist()
             # make them positve
-            yn_label = df.columns[col_2]
+            yn_label = df1.columns[a+1]
             # plot
-            plt.barh(x_axis, y_axis, label=df.columns[col_2],align='center',alpha=0.5)
+            plt.barh(x_axis, y_axis, label=df1.columns[a+1],align='center',alpha=0.5)
 
             plt.legend()
 
@@ -70,9 +58,10 @@ for fname in glob.glob(path):
 
             plt.title(graph_name)
 
-            plt.show()
+            plt.savefig(
+                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'horizon' + x_label + '.jpg')
 
-            col_1 = col_2
+            plt.show()
 
         else:
             print('done')

@@ -1,16 +1,15 @@
 import matplotlib.pyplot as plt
-import numpy as np; np.random.seed(1)
+import numpy as np
 
-data1=np.random.randn(40,2)
-data2=np.random.randn(30,2)
+names = []
+votes = []
+# Split the dictionary of name:votes into two lists, one for names and one for vote count
+for radish in counts:
+    names.append(radish)
+    votes.append(counts[radish])
 
-fig, ax = plt.subplots()
-bp1 = ax.boxplot(data1, positions=[1,4], widths=0.35,
-                 patch_artist=True, boxprops=dict(facecolor="C0"))
-bp2 = ax.boxplot(data2, positions=[2,5],  widths=0.35,
-                 patch_artist=True, boxprops=dict(facecolor="C2"))
+# The X axis can just be numbered 0,1,2,3...
+x = np.arange(len(counts))
 
-ax.legend([bp1["boxes"][0], bp2["boxes"][0]], ['A', 'B'], loc='upper right')
-
-ax.set_xlim(0,6)
-plt.show()
+plt.bar(x, votes)
+plt.xticks(x + 0.5, names, rotation=90)

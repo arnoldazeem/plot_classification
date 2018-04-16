@@ -11,21 +11,22 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/python$implementation.coverage" NAME="implementation Coverage Results" MODIFIED="1522743556889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code" />
-    <SUITE FILE_PATH="coverage/python$bar_horzontal.coverage" NAME="bar_horzontal Coverage Results" MODIFIED="1521878594336" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
+    <SUITE FILE_PATH="coverage/python$bar_horzontal.coverage" NAME="bar_horzontal Coverage Results" MODIFIED="1523644095617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
     <SUITE FILE_PATH="coverage/python$scatter_legend__1_.coverage" NAME="scatter_legend (1) Coverage Results" MODIFIED="1523471553946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scatter" />
     <SUITE FILE_PATH="coverage/python$line_markers.coverage" NAME="line_markers Coverage Results" MODIFIED="1523536125062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/line" />
     <SUITE FILE_PATH="coverage/python$another_line.coverage" NAME="another_line Coverage Results" MODIFIED="1523537558303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/line" />
+    <SUITE FILE_PATH="coverage/python$bar_plot.coverage" NAME="bar_plot Coverage Results" MODIFIED="1523641710948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
     <SUITE FILE_PATH="coverage/python$pca.coverage" NAME="pca Coverage Results" MODIFIED="1522714662772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/python$stringint.coverage" NAME="stringint Coverage Results" MODIFIED="1522736500179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code" />
-    <SUITE FILE_PATH="coverage/python$grouped.coverage" NAME="grouped Coverage Results" MODIFIED="1521881968038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
-    <SUITE FILE_PATH="coverage/python$stacked_bar.coverage" NAME="stacked_bar Coverage Results" MODIFIED="1521879524102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
+    <SUITE FILE_PATH="coverage/python$grouped.coverage" NAME="grouped Coverage Results" MODIFIED="1523651366325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
+    <SUITE FILE_PATH="coverage/python$stacked_bar.coverage" NAME="stacked_bar Coverage Results" MODIFIED="1523652559479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
     <SUITE FILE_PATH="coverage/python$barh_no_legend.coverage" NAME="barh_no_legend Coverage Results" MODIFIED="1521878645911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
     <SUITE FILE_PATH="coverage/python$boxplot_seaborn.coverage" NAME="boxplot_seaborn Coverage Results" MODIFIED="1523552293015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/box" />
-    <SUITE FILE_PATH="coverage/python$bar_legend.coverage" NAME="bar_legend Coverage Results" MODIFIED="1523561552258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
+    <SUITE FILE_PATH="coverage/python$bar_legend.coverage" NAME="bar_legend Coverage Results" MODIFIED="1523645352114" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/bar" />
     <SUITE FILE_PATH="coverage/python$box_plot.coverage" NAME="box_plot Coverage Results" MODIFIED="1523561120944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/box" />
     <SUITE FILE_PATH="coverage/python$anotherGroup.coverage" NAME="anotherGroup Coverage Results" MODIFIED="1523474404985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scatter" />
     <SUITE FILE_PATH="coverage/python$another_boxplot.coverage" NAME="another_boxplot Coverage Results" MODIFIED="1523554474970" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/box" />
-    <SUITE FILE_PATH="coverage/python$defaults.coverage" NAME="defaults Coverage Results" MODIFIED="1523557559261" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scatter/python data" />
+    <SUITE FILE_PATH="coverage/python$defaults.coverage" NAME="defaults Coverage Results" MODIFIED="1523654121278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scatter/python data" />
     <SUITE FILE_PATH="coverage/python$line_legend.coverage" NAME="line_legend Coverage Results" MODIFIED="1523549479214" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/line" />
     <SUITE FILE_PATH="coverage/python$pca__1_.coverage" NAME="pca (1) Coverage Results" MODIFIED="1522715039483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code" />
     <SUITE FILE_PATH="coverage/python$line_simple.coverage" NAME="line_simple Coverage Results" MODIFIED="1523516551133" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/line" />
@@ -38,52 +39,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="box_plot.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bar/box_plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
-              <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bar_legend.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bar/bar_legend.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="9" column="75" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="group_scatter.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scatter/group_scatter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="74" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scatter_plot.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scatter/scatter_plot.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="20" column="3" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -105,11 +61,6 @@
         <option value="$PROJECT_DIR$/.ipynb_checkpoints/another_boxplot.py" />
         <option value="$PROJECT_DIR$/group_scatter.py" />
         <option value="$PROJECT_DIR$/boxplot_seaborn.py" />
-        <option value="$PROJECT_DIR$/bar/bar_legend.py" />
-        <option value="$PROJECT_DIR$/bar/bar_horzontal.py" />
-        <option value="$PROJECT_DIR$/bar/barh_no_legend.py" />
-        <option value="$PROJECT_DIR$/bar/stacked_bar.py" />
-        <option value="$PROJECT_DIR$/bar/grouped.py" />
         <option value="$PROJECT_DIR$/pca.py" />
         <option value="$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code/pca.py" />
         <option value="$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code/stringint.py" />
@@ -129,9 +80,15 @@
         <option value="$PROJECT_DIR$/line/line_legend.py" />
         <option value="$PROJECT_DIR$/box/boxplot_seaborn.py" />
         <option value="$PROJECT_DIR$/box/another_boxplot.py" />
-        <option value="$PROJECT_DIR$/scatter/python data/defaults.py" />
         <option value="$PROJECT_DIR$/box/box_plot.py" />
         <option value="$PROJECT_DIR$/bar/box_plot.py" />
+        <option value="$PROJECT_DIR$/bar/bar_horzontal.py" />
+        <option value="$PROJECT_DIR$/bar/bar_legend.py" />
+        <option value="$PROJECT_DIR$/bar/barh_no_legend.py" />
+        <option value="$PROJECT_DIR$/bar/grouped.py" />
+        <option value="$PROJECT_DIR$/bar/bar_plot.py" />
+        <option value="$PROJECT_DIR$/bar/stacked_bar.py" />
+        <option value="$PROJECT_DIR$/scatter/python data/defaults.py" />
       </list>
     </option>
   </component>
@@ -161,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -198,13 +156,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bar" />
+              <option name="myItemId" value="scatter" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -225,57 +186,75 @@
       <recent name="$PROJECT_DIR$/line" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.bar_legend">
-    <configuration default="false" name="box_plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.defaults">
+    <configuration default="false" name="bar_legend" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/box" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bar" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/box/box_plot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bar/bar_legend.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="boxplot_seaborn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="bar_horzontal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/box" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bar" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/box/boxplot_seaborn.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bar/bar_horzontal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="another_boxplot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration default="false" name="grouped" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/box" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bar" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/box/another_boxplot.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bar/grouped.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="stacked_bar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bar" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bar/stacked_bar.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -294,24 +273,6 @@
       <module name="python" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scatter/python data/defaults.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="bar_legend" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/bar" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="python" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/bar/bar_legend.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -550,19 +511,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Python.pca" />
-      <item index="1" class="java.lang.String" itemvalue="Python.box_plot" />
-      <item index="2" class="java.lang.String" itemvalue="Python.boxplot_seaborn" />
-      <item index="3" class="java.lang.String" itemvalue="Python.another_boxplot" />
-      <item index="4" class="java.lang.String" itemvalue="Python.defaults" />
-      <item index="5" class="java.lang.String" itemvalue="Python.bar_legend" />
+      <item index="1" class="java.lang.String" itemvalue="Python.bar_legend" />
+      <item index="2" class="java.lang.String" itemvalue="Python.bar_horzontal" />
+      <item index="3" class="java.lang.String" itemvalue="Python.grouped" />
+      <item index="4" class="java.lang.String" itemvalue="Python.stacked_bar" />
+      <item index="5" class="java.lang.String" itemvalue="Python.defaults" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.bar_legend" />
-        <item index="1" class="java.lang.String" itemvalue="Python.box_plot" />
-        <item index="2" class="java.lang.String" itemvalue="Python.defaults" />
-        <item index="3" class="java.lang.String" itemvalue="Python.another_boxplot" />
-        <item index="4" class="java.lang.String" itemvalue="Python.boxplot_seaborn" />
+        <item index="0" class="java.lang.String" itemvalue="Python.defaults" />
+        <item index="1" class="java.lang.String" itemvalue="Python.stacked_bar" />
+        <item index="2" class="java.lang.String" itemvalue="Python.grouped" />
+        <item index="3" class="java.lang.String" itemvalue="Python.bar_legend" />
+        <item index="4" class="java.lang.String" itemvalue="Python.bar_horzontal" />
       </list>
     </recent_temporary>
   </component>
@@ -595,9 +556,9 @@
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20151515" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21363637" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8956661" sideWeight="0.11742424" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.122727275" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -608,7 +569,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5730337" sideWeight="0.88257575" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32744783" sideWeight="0.8772727" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -650,14 +611,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code/implementation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3945">
-          <caret line="263" column="24" lean-forward="true" selection-start-line="263" selection-start-column="24" selection-end-line="263" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../../../work/DecisionTrees-master/DecisionTrees-master/03_Python Code/implementation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -744,34 +697,6 @@
     <entry file="file://$PROJECT_DIR$/group_scatter.py" />
     <entry file="file://$PROJECT_DIR$/box_plot.py" />
     <entry file="file://$PROJECT_DIR$/boxplot_seaborn.py" />
-    <entry file="file://$PROJECT_DIR$/bar/grouped.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="70" lean-forward="false" selection-start-line="58" selection-start-column="70" selection-end-line="58" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bar/stacked_bar.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="54" column="82" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bar/barh_no_legend.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="49" column="37" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bar/bar_horzontal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="51" column="84" lean-forward="false" selection-start-line="51" selection-start-column="84" selection-end-line="51" selection-end-column="84" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.5/_bootlocale.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
@@ -895,20 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scatter/python data/defaults.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/box/box_plot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/box/box_plot.py" />
     <entry file="file://$PROJECT_DIR$/box/boxplot_seaborn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="429">
@@ -916,13 +828,11 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bar/box_plot.py" />
     <entry file="file://$PROJECT_DIR$/scatter/group_scatter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="74" lean-forward="false" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="74" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="45">
+          <caret line="9" column="95" lean-forward="false" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="95" />
         </state>
       </provider>
     </entry>
@@ -930,25 +840,55 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="20" column="3" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="20" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bar/bar_legend.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="9" column="75" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="427">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bar/box_plot.py">
+    <entry file="file://$PROJECT_DIR$/bar/bar_horzontal.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="384">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="60" selection-start-column="12" selection-end-line="62" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bar/grouped.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bar/stacked_bar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bar/bar_plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="42" selection-start-column="9" selection-end-line="43" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bar/barh_no_legend.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scatter/python data/defaults.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="39" lean-forward="false" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
         </state>
       </provider>
     </entry>
