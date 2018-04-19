@@ -26,6 +26,7 @@ for fname in glob.glob(path):
     df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
     graph_name = (os.path.basename(fname))
 
+    print(fname)
     #gets you only the numeric data
     #
     df1 = df.select_dtypes(['number'])
@@ -47,8 +48,8 @@ for fname in glob.glob(path):
             y_axis = df.iloc[:10, a + 1].values.tolist()
             y_label = df.columns[a + 1]
 
-            z_axis = df.iloc[:10, a + 2].values.tolist()
-            z_label = df.columns[a + 2]
+            z_axis = df.iloc[10:20, a + 1].values.tolist()
+            z_label = df.columns[a + 1]
 
 
             #plot
@@ -58,7 +59,7 @@ for fname in glob.glob(path):
 
             colors = ("red","green","blue")
 
-            plotfunction(data,groups,colors,y_label)
+            plotfunction(data,groups,colors,x_label)
 
 
 

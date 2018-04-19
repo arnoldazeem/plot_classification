@@ -9,15 +9,15 @@ import matplotlib.pyplot
 import pylab
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/good/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 def plotfunction(x, y, x_axis, y_axis, name,makr):
     plt.scatter(x, y, marker= makr,color='k', s=25,)
     plt.title(graph_name)
     plt.xlabel(x_axis)
     plt.ylabel(y_axis)
-    plt.legend()
-    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + 'now' + name + '.jpg')
+    #plt.legend()
+    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + '1' + name + '.jpg')
     plt.show()
 
 for fname in glob.glob(path):
@@ -31,7 +31,6 @@ for fname in glob.glob(path):
 
     # whole of the csv file
     for a, b in enumerate(df1):
-
 
         if (df1.columns.values[a] != final):
 
@@ -49,8 +48,6 @@ for fname in glob.glob(path):
 
             # plot
             plotfunction(x_axis, y_axis, x_label, y_label, x_label,marker)
-
-
 
 
             #matplotlib.pyplot.scatter(x_axis,y_axis,marker=marker)

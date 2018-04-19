@@ -11,7 +11,7 @@ import matplotlib.pyplot
 import pylab
 
 
-path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/good/*.csv"
+path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 def plotfunction(x, y, x_axis, y_axis, name,makr):
     plt.scatter(x, y, marker= makr,color='k', s=25,)
@@ -53,8 +53,11 @@ for fname in glob.glob(path):
             marker = random.choice(mark)
             markers = random.choice(marks)
 
-            lo = plt.scatter(x_axis, y_axis, marker=marker, color=colors[0])
-
+            plt.xlabel(x_label)
+            plt.ylabel(y_label)
+            lo = plt.scatter(x_axis, y_axis,marker=marker, color=colors[0])
+            plt.xlabel(x_label)
+            plt.ylabel(y_label)
             ll = plt.scatter(y_axis, x_axis, marker=markers, color=colors[1])
 
             plt.legend((lo, ll),
