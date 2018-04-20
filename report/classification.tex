@@ -1,7 +1,4 @@
 \documentclass[12pt, a4paper,oneside]{report}
-
-
-
 \usepackage{titlesec}
 \usepackage[utf8]{inputenc}
 \usepackage{german}
@@ -34,12 +31,11 @@ citecolor = black]{hyperref}
 \usepackage{multirow}
 \usepackage{pdflscape}
 \usepackage{eurosym}
-
 \usepackage{tocbibind}
-
-
-
-\parindent 0pt
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{multirow}
+\usepackage{subcaption}
 
 \begin{document}
 
@@ -55,16 +51,10 @@ citecolor = black]{hyperref}
 
 % \end{acronym}
 
-
 \listoffigures
 \listoftables
 
 \titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{1em}{}
-
-
-
-\chapter*{Abstract}
-
 
 \newpage
 \chapter{Einleitung}
@@ -84,91 +74,286 @@ Distinct visualization techniques are used in scientific research publications t
 These figures tend to reveal trends,patterns or relations that might otherwise be difficult to grasp using only text. In this context, classifying these visualizations is really relevant since there is a variety of visualizations and each one will have a different approach to processing it, example is extracting the raw data from it. 
 
 \chapter{INTRODUCTION}
-A picture tells a thousand words even though a cliché stands to be very true especially when it comes to presenting complex findings in scientific research publications. The importance of these figures in papers cannot be undermined since they provide a way to easily interpret,find patterns and relations in the data which would have otherwise been more complex relying on  only textual data. Processing of these figures could lead to data extraction and analysis which would further improve research. In this work we present a way to automatically detect various types of graphs. This goes a long way to assist in further processing since each type of visualization allows a specific way of processing. 
+A picture tells a thousand words even though a cliché stands to be very true especially when it comes to presenting complex findings in scientific research publications. The importance of these figures in papers cannot be undermined since they provide a way to easily interpret,find patterns and relations in the data which would have otherwise been more complex relying on  only textual data. All though extracting data from a plot manually is relatively easier, doing the same task automatically requires each type of plot to be processed specifically. In this work we present a way to classify each plot effectively, since that the first step before further processing of a plot is possible.  
 
 
 \chapter{MOTIVATION}
-Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand way compared to textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher, this data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a different background as opposed to the audience which the visualizations were created for, Also when comparing two plots the raw data helps make a better decision than just the figures. 
+Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand way compared to textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher, this data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a different background as opposed to the audience which the visualizations were created for, Also when comparing two plots the raw data helps make a better decision than just the figures. Since each plot will be processed differently to extract the raw data, it very relevant that we can distinguish one plot from another and this is the main aim of this thesis. 
 
-
-The diagram below shows vision of this work, starts from getting the research paper to the point
-where the raw data is obtained. But this work mainly focuses on the red dotted lines shown below in
-the diagram.
-
+\chapter{OBJECTIVE}
+The purpose of this thesis is to answer the question \textbf{HOW WELL CAN WE CLASSIFY THE DIFFERENT TYPES OF PLOTS IN SCIENTIFIC LITERATURE.}. In this work we focus on only four plots. These plots are scatter plots,bar charts,line charts and Box plots. The diagram below shows the vision of this work, The first part of the diagram involves extracting or obtaining  the four different types of plots mentioned earlier,after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
+But this work mainly focuses on the red dotted lines shown below in the diagram which which is getting the plots, labeling them, training the model and classifying the plots. 
+ 
+\includegraphics [scale=1.5] {vision}
 
 \chapter{LITERATURE REVIEW}
+Our work is inspired by Architecture proposal for data extraction of chart images using Convolutional Neural Network(2017), in this work a simple 
+LeNet-based CNN model trained with four classes. The model was implemented using Tensorflow, and the model architecture was made of 3 convolutional layers, followed by a fully connected layer. The training process is based on the dataset divided into mini-batches, random samples of fixed sizes(100) are selected and used as input for the CNN, as different batches are used as the input the model keeps learning to generalize the classes of the dataset and therefore becomes more robust.Each image is converted to JPG and resized to 224x224x3 (using crop or pad), that is, 224 pixels of height, 224 of width and 3 layers of output (one for each RGB color channel). Additionally, the process was executed in 1000 epochs and the learning rate was set to 0.003. The accuracy of the final model was 70\%.
 
+\section{Dataset}
+
+\subsection{Dataset for Matlab}
+The dummy data for creating the plots in Matlab were downloaded from Project Datasets \cite{wikiped} a site where datasets are provided in CSV formats for reasons of teaching people how to load datasets.
+The datasets are multidimensional and complied from different fields. On the average the datasets used contain about 500 instance and 5 different columns. The biggest dataset is called Speed dating data with over 8,000 observations of matches and non-matches, with answers to survey questions about how people rate themselves and how they rate others on several dimensions. The smallest dataset
+used is the Happiness dataset, it contains information about European quality of life survey with questions related to income, life satisfaction or perceived quality of society.
+
+\subsection{Dataset for R}
+For the plots in R, 13 random dummy csv files where download from an archive of datasets distributed with R \cite{Franklin1999} called Rdatasets. Rdatasets is a collection of 1147 datasets that were originally distributed alongside the statistical software environment R and some of its add-on packages, the main aim is to make these data more broadly accessible for teaching and statistical software development. On the average their are 80 instances and 5 columns. The biggest CSV file is the Australian athletes data set, these data were collected in a study of how data on various characteristics of the bloood varied with sport body size and sex of the athlete. It contains attributes like sex,height,weight and sports. The smallest dataset is the Canadian Women's Labour-Force Participation saved as the Bfox.csv file. The Bfox data frame has 30 rows and 7 columns, and contains Time-series data on Canadian women's labor-force participation, 1946–1975. It contains information like average wages of women, percent of adult women in the workforce etc.
+
+
+\subsection{Dataset for PYTHON}
+The dummy data used for creating the plots in Python were 15 randomly seleted csv files also from  Rdatasets \cite{Franklin1999}. The biggest dataset among the 15 is the Monoclonal gammapothy data, contains natural history of 1341 sequential patients with monoclonal gammapothy of undetermined significance (MGUS). The CSV is with 1384 observations with 10 columns with attributes like age,sex,time of death and last contact in months. On the average each dataset contains about 200 instances and 7 columns of multi-dimensional data. The smallest dataset however contains only 33 instances with 11 columns and is called the Nuclear Power Station Construction Data.The data relate to the construction of 32 light water reactor (LWR) plants constructed in the U.S.A in the late 1960's and early 1970's. The data was collected with the aim of predicting the cost of construction of further LWR plants.
+
+\subsection{Dataset for Java}
+For the java plots I used the dataset made available by Plotly \cite{wid}.They are CSV datasets used in the Plotly API examples.14 random CSV files were downloaded, the biggest file 3d-line-plot has 1002 instances and 9 columns, and on the average each file contains about 100 instances and 9 columns. The smallest file however is made of 33 instances and 12 columns called the mtcars file. It contain information about a variety of different car models like the number of gears, speed etc. 
+
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|p{4cm}|}
+		
+		 \hline
+		 \multicolumn{4}{|c|}{DUMMY DATA} \\
+		 \hline
+				
+		PYTHON & MATLAB & R LANGUAGE & JAVA\\ \hline
+		
+		3d\_line\_sample\_data.csv \par LightFordwardFlapStall.csv  \par line\_3d\_dataset.csv \par
+		longley.csv  \par loti.csv  \par lung.csv  \par nuclear.csv  \par timeseries.csv  \par
+		USJudgeRatings	\par WVSCulturalMap.csv  \par wind\_rose.csv  \par volcano.csv  \par uspop2.csvm &
+		
+		Camera.csv \par Cars.csv \par CausesOfDeath-France.csv \par Cereal.csv \par film.csv \par happiness.csv \par TestData1.csv \par TestData2.csv  \par mpg.csv \par okcupid-compatibility-religion.csv  \par spectral.csv
+		\par stockdata.csv \par subplots.csv  & 
+		
+		ais.csv \par Angell.csv  \par Baumann.csv \par Bfox.csv \par cane.csv \par carprice.csv \par Chirot.csv
+		Davis.csv \par Ericksen.csv \par Florida.csv \par Highway1.csv \par Pottery.csv \par Prestige.csv 
+		salinity.csv \par urine.csv & 
+		
+		3d-line-plot.csv \par 3d-scatter.csv \par 2011\_flight\_paths.csv \par 2011\_us\_exports.csv \par auto-mpg.csv \par candlestick\_dataset.csv \par finance-charts-apple.csv \par 
+		globe\_contours.csv\par hobbs-pearson-trials.csv \par motor\_trend\_tests.csv \par 
+		nz\_weather.csv \par volcano.csv \par iris.csv \par mtcars.csv	\\ \hline
+		
+
+	\end{tabular}
+	
+	\caption {Names of CSV files used in each language}	\label{Table:1}
+\end{table}
 
 
 \chapter{CREATING PLOTS}
-The dataset consists of images of plots which are automatically created and labeled. Scripts are created in Python, Matlab,R language and Java. This is done to make our model very robust since plots used in scientific papers could be created in any of the above programming languages. The dummy data used in creating these plots are all in csv format. All the csv files are put into one folder and each is read at a time. For each csv file the script reads the first column and discards it if it contains any string values except in its header. Its saves this column into an array as the x-axis and saves the next column into an array as the y-axis if it does not also contain string values in the column. This two arrays are then used to 
-create the plots, their headers serve as the label of their axis and the name of the file serve as the title. The previous
-y-axis becomes the new x-axis and the next column becomes the y-axis and the process continues till the columns in the csv file are all used. So depending on the number of numeric columns in the csv file many plots are created and labeled.
+Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot(example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column. The first column is considered as the x-axis and its header the x-label and the next column will be the y-axis and its header the y-label, The y-axis then becomes the x-axis for the next plot and this process continues till all columns are used, while doing this all non numeric columns are ignored. 
+Next the libraries used in creating the plots in various languages. For reading the values, the scripts written are done in a way to automatically create the plots. The inspiration for creating a variety of plots to capture all type of plots used in scientific papers was gotten by inspecting the dataset of this \cite{junior2017architecture} and \cite{lee2018viziometrics}. The tables below describe how the plots where created in each language, the plotting libraries used, the variants of a particular plot come under the type column, the parameter column describes parameters that were changed and finally the number of plots created were also added in the last column.
 
 
-\chapter{Scatter plot}
-In other to capture all variants of scatter plots in research papers I looked through the dataset of this [] paper and this paper []. From the information gotten from those papers i created scatter plots which are positive correlated, negatively correlated and scatter plots with random plots. I also created plots with different markers as the points, some of the markers are circles,triangles,squares,stars etc., since not all markers all not used in scientific papers the above mentioned markers have a higher occurrence than other markers. Another realization was that some of the markers were filled and others were not, also other scatter plots had legends in them to describe the dataset a little more, all these variants were captured in the plots created. This is done to capture the different ways in which scatter plots are represented in scientific research papers.
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		
+		\hline
+		\multicolumn{5}{|c|}{SCATTER PLOTS} \\
+		\hline
+		
+	Language & Library & Parameters &  Types & Number of plots\\ \hline
+		
+	Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn
+		
+		 v0.8.1 & MarkerStyle \par ['o', '*', '.', '+','x'] & \multirow{4}{*}{Normal scatter} &
+		 
+		  100\\ \hline	   
+		  
+	MATlAB   & Default &  MarkerStyle \par ['o', '*', '.', '+','x','s'] &   &  644 \\ \hline
+		
+	R LANGUAGE   & Default,Plotly \par R Library \par ggplot2 &  MarkerStyle \par ['o', '*', '.', '+','x','s'] &  &  644\\ \hline	
+	
+	JAVA   & XChart 3.5.1, & setMarkerSize (16) \par LegendPosition &   &  644\\ \hline
+		  
+	\end{tabular}
+	
+	\caption {How Scatter plots were created}	\label{Table:1}
+\end{table}
 
 
-\chapter{Bar Chart}
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{scatter1}
+		\caption{created with Matplotlib}
+		\label{fig:sfig1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{scatter2}
+		\caption{created with Jfreechart library}
+		\label{fig:sfig2}
+	\end{subfigure}
+	\caption{Example Scatter plots}
+	\label{fig:fig}
+\end{figure}
 
 
 
 
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		
+		\hline
+		\multicolumn{5}{|c|}{BAR CHARTS} \\
+		\hline
+		
+		Language & Library & Parameters &  Types & Number of plots\\ \hline
+		
+		Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn
+		
+		v0.8.1 &   &
+		
+		Horizontal and Vertical \par Stacked bar charts \par Grouped bar charts & 100\\ \hline
+		
+		MATlAB   & Default &  Width of bar &  &  644\\ \hline
+		
 
-\chapter{Scatter plot}
+		R LANGUAGE   & Default,Plotly \par R Library \par ggplot2 &  &   &  644\\ \hline
+		
+		JAVA   & XChart 3.5.1, & setMarkerSize (16) \par LegendPosition &   &  644\\ \hline
+				
+	\end{tabular}
+	
+	\caption {How Bar Charts were created}	\label{Table:1}
+\end{table}
+
+
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{bar1}
+		\caption{created in Matlab}
+		\label{fig:sfig1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{bar2}
+		\caption{created in R}
+		\label{fig:sfig2}
+	\end{subfigure}
+	\caption{Example Bar Charts}
+	\label{fig:fig}
+\end{figure}
+
+
+
+
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		
+		\hline
+		\multicolumn{5}{|c|}{LINE CHARTS} \\
+		\hline
+		
+		Language & Library & Parameters &  Types & Number of plots\\ \hline
+		
+		Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn
+		
+		v0.8.1 &   &
+		
+		Horizontal and Vertical \par Normal Line \par Lines with markers \par multiple lines  & 100\\ \hline
+		
+		MATlAB   & Default &  Width of bar &  &  644\\ \hline
+		
+		
+		R LANGUAGE   & Default,Plotly \par R Library \par ggplot2 &  &  &  644\\ \hline
+		
+		JAVA   & XChart 3.5.1, &   &  &  644\\ \hline
+		
+	\end{tabular}
+	
+	\caption {How Line Charts were created}	\label{Table:1}
+\end{table}
+
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{line1}
+		\caption{created in Java}
+		\label{fig:sfig1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{line2}
+		\caption{created in Matlab}
+		\label{fig:sfig2}
+	\end{subfigure}
+	\caption{Example Line Charts}
+	\label{fig:fig}
+\end{figure}
+
+
+
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		
+		\hline
+		\multicolumn{5}{|c|}{BOX PLOTS} \\
+		\hline
+		
+		Language & Library & Parameters &  Types & Number of plots\\ \hline
+		
+		Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn
+		
+		v0.8.1 &   &
+		
+		Horizontal and Vertical \par  Lines with markers \par multiple box plots  & 1000\\ \hline
+		
+		MATlAB   & Default &  &  &  644\\ \hline
+		
+		
+		R LANGUAGE   & Default,Plotly \par R Library \par ggplot2 &  &  &  644\\ \hline
+		
+		JAVA   & XChart 3.5.1, &   &  &  644\\ \hline
+		
+	\end{tabular}
+	
+	\caption {How Box Plots were created}	\label{Table:1}
+\end{table}
+
+
+
+\begin{figure}
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{box1}
+		\caption{created in python}
+		\label{fig:sfig1}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=.8\linewidth]{box2}
+		\caption{created in Matlab}
+		\label{fig:sfig2}
+	\end{subfigure}
+	\caption{Example Box Plots}
+	\label{fig:fig}
+\end{figure}
+
+
+
+\section{Scatter plot}
 For constructing the plots for the scatter plots I looked through a dataset from this paper[]. The dataset contained 555
 scatter plots and looking through them I realized the markers used to plot where mainly zeros, triangles,squares,dots and x's.
 So instead of just plotting all the markers randomly i plotted those mentioned above with a higher probability than the rest of the markers.
 Also the scatter plots consisted of positive and negative correlation and just a few zero correlation. 
 I also noticed that some markers were filled and other were not filled. So for creating my dataset I plotted with some markers being filled and other unfilled and this was done randomly. 
 
-\subsection{Dataset for Scatter plot}
-For plotting my scatter plots I used raw data correlated into csv files. Next I will describe the data used and their sources.
-This group of data was gotten from [vincentarel].
+\section{Box Plots}
 
-The first is the \textbf{loti.csv} file which contains temperature anomalies for the years 1880 to 2010 and this data is from GISS(Goddard Institute for Space Studies) Land-Ocean
-Temperature Index(LOTI) data. It has data for months of the year and averages of some combined months.
-Second raw data used is \textbf{USjudgerAtings.csv} contains the ratings of 43 state judges in the US Superior Court by some lawyers. The rating were given based on attributes like Diligence,integrity,demeanor etc.
-Third data used is the famous Iris dataset by Edgar Anderson
-This dataset gives the measurements in centimeters of the variables sepal length and width and petal length and width for 50 flowers of 3 different species of iris; setosa,versicolor and virginica. 
-The next data Longley's Economic Regression Data which was good because it gave very good positive correlation scatter plots even though it was not as huge as the other dataset used. It
-consisted of 7 economical variables observed yearly from 1947 to 1962.
-The next dataset is called the quakes, which has information of locations of Earthquakes off Fiji. It has 1000 observations with 5 variables(longitude,latitude, depth,Richter Magnitude and number of stations reporting).
-The nuclear Power station Construction Data was also used. It contains information about the construction of 32 light water reactor plants in the U.S.A  in the 90's.
+\bibliographystyle{unsrt}
+\bibliography{sample}
 
-The second group of data was taken from [Datplot website] a website for a software called DatPlot for plotting raw data.
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{thebibliography}{12345678}
-\bibitem[BDE-1, o.J.]{BDE-1} "'The Big List of D3.js Examples"', http://christopheviau.com/d3list/, 20.01.2015
-
-
-
-
-
-
-\end{thebibliography}
-
-\newpage
-\chapter*{Erklärung zur Masterarbeit}
-Ich erkläre hiermit, dass ich die vorliegende Arbeit selbständig verfasst und keine anderen als die angegebenen Quellen und Hilfsmittel verwendet habe. \newline
-\ \\
-Die Arbeit wurde bisher keiner anderen Prüfungsbehörde vorgelegt und auch noch nicht veröffentlicht.\newline
-\ \\
-Passau, den <date>
-\newline
-\ \\
-\ \\
-<First Name, Last Name>
-\end{document}
+\end{document}=====

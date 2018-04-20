@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{wikiped}
+{Wikipedia contributors}.
+\newblock Latex --- {Wikipedia}{,} the free encyclopedia.
+\newblock \url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets},
+  2011.
+\newblock [Online; accessed 17-April-2018].
+
+\bibitem{Franklin1999}
+Franklin Allen and Risto Karjalainen.
+\newblock Using genetic algorithms to find technical trading rules.
+\newblock {\em Journal of Financial Economics}, 51:245--271, 1999.
+
+\bibitem{wid}
+{Wikipedia contributors}.
+\newblock Latex --- {Wikipedia}{,} the free encyclopedia.
+\newblock \url{https://github.com/plotly/datasets}, 2011.
+\newblock [Online; accessed 17-April-2018].
+
+\bibitem{junior2017architecture}
+Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
+  Akiyama, Brunelli~Pinto Miranda, Tiago Davi~Oliveira De~Ara{\'u}jo, Carlos
+  Gustavo~Resque Dos~Santos, Bianchi~Serique Meiguins, and
+  Jefferson~Magalh{\~a}es De~Morais.
+\newblock Architecture proposal for data extraction of chart images using
+  convolutional neural network.
+\newblock In {\em Information Visualisation (IV), 2017 21st International
+  Conference}, pages 318--323. IEEE, 2017.
+
+\bibitem{lee2018viziometrics}
+Po-shen Lee, Jevin~D West, and Bill Howe.
+\newblock Viziometrics: Analyzing visual information in the scientific
+  literature.
+\newblock {\em IEEE Transactions on Big Data}, 4(1):117--129, 2018.
+
+\end{thebibliography}
