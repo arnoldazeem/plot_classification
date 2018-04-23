@@ -25,10 +25,12 @@ for fname in glob.glob(path):
     for a,b in enumerate(df1):
 
         if (df1.columns.values[a] != final):
+            mark = ['o', '*', '.', '+', 'x']
+            marker = random.choice(mark)
 
-            sns.lmplot(x=df1.columns.values[a], y = df1.columns.values[a+1], data=df1, fit_reg=False)
+            sns.lmplot(x=df1.columns.values[a], y = df1.columns.values[a+1], data=df1, fit_reg=False, markers=marker)
 
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + 'group'  + df1.columns.values[a]  + '.jpg')
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter' + 'seaborn'  + df1.columns.values[a]  + '.jpg')
             plt.show()
 
 

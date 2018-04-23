@@ -10,9 +10,10 @@ import pylab
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 def plotfunction(datas,groups,colors,name):
-
+    mark = ['o', '*', '.', '+', 'x']
+    marker = random.choice(mark)
     x,y,z = datas
-    plt.scatter(x,y)
+    plt.scatter(x,y,marker=marker)
     plt.title(name)
     pylab.scatter(x,y)
     plt.xlabel(x_label)

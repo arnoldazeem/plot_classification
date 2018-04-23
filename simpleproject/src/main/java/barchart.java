@@ -36,9 +36,6 @@ public class barchart {
 
             public void run() {
 
-
-
-
                 File dir = new File("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java data");
                 File[] directoryListing = dir.listFiles();
                 if (directoryListing != null) {

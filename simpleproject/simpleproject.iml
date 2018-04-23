@@ -22,5 +22,6 @@
     <orderEntry type="library" name="Maven: org.jfree:jfreechart:1.0.19" level="project" />
     <orderEntry type="library" name="Maven: org.jfree:jcommon:1.0.23" level="project" />
     <orderEntry type="library" name="Maven: net.sf.supercsv:super-csv:2.4.0" level="project" />
+    <orderEntry type="library" name="de.erichseifert.gral:gral-core:0.11" level="project" />
   </component>
 </module>

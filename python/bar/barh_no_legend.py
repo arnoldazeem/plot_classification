@@ -10,7 +10,6 @@ import seaborn as sns
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/*.csv"
 
 
-
 for fname in glob.glob(path):
 
     df = (pd.read_csv(fname))

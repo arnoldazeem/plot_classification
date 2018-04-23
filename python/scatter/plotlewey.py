@@ -11,11 +11,13 @@ import random
 #IW5WKDoNWeWWon8haT7r
 
 #plotly.tools.set_credentials_file(username='zanzy', api_key='6tzTYqsLP9zeG91eamft')
+# Replace the username, and API key with your credentials.
 
-py.sign_in('kumar05', 'IW5WKDoNWeWWon8haT7r') # Replace the username, and API key with your credentials.
+#py.sign_in('kumar05', 'IW5WKDoNWeWWon8haT7r')
 
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
+py.sign_in('zanzy', '6tzTYqsLP9zeG91eamft')
 
 for fname in glob.glob(path):
     print(fname)
@@ -32,12 +34,12 @@ for fname in glob.glob(path):
         if (df1.columns.values[a] != final):
 
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df1.iloc[:20, a].values.tolist()
+            x_axis = df1.iloc[:40, a].values.tolist()
             # make them positve
             x_label = df1.columns[a]
 
 
-            y_axis = df1.iloc[:20, a+ 1].values.tolist()
+            y_axis = df1.iloc[:40, a+ 1].values.tolist()
             # make them positve
             y_label = df1.columns[a+1]
 
@@ -55,7 +57,7 @@ for fname in glob.glob(path):
 
             layout = go.Layout(title=graph_name, width=640, height=480)
             fig = go.Figure(data=data, layout=layout)
-            py.image.save_as(fig, filename= 'scatter_plot' + '1' + x_label + '.jpeg')
+            py.image.save_as(fig, filename= 'scatter_plot' + 'ploty40' + x_label + '.jpeg')
 
             from IPython.display import Image
 

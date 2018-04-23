@@ -28,9 +28,11 @@ for fname in glob.glob(path):
     df1 = df._get_numeric_data()
     graph_name = (os.path.basename(fname))
 
-    mark = ['o', '*', '.', '+','x']
+    mark = ['o', '*', '.', 'x']
 
-    marks = ['o', '*', '.', '+', 'x']
+    marks = ['o', '*', '+', 'x']
+
+    marke = ['*', '.', '+', 'x']
 
     final = df1.columns[-1]
 
@@ -48,24 +50,35 @@ for fname in glob.glob(path):
             # make them positve
             y_label = df1.columns[a+1]
 
+            z_axis = df1.iloc[:10, a + 1].values.tolist()
+            # make them positve
+            z_label = df1.columns[a + 1]
+
             colors = ['b', 'c', 'y', 'm', 'r']
 
             marker = random.choice(mark)
             markers = random.choice(marks)
+            marke = random.choice(marke)
 
             plt.xlabel(x_label)
             plt.ylabel(y_label)
-            lo = plt.scatter(x_axis, y_axis,marker=marker, color=colors[0])
+            lo = plt.scatter(x_axis, y_axis,marker=marker)
+
             plt.xlabel(x_label)
             plt.ylabel(y_label)
             ll = plt.scatter(y_axis, x_axis, marker=markers, color=colors[1])
 
-            plt.legend((lo, ll),
-                       (x_label, y_label),
+            plt.xlabel(x_label)
+            plt.ylabel(y_label)
+            li = plt.scatter(y_axis, z_axis, marker=marke, color=colors[2])
+
+
+            plt.legend((lo, ll,li),
+                       (x_label, y_label,z_label),
                        scatterpoints=1,
                        loc='upper right',
                        ncol=3,
                        fontsize=8)
 
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + 'legend' + x_label + '.jpg')
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + 'legend3' + x_label + '.jpg')
             plt.show()

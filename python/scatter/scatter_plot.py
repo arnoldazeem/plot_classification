@@ -12,12 +12,12 @@ import pylab
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 def plotfunction(x, y, x_axis, y_axis, name,makr):
-    plt.scatter(x, y, marker= makr,color='k', s=25,)
+    plt.scatter(x, y, marker= makr, color='k',)
     plt.title(graph_name)
     plt.xlabel(x_axis)
     plt.ylabel(y_axis)
     #plt.legend()
-    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + '1' + name + '.jpg')
+    plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/scatter_plot' + 'simplemore' + name + '.jpg')
     plt.show()
 
 for fname in glob.glob(path):
@@ -35,12 +35,12 @@ for fname in glob.glob(path):
         if (df1.columns.values[a] != final):
 
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df1.iloc[:20, a].values.tolist()
+            x_axis = df1.iloc[:40, a].values.tolist()
             # make them positve
             x_label = df1.columns[a]
 
 
-            y_axis = df1.iloc[:20, a+ 1].values.tolist()
+            y_axis = df1.iloc[:40, a+ 1].values.tolist()
             # make them positve
             y_label = df1.columns[a+1]
 
