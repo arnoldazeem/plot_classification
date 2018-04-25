@@ -43,7 +43,7 @@ for fname in glob.glob(path):
             # plot
             plt.plot(x_axis,y_axis,linestyle=marker)
 
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/line/python line data' + 'new' + x_label + '.jpg')
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/line/python line data' + 'line' + x_label + '.jpg')
 
             plt.show()
 

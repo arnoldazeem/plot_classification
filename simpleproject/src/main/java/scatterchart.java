@@ -103,7 +103,7 @@ public class scatterchart {
                     yAxis = entry.getValue();
                     //clear the series everytime
                     //xAxis.size()
-                    for (int j = 1; j < 6 ; j++) {
+                    for (int j = 1; j < 9 ; j++) {
                         String trim = xAxis.get(j).trim();
                         String trim2 = yAxis.get(j).trim();
                         float a = Float.parseFloat(trim);
@@ -126,12 +126,12 @@ public class scatterchart {
                     chart.addSeries(xAxis.get(0), list);
                     XYSeries series = chart.addSeries(yAxis.get(0), lister);
 
-                    series.setMarker(SeriesMarkers.DIAMOND);
+                    series.setMarker(SeriesMarkers.CROSS);
 
                     new SwingWrapper(chart).displayChart();
 
 
-                    BitmapEncoder.saveBitmap(chart, xAxis.get(0) + ".", BitmapEncoder.BitmapFormat.JPG);
+                    BitmapEncoder.saveBitmap(chart, xAxis.get(0) + "scatter01", BitmapEncoder.BitmapFormat.JPG);
 
                     xAxis = yAxis;
 

@@ -36,9 +36,6 @@ public class jfreebarchartexamples {
 
             public void run() {
 
-
-
-
                 File dir = new File("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java data");
                 File[] directoryListing = dir.listFiles();
                 if (directoryListing != null) {
@@ -153,14 +150,14 @@ public class jfreebarchartexamples {
                                     Double g = Double.parseDouble(trim7);
                                     Double h = Double.parseDouble(trim8);
 
-                                    my_bar_chart_dataset.addValue(a, "Q1", "Rome");
-                                    my_bar_chart_dataset.addValue(b, "Q1", "Cairo");
+                                    my_bar_chart_dataset.addValue(a, "Q1", xAxis.get(0));
+                                    my_bar_chart_dataset.addValue(b, "Q1", yAxis.get(0));
                                     my_bar_chart_dataset.addValue(c, "Q1", "ghana");
-                                    my_bar_chart_dataset.addValue(d, "Q2", "Rome");
-                                    my_bar_chart_dataset.addValue(e, "Q2", "Cairo");
+                                    my_bar_chart_dataset.addValue(d, "Q2", xAxis.get(0));
+                                    my_bar_chart_dataset.addValue(e, "Q2",  yAxis.get(0));
                                     my_bar_chart_dataset.addValue(f, "Q2", "ghana");
-                                    my_bar_chart_dataset.addValue(g, "Q3", "Rome");
-                                    my_bar_chart_dataset.addValue(h, "Q3", "Cairo");
+                                    my_bar_chart_dataset.addValue(g, "Q3", xAxis.get(0));
+                                    my_bar_chart_dataset.addValue(h, "Q3",  yAxis.get(0));
                                     my_bar_chart_dataset.addValue(h, "Q3", "ghana");
 
 
@@ -168,9 +165,9 @@ public class jfreebarchartexamples {
 
                                 // Create Chart
                                 JFreeChart BarChartObject=ChartFactory.createBarChart(xAxis.get(0),"Country",
-                                        "Sales",my_bar_chart_dataset,PlotOrientation.VERTICAL,true,true,false);
+                                        "Sales",my_bar_chart_dataset,PlotOrientation.HORIZONTAL,true,true,false);
 
-                                File BarChart = new File(xAxis.get(0) + "grouped" +  ".jpg");
+                                File BarChart = new File(xAxis.get(0) + "checkhorizontal" +  ".jpg");
 
                                 try{
                                     ChartUtilities.saveChartAsJPEG(BarChart,BarChartObject,640,480);

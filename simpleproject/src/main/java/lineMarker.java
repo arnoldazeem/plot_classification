@@ -120,7 +120,7 @@ public class lineMarker {
                         yAxis = entry.getValue();
                         //clear the series everytime
                         //xAxis.size()
-                        for (int j = 1; j < 15 ; j++) {
+                        for (int j = 1; j < 2 ; j++) {
                             String trim = xAxis.get(j).trim();
                             String trim2 = yAxis.get(j).trim();
                             float a = Float.parseFloat(trim);
@@ -142,11 +142,11 @@ public class lineMarker {
                         chart.addSeries(xAxis.get(0), list);
                         XYSeries series = chart.addSeries(yAxis.get(0), lister);
 
-                        series.setMarker(SeriesMarkers.CROSS);
+                        series.setMarker(SeriesMarkers.DIAMOND);
 
                         new SwingWrapper(chart).displayChart();
 
-                        BitmapEncoder.saveBitmap(chart, xAxis.get(0) + "plusmarker", BitmapEncoder.BitmapFormat.JPG);
+                        BitmapEncoder.saveBitmap(chart, xAxis.get(0) + "plusmarkdiamonless", BitmapEncoder.BitmapFormat.JPG);
 
                         xAxis = yAxis;
 

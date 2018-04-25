@@ -109,7 +109,7 @@ public class groupedbarchartjavafx extends Application {
                 //Prepare XYChart.Series objects by setting data
 
 
-                for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
+                for (Map.Entry<Integer, ArrayList<String>> entry : some.entrySet()){
 
                     if(check){
                         aAxis = entry.getValue();
@@ -154,52 +154,67 @@ public class groupedbarchartjavafx extends Application {
 
 
                             series1.setName("2003");
-                            series1.getData().add(new XYChart.Data(austria, a));
-                            series1.getData().add(new XYChart.Data(brazil, b));
+                            series1.getData().add(new XYChart.Data(aAxis.get(0), a));
+                            series1.getData().add(new XYChart.Data(bAxis.get(0), b));
                             series1.getData().add(new XYChart.Data(france, c));
-                            series1.getData().add(new XYChart.Data(italy, d));
-                            series1.getData().add(new XYChart.Data(usa, e));
+
+
 
 
                             series2.setName("2004");
-                            series2.getData().add(new XYChart.Data(austria, e));
-                            series2.getData().add(new XYChart.Data(brazil, d));
+                            series2.getData().add(new XYChart.Data(aAxis.get(0), e));
+                            series2.getData().add(new XYChart.Data(bAxis.get(0), d));
                             series2.getData().add(new XYChart.Data(france, c));
-                            series2.getData().add(new XYChart.Data(italy, b));
-                            series2.getData().add(new XYChart.Data(usa, a));
+
+
 
                             series3.setName("2005");
-                            series3.getData().add(new XYChart.Data(austria, f));
-                            series3.getData().add(new XYChart.Data(brazil, b));
+                            series3.getData().add(new XYChart.Data(aAxis.get(0), f));
+                            series3.getData().add(new XYChart.Data(bAxis.get(0), b));
                             series3.getData().add(new XYChart.Data(france, d));
-                            series3.getData().add(new XYChart.Data(italy, e));
-                            series3.getData().add(new XYChart.Data(usa, c));
 
 
                         }
 
-                        bc.getData().addAll(series1, series2, series3);
+//                        bc.getData().addAll(series1, series2, series3);
+//
+//                        Scene scene  = new Scene(bc,640,480);
+//
+//
+//                        stage.setScene(scene);
+//
+//                        stage.show();
+//
+//
+//                        saveAsPng(scene, aAxis.get(0) +"grouped" + ".png");
+//                        aAxis = bAxis;
+//
+//                        final CategoryAxis x1Axis = new CategoryAxis();
+//                        final NumberAxis y1Axis = new NumberAxis();
+//                        bc =
+//                                new BarChart<String,Number>(x1Axis,y1Axis);
+//                        bc.setTitle("Country Summary");
+//                        x1Axis.setLabel("Country");
+//                        y1Axis.setLabel("Value");
 
                         Scene scene  = new Scene(bc,640,480);
-
-
+                        bc.setAnimated(false);
+                        bc.getData().addAll(series1, series2, series3);
+                        saveAsPng(scene, aAxis.get(0) +"group2" + ".png");
                         stage.setScene(scene);
-
-                        stage.show();
-
-
-                        saveAsPng(scene, aAxis.get(0) +"grouped" + ".png");
-
+//                        stage.show();
                         final CategoryAxis x1Axis = new CategoryAxis();
                         final NumberAxis y1Axis = new NumberAxis();
-
-                        bc = new BarChart(x1Axis, y1Axis);
+                        bc =
+                                new BarChart<String,Number>(x1Axis,y1Axis);
+                        bc.setTitle("Dummy");
+                        x1Axis.setLabel(aAxis.get(0));
+                        y1Axis.setLabel(bAxis.get(0));
 
                         aAxis = bAxis;
-
                     }
-                }
 
+                }
             }
         }
 
@@ -208,7 +223,7 @@ public class groupedbarchartjavafx extends Application {
 
     public void saveAsPng(Scene scene, String path) {
         WritableImage image = scene.snapshot(null);
-        File file = new File(path);
+        File file = new File("output/"+path);
         try {
             ImageIO.write(SwingFXUtils.fromFXImage(image, null), "png", file);
         } catch (IOException e) {

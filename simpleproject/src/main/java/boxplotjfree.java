@@ -132,8 +132,8 @@ public class boxplotjfree {
                                 //clear the series everytime
                                 //xAxis.size()
 
-                                final int seriesCount = 3;
-                                final int categoryCount = 3;
+                                final int seriesCount = 6;
+                                final int categoryCount = 4;
 
                                 for (int i = 1; i < seriesCount; i++) {
 
@@ -192,7 +192,7 @@ public class boxplotjfree {
                                 final ChartPanel chartPanel = new ChartPanel(chart);
                                 chartPanel.setPreferredSize(new java.awt.Dimension(640, 480));
 
-                                File outputfile = new File(xAxis.get(0) + "boxes" + ".jpg");
+                                File outputfile = new File(xAxis.get(0) + "boxes34" + ".jpg");
 
                                 try{
                                     ChartUtilities.saveChartAsJPEG(outputfile, chart, 640, 480);

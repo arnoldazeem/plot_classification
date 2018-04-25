@@ -18,7 +18,6 @@ public class check {
 
     public static void main(String[] args) throws Exception {
 
-
 //....
         String fileName = "3.csv";
         Map<Integer,ArrayList<String>> some= null;

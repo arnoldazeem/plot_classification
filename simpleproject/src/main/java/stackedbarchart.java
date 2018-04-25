@@ -13,10 +13,7 @@ import javafx.collections.FXCollections;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.chart.CategoryAxis;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.StackedBarChart;
-import javafx.scene.chart.XYChart;
+import javafx.scene.chart.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.WritableImage;
 import javafx.stage.Stage;
@@ -40,8 +37,6 @@ public class stackedbarchart extends Application {
 
     @Override
     public void start(Stage stage) {
-
-
 
         stage.setTitle("Bar Chart Sample");
         sbc.setTitle("Country Summary");
@@ -164,37 +159,33 @@ public class stackedbarchart extends Application {
 
 
                             series1.setName("first");
-                            series1.getData().add(new XYChart.Data<String, Number>("1", a));
-                            series1.getData().add(new XYChart.Data<String, Number>("1", b));
-                            series1.getData().add(new XYChart.Data<String, Number>("1",c));
+                            series1.getData().add(new XYChart.Data<String, Number>(xAxis.get(0), a));
+                            series1.getData().add(new XYChart.Data<String, Number>(xAxis.get(0), b));
+                            series1.getData().add(new XYChart.Data<String, Number>(xAxis.get(0),c));
 
 
                             series2.setName("second");
-                            series2.getData().add(new XYChart.Data<String, Number>("2",d));
-                            series2.getData().add(new XYChart.Data<String, Number>("2",e));
-                            series2.getData().add(new XYChart.Data<String, Number>("2",f));
+                            series2.getData().add(new XYChart.Data<String, Number>(yAxis.get(0),d));
+                            series2.getData().add(new XYChart.Data<String, Number>(yAxis.get(0),e));
+                            series2.getData().add(new XYChart.Data<String, Number>(yAxis.get(0),f));
 
-
-                            series3.setName("third");
-                            series3.getData().add(new XYChart.Data<String, Number>("3", a));
-                            series3.getData().add(new XYChart.Data<String, Number>("3", d));
-                            series3.getData().add(new XYChart.Data<String, Number>("3",c));
 
                         }
 
 
-                        sbc.getData().addAll(series1, series2, series3);
-
-                        Scene scene = new Scene(sbc, 640, 480);
-
-                        stage.setScene(scene);
+                        Scene scene  = new Scene(sbc,640,480);
+                        sbc.setAnimated(false);
+                        sbc.getData().addAll(series1, series2);
                         saveAsPng(scene, xAxis.get(0) +"stacked" + ".png");
-                        stage.show();
-
+                        stage.setScene(scene);
+//                        stage.show();
                         final CategoryAxis x1Axis = new CategoryAxis();
                         final NumberAxis y1Axis = new NumberAxis();
+                        sbc = new StackedBarChart<String,Number>(x1Axis,y1Axis);
+                        sbc.setTitle("Dummy");
+                        x1Axis.setLabel(xAxis.get(0));
+                        y1Axis.setLabel(yAxis.get(0));
 
-                        sbc = new StackedBarChart(x1Axis, y1Axis);
 
                         xAxis = yAxis;
 

@@ -38,7 +38,7 @@ public class defaultbars extends JFrame {
         final String speed = "Speed";
         final String popular = "Popular";
         final String response = "Response";
-        final String osindependent = "OS Independent";
+        final String osindependent = "Independent";
         final String features = "Features";
 
         // create the dataset...

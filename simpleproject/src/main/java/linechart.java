@@ -122,10 +122,7 @@ public class linechart {
                         XYSeries series = chart.addSeries("y(x)", null, list,lister);
                         series.setMarker(SeriesMarkers.CIRCLE);
 
-
-
-
-                        BitmapEncoder.saveBitmap(chart,"new" +  xAxis.get(0) + ".", BitmapEncoder.BitmapFormat.JPG);
+                        BitmapEncoder.saveBitmap(chart,"line" +  xAxis.get(0) + ".", BitmapEncoder.BitmapFormat.JPG);
 
                         xAxis = yAxis;
 

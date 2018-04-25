@@ -5,8 +5,7 @@ import glob
 import pandas as pd
 import os
 import random
-
-
+from IPython.display import Image
 #kumar05
 #IW5WKDoNWeWWon8haT7r
 
@@ -53,31 +52,26 @@ for fname in glob.glob(path):
             trace = go.Scatter(
                 x = x_axis,
                 y = y_axis,
-                mode = 'markers',
-                name="Plot1",
-                marker=dict(
-                    size=16,
-                    color='rgba(0, 152, 0, .8)'
-                )
+                name=x_label
             )
 
             trace2 = go.Scatter(
                 x=z_axis,
-                y=y_axis,
-                mode='markers',
-                name="Plot2",
-                marker=dict(
-                    size=16,
-                    color='rgba(0, 0, 152, .8)'
-                )
+                y=x_axis,
+                name=y_label
             )
 
             data = [trace,trace2]
 
-            layout = go.Layout(title=graph_name, width=640, height=480,legend=dict(orientation="h"))
+            #layout = go.Layout(title=graph_name, width=640, height=480, showlegend=True)
+
+            layout = go.Layout(showlegend=True)
+
             fig = go.Figure(data=data, layout=layout)
-            py.image.save_as(fig, filename= 'scatter_plot' + 'plotyleg' + x_label + '.jpeg')
 
-            from IPython.display import Image
+            plot_url = py.plot(fig, filename='legend-visibility')
 
-            Image('scatter_plot' + 'legg' + x_label + '.jpeg')
+            py.image.save_as(fig, filename= 'scatter_plot' + 'plotyleg' + x_label + '.jpg')
+
+
+            Image('scatter_plot' + 'legg' + x_label + '.jpg')
