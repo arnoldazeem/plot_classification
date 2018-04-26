@@ -1,22 +1,30 @@
 \begin{thebibliography}{1}
 
-\bibitem{wikiped}
-{Wikipedia contributors}.
-\newblock Latex --- {Wikipedia}{,} the free encyclopedia.
-\newblock \url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets},
+\bibitem{projectdataset}
+{James Eagan}.
+\newblock Project datasets.
+\newblock \url{https://perso.telecom-paristech.fr/eagan/class/igr204/datasets}.
+\newblock [Online; accessed 20-April-2018].
+
+\bibitem{datplot}
+{Michael Vogt}.
+\newblock Datplot.
+\newblock \url{https://vincentarelbundock.github.io/Rdatasets/datasets.html},
   2011.
-\newblock [Online; accessed 17-April-2018].
+\newblock [Online; accessed 20-April-2018].
 
-\bibitem{Franklin1999}
-Franklin Allen and Risto Karjalainen.
-\newblock Using genetic algorithms to find technical trading rules.
-\newblock {\em Journal of Financial Economics}, 51:245--271, 1999.
-
-\bibitem{wid}
-{Wikipedia contributors}.
+\bibitem{plotly}
+{plotly/datasets}.
 \newblock Latex --- {Wikipedia}{,} the free encyclopedia.
 \newblock \url{https://github.com/plotly/datasets}, 2011.
-\newblock [Online; accessed 17-April-2018].
+\newblock [Online; accessed 20-April-2018].
+
+\bibitem{rdata}
+{vincentarel bundock}.
+\newblock Rdatasets.
+\newblock \url{https://vincentarelbundock.github.io/Rdatasets/datasets.html},
+  2011.
+\newblock [Online; accessed 20-April-2018].
 
 \bibitem{junior2017architecture}
 Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke

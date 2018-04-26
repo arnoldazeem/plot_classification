@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: classification.aux
 The style file: unsrt.bst
 Database file #1: sample.bib
-You've used 5 entries,
+Warning--I didn't find a database entry for "wid"
+You've used 6 entries,
             1791 wiz_defined-function locations,
-            475 strings with 4556 characters,
-and the built_in function-call counts, 1224 in all, are:
-= -- 112
+            477 strings with 4561 characters,
+and the built_in function-call counts, 1271 in all, are:
+= -- 116
 > -- 53
 < -- 1
-+ -- 20
++ -- 21
 - -- 15
-* -- 72
-:= -- 193
-add.period$ -- 18
-call.type$ -- 5
-change.case$ -- 5
+* -- 58
+:= -- 200
+add.period$ -- 23
+call.type$ -- 6
+change.case$ -- 6
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 49
-empty$ -- 122
+cite$ -- 6
+duplicate$ -- 50
+empty$ -- 135
 format.name$ -- 15
-if$ -- 279
+if$ -- 293
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 3
-newline$ -- 30
-num.names$ -- 5
-pop$ -- 20
+int.to.str$ -- 6
+missing$ -- 2
+newline$ -- 37
+num.names$ -- 6
+pop$ -- 32
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 25
 stack$ -- 0
-substring$ -- 78
-swap$ -- 15
+substring$ -- 57
+swap$ -- 16
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
 while$ -- 11
-width$ -- 6
-write$ -- 60
+width$ -- 7
+write$ -- 72
+(There was 1 warning)

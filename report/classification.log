@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.27)  20 APR 2018 04:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.2.27)  26 APR 2018 22:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,11 +1325,11 @@ File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count171
 \U@D=\dimen260
 )))
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+)
 (./classification.aux
 
-LaTeX Warning: Label `Table:1' multiply defined.
-
-
 LaTeX Warning: Label `fig:sfig1' multiply defined.
 
 
@@ -1360,9 +1360,6 @@ LaTeX Warning: Label `sub@fig:sfig2' multiply defined.
 LaTeX Warning: Label `fig:fig' multiply defined.
 
 
-LaTeX Warning: Label `Table:1' multiply defined.
-
-
 LaTeX Warning: Label `fig:sfig1' multiply defined.
 
 
@@ -1376,36 +1373,30 @@ LaTeX Warning: Label `sub@fig:sfig2' multiply defined.
 
 
 LaTeX Warning: Label `fig:fig' multiply defined.
-
-
-LaTeX Warning: Label `Table:1' multiply defined.
-
-
-LaTeX Warning: Label `Table:1' multiply defined.
 
 )
 \openout1 = `classification.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 41.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 41.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    ... okay on input line 41.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
+LaTeX Font Info:    ... okay on input line 41.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
@@ -1446,7 +1437,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box49
-Package hyperref Info: Link coloring ON on input line 40.
+Package hyperref Info: Link coloring ON on input line 41.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1456,9 +1447,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count178
 )
-LaTeX Info: Redefining \ref on input line 40.
-LaTeX Info: Redefining \pageref on input line 40.
-LaTeX Info: Redefining \nameref on input line 40.
+LaTeX Info: Redefining \ref on input line 41.
+LaTeX Info: Redefining \pageref on input line 41.
+LaTeX Info: Redefining \nameref on input line 41.
 
 (./classification.out) (./classification.out)
 \@outlinefile=\write5
@@ -1509,16 +1500,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--20
 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 23.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 23.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 21--32
+Underfull \hbox (badness 10000) in paragraph at lines 23--33
 
  []
 
@@ -1549,238 +1540,247 @@ Chapter 1.
 
 ]
 Chapter 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
 [5
 
-]
-Chapter 3.
-[6
-
-]
-Chapter 4.
-[7
-
-]
-Chapter 5.
-<vision.png, id=158, 911.405pt x 429.605pt>
+] <vision.png, id=125, 907.39pt x 372.39125pt>
 File: vision.png Graphic file (type png)
  <use vision.png>
-Package pdftex.def Info: vision.png used on input line 87.
-(pdftex.def)             Requested size: 1367.10416pt x 644.40591pt.
+Package pdftex.def Info: vision.png used on input line 76.
+(pdftex.def)             Requested size: 453.6939pt x 186.19516pt.
 
-Overfull \hbox (986.39038pt too wide) in paragraph at lines 87--88
+
+Package caption Warning: \captionsetup{type*=...} or \captionof
+(caption)                outside box or environment on input line 77.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 77.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (72.98012pt too wide) in paragraph at lines 76--77
 [][] 
  []
 
-[8
+[6 <./vision.png>]
+Chapter 3.
+[7
 
-] [9 <./vision.png>]
-Chapter 6.
-[10
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
+] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\T1/cmr/m/n/10.95 CausesOfDeath-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
+Underfull \hbox (badness 10000) in paragraph at lines 140--140
 []\T1/cmr/m/n/10.95 okcupid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-\T1/cmr/m/n/10.95 compatibility-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 []\T1/cmr/m/n/10.95 Chirot.csv
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--132
+Underfull \hbox (badness 10000) in paragraph at lines 148--148
 []\T1/cmr/m/n/10.95 hobbs-pearson-
  []
 
 
-Overfull \hbox (76.45273pt too wide) in paragraph at lines 112--137
+Overfull \hbox (76.45273pt too wide) in paragraph at lines 128--152
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11] [12]
-Chapter 7.
+[9] [10]
+Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--164
+Underfull \hbox (badness 3803) in paragraph at lines 170--170
+[]\T1/cmr/m/n/10.95 Number of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--176
 []\T1/cmr/m/n/10.95 ['o', '*', '.',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
+Underfull \hbox (badness 10000) in paragraph at lines 178--178
 []\T1/cmr/m/n/10.95 ['o', '*', '.',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--168
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
+[]\T1/cmr/m/n/10.95 XChart
+ []
+
+
+Overfull \hbox (21.42003pt too wide) in paragraph at lines 180--180
+\T1/cmr/m/n/10.95 3.5.1,jfreechart:1.0.192| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 180--180
 []\T1/cmr/m/n/10.95 setMarkerSize
  []
 
 
-Overfull \hbox (88.45271pt too wide) in paragraph at lines 150--171
+Underfull \hbox (badness 3803) in paragraph at lines 187--187
+[]\T1/cmr/m/n/10.95 Number of
+ []
+
+
+Overfull \hbox (0.517pt too wide) in paragraph at lines 189--189
+[][]| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--195
+[]\T1/cmr/m/n/10.95 setMarkerSize
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 202--202
+[]\T1/cmr/m/n/10.95 Number of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 206--206
+[]\T1/cmr/m/n/10.95 ['o', '*', '.',
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
+[]\T1/cmr/m/n/10.95 setMarkerSize
+ []
+
+
+Underfull \hbox (badness 3803) in paragraph at lines 217--217
+[]\T1/cmr/m/n/10.95 Number of
+ []
+
+
+Overfull \hbox (88.45271pt too wide) in paragraph at lines 165--229
  [][] 
  []
 
-<scatter1.jpg, id=194, 462.528pt x 346.896pt>
+
+LaTeX Warning: Float too large for page by 210.86372pt on input line 232.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<scatter1.jpg, id=173, 462.528pt x 346.896pt>
 File: scatter1.jpg Graphic file (type jpg)
  <use scatter1.jpg>
-Package pdftex.def Info: scatter1.jpg used on input line 180.
+Package pdftex.def Info: scatter1.jpg used on input line 239.
 (pdftex.def)             Requested size: 159.33604pt x 119.50456pt.
 
-<scatter2.jpg, id=195, 642.4pt x 481.8pt>
+<scatter2.jpg, id=174, 642.4pt x 481.8pt>
 File: scatter2.jpg Graphic file (type jpg)
  <use scatter2.jpg>
-Package pdftex.def Info: scatter2.jpg used on input line 186.
+Package pdftex.def Info: scatter2.jpg used on input line 245.
 (pdftex.def)             Requested size: 159.33604pt x 119.50133pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\T1/cmr/m/n/10.95 Horizontal and
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\T1/cmr/m/n/10.95 Stacked bar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--212
-[]\T1/cmr/m/n/10.95 Grouped bar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--219
-[]\T1/cmr/m/n/10.95 setMarkerSize
- []
-
-
-Overfull \hbox (88.45271pt too wide) in paragraph at lines 200--222
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<bar1.jpg, id=196, 890.32625pt x 664.4825pt>
+<bar1.jpg, id=175, 890.32625pt x 664.4825pt>
 File: bar1.jpg Graphic file (type jpg)
  <use bar1.jpg>
-Package pdftex.def Info: bar1.jpg used on input line 231.
+Package pdftex.def Info: bar1.jpg used on input line 257.
 (pdftex.def)             Requested size: 159.33604pt x 118.91222pt.
 
-<bar2.jpg, id=197, 481.8pt x 481.8pt>
+<bar2.jpg, id=176, 481.8pt x 481.8pt>
 File: bar2.jpg Graphic file (type jpg)
  <use bar2.jpg>
-Package pdftex.def Info: bar2.jpg used on input line 237.
+Package pdftex.def Info: bar2.jpg used on input line 263.
 (pdftex.def)             Requested size: 159.33604pt x 159.33266pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--263
-[]\T1/cmr/m/n/10.95 Horizontal and
- []
-
-
-Overfull \hbox (88.45271pt too wide) in paragraph at lines 251--273
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<line1.jpg, id=198, 642.4pt x 481.8pt>
+<line1.jpg, id=177, 642.4pt x 481.8pt>
 File: line1.jpg Graphic file (type jpg)
  <use line1.jpg>
-Package pdftex.def Info: line1.jpg used on input line 281.
+Package pdftex.def Info: line1.jpg used on input line 276.
 (pdftex.def)             Requested size: 159.33604pt x 119.50133pt.
 
-<line2.jpg, id=199, 878.28125pt x 658.46pt>
+<line2.jpg, id=178, 878.28125pt x 658.46pt>
 File: line2.jpg Graphic file (type jpg)
  <use line2.jpg>
-Package pdftex.def Info: line2.jpg used on input line 287.
+Package pdftex.def Info: line2.jpg used on input line 282.
 (pdftex.def)             Requested size: 159.33604pt x 119.45207pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
-[]\T1/cmr/m/n/10.95 Horizontal and
- []
-
-
-Overfull \hbox (88.45271pt too wide) in paragraph at lines 300--322
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<box1.jpg, id=200, 398.2077pt x 333.1647pt>
+<box1.jpg, id=179, 398.2077pt x 333.1647pt>
 File: box1.jpg Graphic file (type jpg)
  <use box1.jpg>
-Package pdftex.def Info: box1.jpg used on input line 331.
+Package pdftex.def Info: box1.jpg used on input line 295.
 (pdftex.def)             Requested size: 159.33604pt x 133.30927pt.
 
-<box2.jpg, id=201, 562.1pt x 421.575pt>
+<box2.jpg, id=180, 562.1pt x 421.575pt>
 File: box2.jpg Graphic file (type jpg)
  <use box2.jpg>
-Package pdftex.def Info: box2.jpg used on input line 337.
+Package pdftex.def Info: box2.jpg used on input line 301.
 (pdftex.def)             Requested size: 159.33604pt x 119.50041pt.
- [13
+ (./classification.bbl
+[11
 
-] [14 <./scatter1.jpg> <./scatter2.jpg> <./bar1.jpg> <./bar2.jpg> <./line1.jpg>
- <./line2.jpg>]
-(./classification.bbl [15 <./box1.jpg> <./box2.jpg>] [16]
-Chapter 8.
+ <./scatter1.jpg> <./scatter2.jpg>] [12 <./bar1.jpg> <./bar2.jpg> <./line1.jpg>
+ <./line2.jpg> <./box1.jpg> <./box2.jpg>] [13]
+Chapter 5.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 2020) in paragraph at lines 22--30
+Underfull \hbox (badness 2020) in paragraph at lines 30--38
 []\T1/cmr/m/n/12 Paulo Roberto Silva Cha-gas Ju-nior, Alexan-dre Abreu De Fre-i
 tas,
  []
 
-) [17
+) [14
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
  (./classification.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 359.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `classification.out' has not changed.
-(rerunfilecheck)             Checksum: BA4595447A2C829535AB7C6CC11E1396;967.
+(rerunfilecheck)             Checksum: 610A9FA273B5D692E1529F0F66A337A1;761.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24063 strings out of 493029
- 420543 string characters out of 6136234
- 565289 words of memory out of 5000000
- 27003 multiletter control sequences out of 15000+600000
- 20704 words of font info for 54 fonts, out of 8000000 for 9000
+ 24088 strings out of 493029
+ 420958 string characters out of 6136234
+ 564580 words of memory out of 5000000
+ 27026 multiletter control sequences out of 15000+600000
+ 24698 words of font info for 65 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,77p,1956b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/
-fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/c
-m-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-</usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts/type1/public/cm-
-super/sfxc2074.pfb>
-Output written on classification.pdf (18 pages, 486600 bytes).
+ 62i,15n,77p,1956b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.11} has been referenced but does not ex
+ist, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf/fo
+nts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-
+super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb><
+/usr/share/texmf/fonts/type1/public/cm-super/sfbx2074.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfbx2488.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb></
+usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/font
+s/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-su
+per/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></u
+sr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf/fonts
+/type1/public/cm-super/sfxc2074.pfb>
+Output written on classification.pdf (15 pages, 481901 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
- 236 compressed objects within 3 object streams
- 53 named destinations out of 1000 (max. 500000)
- 202 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 223 compressed objects within 3 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 170 words of extra memory for PDF output out of 10000 (max. 10000000)
 

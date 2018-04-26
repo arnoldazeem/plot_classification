@@ -71,7 +71,7 @@ for fname in glob.glob(path):
 
             plot_url = py.plot(fig, filename='legend-visibility')
 
-            py.image.save_as(fig, filename= 'scatter_plot' + 'plotyleg' + x_label + '.jpg')
+            py.image.save_as(fig, filename= 'scatter_plot' + 'plotyleg' + x_label + '.jpeg')
 
 
-            Image('scatter_plot' + 'legg' + x_label + '.jpg')
+            Image('scatter_plot' + 'legg' + x_label + '.jpeg')

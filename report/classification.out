@@ -1,18 +1,14 @@
 \BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
-\BOOKMARK [0][-]{chapter.4}{Einleitung}{}% 3
-\BOOKMARK [1][-]{section.5}{Motivation}{chapter.4}% 4
-\BOOKMARK [0][-]{chapter.7}{ABSTRACT}{}% 5
-\BOOKMARK [0][-]{chapter.8}{INTRODUCTION}{}% 6
-\BOOKMARK [0][-]{chapter.9}{MOTIVATION}{}% 7
-\BOOKMARK [0][-]{chapter.10}{OBJECTIVE}{}% 8
-\BOOKMARK [0][-]{chapter.11}{LITERATURE REVIEW}{}% 9
-\BOOKMARK [1][-]{section.12}{Dataset}{chapter.11}% 10
-\BOOKMARK [2][-]{subsection.13}{Dataset for Matlab}{section.12}% 11
-\BOOKMARK [2][-]{subsection.14}{Dataset for R}{section.12}% 12
-\BOOKMARK [2][-]{subsection.15}{Dataset for PYTHON}{section.12}% 13
-\BOOKMARK [2][-]{subsection.16}{Dataset for Java}{section.12}% 14
-\BOOKMARK [0][-]{chapter.18}{CREATING PLOTS}{}% 15
-\BOOKMARK [1][-]{section.27}{Scatter plot}{chapter.18}% 16
-\BOOKMARK [1][-]{section.28}{Box Plots}{chapter.18}% 17
-\BOOKMARK [0][-]{chapter.29}{Bibliography}{}% 18
+\BOOKMARK [0][-]{chapter.4}{ABSTRACT}{}% 3
+\BOOKMARK [0][-]{chapter.5}{INTRODUCTION}{}% 4
+\BOOKMARK [1][-]{section.6}{MOTIVATION}{chapter.5}% 5
+\BOOKMARK [1][-]{section.7}{OBJECTIVE}{chapter.5}% 6
+\BOOKMARK [0][-]{chapter.9}{RELATED WORK}{}% 7
+\BOOKMARK [1][-]{section.12}{Dataset}{chapter.9}% 8
+\BOOKMARK [2][-]{subsection.13}{Dataset for Matlab}{section.12}% 9
+\BOOKMARK [2][-]{subsection.14}{Dataset for R}{section.12}% 10
+\BOOKMARK [2][-]{subsection.15}{Dataset for PYTHON}{section.12}% 11
+\BOOKMARK [2][-]{subsection.16}{Dataset for Java}{section.12}% 12
+\BOOKMARK [0][-]{chapter.18}{CREATING PLOTS}{}% 13
+\BOOKMARK [0][-]{chapter.24}{Bibliography}{}% 14

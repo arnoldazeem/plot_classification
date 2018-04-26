@@ -17,7 +17,7 @@ import random
 
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
-py.sign_in('zanzy', '6tzTYqsLP9zeG91eamft')
+py.sign_in('kumar05', 'IW5WKDoNWeWWon8haT7r')
 
 for fname in glob.glob(path):
     print(fname)
@@ -34,14 +34,19 @@ for fname in glob.glob(path):
         if (df1.columns.values[a] != final):
 
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df1.iloc[:7, a].values.tolist()
+            x_axis = df1.iloc[:5, a].values.tolist()
+
+            w_axis = df1.iloc[5:10, a].values.tolist()
             # make them positve
             x_label = df1.columns[a]
 
 
-            y_axis = df1.iloc[:7, a+ 1].values.tolist()
+            y_axis = df1.iloc[:5, a+ 1].values.tolist()
+
+            z_axis = df1.iloc[5:10, a].values.tolist()
             # make them positve
             y_label = df1.columns[a+1]
+
 
             marker = random.choice(mark)
 
@@ -53,14 +58,48 @@ for fname in glob.glob(path):
                 name = x_label
             )
 
-            data = [trace]
+            # Create a trace
+            trace2 = go.Scatter(
+                x=z_axis,
+                y=w_axis,
+                mode='lines+markers',
+                name=y_label
+            )
+
+            # Create a trace
+            trace3 = go.Scatter(
+                x=y_axis,
+                y=w_axis,
+                mode='lines+markers',
+                name=y_label
+            )
 
 
-            layout = go.Layout(title=graph_name, width=640, height=480)
+
+            data = [trace, trace2,trace3]
+
+            layout = go.Layout(width=640, height=480,title='Plot Title',
+                xaxis=dict(
+                    title='x Axis',
+                    titlefont=dict(
+                        family='Courier New, monospace',
+                        size=18,
+                        color='#7f7f7f'
+                    )
+                ),
+                yaxis=dict(
+                    title='y Axis',
+                    titlefont=dict(
+                        family='Courier New, monospace',
+                        size=18,
+                        color='#7f7f7f'
+                    )
+                )
+            )
 
             fig = go.Figure(data=data, layout=layout)
 
-            py.image.save_as(fig, filename= 'scatter_plot' + 'plotyline' + x_label + '.jpeg')
+            py.image.save_as(fig, filename= 'scatter_plot' + 'plotylinechartthripple' + x_label + '.jpeg')
 
             from IPython.display import Image
 
