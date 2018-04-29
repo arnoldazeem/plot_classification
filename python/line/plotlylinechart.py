@@ -17,7 +17,7 @@ import random
 
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
-py.sign_in('kumar05', 'IW5WKDoNWeWWon8haT7r')
+py.sign_in('zanzy', '6tzTYqsLP9zeG91eamft')
 
 for fname in glob.glob(path):
     print(fname)
@@ -99,7 +99,7 @@ for fname in glob.glob(path):
 
             fig = go.Figure(data=data, layout=layout)
 
-            py.image.save_as(fig, filename= 'scatter_plot' + 'plotylinechartthripple' + x_label + '.jpeg')
+            py.image.save_as(fig, filename= 'scatter_plot' + 'plotylinechartthripples' + x_label + '.jpeg')
 
             from IPython.display import Image
 

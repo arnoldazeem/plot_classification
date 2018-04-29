@@ -10,7 +10,6 @@ import seaborn as sns
 path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/scatter/data/*.csv"
 
 
-
 for fname in glob.glob(path):
     df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
     graph_name = (os.path.basename(fname))
@@ -22,20 +21,17 @@ for fname in glob.glob(path):
     listhem = []
     final = df1.columns[-1]
 
-    col_1 = 0
-
-
     # whole of the csv file
     for a, b in enumerate(df1):
 
         if (df1.columns.values[a] != final):
 
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
-            x_axis = df.iloc[:5, a].values.tolist()
+            x_axis = df.iloc[:15, a].values.tolist()
             # make them positve
             x_label = df.columns[a]
 
-            y_axis = df.iloc[:5, a+1].values.tolist()
+            y_axis = df.iloc[:15, a+1].values.tolist()
             # make them positve
             y_label = df.columns[a+1]
             # plot
@@ -50,7 +46,8 @@ for fname in glob.glob(path):
             # make them positve
             yn_label = df.columns[a+1]
             # plot
-            plt.bar(x_axis, y_axis, label=df.columns[a+1],align='center',alpha=0.5)
+            one =  plt.bar(0.1, x_axis, label=df.columns[a + 1])
+
 
             plt.legend()
 
@@ -60,11 +57,9 @@ for fname in glob.glob(path):
             plt.title(graph_name)
 
             plt.savefig(
-                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'vertlegend' + x_label + '.jpg')
+                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'veregend' + x_label + '.jpg')
 
             plt.show()
-
-
 
         else:
             print('done')

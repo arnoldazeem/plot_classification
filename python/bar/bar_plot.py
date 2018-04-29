@@ -21,6 +21,12 @@ for fname in glob.glob(path):
 
     for a, b in enumerate(df1):
 
+        width = [0.5, 0.6,0.7, 0.8, 0.9,1.0]
+
+        height = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+
+        marker = random.choice(width)
+
         if (df1.columns.values[a] != final):
             #x_axis = df.iloc[:10, col_1].abs().values.tolist()
             x_axis = df1.iloc[:10, a].values.tolist()
@@ -38,9 +44,10 @@ for fname in glob.glob(path):
 
             plt.title(graph_name)
 
-            plt.bar(x_axis, y_axis, align='center', alpha=0.5)
+            plt.barh(x_axis,y_axis)
 
-            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'simple' + x_label + '.jpg')
+            plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'simplehorizont23' + x_label + '.jpg')
+
 
             plt.show()
 

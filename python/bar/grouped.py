@@ -30,27 +30,41 @@ for fname in glob.glob(path):
             # make them positve
             x_label = df1.columns[a]
 
+            n_axis = df1.iloc[5:9, a].values.tolist()
+
 
             y_axis = df1.iloc[5:9, a+1].values.tolist()
             # make them positve
             y_label = df1.columns[a+1]
 
-            index=np.arange(4)
-            # plot
 
-            plt.bar(index, x_axis,label=x_label)
+            city = [x_label, 'dummy1', y_label, 'dummy3']
 
-            plt.bar(index+bar_width, y_axis,label=y_label)
+            Gender = [x_label, y_label,'dummy']
+
+            pos = np.arange(len(city))
+
+            bar_width = 0.20
+
+            bar_widt = 0.80
+
+            plt.barh(pos, x_axis, bar_width, color='blue', edgecolor='black')
+
+            plt.barh(pos + bar_width, n_axis, bar_width, color='green', edgecolor='black')
+
+            plt.barh(pos + bar_widt, y_axis, bar_width, color='pink', edgecolor='black')
+
+            plt.xticks(pos, city)
 
             plt.xlabel(x_label)
             plt.ylabel(y_label)
 
             plt.title(graph_name)
 
-            plt.legend()
+            plt.legend(Gender)
 
             plt.savefig(
-                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'goop' + x_label + '.jpg')
+                '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/bar/bar data' + 'groupedhorin' + x_label + '.jpg')
 
             plt.show()
 
