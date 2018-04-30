@@ -11,7 +11,7 @@ path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/
 
 
 for fname in glob.glob(path):
-    df = (pd.read_csv(fname))
+    df = (pd.read_csv(fname,encoding= "ISO-8859-1"))
     graph_name = (os.path.basename(fname))
 
     # gets you only the numeric data

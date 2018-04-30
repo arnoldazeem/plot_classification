@@ -19,7 +19,6 @@ for fname in glob.glob(path):
     labels = []
 
     final = df1.columns[-1]
-
     # gets you only the numeric data
     # df1 = df.select_dtypes(['number'])
     df1 = df._get_numeric_data()
@@ -30,21 +29,24 @@ for fname in glob.glob(path):
 
             dfList = df1[b].tolist()
 
-            listhem.append(dfList[:10])
+            listhem.append(dfList[:2])
 
             labels.append(df1.columns.values[a])
 
             df11 = pd.DataFrame(listhem, index=labels)
 
-            df11.T.boxplot(vert=False)
 
-            plt.subplots_adjust(left=0.25)
+            #plt.subplots_adjust(left=0.25)
 
 
-            plt.grid(b=None, which='major', axis='both')
+            #plt.grid(b=None, which='major', axis='both')
+
+            plt.xlabel(df1.columns.values[a])
+            #plt.ylabel(df1.columns.values[a+1])
+            plt.title(graph_name)
 
 
             plt.savefig('/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/' + df1.columns.values[
-                    a] +'vetical'+ '.jpg', bbox_inches='tight')
+                    a] +'anovetical'+ '.jpg', bbox_inches='tight')
 
             plt.show()

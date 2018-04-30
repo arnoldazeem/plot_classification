@@ -171,7 +171,7 @@ seed(1)
 #data_banknote_authentication
 #fishiris.csv
 #tbc
-filename = 'HR_comma_sep_int.csv'
+filename = 'tbc.csv'
 dataset = load_csv(filename)
 # convert string attributes to integers
 #for i in range(len(dataset[0])):

@@ -30,7 +30,7 @@ for fname in glob.glob(path):
         # df1 = df.select_dtypes(['number'])
         df1 = df._get_numeric_data()
 
-        df2 = df1.iloc[:40]
+        df2 = df1.iloc[:2]
 
         final = df2.columns[-1]
 
@@ -38,14 +38,10 @@ for fname in glob.glob(path):
 
             if (df2.columns.values[a] != final):
 
-                sns.boxplot(x=df2.columns.values[a], data=df2, hue=df2.columns.values[a])
-
-                #plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.);
+                sns.boxplot(y=df2.columns.values[a+1], data=df2, hue=df2.columns.values[a])
 
                 plt.savefig(
-                        '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/'+ 'seaborn' +  df1.columns.values[
+                        '/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/python/box/'+ 'againseaborn' +  df1.columns.values[
                             a] + '.jpg')
-                plt.show()
-
-
-
+            else:
+                print('done')
