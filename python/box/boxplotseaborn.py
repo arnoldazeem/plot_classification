@@ -26,6 +26,8 @@ for fname in glob.glob(path):
 
             y_label = df2.columns[a+1]
 
+
+
             sns.boxplot(x=x_label,y=y_label, data=df2,palette='coolwarm')
 
             plt.xlabel(x_label)
