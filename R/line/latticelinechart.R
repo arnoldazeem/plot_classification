@@ -20,7 +20,6 @@ for(i in 1:length(list.filenames)){
   title <- list.filenames[i]
   title <- sub('\\..*$', '', basename(title))
   
-  print(title)
   
   a=1
   

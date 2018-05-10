@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.6)  9 MAY 2018 04:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.5.6)  10 MAY 2018 12:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1760,7 +1760,7 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  24767 strings out of 494871
  433238 string characters out of 6178383
- 600011 words of memory out of 5000000
+ 600012 words of memory out of 5000000
  27472 multiletter control sequences out of 15000+600000
  24698 words of font info for 65 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
@@ -1782,7 +1782,7 @@ n/ec/ecbx1200.600pk> </home/adaboo/.texlive2017/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecbx2488.600pk> </home/adaboo/.texlive2017/texmf-var/fonts/pk/ljfour/jkn
 appen/ec/ecxc2074.600pk> </home/adaboo/.texlive2017/texmf-var/fonts/pk/ljfour/j
 knappen/ec/ecrm1200.600pk>
-Output written on classification.pdf (18 pages, 428659 bytes).
+Output written on classification.pdf (18 pages, 428677 bytes).
 PDF statistics:
  687 PDF objects out of 1000 (max. 8388607)
  263 compressed objects within 3 object streams
