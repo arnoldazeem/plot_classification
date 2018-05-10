@@ -1,8 +1,10 @@
+\babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Number of Train and Test Dataset collected\relax }}{7}{table.caption.10}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Names of CSV files used in each language\relax }}{10}{table.caption.17}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Number of Train and Test Dataset collected\relax }}{8}{table.caption.10}
+\contentsline {table}{\numberline {3.2}{\ignorespaces COMPARISON RESULTS OF PROPOSED FRAMEWORK\relax }}{10}{table.caption.12}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Names of datasets used in each plotting program\relax }}{12}{table.caption.18}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces How Scatter plots were created\relax }}{13}{table.caption.19}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Overview of the varied parameters for creating plots in the different plotting programs\relax }}{14}{table.caption.20}
 \addvspace {10\p@ }

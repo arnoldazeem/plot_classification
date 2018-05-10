@@ -1,4 +1,41 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{liu2015chart}
+Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
+  Mingli Song.
+\newblock Chart classification by combining deep convolutional networks and
+  deep belief networks.
+\newblock In {\em Document Analysis and Recognition (ICDAR), 2015 13th
+  International Conference on}, pages 801--805. IEEE, 2015.
+
+\bibitem{savva2011revision}
+Manolis Savva, Nicholas Kong, Arti Chhajta, Li~Fei-Fei, Maneesh Agrawala, and
+  Jeffrey Heer.
+\newblock Revision: Automated classification, analysis and redesign of chart
+  images.
+\newblock In {\em Proceedings of the 24th annual ACM symposium on User
+  interface software and technology}, pages 393--402. ACM, 2011.
+
+\bibitem{prasad2007classifying}
+V~Shiv~Naga Prasad, Behjat Siddiquie, Jennifer Golbeck, and Larry~S Davis.
+\newblock Classifying computer generated charts.
+\newblock In {\em Content-Based Multimedia Indexing, 2007. CBMI'07.
+  International Workshop on}, pages 85--92. IEEE, 2007.
+
+\bibitem{amara2017convolutional}
+Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
+\newblock Convolutional neural network based chart image classification.
+\newblock 2017.
+
+\bibitem{junior2017architecture}
+Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
+  Akiyama, Brunelli~Pinto Miranda, Tiago Davi~Oliveira De~Ara{\'u}jo, Carlos
+  Gustavo~Resque Dos~Santos, Bianchi~Serique Meiguins, and
+  Jefferson~Magalh{\~a}es De~Morais.
+\newblock Architecture proposal for data extraction of chart images using
+  convolutional neural network.
+\newblock In {\em Information Visualisation (IV), 2017 21st International
+  Conference}, pages 318--323. IEEE, 2017.
 
 \bibitem{projectdataset}
 {James Eagan}.
@@ -25,16 +62,6 @@
 \newblock \url{https://vincentarelbundock.github.io/Rdatasets/datasets.html},
   2011.
 \newblock [Online; accessed 20-April-2018].
-
-\bibitem{junior2017architecture}
-Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
-  Akiyama, Brunelli~Pinto Miranda, Tiago Davi~Oliveira De~Ara{\'u}jo, Carlos
-  Gustavo~Resque Dos~Santos, Bianchi~Serique Meiguins, and
-  Jefferson~Magalh{\~a}es De~Morais.
-\newblock Architecture proposal for data extraction of chart images using
-  convolutional neural network.
-\newblock In {\em Information Visualisation (IV), 2017 21st International
-  Conference}, pages 318--323. IEEE, 2017.
 
 \bibitem{lee2018viziometrics}
 Po-shen Lee, Jevin~D West, and Bill Howe.

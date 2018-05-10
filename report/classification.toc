@@ -1,14 +1,15 @@
+\babel@toc {english}{}
 \contentsline {chapter}{List of Figures}{2}{chapter*.2}
 \contentsline {chapter}{List of Tables}{3}{chapter*.3}
 \contentsline {chapter}{\numberline {1}ABSTRACT}{4}{chapter.4}
 \contentsline {chapter}{\numberline {2}INTRODUCTION}{5}{chapter.5}
-\contentsline {section}{\numberline {2.1}MOTIVATION}{5}{section.6}
-\contentsline {section}{\numberline {2.2}OBJECTIVE}{5}{section.7}
-\contentsline {chapter}{\numberline {3}RELATED WORK}{7}{chapter.9}
-\contentsline {section}{\numberline {3.1}Dataset}{8}{section.12}
-\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{8}{subsection.13}
-\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{8}{subsection.14}
-\contentsline {subsection}{\numberline {3.1.3}Dataset for PYTHON}{9}{subsection.15}
-\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{9}{subsection.16}
-\contentsline {chapter}{\numberline {4}CREATING PLOTS}{11}{chapter.18}
-\contentsline {chapter}{\numberline {5}Bibliography}{14}{chapter.24}
+\contentsline {section}{\numberline {2.1}MOTIVATION}{6}{section.6}
+\contentsline {section}{\numberline {2.2}OBJECTIVE}{6}{section.7}
+\contentsline {chapter}{\numberline {3}RELATED WORK}{8}{chapter.9}
+\contentsline {section}{\numberline {3.1}Dataset}{10}{section.13}
+\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{10}{subsection.14}
+\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{10}{subsection.15}
+\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{11}{subsection.16}
+\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{11}{subsection.17}
+\contentsline {chapter}{\numberline {4}CREATING PLOTS}{13}{chapter.19}
+\contentsline {chapter}{\numberline {5}Bibliography}{16}{chapter.25}
