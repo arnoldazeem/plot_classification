@@ -69,4 +69,31 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   literature.
 \newblock {\em IEEE Transactions on Big Data}, 4(1):117--129, 2018.
 
+\bibitem{cnnonline}
+ujjwalkarn.
+\newblock An intuitive explanation of convolutional neural networks – the
+  data science blog.
+\newblock
+  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
+  August 2016.
+\newblock (Accessed on 05/16/2018).
+
+\bibitem{AFriendl79}
+Ifu Aniemeka.
+\newblock A friendly introduction to convolutional neural networks |
+  hashrocket.
+\newblock
+  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
+  August 2017.
+\newblock (Accessed on 05/17/2018).
+
+\bibitem{convo:online}
+Adit Deshpande.
+\newblock A beginner's guide to understanding convolutional neural networks –
+  adit deshpande – cs undergrad at ucla ('19).
+\newblock
+  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
+  July 2016.
+\newblock (Accessed on 05/17/2018).
+
 \end{thebibliography}

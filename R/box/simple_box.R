@@ -33,20 +33,20 @@ for(i in 1:length(list.filenames)){
     if(a < ncol(numeric)){
       
       x_label <- names(numeric[a])    
-      x_axis <- numeric[1:10,a]
+      x_axis <- numeric[1:30,a]
       a <- a+1
       
       y_label <- names(numeric[a])   
-      y_axis <- numeric[1:10,a]  
+      y_axis <- numeric[1:30,a]  
       
-      tit = paste("Example box lattice called ", title, " dataset", sep = "")
+      tit = paste("A Notch box called ", title, " dataset", sep = "")
       
-      mypath <- file.path("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/plots",paste("myplotlinebox_", x_label, ".jpg", sep = ""))
+      mypath <- file.path("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/plots",paste("notchplotlinebox_", x_label, ".jpg", sep = ""))
       
       jpeg(file=mypath)
       
       #now <- plotme    
-      boxplot(x_axis, xlab=x_label, ylab= y_label,main=tit) 
+      boxplot(x_axis, xlab=x_label, ylab= y_label,main=tit, notch=TRUE) 
       
       
       dev.off()

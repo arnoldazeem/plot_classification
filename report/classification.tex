@@ -230,7 +230,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		
 		R & Default,Plotly \par R Library \par ggplot2 & space (0-3)  & 1144  & \\ \cline{0-3}
 		
-		JAVA  & XChart 3.5.1 \par jfreechart:1.0.192 \par javafx.scene & PlotOrientation \par (vertical or horizontal)  & 1144 & \\ \hline
+		JAVA  & XChart 3.5.1 \par jfreechart:1.0.192 \par javafx.scene & PlotOrientation \par (vertical or horizontal) \par with error bars & 1144 & \\ \hline
 		
 			\multicolumn{5}{|c|}{LINE CHARTS} \\
 			\hline
@@ -239,7 +239,7 @@ The Library column shows the different plotting libraries used, the parameter co
 			
 			Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 & Linestyle \par ['-', '--', '-.', ':']   &  1000 &  \multirow{6}{*} {\shortstack { Markers, \\ Multiple Lines }} \\ \cline{0-3}	 
 			
-			MATLAB  & Default &  MarkerStyle \par ['o', '*', '.', '+','x','s']  & 1000 &  \\ \cline{0-3}
+			MATLAB  & Default\par Plotly &  MarkerStyle \par ['o', '*', '.', '+','x','s'] \par markersize [8-10] & 1000 &  \\ \cline{0-3}
 			
 			R & Default,Plotly \par R Library \par ggplot2 &  & 1644  & \\ \cline{0-3}
 			
@@ -335,6 +335,33 @@ The Library column shows the different plotting libraries used, the parameter co
 	\caption{Example Box Plots}
 	\label{fig:figbox}
 \end{figure}
+
+\subsection{Method}
+Convolutional Neural Network \footnote{https://deeplearning4j.org/convolutionalnetwork} was used for training and evaluation phase. In the next sections Convolutional neural networks will be discussed, the method and parameters used will also be talked about.
+
+\subsection{Convolutional Neural Network}
+The following is inspired by the following blogs by ujjwalkarn \cite{cnnonline}, Ifu Aniemeka\cite{AFriendl79} and Adit Deshpande \cite{convo:online}.
+CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) are a variety of Artificial Neural Network which have given results near to human performance. They  especially perform well in the areas of image recognition and classification. All CovNets are divided into steps called layers, the layers are Convolution, Pooling or Sub Sampling, Classification (Fully Connected Layer). When an image is presented to a computer, the image is seen as an array of pixel values. For instance if a  color image of size 48x48 is presented the computer sees it as 48x48x3 where the 3 represents the RGB values. 
+
+\subsubsection{Convolutional Layer}
+The convolutional layer will be explained using the following example, let consider the image as a magical cake of height and width 48x48, and there is a cake cutter of size say 5x5. The cutter is used to cut the cake from the top left. The cutter is referred to as a filter in machine learning. The cutter in this case is also an array of numbers called weights and for the maths to work the cutter must have the same depth as our cake (5x5x3).
+Lets first consider the cutter being in the first position ie. the top left of the cake. The values in the cutter are multiplied with the values of the cake (element wise multiplications). These multiplications are all summed up and result in a single number. This single number is only for the first part and this process is repeated through out the whole cake (Next step would be moving the cutter to the right by 1 unit, then right again by 1, and so on) keep in mind its a magical cake so you can cut a part more than once. After using the cutter on the whole of the magical cake we result in a new cake of size 28x28x1, the results is called a feature map. The filters are low level feature identifiers (straight edges, simple colors, and curves). 
+
+
+\subsubsection{ReLU Layer}
+The next layer after the convolution phase is the Rectified Linear Units (ReLU). This layers helps to handle situations where the relation between the input values and the CovNet output is non-linear. The ReLU has a function \(f(x) = max(0,x)\) which means if you give it a value x, it will return 0 if x is negative and will return the value itself if its positive. There are also other functions which can used n place of the ReLU; that is the tanh or the sigmoid function but the ReLU mostly works well.
+
+\subsubsection{Pooling Layer}
+The pooling layers basically have two main functions, first one is that it helps the CovNet to locate features regardless of which part of the image it is located. This results in the model being robust against small changes in position of the features of the images. The second function is that it also helps to reduce the size of the feature map. Therefore computations in the futures layers are relatively less complex. One way of performing pooling is using max pooling technique, thats is sliding a window through the feature map, the windows fills a number of arrays in the feature map therefore, you pick the largest among all the numbers and disregard the rest of the numbers. 
+
+\subsubsection{Fully Connected Layer}
+This is the last layer and where the decision about the image is made. i.e a probability saying which class the image belongs to. This layer takes the output of the previous layers, which are the high level features and check which class these features strongly correlate to. All the above mentioned layers can be multiply stacked 
+on each other.
+
+
+\subsection{Image Preprocesing}
+Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
+
 
 
 \bibliographystyle{unsrt}

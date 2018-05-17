@@ -35,20 +35,20 @@ for(i in 1:length(list.filenames)){
     if(a < ncol(numeric)){
       
       x_label <- names(numeric[a])    
-      x_axis <- numeric[1:10,a]
-      w_axis <- numeric[10:20,a]
+      x_axis <- numeric[1:15,a]
+      w_axis <- numeric[10:25,a]
       a <- a+1
       
       y_label <- names(numeric[a])   
-      y_axis <- numeric[1:10,a]  
-      z_axis <- numeric[10:20,a]  
+      y_axis <- numeric[1:15,a]  
+      z_axis <- numeric[10:25,a]  
       
-      mypath <- file.path("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/plots",paste("myplotlineboxmultihorizon_", x_label, ".png", sep = ""))
+      mypath <- file.path("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/plots",paste("horizontalboxmultihorizon_", x_label, ".png", sep = ""))
       
       png(file=mypath)
       
       #now <- plotme    
-      boxplot(x_axis,y_axis,w_axis,z_axis, xlab=x_label, ylab= y_label,horizontal=TRUE,main=title) 
+      boxplot(x_axis,y_axis,w_axis,z_axis, xlab=x_label, ylab= y_label,horizontal=FALSE,main=title, notch=TRUE) 
       
       
       dev.off()

@@ -12,4 +12,11 @@
 \contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{11}{subsection.16}
 \contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{11}{subsection.17}
 \contentsline {chapter}{\numberline {4}CREATING PLOTS}{13}{chapter.19}
-\contentsline {chapter}{\numberline {5}Bibliography}{16}{chapter.25}
+\contentsline {subsection}{\numberline {4.0.1}Method}{16}{subsection.25}
+\contentsline {subsection}{\numberline {4.0.2}Convolutional Neural Network}{16}{subsection.27}
+\contentsline {subsubsection}{Convolutional Layer}{16}{subsubsection*.28}
+\contentsline {subsubsection}{ReLU Layer}{17}{subsubsection*.29}
+\contentsline {subsubsection}{Pooling Layer}{17}{subsubsection*.30}
+\contentsline {subsubsection}{Fully Connected Layer}{17}{subsubsection*.31}
+\contentsline {subsection}{\numberline {4.0.3}Image Preprocesing}{17}{subsection.32}
+\contentsline {chapter}{\numberline {5}Bibliography}{18}{chapter.33}

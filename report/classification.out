@@ -11,4 +11,11 @@
 \BOOKMARK [2][-]{subsection.16}{Dataset for Python}{section.13}% 11
 \BOOKMARK [2][-]{subsection.17}{Dataset for Java}{section.13}% 12
 \BOOKMARK [0][-]{chapter.19}{CREATING PLOTS}{}% 13
-\BOOKMARK [0][-]{chapter.25}{Bibliography}{}% 14
+\BOOKMARK [1][-]{subsection.25}{Method}{chapter.19}% 14
+\BOOKMARK [2][-]{subsection.27}{Convolutional Neural Network}{subsection.25}% 15
+\BOOKMARK [3][-]{subsubsection*.28}{Convolutional Layer}{subsection.27}% 16
+\BOOKMARK [3][-]{subsubsection*.29}{ReLU Layer}{subsection.27}% 17
+\BOOKMARK [3][-]{subsubsection*.30}{Pooling Layer}{subsection.27}% 18
+\BOOKMARK [3][-]{subsubsection*.31}{Fully Connected Layer}{subsection.27}% 19
+\BOOKMARK [2][-]{subsection.32}{Image Preprocesing}{subsection.25}% 20
+\BOOKMARK [0][-]{chapter.33}{Bibliography}{}% 21
