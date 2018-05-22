@@ -1,21 +1,26 @@
-\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 1
-\BOOKMARK [0][-]{chapter*.3}{List of Tables}{}% 2
-\BOOKMARK [0][-]{chapter.4}{ABSTRACT}{}% 3
-\BOOKMARK [0][-]{chapter.5}{INTRODUCTION}{}% 4
+\BOOKMARK [1][-]{section.1}{Abstract}{}% 1
+\BOOKMARK [0][-]{chapter*.3}{List of Figures}{}% 2
+\BOOKMARK [0][-]{chapter*.4}{List of Tables}{}% 3
+\BOOKMARK [0][-]{chapter.5}{Introduction}{}% 4
 \BOOKMARK [1][-]{section.6}{MOTIVATION}{chapter.5}% 5
 \BOOKMARK [1][-]{section.7}{OBJECTIVE}{chapter.5}% 6
-\BOOKMARK [0][-]{chapter.9}{RELATED WORK}{}% 7
-\BOOKMARK [1][-]{section.13}{Dataset}{chapter.9}% 8
-\BOOKMARK [2][-]{subsection.14}{Dataset for Matlab}{section.13}% 9
-\BOOKMARK [2][-]{subsection.15}{Dataset for R}{section.13}% 10
-\BOOKMARK [2][-]{subsection.16}{Dataset for Python}{section.13}% 11
-\BOOKMARK [2][-]{subsection.17}{Dataset for Java}{section.13}% 12
-\BOOKMARK [0][-]{chapter.19}{CREATING PLOTS}{}% 13
-\BOOKMARK [1][-]{subsection.25}{Method}{chapter.19}% 14
-\BOOKMARK [2][-]{subsection.27}{Convolutional Neural Network}{subsection.25}% 15
-\BOOKMARK [3][-]{subsubsection*.28}{Convolutional Layer}{subsection.27}% 16
-\BOOKMARK [3][-]{subsubsection*.29}{ReLU Layer}{subsection.27}% 17
-\BOOKMARK [3][-]{subsubsection*.30}{Pooling Layer}{subsection.27}% 18
-\BOOKMARK [3][-]{subsubsection*.31}{Fully Connected Layer}{subsection.27}% 19
-\BOOKMARK [2][-]{subsection.32}{Image Preprocesing}{subsection.25}% 20
-\BOOKMARK [0][-]{chapter.33}{Bibliography}{}% 21
+\BOOKMARK [0][-]{chapter.9}{Background and Related Work}{}% 7
+\BOOKMARK [1][-]{subsubsection*.10}{Architecture proposal for data extraction of chart images using Convolutional Neural Networ}{chapter.9}% 8
+\BOOKMARK [2][-]{subsubsection*.13}{Chart classification by combining deep convolutional networks and deep belief networks}{subsubsection*.10}% 9
+\BOOKMARK [0][-]{chapter.15}{Approach}{}% 10
+\BOOKMARK [1][-]{section.16}{Dataset}{chapter.15}% 11
+\BOOKMARK [2][-]{subsection.17}{Dataset for Matlab}{section.16}% 12
+\BOOKMARK [2][-]{subsection.18}{Dataset for R}{section.16}% 13
+\BOOKMARK [2][-]{subsection.19}{Dataset for Python}{section.16}% 14
+\BOOKMARK [2][-]{subsection.20}{Dataset for Java}{section.16}% 15
+\BOOKMARK [1][-]{section.22}{Creating Plots}{chapter.15}% 16
+\BOOKMARK [2][-]{subsection.28}{Method}{section.22}% 17
+\BOOKMARK [2][-]{subsection.30}{Convolutional Neural Network}{section.22}% 18
+\BOOKMARK [3][-]{subsubsection*.31}{Convolutional Layer}{subsection.30}% 19
+\BOOKMARK [3][-]{subsubsection*.32}{ReLU Layer}{subsection.30}% 20
+\BOOKMARK [3][-]{subsubsection*.33}{Pooling Layer}{subsection.30}% 21
+\BOOKMARK [3][-]{subsubsection*.34}{Fully Connected Layer}{subsection.30}% 22
+\BOOKMARK [2][-]{subsection.35}{Image Preprocesing}{section.22}% 23
+\BOOKMARK [0][-]{chapter.36}{Evaluation}{}% 24
+\BOOKMARK [0][-]{chapter.37}{Summary}{}% 25
+\BOOKMARK [0][-]{chapter.38}{Bibliography}{}% 26

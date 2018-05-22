@@ -27,7 +27,14 @@ Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
 \newblock Convolutional neural network based chart image classification.
 \newblock 2017.
 
-\bibitem{junior2017architecture}
+\bibitem{geirhos2017comparing}
+Robert Geirhos, David~HJ Janssen, Heiko~H Sch{\"u}tt, Jonas Rauber, Matthias
+  Bethge, and Felix~A Wichmann.
+\newblock Comparing deep neural networks against humans: object recognition
+  when the signal gets weaker.
+\newblock {\em arXiv preprint arXiv:1706.06969}, 2017.
+
+\bibitem{junior2017archi}
 Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
   Akiyama, Brunelli~Pinto Miranda, Tiago Davi~Oliveira De~Ara{\'u}jo, Carlos
   Gustavo~Resque Dos~Santos, Bianchi~Serique Meiguins, and

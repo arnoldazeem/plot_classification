@@ -44,7 +44,11 @@ citecolor = black]{hyperref}
 
 \input{title-page}
 
+
 \setcounter{tocdepth}{10}
+
+\clearpage
+
 \tableofcontents
 
 
@@ -60,18 +64,14 @@ citecolor = black]{hyperref}
 \titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{1em}{}
 
 \newpage
-\chapter{ABSTRACT}
-Distinct visualization techniques are used in scientific research publications to summarize large amount of data and also represent a variety of data. These visualizations help to communicate complex information and support the arguments presented in the paper in a easy to understand and follow way.
-These figures tend to reveal trends,patterns or relations that might otherwise be difficult to grasp using only text. In this context, classifying these visualizations is really relevant since there is a variety of visualizations and each one will have a different approach to processing it, example is extracting the raw data from it. 
-
-\chapter{INTRODUCTION}
+\chapter{Introduction}
 "A picture is worth a thousand words" even though a widely used phrase stands to be very true especially when complex data is visualized and presented in scientific research publications. 
 Data is ever growing and sometimes complex, using figures and diagrams to interpret and represent this data cannot be undermined since, they provide a way to easily give insight into the research findings, which would have otherwise been more complex relying on  only textual data. For this reason, there has been a growing interest in the chart analysis area and quite a number of techniques have been developed. I spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}.
 For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends.
 In V Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted.
 The process of extracting data already visualized as figures can be done relatively easier manually but becomes more complicated if done automatically. This process can be divided into two main steps \cite{savva2011revision}. The first step which our work focuses on, classifying the chart and the second step which involves extracting the data from the classified chart.
 To achieve the classification step, this paper presents an approach where charts are created with real-world datasets, different plotting programs (Python, Matlab, R, and Java) and different libraries supported by these plotting programs were used together with downloaded chart images from the Internet. We then use these images as input to Convolutional Neural Network (CNN). CNN was used instead of primitive approaches because it has achieved ground breaking results in the area of image classification \cite{amara2017convolutional}. Our model can identify four classes of plots namely Box-plots, Line Charts, Scatter-plots and, Bar-charts.
-The other parts of this paper are organized in the following way. 
+The other parts of this paper are organized in the follows: 
 In the next Sections, we present the motivation behind this work. Other works related to this,  our proposed method is described,
 Experimental evaluation and results are reported, and finally, the conclusion and the way to approach this work in the future.
 
@@ -79,14 +79,18 @@ Experimental evaluation and results are reported, and finally, the conclusion an
 Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand way compared to textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher, this data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a different background as opposed to the audience which the visualizations were created for, Also when comparing two plots the raw data helps make a better decision than just the figures. Since each plot will be processed differently to extract the raw data, it very relevant that we can distinguish one plot from another and this is the main aim of this thesis. 
 
 \section{OBJECTIVE}
-The purpose of this thesis is to answer the question: \begin{quote} HOW WELL CAN WE CLASSIFY THE DIFFERENT TYPES OF PLOTS IN SCIENTIFIC LITERATURE.\end{quote} In this work we focus on only four plots. These plots are scatter plots,bar charts,line charts and Box plots. The diagram below shows the vision of this work, The first part of the diagram involves extracting or obtaining  the four different types of plots mentioned earlier,after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
+The purpose of this thesis is to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line Chart, Bar Chart, Scatter Plot and Boxplot) in Scientific Literature ? \end{quote} In this work we focus on only four plots. These plots are scatter plots,bar charts,line charts and Box plots. The diagram below shows the vision of this work, The first part of the diagram involves extracting or obtaining  the four different types of plots mentioned earlier,after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
 But this work mainly focuses on the red dotted lines shown below in the diagram which which is getting the plots, labeling them, training the model and classifying the plots. \\
  
 \includegraphics [scale=0.5] {vision}
 \captionof{figure}{What we hope to achieve in the thesis}
 
-\chapter{RELATED WORK}
-Our work is inspired by De Freitas et al. \cite{junior2017architecture}, proposed a way to extract the wealth of information contained in different visualization techniques. The paper talks about two main stages of accomplishing this task. Firstly, classification of the charts is done since it allows a different variety of chart to be detected automatically allowing the next step, which is the extraction of data from the classified plots. The paper, however, focuses on the first step, classification of charts. In this paper, a Convolutional Neural Network is used for the classification task. The Convolutional neural network encapsulates the characterization and classification processes during its learning process, unlike other techniques. The dataset used for this task were searched for and downloaded from Google image search. Table \ref{table:rela} shows the chart types which were collected and the number of train and test sets which the respective charts were divided into.
+\chapter{Background and Related Work}
+Classification involving charts has been a topic of huge interest for sometime now. This is due to the fact that further analysis of charts example: presenting to another audience is only possible after the chart is identified. Initial approaches involved using techniques like SIFT key points to find important features of an image \cite{prasad2007classifying} and representing these features as vectors. The similarities between images is then calculated using a distance algorithm like Pyramid Match algorithm or euclidean 
+distance. Due to limitation of this approach like performance, new techniques have been adapted in recent years. One technique that has outperformed the rest is CovNet. CovNets has advantage of being able to detect key points in an image without human supervision. This technique has recently achieved human-level classification performance~\cite{geirhos2017comparing}. In the rest of this chapter, two related works that our work builds on are described into details.  
+
+\subsubsection{Architecture proposal for data extraction of chart images using Convolutional Neural Networ}
+Our work is inspired by De Freitas et al.~\cite{junior2017archi}, proposed a way to extract the wealth of information contained in different visualization techniques. The paper talks about two main stages of accomplishing this task. Firstly, classification of the charts is done since it allows a different variety of chart to be detected automatically allowing the next step, which is the extraction of data from the classified plots. The paper, however, focuses on the first step, classification of charts. In this paper, a Convolutional Neural Network is used for the classification task. The Convolutional neural network encapsulates the characterization and classification processes during its learning process, unlike other techniques. The dataset used for this task were searched for and downloaded from Google image search. Table \ref{table:rela} shows the chart types which were collected and the number of train and test sets which the respective charts were divided into.
 
 \begin{table}[h]
 	\centering \def\arraystretch{1.5} \small
@@ -111,8 +115,10 @@ Our work is inspired by De Freitas et al. \cite{junior2017architecture}, propose
 	\label{table:rela}
 	
 \end{table}
-For the classification, a variant of convolutional neural network called LeNet-based CNN model is used. The model was implemented using \footnote{Tensorflow}, LeNet-based CNN has an architecture which is comprised of 3 convolutional layers, followed by a fully connected layer. The model is trained in a way that the dataset is divided into mini-batches, samples of fixed sizes(100) are selected and fed into the CNN, as a result of this process the model becomes robust since it learns to generalize from the different min-batches which are fed into the model. Also, all the images are converted to JPG and resized to 224x224x3, that is, 224 pixels of height, 224 of width and 3 layers of output. The other parameters used were 1000 epochs and a learning rate of 0.003. The accuracy at the end of the training process was 70\%.
-In another paper by Liu et al. \cite{liu2015chart}, a new approach was proposed for the process of chart classification. The process involves using convolutional neural network to extract deep hidden features of charts and then deep belief networks then use the extracted features to predict the labels of the charts. Due to a difficulty in acquiring a large number of charts as training data, natural images where first used to train the model and later the model was fined tuned with just over 5,000 collected charts. The types of charts collected were pie charts, scatter charts, line charts, bar charts, and flowcharts. The architecture of the CovNet is made up of five Convolutional layers and two fully-connected layers and then an output layer. The preprocessing steps for the images involve down-sampling them to 256 x 256 x 3, after which each is cropped to a size 227 x 227 from the center and its horizontal flip are extracted as the input of the CovNet, other parameters used for the CovNet include a learning rate that starts with 0.01 initially and is then decreased by a factor of 0.1 after every lOOk iterations, the weight decay parameter was set at 0.0005 and a dropout rate of 0.5. This results in an output of a 5-way softmax which produces the distribution over the 5 class labels and this is used as input for the deep belief network. The deep belief network architecture has three hidden layers, whose dimensions are 5000, 500 and 2000. This results in a softmax predicting the probability
+For the classification, a variant of CovNet called LeNet-based CNN model is used. The model was implemented using Tensorflow\footnote{https://www.tensorflow.org/}, LeNet-based CovNet has an architecture which is comprised of 3 convolutional layers, followed by a fully connected layer. The model is trained in a way that the dataset is divided into mini-batches, samples of fixed sizes(100) are selected and fed into the CNN, as a result of this process the model becomes robust since it learns to generalize from the different min-batches which are fed into the model. Also, all the images are converted to JPG and resized to 224x224x3, that is, 224 pixels of height, 224 of width and 3 layers of output. The other parameters used were 1000 epochs and a learning rate of 0.003. The accuracy at the end of the training process was 70\%.
+
+\subsubsection{Chart classification by combining deep convolutional networks and deep belief networks}
+In another paper by Liu et al.~\cite{liu2015chart}, a new approach was proposed for the process of chart classification. The process involves using CovNet to extract deep hidden features of charts and then deep belief networks then use the extracted features to predict the labels of the charts. Due to a difficulty in acquiring a large number of charts as training data, natural images where first used to train the model and later the model was fined tuned with just over 5,000 collected charts. The types of charts collected were pie charts, scatter charts, line charts, bar charts, and flowcharts. The architecture of the CovNet is made up of five Convolutional layers and two fully-connected layers and then an output layer. The preprocessing steps for the images involve down-sampling them to 256 x 256 x 3, after which each is cropped to a size 227 x 227 from the center and its horizontal flip are extracted as the input of the CovNet, other parameters used for the CovNet include a learning rate that starts with 0.01 initially and is then decreased by a factor of 0.1 after every lOOk iterations, the weight decay parameter was set at 0.0005 and a dropout rate of 0.5. This results in an output of a 5-way softmax which produces the distribution over the 5 class labels and this is used as input for the deep belief network. The deep belief network architecture has three hidden layers, whose dimensions are 5000, 500 and 2000. This results in a softmax predicting the probability
 distribution over the 5 categories of charts as output.
 The training process was done with 4000 randomly selected images and the rest were used as test set. The accuracy of the model after the evaluation was  75.4\%. Table \ref{table:deep} show the results after the training was done without deep belief networks but pre-trained with the natural images and finally the training done with only the chart dataset but with deep belief networks.
 
@@ -121,22 +127,26 @@ The training process was done with 4000 randomly selected images and the rest we
 	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 		
 		\hline
-		Chart & ConvNets&ConvNets+DBN without pre-training & ConvNets+DBN \\ \hline
+		Chart & CovNets&CovNets+DBN without pre-training & CovNets+DBN \\ \hline
 				
 		Bar Chart & 75.6\% & 45.6\% & 74.2\% \\ \hline
-		flow Chart & 88.3\%  & 56.8\% & 91.3\%  \\ \hline
-		line Chart  & 71.2\%  & 22.3\% & 67.9\% \\ \hline
+		Flow Chart & 88.3\%  & 56.8\% & 91.3\%  \\ \hline
+		Line Chart  & 71.2\%  & 22.3\% & 67.9\% \\ \hline
 	
-		scatter Chart & 69.8\% & 44.5\% & 84.2\% \\ \hline
-		pie Chart & 58.1\%  & 50.1\% & 59.4\%    \\ \hline
-		ave Accuracy & 72.6\%  & 43.9\% & 75.4\% \\ \hline
+		Scatter Chart & 69.8\% & 44.5\% & 84.2\% \\ \hline
+		Pie Chart & 58.1\%  & 50.1\% & 59.4\%    \\ \hline
+		Ave. Accuracy & 72.6\%  & 43.9\% & 75.4\% \\ \hline
 		
 	\end{tabular}
-	\caption {COMPARISON RESULTS OF PROPOSED FRAMEWORK}	
+	\caption {Comparing Results of Proposed Framework from Liu et al.~\cite{liu2015chart} }	
 	\label{table:deep}
 	
 \end{table}
 
+
+\chapter{Approach}
+We assume Each image is processed in three stages:
+that the chart has been isolated from the rest of the document
 
 \section{Dataset}
 In this section, the various datasets used in plotting are described. For each language a different set of CSV files are used for generating the plots. This is done to generate more diverse plots.
@@ -146,7 +156,7 @@ The Data used for creating the plots in Matlab were randomly chosen from Project
 
 \subsection{Dataset for R}
 For the plots in R, 13 random CSV files where downloaded from an archive of datasets distributed with R called Rdatasets  \cite{rdata}. Rdatasets is a collection of dataset distributed with R. On the average there are 80 instances and 5 columns in each dataset.
-The biggest CSV file is the Australian athletes dataset. Its made of 203 instances and 14 columns and contains attributes like sex,height,weight and sports. The smallest dataset is the Canadian Women's Labour-Force Participation. This dataset has 30 rows and 7 columns. It contains information like average wages of women, percent of adult women in the workforce etc.
+The biggest CSV file is the Australian athletes dataset. It's made of 203 instances and 14 columns and contains attributes like sex,height,weight and sports. The smallest dataset is the Canadian Women's Labour-Force Participation. This dataset has 30 rows and 7 columns. It contains information like average wages of women, percent of adult women in the workforce etc.
 
 
 \subsection{Dataset for Python}
@@ -162,10 +172,10 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|p{4cm}|}
 		
 		 \hline
-		 \multicolumn{4}{|c|}{DUMMY DATA} \\
+		 \multicolumn{4}{|c|}{Datasets} \\
 		 \hline
 				
-		PYTHON & MATLAB & R LANGUAGE & JAVA\\ \hline
+		Python & Matlab & R  & Java\\ \hline
 		
 		3d\_line\_sample\_data.csv \par LightFordwardFlapStall.csv  \par line\_3d\_dataset.csv \par
 		longley.csv  \par loti.csv  \par lung.csv  \par nuclear.csv  \par timeseries.csv  \par
@@ -188,8 +198,8 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 \end{table}
 
 
-\chapter{CREATING PLOTS}
-The inspiration for creating a variety of plots to capture all type of plots used in scientific papers was gotten by inspecting the dataset of Architecture proposal for data extraction of chart images using Convolutional Neural Network paper \cite{junior2017architecture} and Viziometrics: Analyzing visual information in the scientific literature \cite{lee2018viziometrics} dataset. Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column while creating the plots.
+\section{Creating Plots}
+The inspiration for creating a variety of plots to capture all type of plots used in scientific papers was gotten by inspecting the dataset of Architecture proposal for data extraction of chart images using CovNet paper \cite{junior2017archi} and Viziometrics: Analyzing visual information in the scientific literature \cite{lee2018viziometrics} dataset. Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column while creating the plots.
  
 Table \ref{table:2} describe how the plots where created in each language. The type column describes the different variety of a particular plot, for example bar charts can be of type stacked, grouped, vertical and horizontal bar charts, also scatter plots types can be a scatter plot consisting of one type of marker, one scatter plot with multiple markers and finally a scatter plot with a line showing the correlation between the plots. 
 Figure \ref{fig:fig11} shows two different types of bar charts. Figure \ref{fig:fig1} is a stacked bar chart and  Figure \ref{fig:fig2} a normal vertical bar chart.
@@ -362,7 +372,10 @@ on each other.
 \subsection{Image Preprocesing}
 Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
 
+\chapter{Evaluation}
 
+
+\chapter{Summary}
 
 \bibliographystyle{unsrt}
 \bibliography{sample}

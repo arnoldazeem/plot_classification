@@ -1,22 +1,27 @@
 \babel@toc {english}{}
-\contentsline {chapter}{List of Figures}{2}{chapter*.2}
-\contentsline {chapter}{List of Tables}{3}{chapter*.3}
-\contentsline {chapter}{\numberline {1}ABSTRACT}{4}{chapter.4}
-\contentsline {chapter}{\numberline {2}INTRODUCTION}{5}{chapter.5}
-\contentsline {section}{\numberline {2.1}MOTIVATION}{6}{section.6}
-\contentsline {section}{\numberline {2.2}OBJECTIVE}{6}{section.7}
-\contentsline {chapter}{\numberline {3}RELATED WORK}{8}{chapter.9}
-\contentsline {section}{\numberline {3.1}Dataset}{10}{section.13}
-\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{10}{subsection.14}
-\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{10}{subsection.15}
-\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{11}{subsection.16}
-\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{11}{subsection.17}
-\contentsline {chapter}{\numberline {4}CREATING PLOTS}{13}{chapter.19}
-\contentsline {subsection}{\numberline {4.0.1}Method}{16}{subsection.25}
-\contentsline {subsection}{\numberline {4.0.2}Convolutional Neural Network}{16}{subsection.27}
-\contentsline {subsubsection}{Convolutional Layer}{16}{subsubsection*.28}
-\contentsline {subsubsection}{ReLU Layer}{17}{subsubsection*.29}
-\contentsline {subsubsection}{Pooling Layer}{17}{subsubsection*.30}
-\contentsline {subsubsection}{Fully Connected Layer}{17}{subsubsection*.31}
-\contentsline {subsection}{\numberline {4.0.3}Image Preprocesing}{17}{subsection.32}
-\contentsline {chapter}{\numberline {5}Bibliography}{18}{chapter.33}
+\contentsline {section}{\numberline {0.1}Abstract}{2}{section.1}
+\contentsline {chapter}{List of Figures}{3}{chapter*.3}
+\contentsline {chapter}{List of Tables}{4}{chapter*.4}
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.5}
+\contentsline {section}{\numberline {1.1}MOTIVATION}{6}{section.6}
+\contentsline {section}{\numberline {1.2}OBJECTIVE}{6}{section.7}
+\contentsline {chapter}{\numberline {2}Background and Related Work}{8}{chapter.9}
+\contentsline {subsubsection}{Architecture proposal for data extraction of chart images using Convolutional Neural Networ}{8}{subsubsection*.10}
+\contentsline {subsubsection}{Chart classification by combining deep convolutional networks and deep belief networks}{9}{subsubsection*.13}
+\contentsline {chapter}{\numberline {3}Approach}{11}{chapter.15}
+\contentsline {section}{\numberline {3.1}Dataset}{11}{section.16}
+\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{11}{subsection.17}
+\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{11}{subsection.18}
+\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{12}{subsection.19}
+\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{12}{subsection.20}
+\contentsline {section}{\numberline {3.2}Creating Plots}{13}{section.22}
+\contentsline {subsection}{\numberline {3.2.1}Method}{16}{subsection.28}
+\contentsline {subsection}{\numberline {3.2.2}Convolutional Neural Network}{16}{subsection.30}
+\contentsline {subsubsection}{Convolutional Layer}{16}{subsubsection*.31}
+\contentsline {subsubsection}{ReLU Layer}{17}{subsubsection*.32}
+\contentsline {subsubsection}{Pooling Layer}{17}{subsubsection*.33}
+\contentsline {subsubsection}{Fully Connected Layer}{17}{subsubsection*.34}
+\contentsline {subsection}{\numberline {3.2.3}Image Preprocesing}{17}{subsection.35}
+\contentsline {chapter}{\numberline {4}Evaluation}{19}{chapter.36}
+\contentsline {chapter}{\numberline {5}Summary}{20}{chapter.37}
+\contentsline {chapter}{\numberline {6}Bibliography}{21}{chapter.38}
