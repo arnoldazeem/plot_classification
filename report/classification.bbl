@@ -27,6 +27,31 @@ Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
 \newblock Convolutional neural network based chart image classification.
 \newblock 2017.
 
+\bibitem{zhou2000bar}
+Yan~Ping Zhou and Chew~Lim Tan.
+\newblock Bar charts recognition using hough based syntactic segmentation.
+\newblock In {\em International Conference on Theory and Application of
+  Diagrams}, pages 494--497. Springer, 2000.
+
+\bibitem{shao2005recognition}
+Mingyan Shao and Robert~P Futrelle.
+\newblock Recognition and classification of figures in pdf documents.
+\newblock In {\em International Workshop on Graphics Recognition}, pages
+  231--242. Springer, 2005.
+
+\bibitem{inokuchi2000apriori}
+Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
+\newblock An apriori-based algorithm for mining frequent substructures from
+  graph data.
+\newblock In {\em European Conference on Principles of Data Mining and
+  Knowledge Discovery}, pages 13--23. Springer, 2000.
+
+\bibitem{karthikeyani2012machine}
+V~Karthikeyani and S~Nagarajan.
+\newblock Machine learning classification algorithms to recognize chart types
+  in portable document format (pdf) files.
+\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
+
 \bibitem{geirhos2017comparing}
 Robert Geirhos, David~HJ Janssen, Heiko~H Sch{\"u}tt, Jonas Rauber, Matthias
   Bethge, and Felix~A Wichmann.

@@ -86,10 +86,60 @@ But this work mainly focuses on the red dotted lines shown below in the diagram 
 \captionof{figure}{What we hope to achieve in the thesis}
 
 \chapter{Background and Related Work}
-Classification involving charts has been a topic of huge interest for sometime now. This is due to the fact that further analysis of charts example: presenting to another audience is only possible after the chart is identified. Initial approaches involved using techniques like SIFT key points to find important features of an image \cite{prasad2007classifying} and representing these features as vectors. The similarities between images is then calculated using a distance algorithm like Pyramid Match algorithm or euclidean 
-distance. Due to limitation of this approach like performance, new techniques have been adapted in recent years. One technique that has outperformed the rest is CovNet. CovNets has advantage of being able to detect key points in an image without human supervision. This technique has recently achieved human-level classification performance~\cite{geirhos2017comparing}. In the rest of this chapter, two related works that our work builds on are described into details.  
+Classification involving charts has been a topic of huge interest for sometime now. This is due to the fact that further analysis of charts example: presenting to another audience is only possible after the chart is identified. 
+Different techniques have over time been used for classification of charts and these techniques are be widely put into two categories; Model Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}.
 
-\subsubsection{Architecture proposal for data extraction of chart images using Convolutional Neural Networ}
+\section{Model Based Approaches}
+In this approach handcrafted features are extracted from the charts and used to form a specific model for classifying the chart. In Zhou and Tan's ~\cite{zhou2000bar} work, features like legend, x-y-axis title, chart title and value of the bar were extracted for purposes of classifying a bar-chart. In Shao and  Futrelle's~\cite{shao2005recognition} work. Graphical elements of the charts like colors,tick marks on an axis and data point markers. Another instance where handcrafted features were used was in Inokuchi et al. work~\cite{inokuchi2000apriori}. In this work regularly appearing substructures of chart are extracted and used as features for classification. After the features are obtained, they are then represented in vector form for the classification stage. The features are stored in matrix vector with most columns containing the features and one column indicating the target of the chart. A machine learning technique is then used to recognize or classify the chart using the matrix vector as input. In Karthikeyani and Nagarajan's paper~\cite{karthikeyani2012machine} after the features were obtained SVM Classification \footnote{http://www.statsoft.com/Textbook/Support-Vector-Machines} MLP Classification
+\footnote{http://www.iro.umontreal.ca/~bengioy/ift6266/H12/html/mlp\_en.html} and  KNN Classification\footnote{
+https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This function is known as the classification model.
+
+
+
+One technique that has outperformed the rest is CovNet. CovNets has advantage of being able to detect key points in an image without human supervision. This technique has recently achieved human-level classification performance~\cite{geirhos2017comparing}. In the rest of this chapter, three related works that our work builds on are described into details.  
+
+\subsubsection{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}
+Karthikeyani and Nagarajan ~\cite{karthikeyani2012machine} focuses on classifying charts found in pdf files by extracting texture features and then, using a machine learning technique for the classifying phase. Table \ref{table:pdf} shows the details of the dataset used. For the feature extraction phase, Gray Level Co-Occurrence Matrix (GLCM). GLCM is a technique which uses co-occurrence matrix to extract texture features of an image with the use of statistical equations. Using this method eleven features were extracted these were: area, median, minimum and maximum intensity, contrast, homogeneity, energy, entropy, mean, variance, standard deviation and correlation, these are mainly connected to the pixels of the image. These extracted features are then stored using a 2-dimensional matrix vector data structure. This structure has thirteen (13) columns and 'x' rows, where x is the size of the dataset. The features are stored in twelve (12) columns and the label is stored in the thirteenth column. The features and labels were stored in the below structure 
+
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+		
+		\hline
+		Chart Type & No of Charts & Chart
+		Type & No of Charts  \\ \hline
+		2D Bar chart & 40 & Doughnut 2D & 7 \\ \hline
+		3D Bar chart & 16 & Doughnut 3D & 11\\ \hline
+		2D Pie chart & 13 & Line & 35 \\ \hline
+		3D Pie Chart & 20 & Mixed Chart& 13 \\ \hline
+
+		
+	\end{tabular}
+	\caption {Details on Dataset from \cite{karthikeyani2012machine} }	
+	\label{table:pdf}
+	
+\end{table}
+
+\begin{align*} 
+Struct FeatureVector \{\\
+	float feature1; float feature2;\\
+	float feature3; float feature4;\\
+	float feature5; float feature6;\\
+	float feature7; float feature8;\\
+	float feature9; float feature10;\\
+	float feature11; float feature12;\\
+	int target;\\
+\}
+\end{align*}
+
+This structure is then fed as input into three classifiers SVM, MLP neural network and K-Nearest Neighbour, these classifiers are then trained and a classification is model is formed for the recognition step. After this, to see if the model works well a test set consisting of records is fed into the model for the model to predict their labels. Three metrics were used to check the performance of the model; error rate,
+classification accuracy and speed of classification. The error rates are MLP 0.30, K-NN 0.22 and SVM 0.23. For the accuracy metric; KNN (78.06\%), MLP (69.68\%) and SVM (76.77\%). Finally the speed metric, which sum of training and test time results in MPL being the slowest with 8.38,followed by SVM with 0.31secs and  KNN with 0.26secs.
+ 
+
+
+
+
+\subsubsection{Architecture proposal for data extraction of chart images using Convolutional Neural Network}
 Our work is inspired by De Freitas et al.~\cite{junior2017archi}, proposed a way to extract the wealth of information contained in different visualization techniques. The paper talks about two main stages of accomplishing this task. Firstly, classification of the charts is done since it allows a different variety of chart to be detected automatically allowing the next step, which is the extraction of data from the classified plots. The paper, however, focuses on the first step, classification of charts. In this paper, a Convolutional Neural Network is used for the classification task. The Convolutional neural network encapsulates the characterization and classification processes during its learning process, unlike other techniques. The dataset used for this task were searched for and downloaded from Google image search. Table \ref{table:rela} shows the chart types which were collected and the number of train and test sets which the respective charts were divided into.
 
 \begin{table}[h]
@@ -138,7 +188,7 @@ The training process was done with 4000 randomly selected images and the rest we
 		Ave. Accuracy & 72.6\%  & 43.9\% & 75.4\% \\ \hline
 		
 	\end{tabular}
-	\caption {Comparing Results of Proposed Framework from Liu et al.~\cite{liu2015chart} }	
+	\caption {Comparing Results of Proposed Framework from (Liu et al.~\cite{liu2015chart}) }	
 	\label{table:deep}
 	
 \end{table}
