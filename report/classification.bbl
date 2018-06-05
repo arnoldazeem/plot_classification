@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{karthikeyani2012machine}
+V~Karthikeyani and S~Nagarajan.
+\newblock Machine learning classification algorithms to recognize chart types
+  in portable document format (pdf) files.
+\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
+
 \bibitem{liu2015chart}
 Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
   Mingli Song.
@@ -27,6 +33,12 @@ Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
 \newblock Convolutional neural network based chart image classification.
 \newblock 2017.
 
+\bibitem{boyle2007advances}
+Richard Boyle, Bahram Parvin, Darko Koracin, Nikos Paragios, and Syeda-Mahmood
+  Tanveer.
+\newblock {\em Advances in visual computing}.
+\newblock Springer, 2007.
+
 \bibitem{zhou2000bar}
 Yan~Ping Zhou and Chew~Lim Tan.
 \newblock Bar charts recognition using hough based syntactic segmentation.
@@ -45,12 +57,6 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
   graph data.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
-
-\bibitem{karthikeyani2012machine}
-V~Karthikeyani and S~Nagarajan.
-\newblock Machine learning classification algorithms to recognize chart types
-  in portable document format (pdf) files.
-\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
 
 \bibitem{geirhos2017comparing}
 Robert Geirhos, David~HJ Janssen, Heiko~H Sch{\"u}tt, Jonas Rauber, Matthias

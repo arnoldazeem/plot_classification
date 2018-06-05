@@ -7,23 +7,23 @@
 \contentsline {section}{\numberline {1.2}OBJECTIVE}{6}{section.7}
 \contentsline {chapter}{\numberline {2}Background and Related Work}{8}{chapter.9}
 \contentsline {section}{\numberline {2.1}Model Based Approaches}{8}{section.10}
-\contentsline {subsubsection}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{9}{subsubsection*.14}
-\contentsline {subsubsection}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{10}{subsubsection*.16}
-\contentsline {subsubsection}{Chart classification by combining deep convolutional networks and deep belief networks}{11}{subsubsection*.19}
-\contentsline {chapter}{\numberline {3}Approach}{13}{chapter.21}
-\contentsline {section}{\numberline {3.1}Dataset}{13}{section.22}
-\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{13}{subsection.23}
-\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{13}{subsection.24}
-\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{14}{subsection.25}
-\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{14}{subsection.26}
-\contentsline {section}{\numberline {3.2}Creating Plots}{15}{section.28}
-\contentsline {subsection}{\numberline {3.2.1}Method}{18}{subsection.34}
-\contentsline {subsection}{\numberline {3.2.2}Convolutional Neural Network}{18}{subsection.36}
-\contentsline {subsubsection}{Convolutional Layer}{18}{subsubsection*.37}
-\contentsline {subsubsection}{ReLU Layer}{19}{subsubsection*.38}
-\contentsline {subsubsection}{Pooling Layer}{19}{subsubsection*.39}
-\contentsline {subsubsection}{Fully Connected Layer}{19}{subsubsection*.40}
-\contentsline {subsection}{\numberline {3.2.3}Image Preprocesing}{19}{subsection.41}
-\contentsline {chapter}{\numberline {4}Evaluation}{21}{chapter.42}
-\contentsline {chapter}{\numberline {5}Summary}{22}{chapter.43}
-\contentsline {chapter}{\numberline {6}Bibliography}{23}{chapter.44}
+\contentsline {section}{\numberline {2.2}Machine Learning Based Approaches}{9}{section.11}
+\contentsline {subsection}{\numberline {2.2.1}Convolutional Neural Network}{10}{subsection.16}
+\contentsline {subsubsection}{Convolutional Layer}{10}{subsubsection*.17}
+\contentsline {subsubsection}{ReLU Layer}{10}{subsubsection*.18}
+\contentsline {subsubsection}{Pooling Layer}{11}{subsubsection*.19}
+\contentsline {subsubsection}{Fully Connected Layer}{11}{subsubsection*.20}
+\contentsline {subsubsection}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{11}{subsubsection*.21}
+\contentsline {subsubsection}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{12}{subsubsection*.24}
+\contentsline {subsubsection}{Chart classification by combining deep convolutional networks and deep belief networks}{13}{subsubsection*.27}
+\contentsline {chapter}{\numberline {3}Approach}{15}{chapter.29}
+\contentsline {section}{\numberline {3.1}Dataset}{15}{section.30}
+\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{15}{subsection.31}
+\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{15}{subsection.32}
+\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{16}{subsection.33}
+\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{16}{subsection.34}
+\contentsline {section}{\numberline {3.2}Creating Plots}{17}{section.36}
+\contentsline {subsection}{\numberline {3.2.1}Image Preprocesing}{20}{subsection.42}
+\contentsline {chapter}{\numberline {4}Evaluation}{21}{chapter.43}
+\contentsline {chapter}{\numberline {5}Summary}{22}{chapter.44}
+\contentsline {chapter}{\numberline {6}Bibliography}{23}{chapter.45}
