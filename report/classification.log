@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.1)  4 JUN 2018 23:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.1)  7 JUN 2018 15:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1576,259 +1576,319 @@ Chapter 1.
 [5
 
 ]
-<vision.png, id=221, 907.39pt x 372.39125pt>
+Underfull \hbox (badness 10000) in paragraph at lines 82--84
+
+ []
+
+<vision.png, id=234, 907.39pt x 372.39125pt>
 File: vision.png Graphic file (type png)
 <use vision.png>
-Package pdftex.def Info: vision.png  used on input line 84.
+Package pdftex.def Info: vision.png  used on input line 86.
 (pdftex.def)             Requested size: 453.6939pt x 186.19516pt.
 
-
-Package caption Warning: \captionsetup{type*=...} or \captionof
-(caption)                outside box or environment on input line 85.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 85.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (55.3553pt too wide) in paragraph at lines 82--85
-[] 
+Overfull \hbox (55.3553pt too wide) in paragraph at lines 86--87
+[][] 
  []
 
 [6] [7 <./vision.png>]
 Chapter 2.
 [8
 
-] [9] [10]
+]
+Overfull \hbox (18.4803pt too wide) in paragraph at lines 107--109
+\T1/cmr/m/n/12 The fol-low-ing is in-spired by the fol-low-ing blogs by ujjwalk
+arn [[]], Ifu Aniemeka[[]]
+ []
+
+[9]
+Overfull \hbox (0.59045pt too wide) in paragraph at lines 116--117
+\T1/cmr/m/n/12 The next layer af-ter the con-vo-lu-tion phase is the Rec-ti-fie
+d Lin-ear Units (ReLU).
+ []
+
+[10]
+Overfull \hbox (9.33392pt too wide) in paragraph at lines 126--126
+|\T1/cmr/bx/n/12 Machine Learn-ing Clas-si-fi-ca-tion Al-go-rithms to Rec-og-ni
+ze Chart Types
+ []
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 143.
+put line 148.
 [11] [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
 []\T1/cmr/m/n/10.95 CovNets+DBN
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
+Underfull \hbox (badness 10000) in paragraph at lines 203--203
 \T1/cmr/m/n/10.95 with-out pre-
  []
 
 [14]
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
+
+ []
+
 [15
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 252--252
+] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
 []\T1/cmr/m/n/10.95 okcupid-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 262--263
 []\T1/cmr/m/n/10.95 Chirot.csv
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 260--260
+Underfull \hbox (badness 10000) in paragraph at lines 267--267
 []\T1/cmr/m/n/10.95 hobbs-pearson-
  []
 
 
-Overfull \hbox (76.45273pt too wide) in paragraph at lines 240--264
+Overfull \hbox (76.45273pt too wide) in paragraph at lines 247--271
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[16]
+[17]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 277.
+               Default added (so using `tbp') on input line 284.
 
 
-Underfull \hbox (badness 3803) in paragraph at lines 288--288
+Underfull \hbox (badness 3803) in paragraph at lines 295--295
 []\T1/cmr/m/n/10.95 Number of
  []
 
 
-Underfull \hbox (badness 3803) in paragraph at lines 303--303
+Underfull \hbox (badness 3803) in paragraph at lines 310--310
 []\T1/cmr/m/n/10.95 Number of
  []
 
 
-Overfull \hbox (0.517pt too wide) in paragraph at lines 305--305
+Overfull \hbox (0.517pt too wide) in paragraph at lines 312--312
 [][]| 
  []
 
 
-Underfull \hbox (badness 3803) in paragraph at lines 316--316
+Underfull \hbox (badness 3803) in paragraph at lines 323--323
 []\T1/cmr/m/n/10.95 Number of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 320--320
+Underfull \hbox (badness 10000) in paragraph at lines 327--327
 []\T1/cmr/m/n/10.95 ['o', '*', '.',
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
+Underfull \hbox (badness 10000) in paragraph at lines 331--331
 []\T1/cmr/m/n/10.95 MarkerSize (12-
  []
 
 
-Underfull \hbox (badness 3803) in paragraph at lines 328--328
+Underfull \hbox (badness 3803) in paragraph at lines 335--335
 []\T1/cmr/m/n/10.95 Number of
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--336
+Underfull \hbox (badness 10000) in paragraph at lines 343--343
 []\T1/cmr/m/n/10.95 LegendPosition
  []
 
 
-LaTeX Warning: Float too large for page by 69.78127pt on input line 342.
+LaTeX Warning: Float too large for page by 68.78127pt on input line 349.
 
-<scatter1.jpg, id=334, 462.528pt x 346.896pt>
+<scatter1.jpg, id=358, 462.528pt x 346.896pt>
 File: scatter1.jpg Graphic file (type jpg)
 <use scatter1.jpg>
-Package pdftex.def Info: scatter1.jpg  used on input line 348.
+Package pdftex.def Info: scatter1.jpg  used on input line 355.
 (pdftex.def)             Requested size: 159.33604pt x 119.50456pt.
-<scatter2.jpg, id=335, 642.4pt x 481.8pt>
+<scatter2.jpg, id=359, 642.4pt x 481.8pt>
 File: scatter2.jpg Graphic file (type jpg)
 <use scatter2.jpg>
-Package pdftex.def Info: scatter2.jpg  used on input line 354.
+Package pdftex.def Info: scatter2.jpg  used on input line 361.
 (pdftex.def)             Requested size: 159.33604pt x 119.50133pt.
-<bar1.jpg, id=336, 462.528pt x 346.896pt>
+<bar1.jpg, id=360, 462.528pt x 346.896pt>
 File: bar1.jpg Graphic file (type jpg)
 <use bar1.jpg>
-Package pdftex.def Info: bar1.jpg  used on input line 366.
+Package pdftex.def Info: bar1.jpg  used on input line 373.
 (pdftex.def)             Requested size: 159.33604pt x 119.50456pt.
-<bar2.jpg, id=337, 481.8pt x 481.8pt>
+<bar2.jpg, id=361, 481.8pt x 481.8pt>
 File: bar2.jpg Graphic file (type jpg)
 <use bar2.jpg>
-Package pdftex.def Info: bar2.jpg  used on input line 372.
+Package pdftex.def Info: bar2.jpg  used on input line 379.
 (pdftex.def)             Requested size: 159.33604pt x 159.33266pt.
-<line1.jpg, id=338, 642.4pt x 481.8pt>
+<line1.jpg, id=362, 642.4pt x 481.8pt>
 File: line1.jpg Graphic file (type jpg)
 <use line1.jpg>
-Package pdftex.def Info: line1.jpg  used on input line 384.
+Package pdftex.def Info: line1.jpg  used on input line 391.
 (pdftex.def)             Requested size: 159.33604pt x 119.50133pt.
-<line2.jpg, id=339, 878.28125pt x 658.46pt>
+<line2.jpg, id=363, 878.28125pt x 658.46pt>
 File: line2.jpg Graphic file (type jpg)
 <use line2.jpg>
-Package pdftex.def Info: line2.jpg  used on input line 390.
+Package pdftex.def Info: line2.jpg  used on input line 397.
 (pdftex.def)             Requested size: 159.33604pt x 119.45207pt.
-<box1.jpg, id=340, 398.2077pt x 333.1647pt>
+<box1.jpg, id=364, 398.2077pt x 333.1647pt>
 File: box1.jpg Graphic file (type jpg)
 <use box1.jpg>
-Package pdftex.def Info: box1.jpg  used on input line 403.
+Package pdftex.def Info: box1.jpg  used on input line 410.
 (pdftex.def)             Requested size: 159.33604pt x 133.30927pt.
-<box2.jpg, id=341, 562.1pt x 421.575pt>
+<box2.jpg, id=365, 562.1pt x 421.575pt>
 File: box2.jpg Graphic file (type jpg)
 <use box2.jpg>
-Package pdftex.def Info: box2.jpg  used on input line 409.
+Package pdftex.def Info: box2.jpg  used on input line 416.
 (pdftex.def)             Requested size: 159.33604pt x 119.50041pt.
-[17] [18] [19 <./scatter1.jpg> <./scatter2.jpg> <./bar1.jpg> <./bar2.jpg> <./li
-ne1.jpg> <./line2.jpg>] [20 <./box1.jpg> <./box2.jpg>]
+[18 <./scatter1.jpg> <./scatter2.jpg>] [19] [20 <./bar1.jpg> <./bar2.jpg> <./li
+ne1.jpg> <./line2.jpg> <./box1.jpg> <./box2.jpg>]
+
+Package caption Warning: \label without proper reference on input line 429.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:approach' on page 21 undefined on input line 426.
+
+
+<approach.png, id=381, 753.81625pt x 492.84125pt>
+File: approach.png Graphic file (type png)
+<use approach.png>
+Package pdftex.def Info: approach.png  used on input line 428.
+(pdftex.def)             Requested size: 376.90721pt x 246.42001pt.
+[21] [22 <./approach.png>]
 Chapter 4.
-[21
-
-]
-Chapter 5.
-(./classification.bbl [22
-
-]
-Chapter 6.
 [23
 
 ]
-Underfull \hbox (badness 1314) in paragraph at lines 69--77
-[]\T1/cmr/m/n/12 Paulo Roberto Silva Cha-gas Ju-nior, Alexan-dre Abreu De Fre-i
-tas,
- []
+Chapter 5.
+(./classification.bbl [24
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 81.
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+]
+Chapter 6.
+[25
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 66.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 1931) in paragraph at lines 98--103
-[]\T1/cmr/m/n/12 vincentarel bun-dock.  Rdatasets.  [][]$\T1/cmtt/m/n/12 https 
-: / / vincentarelbundock .
- []
-
-
-Underfull \hbox (badness 1270) in paragraph at lines 111--118
+Underfull \hbox (badness 1270) in paragraph at lines 62--69
 []\T1/cmr/m/n/12 ujjwalkarn.  An in-tu-itive ex-pla-na-tion of con-vo-lu-tional
  neu-ral net-
  []
 
 
-Underfull \hbox (badness 3179) in paragraph at lines 120--127
+Underfull \hbox (badness 3179) in paragraph at lines 71--78
 []\T1/cmr/m/n/12 Ifu Aniemeka.  A friendly in-tro-duc-tion to con-vo-lu-tional 
 neu-ral
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--127
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
 \T1/cmr/m/n/12 net-works | hashrocket.  [][]$\T1/cmtt/m/n/12 https : / / hashro
 cket . com / blog / posts /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--127
+Underfull \hbox (badness 10000) in paragraph at lines 71--78
 \T1/cmtt/m/n/12 a-[]friendly-[]introduction-[]to-[]convolutional-[]neural-[]net
 works #
  []
 
 
-Underfull \hbox (badness 6316) in paragraph at lines 129--136
+Underfull \hbox (badness 6316) in paragraph at lines 80--87
 []\T1/cmr/m/n/12 Adit Desh-pande.  A be-gin-ner's guide to un-der-stand-ing con
 -
  []
 
 
-Underfull \hbox (badness 7796) in paragraph at lines 129--136
+Underfull \hbox (badness 7796) in paragraph at lines 80--87
 \T1/cmr/m/n/12 vo-lu-tional neu-ral net-works ^^U adit desh-pande ^^U cs un-der
 -grad
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--136
+Underfull \hbox (badness 10000) in paragraph at lines 80--87
 \T1/cmr/m/n/12 at ucla ('19).  [][]$\T1/cmtt/m/n/12 https : / / adeshpande3 . g
 ithub . io / A-[]Beginner %
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--136
+Underfull \hbox (badness 10000) in paragraph at lines 80--87
 \T1/cmtt/m/n/12 27s-[]Guide-[]To-[]Understanding-[]Convolutional-[]Neural-[]Net
 works/$[][]\T1/cmr/m/n/12 ,
  []
 
-[24]) [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 431.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 431.
+
+Underfull \hbox (badness 1314) in paragraph at lines 89--97
+[]\T1/cmr/m/n/12 Paulo Roberto Silva Cha-gas Ju-nior, Alexan-dre Abreu De Fre-i
+tas,
+ []
+
+
+Overfull \hbox (215.881pt too wide) in paragraph at lines 99--106
+\T1/cmtt/m/n/12 convolutional-[]neural-[]networks-[]for-[]the-[]rest-[]of-[]us-
+[]part-[]iii-[]benefits-[]and-[]motivation-[]d84cd72f5670$[][]\T1/cmr/m/n/12 ,
+ []
+
+
+Overfull \hbox (302.30989pt too wide) in paragraph at lines 114--120
+\T1/cmtt/m/n/12 @jrodthoughts / convolutional-[]neural-[]networks-[]for-[]the-[
+]rest-[]of-[]us-[]part-[]iii-[]benefits-[]and-[]motivation-[]d84cd72f5670$[][]\
+T1/cmr/m/n/12 ,
+ []
+
+[26]
+Underfull \hbox (badness 1931) in paragraph at lines 141--146
+[]\T1/cmr/m/n/12 vincentarel bun-dock.  Rdatasets.  [][]$\T1/cmtt/m/n/12 https 
+: / / vincentarelbundock .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--160
+[]\T1/cmr/m/n/12 Akshay Bal-wally,.  What is the dif-fer-ence be-tween val-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--160
+\T1/cmr/m/n/12 i-da-tion set and test set?  [][]$\T1/cmtt/m/n/12 https : / / ww
+w . quora . com /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 154--160
+\T1/cmtt/m/n/12 What-[]is-[]the-[]difference-[]between-[]validation-[]set-[]and
+-[]test-[]set$[][]\T1/cmr/m/n/12 ,
+ []
+
+) [27]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 448.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 448.
  (./classification.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 431.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 431.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 448.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 448.
 Package rerunfilecheck Info: File `classification.out' has not changed.
-(rerunfilecheck)             Checksum: 6BA2B4394D81C32008EE19EDA9A0E621;1964.
+(rerunfilecheck)             Checksum: 84BB0BC5BA79769BDDF5CF68456DFB94;2104.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24885 strings out of 492982
- 435067 string characters out of 6134897
- 609572 words of memory out of 5000000
- 27783 multiletter control sequences out of 15000+600000
+ 24910 strings out of 492982
+ 435368 string characters out of 6134897
+ 605834 words of memory out of 5000000
+ 27799 multiletter control sequences out of 15000+600000
  24007 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,15n,77p,2193b,532s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,15n,77p,2193b,551s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.26} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -1856,10 +1916,10 @@ mf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/publi
 c/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.
 pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texm
 f/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on classification.pdf (27 pages, 591266 bytes).
+Output written on classification.pdf (29 pages, 630970 bytes).
 PDF statistics:
- 469 PDF objects out of 1000 (max. 8388607)
- 409 compressed objects within 5 object streams
- 92 named destinations out of 1000 (max. 500000)
- 282 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 507 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 303 words of extra memory for PDF output out of 10000 (max. 10000000)
 

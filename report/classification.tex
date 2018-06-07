@@ -79,10 +79,14 @@ Experimental evaluation and results are reported, and finally, the conclusion an
 Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand way compared to textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher, this data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a different background as opposed to the audience which the visualizations were created for, Also when comparing two plots the raw data helps make a better decision than just the figures. Since each plot will be processed differently to extract the raw data, it very relevant that we can distinguish one plot from another and this is the main aim of this thesis. 
 
 \section{OBJECTIVE}
-The purpose of this thesis is to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line Chart, Bar Chart, Scatter Plot and Boxplot) in Scientific Literature ? \end{quote} In this work we focus on only four plots. These plots are scatter plots,bar charts,line charts and Box plots. The diagram below shows the vision of this work, The first part of the diagram involves extracting or obtaining  the four different types of plots mentioned earlier,after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
+The purpose of this thesis is to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line Chart, Bar Chart, Scatter Plot and Boxplot) in Scientific Literature ? \end{quote} In this work we focus on only four plots. These plots are scatter plots,bar charts,line charts and Box plots. Figure \ref{fig:vis} shows the vision of this work, The first part of the diagram involves extracting or obtaining  the four different types of plots mentioned earlier,after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
 But this work mainly focuses on the red dotted lines shown below in the diagram which which is getting the plots, labeling them, training the model and classifying the plots. \\
+
+\begin{figure}
 \includegraphics [scale=0.5] {vision}
 \captionof{figure}{What we hope to achieve in the thesis}
+\label{fig:vis}
+\end{figure}
 
 \chapter{Background and Related Work}
 Classification involving charts has been a topic of huge interest in recent times. This is due to the fact that most publication are embedded  with these charts as a way to convey complex research findings in more visualizable and easy to understand form. As a result of its popularity different techniques have over time been used for classification of charts and these techniques have evolved over the years. 
@@ -96,7 +100,8 @@ The following is written with inspiration from Boyle et al. work~\cite{boyle2007
 This approach also has different method. Some methods 
 involve using handcrafted features from the charts for classifying the chart. In Zhou and Tan's ~\cite{zhou2000bar} work, features like legend, x-y-axis title, chart title and value of the bar were extracted for purposes of classifying a bar-chart. In Shao and  Futrelle's~\cite{shao2005recognition} work, graphical elements of the charts like colors,tick marks on an axis and data point markers are used. Another instance where handcrafted features were used was in Inokuchi et al. work~\cite{inokuchi2000apriori}. In this work regularly appearing substructures of chart are extracted and used as features for classification. The next step is the classification step, after the features are obtained, they are then represented in vector form for the classification stage. The features are stored in a matrix vector like structure. Algorithm~\ref{alg:1} shows an example structure. This structure has columns containing the features and one column indicating the target or label of the chart. The structure is then fed as input into a machine learning technique for the model training step. In Karthikeyani and Nagarajan's paper~\cite{karthikeyani2012machine} after the features were obtained SVM Classification \footnote{http://www.statsoft.com/Textbook/Support-Vector-Machines} MLP Classification
 \footnote{http://www.iro.umontreal.ca/~bengioy/ift6266/H12/html/mlp\_en.html} and  KNN Classification\footnote{
-https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This function is known as the classification model. This technique also achieves very good results but, the drawback is the reliance on handcrafted features such as edges and corners and therefore, does not handle a large amount of data with variable context properly. Recently however, CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) \footnote{https://deeplearning4j.org/convolutionalnetwork}, a machine learning technique which automatically which does not need to be supplied with handcrafted features, since they learn the features and classify them on their own.
+https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This function is known as the classification model. This technique also achieves very good results but, the drawback is the reliance on handcrafted features such as edges and corners and therefore, does not handle a large amount of data with variable context properly. Recently however, CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) \footnote{https://deeplearning4j.org/convolutionalnetwork}, a machine learning technique which does not need to be supplied with handcrafted features, since they learn the features and classify them on their own. Hence, CovNets are used in our work to automatically classify charts and avoid the cumbersome task of having to extract handcrafted features.
+
 
 \subsection{Convolutional Neural Network}
 The following is inspired by the following blogs by ujjwalkarn \cite{cnnonline}, Ifu Aniemeka\cite{AFriendl79} and Adit Deshpande \cite{convo:online}.
@@ -213,11 +218,13 @@ The training process was done with 4000 randomly selected images and the rest we
 
 
 \chapter{Approach}
-We assume Each image is processed in three stages:
-that the chart has been isolated from the rest of the document
+As seen in the previous chapter, different approaches and methods have been described for chart image recognition. Due to the complexity of this task, a CovNet approach is employed for our work. Reasons for selecting this approach include; automatic capturing, learning and extraction of features; parameter sharing which allows the model to learn a single set of weights once, rather than a different set of weights every time~\cite{Rodriguez} and more importantly a performance accuracy nearing human capability. In spite of all the advantages of CovNets, they are very computationally expensive to apply on high resolution images. Fortunately, current GPU capabilities with the help of good optimization techniques can handle this issue~\cite{krizhevsky2012imagenet}. \newline\newline
+The specific contributions of this work is as follows: to create a dataset of chart images (scatter-plot,bar chart,line-chart and box-plot) using real world data. This chart image dataset tries to capture all variety of structure in the various chart images to be handled. The scripts, libraries and parameters used in creating the  chart images will readily available for recreation of the dataset. The second contribution, is training a CovNet model for recognizing these types of chart images when presented to it.\newline
+The rest of this chapter describes into details how the dataset was created, it also describes the CovNet architecture that was used for the classification task.
 
 \section{Dataset}
-In this section, the various datasets used in plotting are described. For each language a different set of CSV files are used for generating the plots. This is done to generate more diverse plots.
+The following paragraph is inspired by \cite{edi}.
+The saying 'Garbage in Garbage out' is a valid statement when it comes to creating a dataset for machine learning. The machine learning technique will learn from whatever data fed to it. So if a dataset of good quality is fed into the algorithm, then the model created will also be of good quality. The dataset creation stage is therefore a very important stage. In most approaches that worked on chart images classification, the dataset used consisted of images downloaded from Google and a few others were obtained from extracting them from pdf's. This approach we believe is bit limited since, we don't know the programming languages, the libraries used and parameters used in creating these charts. This information is very relevant since it tells us how diverse our resultant dataset is. For example, how are we sure that all the charts that were downloaded from Google, were not only created with python or java?, and in such case how well will a new chart created with matlab or R be classified. For this reason the dataset comprised of image charts created with different libraries and in different programming languages. In the next sections, the various datasets and the languages used in plotting are described. To make the dataset as diverse as possible, charts created in each programing language used a different set of CSV files. 
 
 \subsection{Dataset for Matlab}
 The Data used for creating the plots in Matlab were randomly chosen from Project Dataset \cite{projectdataset}, a free CSV data repository, DatPlot \cite{datplot} and Plotly CSV repository in github \cite{plotly}. The datasets are multidimensional and compiled from normal day to day activities like dating, what makes people happy etc, and objects like cameras and cars. On the average the datasets used contain about 500 instance and 5 different columns. The biggest dataset is called Speed dating data. It is made up of over 8,000 observations of answers to survey questions about how people rate themselves and how they rate others on several dimensions. The smallest dataset used has 33 instances and 12 columns. It contains information about cars. The number of gears and speed, just to name a few attributes.
@@ -415,9 +422,19 @@ The Library column shows the different plotting libraries used, the parameter co
 \end{figure}
 
 
+\section{Training, Validation and Test set}
+Figure ~\ref{fig:approach} summaries how our dataset was split for various activities. In machine learning, a model is an artifact created during the training phase, this model can be likened to a function that maps specific features to their respective labels, the model is trained with a portion of the dataset called the train set. As the model is trained, the validation set is used to decide and pick which metric out of hyper-parameters, early stopping and architecture considerations yields the best performance. These help to adjust and optimize the model~\cite{validation}.Finally, the test-set in machine learning, is the other portion of the dataset which was not used during the training phase. The test-set checks how well the trained model performs on unseen data by giving an unbiased assessment of the model. For this work, the dataset is divided into train, validation and test set. The validation set is not shown in the figure since it forms part of the train data.
+\begin{figure}
+\includegraphics [scale=0.5] {approach}
+\label{fig:approach}
+\captionof{figure}{Steps involved in building the Classification model}
+\end{figure}
 
 
-\subsection{Image Preprocesing}
+\section{The Architecture}
+
+
+\section{Image Preprocesing}
 Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
 
 \chapter{Evaluation}

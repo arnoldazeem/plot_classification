@@ -58,12 +58,32 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
 
-\bibitem{geirhos2017comparing}
-Robert Geirhos, David~HJ Janssen, Heiko~H Sch{\"u}tt, Jonas Rauber, Matthias
-  Bethge, and Felix~A Wichmann.
-\newblock Comparing deep neural networks against humans: object recognition
-  when the signal gets weaker.
-\newblock {\em arXiv preprint arXiv:1706.06969}, 2017.
+\bibitem{cnnonline}
+ujjwalkarn.
+\newblock An intuitive explanation of convolutional neural networks – the
+  data science blog.
+\newblock
+  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
+  August 2016.
+\newblock (Accessed on 05/16/2018).
+
+\bibitem{AFriendl79}
+Ifu Aniemeka.
+\newblock A friendly introduction to convolutional neural networks |
+  hashrocket.
+\newblock
+  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
+  August 2017.
+\newblock (Accessed on 05/17/2018).
+
+\bibitem{convo:online}
+Adit Deshpande.
+\newblock A beginner's guide to understanding convolutional neural networks –
+  adit deshpande – cs undergrad at ucla ('19).
+\newblock
+  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
+  July 2016.
+\newblock (Accessed on 05/17/2018).
 
 \bibitem{junior2017archi}
 Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
@@ -74,6 +94,29 @@ Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
   convolutional neural network.
 \newblock In {\em Information Visualisation (IV), 2017 21st International
   Conference}, pages 318--323. IEEE, 2017.
+
+\bibitem{Rodriguez}
+{Rodriguez, J.}
+\newblock Convolutional neural networks for the rest of us part iii: Benefits
+  and motivation.
+\newblock
+  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
+  2011.
+\newblock [Online; accessed 5-Jun-2018].
+
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
+\bibitem{edi}
+{Editor}.
+\newblock what-to-look-for-in-training-dataset.
+\newblock
+  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
+  2018.
+\newblock [Online; accessed 5-Jun-2018].
 
 \bibitem{projectdataset}
 {James Eagan}.
@@ -107,31 +150,12 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   literature.
 \newblock {\em IEEE Transactions on Big Data}, 4(1):117--129, 2018.
 
-\bibitem{cnnonline}
-ujjwalkarn.
-\newblock An intuitive explanation of convolutional neural networks – the
-  data science blog.
+\bibitem{validation}
+{Akshay Balwally,}.
+\newblock What is the difference between validation set and test set?
 \newblock
-  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
-  August 2016.
-\newblock (Accessed on 05/16/2018).
-
-\bibitem{AFriendl79}
-Ifu Aniemeka.
-\newblock A friendly introduction to convolutional neural networks |
-  hashrocket.
-\newblock
-  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
-  August 2017.
-\newblock (Accessed on 05/17/2018).
-
-\bibitem{convo:online}
-Adit Deshpande.
-\newblock A beginner's guide to understanding convolutional neural networks –
-  adit deshpande – cs undergrad at ucla ('19).
-\newblock
-  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
-  July 2016.
-\newblock (Accessed on 05/17/2018).
+  \url{https://www.quora.com/What-is-the-difference-between-validation-set-and-test-set},
+  2016.
+\newblock [Online; accessed 7-Jun-2018].
 
 \end{thebibliography}

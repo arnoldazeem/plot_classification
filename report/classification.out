@@ -22,7 +22,9 @@
 \BOOKMARK [2][-]{subsection.33}{Dataset for Python}{section.30}% 22
 \BOOKMARK [2][-]{subsection.34}{Dataset for Java}{section.30}% 23
 \BOOKMARK [1][-]{section.36}{Creating Plots}{chapter.29}% 24
-\BOOKMARK [2][-]{subsection.42}{Image Preprocesing}{section.36}% 25
-\BOOKMARK [0][-]{chapter.43}{Evaluation}{}% 26
-\BOOKMARK [0][-]{chapter.44}{Summary}{}% 27
-\BOOKMARK [0][-]{chapter.45}{Bibliography}{}% 28
+\BOOKMARK [1][-]{section.42}{Training, Validation and Test set}{chapter.29}% 25
+\BOOKMARK [1][-]{section.44}{The Architecture}{chapter.29}% 26
+\BOOKMARK [1][-]{section.45}{Image Preprocesing}{chapter.29}% 27
+\BOOKMARK [0][-]{chapter.46}{Evaluation}{}% 28
+\BOOKMARK [0][-]{chapter.47}{Summary}{}% 29
+\BOOKMARK [0][-]{chapter.48}{Bibliography}{}% 30
