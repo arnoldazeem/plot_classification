@@ -58,33 +58,6 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
 
-\bibitem{cnnonline}
-ujjwalkarn.
-\newblock An intuitive explanation of convolutional neural networks – the
-  data science blog.
-\newblock
-  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
-  August 2016.
-\newblock (Accessed on 05/16/2018).
-
-\bibitem{AFriendl79}
-Ifu Aniemeka.
-\newblock A friendly introduction to convolutional neural networks |
-  hashrocket.
-\newblock
-  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
-  August 2017.
-\newblock (Accessed on 05/17/2018).
-
-\bibitem{convo:online}
-Adit Deshpande.
-\newblock A beginner's guide to understanding convolutional neural networks –
-  adit deshpande – cs undergrad at ucla ('19).
-\newblock
-  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
-  July 2016.
-\newblock (Accessed on 05/17/2018).
-
 \bibitem{junior2017archi}
 Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
   Akiyama, Brunelli~Pinto Miranda, Tiago Davi~Oliveira De~Ara{\'u}jo, Carlos
@@ -157,5 +130,32 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   \url{https://www.quora.com/What-is-the-difference-between-validation-set-and-test-set},
   2016.
 \newblock [Online; accessed 7-Jun-2018].
+
+\bibitem{cnnonline}
+ujjwalkarn.
+\newblock An intuitive explanation of convolutional neural networks – the
+  data science blog.
+\newblock
+  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
+  August 2016.
+\newblock (Accessed on 05/16/2018).
+
+\bibitem{AFriendl79}
+Ifu Aniemeka.
+\newblock A friendly introduction to convolutional neural networks |
+  hashrocket.
+\newblock
+  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
+  August 2017.
+\newblock (Accessed on 05/17/2018).
+
+\bibitem{convo:online}
+Adit Deshpande.
+\newblock A beginner's guide to understanding convolutional neural networks –
+  adit deshpande – cs undergrad at ucla ('19).
+\newblock
+  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
+  July 2016.
+\newblock (Accessed on 05/17/2018).
 
 \end{thebibliography}

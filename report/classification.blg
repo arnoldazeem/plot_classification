@@ -3,6 +3,10 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: classification.aux
 The style file: unsrt.bst
 Database file #1: sample.bib
+Repeated entry---line 224 of file sample.bib
+ : @inproceedings{krizhevsky2012imagenet
+ :                                      ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in amara2017convolutional
 You've used 22 entries,
             1791 wiz_defined-function locations,
@@ -45,4 +49,4 @@ warning$ -- 1
 while$ -- 48
 width$ -- 24
 write$ -- 257
-(There was 1 warning)
+(There was 1 error message)

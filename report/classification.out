@@ -7,24 +7,24 @@
 \BOOKMARK [0][-]{chapter.9}{Background and Related Work}{}% 7
 \BOOKMARK [1][-]{section.10}{Model Based Approaches}{chapter.9}% 8
 \BOOKMARK [1][-]{section.11}{Machine Learning Based Approaches}{chapter.9}% 9
-\BOOKMARK [2][-]{subsection.16}{Convolutional Neural Network}{section.11}% 10
-\BOOKMARK [3][-]{subsubsection*.17}{Convolutional Layer}{subsection.16}% 11
-\BOOKMARK [3][-]{subsubsection*.18}{ReLU Layer}{subsection.16}% 12
-\BOOKMARK [3][-]{subsubsection*.19}{Pooling Layer}{subsection.16}% 13
-\BOOKMARK [3][-]{subsubsection*.20}{Fully Connected Layer}{subsection.16}% 14
-\BOOKMARK [3][-]{subsubsection*.21}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{subsection.16}% 15
-\BOOKMARK [3][-]{subsubsection*.24}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{subsection.16}% 16
-\BOOKMARK [3][-]{subsubsection*.27}{Chart classification by combining deep convolutional networks and deep belief networks}{subsection.16}% 17
-\BOOKMARK [0][-]{chapter.29}{Approach}{}% 18
-\BOOKMARK [1][-]{section.30}{Dataset}{chapter.29}% 19
-\BOOKMARK [2][-]{subsection.31}{Dataset for Matlab}{section.30}% 20
-\BOOKMARK [2][-]{subsection.32}{Dataset for R}{section.30}% 21
-\BOOKMARK [2][-]{subsection.33}{Dataset for Python}{section.30}% 22
-\BOOKMARK [2][-]{subsection.34}{Dataset for Java}{section.30}% 23
-\BOOKMARK [1][-]{section.36}{Creating Plots}{chapter.29}% 24
-\BOOKMARK [1][-]{section.42}{Training, Validation and Test set}{chapter.29}% 25
-\BOOKMARK [1][-]{section.44}{The Architecture}{chapter.29}% 26
-\BOOKMARK [1][-]{section.45}{Image Preprocesing}{chapter.29}% 27
-\BOOKMARK [0][-]{chapter.46}{Evaluation}{}% 28
-\BOOKMARK [0][-]{chapter.47}{Summary}{}% 29
-\BOOKMARK [0][-]{chapter.48}{Bibliography}{}% 30
+\BOOKMARK [2][-]{subsubsection*.16}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.11}% 10
+\BOOKMARK [3][-]{subsubsection*.19}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{subsubsection*.16}% 11
+\BOOKMARK [3][-]{subsubsection*.22}{Chart classification by combining deep convolutional networks and deep belief networks}{subsubsection*.16}% 12
+\BOOKMARK [0][-]{chapter.24}{Approach}{}% 13
+\BOOKMARK [1][-]{section.25}{Dataset}{chapter.24}% 14
+\BOOKMARK [2][-]{subsection.26}{Dataset for Matlab}{section.25}% 15
+\BOOKMARK [2][-]{subsection.27}{Dataset for R}{section.25}% 16
+\BOOKMARK [2][-]{subsection.28}{Dataset for Python}{section.25}% 17
+\BOOKMARK [2][-]{subsection.29}{Dataset for Java}{section.25}% 18
+\BOOKMARK [1][-]{section.31}{Creating Plots}{chapter.24}% 19
+\BOOKMARK [1][-]{section.37}{Training, Validation and Test set}{chapter.24}% 20
+\BOOKMARK [1][-]{section.39}{The Architecture}{chapter.24}% 21
+\BOOKMARK [2][-]{subsection.41}{Convolutional Neural Network}{section.39}% 22
+\BOOKMARK [3][-]{subsubsection*.42}{Convolutional Layer}{subsection.41}% 23
+\BOOKMARK [3][-]{subsubsection*.43}{ReLU Layer}{subsection.41}% 24
+\BOOKMARK [3][-]{subsubsection*.44}{Pooling Layer}{subsection.41}% 25
+\BOOKMARK [3][-]{subsubsection*.45}{Fully Connected Layer}{subsection.41}% 26
+\BOOKMARK [1][-]{section.46}{Image Preprocesing}{chapter.24}% 27
+\BOOKMARK [0][-]{chapter.47}{Evaluation}{}% 28
+\BOOKMARK [0][-]{chapter.48}{Summary}{}% 29
+\BOOKMARK [0][-]{chapter.49}{Bibliography}{}% 30

@@ -1,6 +1,8 @@
-/**
+/*
+*
  * Created by adaboo on 4/25/18.
- */
+
+
        import java.awt.Color;
 
         import javax.swing.JFrame;
@@ -15,9 +17,10 @@
         import org.jfree.data.xy.XYSeries;
         import org.jfree.data.xy.XYSeriesCollection;
 
-/**
+*
  * @author imssbora
- */
+
+
 public class defaultscatter extends JFrame {
     private static final long serialVersionUID = 6294689542092367723L;
 
@@ -89,3 +92,4 @@ public class defaultscatter extends JFrame {
         });
     }
 }
+*/

@@ -1,3 +1,4 @@
+/*
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -16,12 +17,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+*/
 /**
  * Created by adaboo on 4/25/18.
- */
+ *//*
+
+*/
 /**
  * Created by adaboo on 4/23/18.
- */
+ *//*
+
 
 public class linejavafx extends Application {
 
@@ -214,3 +219,4 @@ public class linejavafx extends Application {
         launch(args);
     }
 }
+*/

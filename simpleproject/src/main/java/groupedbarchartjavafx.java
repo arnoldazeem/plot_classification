@@ -1,6 +1,7 @@
 /**
  * Created by adaboo on 4/23/18.
- */
+ *//*
+
 import javafx.application.Application;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
@@ -237,3 +238,4 @@ public class groupedbarchartjavafx extends Application {
         launch(args);
     }
 }
+*/

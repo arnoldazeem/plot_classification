@@ -14,8 +14,7 @@ import org.jfree.data.statistics.DefaultBoxAndWhiskerXYDataset;
 import org.jfree.data.time.Day;
 import org.jfree.data.time.RegularTimePeriod;
 import org.jfree.data.xy.DefaultXYDataset;
-import org.jfree.date.DateUtilities;
-import org.jfree.ui.RefineryUtilities;
+
 
 import javax.swing.*;
 import java.awt.*;
