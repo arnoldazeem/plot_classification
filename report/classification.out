@@ -19,12 +19,12 @@
 \BOOKMARK [1][-]{section.31}{Creating Plots}{chapter.24}% 19
 \BOOKMARK [1][-]{section.37}{Training, Validation and Test set}{chapter.24}% 20
 \BOOKMARK [1][-]{section.39}{The Architecture}{chapter.24}% 21
-\BOOKMARK [2][-]{subsection.41}{Convolutional Neural Network}{section.39}% 22
-\BOOKMARK [3][-]{subsubsection*.42}{Convolutional Layer}{subsection.41}% 23
-\BOOKMARK [3][-]{subsubsection*.43}{ReLU Layer}{subsection.41}% 24
-\BOOKMARK [3][-]{subsubsection*.44}{Pooling Layer}{subsection.41}% 25
-\BOOKMARK [3][-]{subsubsection*.45}{Fully Connected Layer}{subsection.41}% 26
-\BOOKMARK [1][-]{section.46}{Image Preprocesing}{chapter.24}% 27
-\BOOKMARK [0][-]{chapter.47}{Evaluation}{}% 28
-\BOOKMARK [0][-]{chapter.48}{Summary}{}% 29
-\BOOKMARK [0][-]{chapter.49}{Bibliography}{}% 30
+\BOOKMARK [2][-]{subsubsection*.41}{Convolutional Layer}{section.39}% 22
+\BOOKMARK [3][-]{subsubsection*.42}{ReLU Layer}{subsubsection*.41}% 23
+\BOOKMARK [3][-]{subsubsection*.44}{Pooling Layer}{subsubsection*.41}% 24
+\BOOKMARK [3][-]{subsubsection*.45}{Dropout Layers}{subsubsection*.41}% 25
+\BOOKMARK [3][-]{subsubsection*.46}{Fully Connected Layer}{subsubsection*.41}% 26
+\BOOKMARK [1][-]{section.48}{Image Preprocesing}{chapter.24}% 27
+\BOOKMARK [0][-]{chapter.49}{Evaluation}{}% 28
+\BOOKMARK [0][-]{chapter.50}{Summary}{}% 29
+\BOOKMARK [0][-]{chapter.51}{Bibliography}{}% 30

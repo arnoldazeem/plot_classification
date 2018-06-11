@@ -4,28 +4,33 @@
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
-import java.util.ArrayList;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 import java.util.List;
-import java.util.Map;
-import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
+import de.erichseifert.gral.graphics.*;
 import de.erichseifert.gral.data.DataSource;
 import de.erichseifert.gral.data.DataTable;
-import de.erichseifert.gral.graphics.DrawingContext;
+import de.erichseifert.gral.graphics.Label;
 import de.erichseifert.gral.io.plots.DrawableWriter;
 import de.erichseifert.gral.io.plots.DrawableWriterFactory;
 import de.erichseifert.gral.plots.BoxPlot;
 import de.erichseifert.gral.plots.BoxPlot.BoxWhiskerRenderer;
 import de.erichseifert.gral.plots.PiePlot;
+import de.erichseifert.gral.plots.XYPlot;
 import de.erichseifert.gral.plots.XYPlot.XYNavigationDirection;
+import de.erichseifert.gral.plots.axes.AxisRenderer;
+import de.erichseifert.gral.plots.axes.LinearRenderer2D;
+import de.erichseifert.gral.plots.axes.LogarithmicRenderer2D;
 import de.erichseifert.gral.plots.colors.LinearGradient;
 import de.erichseifert.gral.plots.colors.ScaledContinuousColorMapper;
 import de.erichseifert.gral.ui.InteractivePanel;
 import de.erichseifert.gral.util.DataUtils;
 import de.erichseifert.gral.util.GraphicsUtils;
-import de.erichseifert.gral.graphics.Insets2D;
 import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.io.IOUtils;
 
 import javax.swing.*;
 
@@ -39,16 +44,24 @@ public class boxgral extends ExamplePanel {
 
     @SuppressWarnings("unchecked")
     public boxgral() {
-        setPreferredSize(new Dimension(480, 640));
+        setPreferredSize(new Dimension(800, 600));
 
         // Create example data
-        DataTable data = new DataTable(Float.class, Float.class, Float.class);
+        DataTable data = new DataTable(Float.class, Float.class, Float.class,Float.class,Float.class,Float.class);
 
         File dir = new File("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java data");
         File[] directoryListing = dir.listFiles();
         if (directoryListing != null) {
             for (File child : directoryListing) {
                 // Do something with child
+
+                Path path = Paths.get(child.toString());
+
+                String  keep = path.getFileName().toString();
+
+                String titl = keep.substring(0, keep.lastIndexOf('.'));
+
+                System.out.println(titl);
 
                 Map<Integer,ArrayList<String>> some= null;
 
@@ -130,7 +143,7 @@ public class boxgral extends ExamplePanel {
                         yAxis = entry.getValue();
                         //clear the series everytime
                         //xAxis.size()
-                        for (int j = 1; j < 25 ; j++) {
+                        for (int j = 1; j < 10 ; j++) {
 
                             String trim = xAxis.get(j).trim();
                             String trim2 = yAxis.get(j).trim();
@@ -150,7 +163,7 @@ public class boxgral extends ExamplePanel {
                             float e = Float.parseFloat(trim5);
                             float f = Float.parseFloat(trim6);
 
-                            data.add(a, b, c);
+                            data.add(a,b,c,d,e,f);
 
                         }
 
@@ -160,13 +173,33 @@ public class boxgral extends ExamplePanel {
                         BoxPlot plot = new BoxPlot(boxData);
 
                         // Format plot
-                        plot.setInsets(new Insets2D.Double(20.0, 50.0, 40.0, 20.0));
+                        plot.setInsets(new Insets2D.Double(20.0, 60.0, 60.0, 40.0));
+
+                        plot.setBackground(Color.WHITE);
+
+
+                        // Format axes
+                        AxisRenderer axisRendererX = new LinearRenderer2D();
+                        AxisRenderer axisRendererY = plot.getAxisRenderer(XYPlot.AXIS_Y);
+                        axisRendererX.setLabel(new Label(yAxis.get(0)));
+
+                        plot.setAxisRenderer(XYPlot.AXIS_X, axisRendererX);
+
+
+
+                        Label linearAxisLabel = new Label(xAxis.get(0));
+                        linearAxisLabel.setRotation(90);
+                        axisRendererY.setLabel(linearAxisLabel);
+
+                         //xAxis.get(0)
+
+                        plot.getTitle().setText("A three boxplot showing data from " + titl);
 
                         // Format axes
                         plot.getAxisRenderer(BoxPlot.AXIS_X).setCustomTicks(
                                 DataUtils.map(
-                                        new Double[] {1.0, 2.0, 3.0},
-                                        new String[] {"Column 1", "Column 2", "Column 3"}
+                                        new Double[] {1.0, 2.0, 3.0, 4.0,5.0,6.0},
+                                        new String[] {"Column 1", "Column 2", "Column 3","Column 4","Column 5","Column 6"}
                                 )
                         );
 
@@ -185,8 +218,10 @@ public class boxgral extends ExamplePanel {
                         pointRenderer.setWhiskerColor(COLOR1);
                         pointRenderer.setCenterBarColor(COLOR1);
 
-                        plot.getNavigator().setDirection(XYNavigationDirection.VERTICAL);
 
+                        //plot.setLegendVisible(true);
+
+                        plot.getNavigator().setDirection(XYNavigationDirection.VERTICAL);
 
 
                         // Add plot to Swing component
@@ -195,7 +230,21 @@ public class boxgral extends ExamplePanel {
                        // add(panel);
                         try{
 
-                            save(plot);
+                            String mimeType = "image/png";
+
+                            DrawableWriter writer = DrawableWriterFactory.getInstance().get(mimeType);
+
+                            File file = new File(xAxis.get(0) +"legend" + ".png");
+
+                            FileOutputStream outStream = null;
+                            try {
+                                outStream = new FileOutputStream((file));
+                                plot.setBounds(10, 10, 790, 590);
+                                writer.write(plot, outStream, 800, 600);
+                            } finally {
+                                outStream.flush();
+                                outStream.close();
+                            }
 
                         }catch(Exception e){
                             e.printStackTrace();
@@ -222,19 +271,6 @@ public class boxgral extends ExamplePanel {
     }
 
 
-    public void save(BoxPlot plot) {
-        JFileChooser chooser = new JFileChooser();
-        int option = chooser.showSaveDialog(null);
-        if (option == JFileChooser.APPROVE_OPTION) {
-            File file = chooser.getSelectedFile();
-            try {
-                DrawableWriter writer = DrawableWriterFactory.getInstance().get("application/postscript");
-                writer.write(plot, new FileOutputStream(file), 800, 600);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-    }
 
     @Override
     public String getTitle() {

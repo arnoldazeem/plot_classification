@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
 \bibitem{karthikeyani2012machine}
 V~Karthikeyani and S~Nagarajan.
 \newblock Machine learning classification algorithms to recognize chart types
@@ -77,12 +83,6 @@ Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
   2011.
 \newblock [Online; accessed 5-Jun-2018].
 
-\bibitem{krizhevsky2012imagenet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock In {\em Advances in neural information processing systems}, pages
-  1097--1105, 2012.
-
 \bibitem{edi}
 {Editor}.
 \newblock what-to-look-for-in-training-dataset.
@@ -131,31 +131,27 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   2016.
 \newblock [Online; accessed 7-Jun-2018].
 
-\bibitem{cnnonline}
-ujjwalkarn.
-\newblock An intuitive explanation of convolutional neural networks – the
-  data science blog.
+\bibitem{relu}
+{Balwally, A.}
+\newblock What is the role of rectified li.
 \newblock
-  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
-  August 2016.
-\newblock (Accessed on 05/16/2018).
+  \url{https://www.quora.com/What-is-the-role-of-rectified-linear-ReLU-activation-function-in-CNN},
+  2018.
+\newblock [Online; accessed 9-Jun-2018].
 
-\bibitem{AFriendl79}
-Ifu Aniemeka.
-\newblock A friendly introduction to convolutional neural networks |
-  hashrocket.
+\bibitem{dropout}
+{Rodriguez, J.}
+\newblock Convolutional neural networks for the rest of us part iii: Benefits
+  and motivation.
 \newblock
-  \url{https://hashrocket.com/blog/posts/a-friendly-introduction-to-convolutional-neural-networks#relu-layer},
-  August 2017.
-\newblock (Accessed on 05/17/2018).
+  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
+  2018.
+\newblock [Online; accessed 10-Jun-2018].
 
-\bibitem{convo:online}
-Adit Deshpande.
-\newblock A beginner's guide to understanding convolutional neural networks –
-  adit deshpande – cs undergrad at ucla ('19).
-\newblock
-  \url{https://adeshpande3.github.io/A-Beginner%27s-Guide-To-Understanding-Convolutional-Neural-Networks/},
-  July 2016.
-\newblock (Accessed on 05/17/2018).
+\bibitem{softmax}
+{karpathy}.
+\newblock Cs231n convolutional neural networks for visual recognition.
+\newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
+\newblock [Online; accessed 11-Jun-2018].
 
 \end{thebibliography}

@@ -10,14 +10,14 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in amara2017convolutional
 You've used 22 entries,
             1791 wiz_defined-function locations,
-            561 strings with 8012 characters,
-and the built_in function-call counts, 5359 in all, are:
+            559 strings with 7796 characters,
+and the built_in function-call counts, 5353 in all, are:
 = -- 508
 > -- 211
 < -- 8
 + -- 81
 - -- 59
-* -- 255
+* -- 249
 := -- 784
 add.period$ -- 83
 call.type$ -- 22

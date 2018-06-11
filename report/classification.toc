@@ -20,12 +20,12 @@
 \contentsline {section}{\numberline {3.2}Creating Plots}{17}{section.31}
 \contentsline {section}{\numberline {3.3}Training, Validation and Test set}{20}{section.37}
 \contentsline {section}{\numberline {3.4}The Architecture}{21}{section.39}
-\contentsline {subsection}{\numberline {3.4.1}Convolutional Neural Network}{22}{subsection.41}
-\contentsline {subsubsection}{Convolutional Layer}{22}{subsubsection*.42}
-\contentsline {subsubsection}{ReLU Layer}{22}{subsubsection*.43}
+\contentsline {subsubsection}{Convolutional Layer}{21}{subsubsection*.41}
+\contentsline {subsubsection}{ReLU Layer}{22}{subsubsection*.42}
 \contentsline {subsubsection}{Pooling Layer}{23}{subsubsection*.44}
-\contentsline {subsubsection}{Fully Connected Layer}{23}{subsubsection*.45}
-\contentsline {section}{\numberline {3.5}Image Preprocesing}{23}{section.46}
-\contentsline {chapter}{\numberline {4}Evaluation}{24}{chapter.47}
-\contentsline {chapter}{\numberline {5}Summary}{25}{chapter.48}
-\contentsline {chapter}{\numberline {6}Bibliography}{26}{chapter.49}
+\contentsline {subsubsection}{Dropout Layers}{23}{subsubsection*.45}
+\contentsline {subsubsection}{Fully Connected Layer}{24}{subsubsection*.46}
+\contentsline {section}{\numberline {3.5}Image Preprocesing}{24}{section.48}
+\contentsline {chapter}{\numberline {4}Evaluation}{25}{chapter.49}
+\contentsline {chapter}{\numberline {5}Summary}{26}{chapter.50}
+\contentsline {chapter}{\numberline {6}Bibliography}{27}{chapter.51}

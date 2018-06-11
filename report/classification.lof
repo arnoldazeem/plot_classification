@@ -8,7 +8,8 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{19}{figure.caption.35}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{19}{figure.caption.36}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Steps involved in building the Classification model\relax }}{21}{figure.caption.38}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecure of CovNet used to train our model\relax }}{21}{figure.caption.40}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecure of CovNet used to train our model\relax }}{22}{figure.caption.40}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{23}{figure.caption.43}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
