@@ -1,10 +1,23 @@
 \begin{thebibliography}{10}
 
+\bibitem{softmax}
+{karpathy}.
+\newblock Cs231n convolutional neural networks for visual recognition.
+\newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
+\newblock [Online; accessed 11-Jun-2018].
+
 \bibitem{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   1097--1105, 2012.
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
+  2014.
 
 \bibitem{karthikeyani2012machine}
 V~Karthikeyani and S~Nagarajan.
@@ -63,6 +76,41 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
   graph data.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
+
+\bibitem{covnet}
+{Cornelisse, D.}
+\newblock An intuitive guide to convolutional neural networks. [online]
+  freecodecamp.
+\newblock \url{
+  https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050},
+  2018.
+\newblock [Online; accessed 12-Jun-2018].
+
+\bibitem{relu}
+{Balwally, A.}
+\newblock What is the role of rectified li.
+\newblock
+  \url{https://www.quora.com/What-is-the-role-of-rectified-linear-ReLU-activation-function-in-CNN},
+  2018.
+\newblock [Online; accessed 9-Jun-2018].
+
+\bibitem{dropout}
+{Rodriguez, J.}
+\newblock Convolutional neural networks for the rest of us part iii: Benefits
+  and motivation.
+\newblock
+  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
+  2018.
+\newblock [Online; accessed 10-Jun-2018].
+
+\bibitem{cnnonline}
+ujjwalkarn.
+\newblock An intuitive explanation of convolutional neural networks – the
+  data science blog.
+\newblock
+  \url{https://ujjwalkarn.me/2016/08/11/intuitive-explanation-convnets/},
+  August 2016.
+\newblock (Accessed on 05/16/2018).
 
 \bibitem{junior2017archi}
 Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
@@ -130,28 +178,5 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   \url{https://www.quora.com/What-is-the-difference-between-validation-set-and-test-set},
   2016.
 \newblock [Online; accessed 7-Jun-2018].
-
-\bibitem{relu}
-{Balwally, A.}
-\newblock What is the role of rectified li.
-\newblock
-  \url{https://www.quora.com/What-is-the-role-of-rectified-linear-ReLU-activation-function-in-CNN},
-  2018.
-\newblock [Online; accessed 9-Jun-2018].
-
-\bibitem{dropout}
-{Rodriguez, J.}
-\newblock Convolutional neural networks for the rest of us part iii: Benefits
-  and motivation.
-\newblock
-  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
-  2018.
-\newblock [Online; accessed 10-Jun-2018].
-
-\bibitem{softmax}
-{karpathy}.
-\newblock Cs231n convolutional neural networks for visual recognition.
-\newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
-\newblock [Online; accessed 11-Jun-2018].
 
 \end{thebibliography}

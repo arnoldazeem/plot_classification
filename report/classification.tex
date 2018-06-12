@@ -41,6 +41,8 @@ citecolor = black]{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{algorithm}
+\usepackage{booktabs}
+\usepackage{tabularx}
 
 
 \begin{document}
@@ -75,16 +77,18 @@ The other parts of this paper are organized in the follows:
 In the next Sections, we present the motivation behind this work. Other works related to this,  our proposed method is described,
 Experimental evaluation and results are reported, and finally, the conclusion and the way to approach this work in the future.
 
-\section{MOTIVATION}
+\section{Motivation}
 Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand format as compared to the textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher. The extracted data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background as opposed to the audience for which the visualizations were created initially. Another reason for extracting this data is that, when comparing two plots, looking at the raw data, gives us more insight and consequently helps in better decision making as compared to just looking at the figures. Since each plot will be processed differently to extract the raw data, it is very relevant that we can distinguish one plot from another and this is the main aim of this thesis.
 
-\section{OBJECTIVE}
+\section{Objective}
 The purpose of this thesis is to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? \end{quote} In this work we focus on only four plots. These plots are scatter-plots, bar-charts, line-charts, and box-plots. Figure \ref{fig:vis} shows the vision of this work, The first part of the diagram involves, extracting or obtaining  the four different types of plots mentioned earlier, after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
 But this thesis mainly focuses on the red dotted lines shown below in the diagram which involves, gathering a dataset of chart images, labeling them, training the model and classifying the plots. \\
 
 \begin{figure}
 \includegraphics [scale=0.5] {vision}
-\captionof{figure}{What we hope to achieve in the thesis}
+\captionof{figure}{Overview of process to obtain raw 
+	data from scientific papers. The red outline indicates the work in this 
+	thesis.}
 \label{fig:vis}
 \end{figure}
 
@@ -99,7 +103,95 @@ The following is written with inspiration from Boyle et al. work~\cite{boyle2007
 This method was developed in recent times, and most works in area of text mining and image processing employ this approach. This method 
 involves using handcrafted features extracted from the charts for classification task. In Zhou and Tan's ~\cite{zhou2000bar} work, features like legend, x-y-axis title, chart title, and values of the bar of a bar-chart were extracted for purposes of classifying a bar-chart. In Shao and  Futrelle's~\cite{shao2005recognition} work, graphical elements of the charts like colors,tick marks on an axis and data point markers are the handcrafted feature used for classification. Another instance where handcrafted features were used was in Inokuchi et al. work~\cite{inokuchi2000apriori}. In this work regularly appearing substructures of chart are extracted and used as features for classification. After the feature acquisition step, the obtained features are then represented in vector form for the classification step. The features are stored in a matrix vector-like structure. Algorithm~\ref{alg:1} shows an example of the structure in which the features are stored. This structure has multiple columns containing the features and one column indicating the target or label of the chart. This vector-like structure is then fed as input into a machine learning technique for the model training step. In Karthikeyani and Nagarajan's paper~\cite{karthikeyani2012machine} after the features were obtained SVM Classification \footnote{http://www.statsoft.com/Textbook/Support-Vector-Machines}, MLP Classification
 \footnote{http://www.iro.umontreal.ca/~bengioy/ift6266/H12/html/mlp\_en.html}, and  KNN Classification\footnote{
-https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This technique achieves very good results but, the drawback is the over reliance on handcrafted features. This drawback makes it difficult when large amount of data consisting of a variable context structure is involved, and this situation is evident in most cases. Recently, however CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) \footnote{https://deeplearning4j.org/convolutionalnetwork}, a machine learning technique which removes the drawback of using handcrafted features by learning important features anywhere in the image by itself. CovNets performance on image classification keeps on improving and in recent times, results are being compared to human performance levels. \newline
+https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This technique achieves very good results but, the drawback is the over reliance on handcrafted features. This drawback makes it difficult when large amount of data consisting of a variable context structure is involved, and this situation is evident in most cases. Recently, however CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) \footnote{https://deeplearning4j.org/convolutionalnetwork}, a machine learning technique which removes the drawback of using handcrafted features by learning important features anywhere in the image by itself. CovNets performance on image classification keeps on improving and in recent times, results are being compared to human performance levels. CovNets were used in this work, in the next section they will be explained into details, and is inspired by an article written by Daphne Cornelisse \cite{covnet}.\newline
+
+\subsubsection{The Brain}
+The following is . As human beings we identify objects around as all the time with minimal effort. We identify objects based on what we previously leaned. We see objects, label, recognize patterns, and make predictions subconsciously everyday. How are we able to do this effortlessly? Even though the whole process starts with the eye, most of the process happens in the part of the brain called the primary visual cortex. When we see an object, light receptors send signals via the optic nerves to the visual cortex and sense is made of the perceived object by this organ. The deep neural connections in the brain plays a major role in remembering and identifying objects.
+
+\subsection{Convolutional Neural Network}
+Just like how human beings learn to recognize and label objects, we 
+need to show an algorithm a huge number of images for it to be able to identify an image it has never seen before. Computers unlike humans perceive images as a 2D array of numbers, known as pixels.
+A CovNet has neurons just like the visual cortex and these are organized into layers. Each layer tries to identify a part of the input image. For example on layer identifies the edges, another identifies the curves and so on. This is done by employing the spatial relation that exit in the pixel of an image. All the layers are connected to each other. There are four main layers in the CovNet:
+
+\begin{itemize}
+	\item Convolution
+	\item Non Linearity (ReLU)
+	\item Pooling or Sub Sampling
+	\item Classification (Fully Connected Layer)
+\end{itemize} 
+
+
+\begin{figure}
+	\includegraphics [scale=0.5] {cat}
+	\captionof{figure}{How a computer perceives an image- source \cite{softmax}}
+	\label{fig:cat}
+\end{figure}
+
+
+
+\subsubsection{Convolutional Layer}
+The Convolutional layer will be explained using the following example, let consider the image as a magical cake of height and width 48x48, and there is a cake cutter of size say 5x5. The cutter is used to cut the cake from the top left. The cutter is referred to as a filter in machine learning. The cutter in this case is also an array of numbers called weights and for the maths to work the cutter must have the same depth as our cake (5x5x3).
+Lets first consider the cutter being in the first position ie. the top left of the cake. The values in the cutter are multiplied with the values of the cake (element wise multiplications). These multiplications are all summed up and result in a single number. This single number is only for the first part and this process is repeated through out the whole cake (Next step would be moving the cutter to the right by 1 unit, then to the right again by 1, and so on) keep in mind its a magical cake so you can cut a part more than once. After using the cutter on the whole of the magical cake we result in a new cake of size 28x28x1, the results is called a feature map. The filters are low level feature identifiers (straight edges, simple colors, and curves). 
+
+
+\subsubsection{Activation Functions}
+The activation functions are a very important part of a CovNet, they are mostly added to the output end of a Convolutional layer. It usually maps the output values between 0 and 1 or -1 and 1. The activation functions can be divided into two categories; linear and non-linear functions. The non-linear functions are the most used because most of real world data are non-linear. There 3 main types of this function that are mostly used. They are the sigmoid, tanh and ReLu. The sigmoid map the output value between 0 and 1, the tanh maps the output between -1 and 1 and finally the ReLu the most used activation function. The Rectified Linear Units (ReLU) is found in all layers during the Convolution phase, this layer implements element-wise nonlinearity to our Convolutional layer, this just means it helps to handle situations where the relation between the input values and the CovNet output is non-linear. The ReLU has a function \(f(x) = max(0,x)\) which means if you give it a value x, it will return 0 if x is negative and will return the value itself if its positive. We used ReLU mainly because it speeds up the training process significantly and it does not saturate(the gradient is very small, if the input is elevated or small) unlike the tanh and sigmoid~\cite{relu}. Figure ~\ref{fig:relu} shows a plot from Krizhevsky et al. \cite{krizhevsky2012imagenet} paper shows that there is a 6x advancement in convergence with the ReLU unit compared to the tanh unit. The bold line represents the ReLU and tanh is the dashed line.
+
+\begin{figure}
+	\includegraphics [scale=0.9] {relu}
+	\captionof{figure}{ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite{krizhevsky2012imagenet}}
+	\label{fig:relu}
+\end{figure}
+
+
+\subsubsection{Pooling Layer}
+The pooling layers basically have two main functions, first one is that it helps the CovNet to locate features regardless of which part of the image it is located. This results in the model being robust against small changes in position of the features of the images. The second function is that it also helps to reduce the size of the feature map. Therefore computations in the futures layers are relatively less complex. One way of performing pooling is using max pooling technique other less used techniques include Average and sum pooling, the idea in max-pooling is like sliding a window through the feature map, the windows fills a number of arrays in the feature map therefore, you pick the largest among all the numbers and disregard the rest of the numbers. We employ this technique in the first, second and last Convolutional layers of our network.
+
+\subsubsection{Dropout Layers}
+The following is inspired by an article on Medium \cite{dropout}. 
+This layer is used for regularizing your network. The dropout is used in our CovNet to prevent over-fitting. The Fully connected layers eventually handles more parameters and therefore neurons become co-dependent on one another, and this leads to over-fitting during the training phase. When dropout is implemented in a network, it does not use all neurons during a particular forward or backward pass during training but, chooses random neurons at a specified probability for each pass. Figure \ref{fig:dropout} shows how how a dropout is different from a normal neural network.
+
+\begin{figure}[!htb]
+	\includegraphics [scale=0.6] {dropout}
+	
+	\captionof{figure}{Left: shows a standard neural net. Right:
+		shows a neural network where dropout has been applied on.
+		Crossed units are dropped units. figure from Krizhevsky et al. paper \cite{srivastava2014dropout}}
+	\label{fig:dropout}
+\end{figure}
+
+
+\subsubsection{Fully Connected Layer}
+Fully connected simply implies that every neuron from the previous layer is connected to every other neuron in the next layer. The output of this layer are high level features of the image presented to the network. The output of this layer is a probability distribution of all the classes in the network and this is ensured by using an activation function, usually a softmax activation function. We used a sofmax activation as opposed to other activation functions because, it handles low invigoration
+in images (say blurry charts) of your neural net with rather uniform distribution and to high invigoration in images (say large numbers, like sharp images) with prediction probabilities between 1 and 0. To put in simple terms, the Convolutional and pooling layers act as feature extractors and the last layer, the fully connected layer act as the classifier.
+
+\begin{equation} \label{eq:soft}
+f_j(z) = \frac{e^{z_j}}{\sum_k e^{z_k}}
+\end{equation}
+
+The equation \ref{eq:soft} is a softmax function, (z) represents a vector, so the function takes (in z) and crushes it to a probability value between zero and one \cite{softmax}.
+
+\subsubsection{Training process}
+This section is inspired by a blog written by ujjwalkarn \cite{cnnonline}.
+The process by which a CovNet performs classification is summarized below.
+
+\begin{itemize}
+	\item All parameters (weights, filter, and biases) are initialized randomly.
+	\item The network is then given as input the image. The forward pass is then performed (convolution, relu, pooling and fully connected layer),  the output is a probability of each class.
+	\item here the error in the output is calculated.
+	\[Total Error = \sum  \frac{1}{2} (target probability - output probability) ^2 \]
+	\item This step reduces the total error by performing back-propagation, the gradients of the error with respect to the weights are calculated. This is used to update parameters and therefore results in reducing the total error.
+	\item In the final step, steps 2 to 4 are repeated for all images in the training dataset. The best parameters are then stored for the prediction of a new image given to the network. 
+	
+\end{itemize}
+
+
+
+
+\section{Image Preprocesing}
+Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
+
+
 In the rest of this chapter, three related works that performed chart image classification, with very unique methods and also achieved good results are described in details.  
 
 \subsubsection{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}
@@ -220,8 +312,11 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 
 
 
-\begin{table}[h]
-	\centering \def\arraystretch{1.5} \small
+\begin{table}[htb]
+
+	\centering
+\begin{adjustbox}{max width=1.1\textwidth,center}
+	
 	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|p{4cm}|}
 		
 		 \hline
@@ -246,8 +341,12 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 		nz\_weather.csv \par volcano.csv \par iris.csv \par mtcars.csv	\\ \hline
 		
 	\end{tabular}
-	\caption {Names of datasets used in each plotting program}	
-	\label{table:1}
+	
+\end{adjustbox}
+
+
+\caption {Names of datasets used in each plotting program}	
+\label{table:1}
 \end{table}
 
 
@@ -261,10 +360,9 @@ The Library column shows the different plotting libraries used, the parameter co
 	
 \begin{table}[]
 	\centering \def\arraystretch{1.5} \small
-	\caption {Overview of the varied parameters for creating plots in the different plotting programs}
-	
+	\caption {Overview of the varied parameters for creating plots in the different plotting programs}	
 	\label{table:2}
-	\begin{adjustbox}{width=\textwidth}
+	\begin{adjustbox}{max width=1.1\textwidth,center}
 	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{2cm}|p{4cm}|}
 		\hline
 		\multicolumn{5}{|c|}{SCATTER PLOTS} \\
@@ -334,6 +432,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		\caption{Matplotlib scatter plot with star and circular markers }
 		\label{fig:fig1}
 	\end{subfigure}%
+
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{scatter2}
@@ -417,30 +516,11 @@ As mentioned in previous sections, our model is trained with a CovNet. This arch
 \end{figure}
 
 \subsubsection{Convolutional Layer}
-The convolutional layer will be explained using the following example, let consider the image as a magical cake of height and width 48x48, and there is a cake cutter of size say 5x5. The cutter is used to cut the cake from the top left. The cutter is referred to as a filter in machine learning. The cutter in this case is also an array of numbers called weights and for the maths to work the cutter must have the same depth as our cake (5x5x3).
-Lets first consider the cutter being in the first position ie. the top left of the cake. The values in the cutter are multiplied with the values of the cake (element wise multiplications). These multiplications are all summed up and result in a single number. This single number is only for the first part and this process is repeated through out the whole cake (Next step would be moving the cutter to the right by 1 unit, then to the right again by 1, and so on) keep in mind its a magical cake so you can cut a part more than once. After using the cutter on the whole of the magical cake we result in a new cake of size 28x28x1, the results is called a feature map. The filters are low level feature identifiers (straight edges, simple colors, and curves). As mentioned above 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 224 x 224 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling.
+As mentioned above 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 224 x 224 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling.
 
-\subsubsection{ReLU Layer}
-The Rectified Linear Units (ReLU) is found in all layers during the Convolution phase, this layer implements element-wise nonlinearity to our Convolutional layer, this just means it helps to handle situations where the relation between the input values and the CovNet output is non-linear. The ReLU has a function \(f(x) = max(0,x)\) which means if you give it a value x, it will return 0 if x is negative and will return the value itself if its positive.
-There are also other functions which can used in place of the ReLU, that is the tanh or the sigmoid. We used ReLU mainly because it speeds up the training process significantly and it does not saturate(the gradient is very small, if the input is elevated or small) unlike the tanh and sigmoid~\cite{relu}. Figure ~\ref{fig:relu} shows a plot from Krizhevsky et al. \cite{krizhevsky2012imagenet} paper shows that there is a 6x advancement in convergence with the ReLU unit compared to the tanh unit. The bold line represents the ReLU and tanh is the dashed line.
+\subsection{Dropout}
+A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or or maintained at a probability of 0.5.
 
-\begin{figure}
-	\includegraphics [scale=0.9] {relu}
-	\captionof{figure}{ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite{krizhevsky2012imagenet}}
-	\label{fig:relu}
-\end{figure}
-
-
-
-\subsubsection{Pooling Layer}
-The pooling layers basically have two main functions, first one is that it helps the CovNet to locate features regardless of which part of the image it is located. This results in the model being robust against small changes in position of the features of the images. The second function is that it also helps to reduce the size of the feature map. Therefore computations in the futures layers are relatively less complex. One way of performing pooling is using max pooling technique, thats is sliding a window through the feature map, the windows fills a number of arrays in the feature map therefore, you pick the largest among all the numbers and disregard the rest of the numbers. We employ this technique in the first, second and last Convolutional layers of our network.
-
-\subsubsection{Dropout Layers}
-The following is inspired by an article on Medium \cite{dropout}. A dropout was used in the first and second Fully connected layers in our architecture. The dropout is used in our CovNet to prevent over-fitting. The Fully connected layers eventually handles more parameters and therefore neurons become co-dependent on one another, and this leads to over-fitting during the training phase.
-When dropout is implemented in a network, it does not use all neurons during a particular forward or backward pass during training but, choose random neurons at a specified probability for each pass. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or or maintained at a probability of 0.5.
-
-
-\subsubsection{Fully Connected Layer}
 The last set of layers used are the Fully connected layers. 
 The first layer takes as input the 1D feature vector generated by a flatten layer in our network. The flatten layer converts all our 2D arrays from our previous Convolutional layers into a 1D resultant vector. The output of this layer is then fed as input into the second fully connected layer. The output of the second layer is then fed into the last fully connected layer. The last layer in this set of 3 layers uses the softmax activation to give our output prediction. The output is a separate probability of our four classes and the choice with the highest probability is our chosen prediction. We used a sofmax activation as opposed to other activation functions because, it handles low invigoration
 in images (say blurry charts) of your neural net with rather uniform distribution and to high invigoration in images (say large numbers, like sharp images) with prediction probabilities between 1 and 0.
@@ -451,13 +531,7 @@ f_j(z) = \frac{e^{z_j}}{\sum_k e^{z_k}}
 
 The equation \ref{eq:soft} is a softmax function, (z) represents a vector, so the function takes (in z) and crushes it to a probability value between zero and one \cite{softmax}.
 
-
-
-
-\section{Image Preprocesing}
-Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
-
-\chapter{Evaluation}
+\chapter{Experiments}
 
 
 \chapter{Summary}

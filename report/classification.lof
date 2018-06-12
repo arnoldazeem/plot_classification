@@ -1,15 +1,17 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces What we hope to achieve in the thesis\relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Overview of process to obtain raw data from scientific papers. The red outline indicates the work in this thesis.\relax }}{7}{figure.caption.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces How a computer perceives an image- source \cite {softmax}\relax }}{11}{figure.caption.18}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{12}{figure.caption.21}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{13}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plots\relax }}{17}{figure.caption.33}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Example Bar Charts\relax }}{19}{figure.caption.34}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{19}{figure.caption.35}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{19}{figure.caption.36}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Steps involved in building the Classification model\relax }}{21}{figure.caption.38}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecure of CovNet used to train our model\relax }}{22}{figure.caption.40}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{23}{figure.caption.43}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plots\relax }}{22}{figure.caption.46}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Example Bar Charts\relax }}{24}{figure.caption.47}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{24}{figure.caption.48}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{24}{figure.caption.49}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Steps involved in building the Classification model\relax }}{26}{figure.caption.51}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Architecure of CovNet used to train our model\relax }}{27}{figure.caption.53}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
