@@ -43,8 +43,7 @@ citecolor = black]{hyperref}
 \usepackage{algorithm}
 \usepackage{booktabs}
 \usepackage{tabularx}
-
-
+\usepackage{placeins}
 \begin{document}
 
 \input{title-page}
@@ -66,8 +65,36 @@ citecolor = black]{hyperref}
 \titleformat{\chapter}{\LARGE\bfseries}{\thechapter}{1em}{}
 
 \newpage
+\chapter{Acknowledgements}
+ 
+
+\newpage
 \chapter{Introduction}
-"A picture is worth a thousand words" even though a widely used phrase stands to be very true especially when complex data is visualized and presented in scientific research publications. 
+"A picture is worth a thousand words" even though a widely used phrase stands to be very true especially when dealing with scientific literature. This is due to the fact that information and data is easily understood when visualized, for this reason most scientific publications tend to present their data using tables, plots and pictures. Identification, extraction and interpretation of this visualized data for purposes of; validation of results by another researcher, or presentation of the data to another audience is an area in machine learning which is still found wanting.\newline\newline
+The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification.  In the other sections of this chapter the research motivation, objectives, contributions and an outline of
+the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6
+
+
+
+\section{Overview} 
+A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots,stars,diamonds and an asterisk in the case of a scatter plot.
+Charts are often used to visualize complex data for easy understanding and interpretation, to find patterns and trends in data. Charts can usually be read more quickly than textual data, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the helped of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts works better when we want to find trends in data and scatter plots are used when we want to find relationships in data.
+
+
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics [scale=0.6] {chart}
+	\captionof{figure}{Seletecting the approapriate chart for visualizing data \cite{srivastava2014dropout}}
+	\label{fig:chartse}
+\end{figure}
+
+
+When comparing the usage of texts and images in most information content 
+
+the brain processes visual information sixty thousand
+
+Chart images are a very important part of scientific documents.
 Data is ever growing and sometimes complex, using figures and diagrams to interpret and represent this data cannot be undermined since, they provide a way to easily give insight into the research findings, which would have otherwise been more complex relying on  only textual data. For this reason, there has been a growing interest in the chart analysis area and quite a number of techniques have been developed. I spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}.
 For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends.
 In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted.
@@ -108,10 +135,25 @@ https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create
 \subsubsection{The Brain}
 The following is . As human beings we identify objects around as all the time with minimal effort. We identify objects based on what we previously leaned. We see objects, label, recognize patterns, and make predictions subconsciously everyday. How are we able to do this effortlessly? Even though the whole process starts with the eye, most of the process happens in the part of the brain called the primary visual cortex. When we see an object, light receptors send signals via the optic nerves to the visual cortex and sense is made of the perceived object by this organ. The deep neural connections in the brain plays a major role in remembering and identifying objects.
 
+\subsection{Input data format}
+This section was inspired by Nikhil B's article \cite{input}. Just like the way the human eye needs to perform some preprocessing steps before an image signal reaches the brain, an image recognition system can better identify images if some preprocessing steps were performed on the input images. Below some effective preprocessing steps that go a long way to improve image recognition are explained:
+
+\begin{itemize}
+	
+	\item \textbf{Uniform aspect ratio:}  Neural networks usually take as input square shaped images, all images should consequently have the same size and aspect ratio. Images should for this reason be checked and cropped to meet this requirement appropriately. One important thing we should consider when cropping is to keep the middle part as much as possible.
+	
+	\item \textbf{Normalizing image inputs:} This step is mainly performed to ensure that there is uniform distribution in the image pixels data distribution.This in the long run accelerates convergence during the process of training. 
+
+	\item \textbf{Dimensionality reduction:} Depending on the type of experiment being performed, the RGB channels of a colored image can be collapsed and convected to a gray-scale channel. This can result in a faster training time.
+	
+	\item \textbf{Data augmentation:} This step is also very dependent on the type of experiment being done. Variant of the input image are acquired by argumenting the existing dataset. This includes scaling, rotation etc.
+		
+\end{itemize} 
+
+
+
 \subsection{Convolutional Neural Network}
-Just like how human beings learn to recognize and label objects, we 
-need to show an algorithm a huge number of images for it to be able to identify an image it has never seen before. Computers unlike humans perceive images as a 2D array of numbers, known as pixels.
-A CovNet has neurons just like the visual cortex and these are organized into layers. Each layer tries to identify a part of the input image. For example on layer identifies the edges, another identifies the curves and so on. This is done by employing the spatial relation that exit in the pixel of an image. All the layers are connected to each other. There are four main layers in the CovNet:
+Just like how human beings learn to recognize and label objects, we need to show an algorithm a huge number of images for it to be able to identify an image it has never seen before. Computers unlike humans perceive images as a 2D array of numbers, known as pixels. A CovNet has neurons just like the visual cortex and these are organized into layers. Each layer tries to identify a part of the input image. For example on layer identifies the edges, another identifies the curves and so on. This is done by employing the spatial relation that exit in the pixel of an image. All the layers are connected to each other. There are four main layers in the CovNet:
 
 \begin{itemize}
 	\item Convolution
@@ -121,7 +163,7 @@ A CovNet has neurons just like the visual cortex and these are organized into la
 \end{itemize} 
 
 
-\begin{figure}
+\begin{figure}[htb!]
 	\includegraphics [scale=0.5] {cat}
 	\captionof{figure}{How a computer perceives an image- source \cite{softmax}}
 	\label{fig:cat}
@@ -181,16 +223,9 @@ The process by which a CovNet performs classification is summarized below.
 	\item here the error in the output is calculated.
 	\[Total Error = \sum  \frac{1}{2} (target probability - output probability) ^2 \]
 	\item This step reduces the total error by performing back-propagation, the gradients of the error with respect to the weights are calculated. This is used to update parameters and therefore results in reducing the total error.
-	\item In the final step, steps 2 to 4 are repeated for all images in the training dataset. The best parameters are then stored for the prediction of a new image given to the network. 
+	\item In the final step, steps 2 to 4 are repeated for all images in the training dataset. The best parameters are then stored for the prediction of a new image given to the network.\newline 
 	
-\end{itemize}
-
-
-
-
-\section{Image Preprocesing}
-Image preprocessing is a very important step in any image based application. This process involves taking the image and improving it in a way that enables easier machine understanding. This ultimately makes it easier for the machine to extract important features for other operations. 
-
+\end{itemize} 
 
 In the rest of this chapter, three related works that performed chart image classification, with very unique methods and also achieved good results are described in details.  
 
@@ -294,7 +329,7 @@ The rest of this chapter describes into details how the dataset was created, it 
 
 \section{Dataset}
 The following paragraph is inspired by a blog written on what to look for in training data~\cite{edi}.
-The saying 'Garbage in Garbage out' is a valid statement when it comes to creating a dataset for machine learning. The machine learning technique will learn from whatever data fed to it. So if a dataset of good quality is fed into the algorithm, then the model created will also be of good quality. The dataset creation stage is therefore a very important stage. In most approaches that worked on chart images classification, the dataset used consisted of chart images downloaded from Google and a few others were obtained from extracting chart images from pdf's. This approach we believe is limited since, we don't know the programming languages, the libraries used and parameters used in creating these charts. This messing information is very relevant since it tells us how diverse our resultant dataset is. For example, how are we sure that all the charts that were downloaded from Google, were not only created in Python or Java?, and in such a case how well will a new chart created with Matlab or R be classified. For this reason the dataset comprised of image charts created with different libraries and in different programming languages. In the next sections, the various datasets and the languages used in plotting are described. To make the dataset as diverse as possible, charts created in each programing language used a different set of CSV files. 
+The saying 'Garbage in Garbage out' is a valid statement when it comes to creating a dataset for machine learning. The machine learning technique will learn from whatever data fed to it. So if a dataset of good quality is fed into the algorithm, then the model created will also be of good quality. The dataset creation stage is therefore a very important stage. In most approaches that worked on chart images classification, the dataset used consisted of chart images downloaded from Google and a few others were obtained from extracting chart images from pdf's. This approach we believe is limited since, we don't know the programming languages, the libraries used and parameters used in creating these charts. This missing information is very relevant since it tells us how diverse our resultant dataset is. For example, how are we sure that all the charts that were downloaded from Google, were not only created in Python or Java?, and in such a case how well will a new chart created with Matlab or R be classified. For this reason the dataset comprised of image charts created with different libraries and with dissimilar programming languages. Some random chart images from other works were manually labeled and added to our created dataset. In the next sections, the various datasets and the languages used in plotting are described. To make the dataset as diverse as possible, charts created in each programing language used a different set of CSV files. 
 
 \subsection{Dataset for Matlab}
 The Data used for creating the plots in Matlab were randomly chosen from Project Dataset \cite{projectdataset}, a free CSV data repository, DatPlot \cite{datplot} and Plotly CSV repository in github \cite{plotly}. The datasets are multidimensional and compiled from normal day to day activities like dating, what makes people happy etc, and objects like cameras and cars. On the average the datasets used contain about 500 instance and 5 different columns. The biggest dataset is called Speed dating data. It is made up of over 8,000 observations of answers to survey questions about how people rate themselves and how they rate others on several dimensions. The smallest dataset used has 33 instances and 12 columns. It contains information about cars. The number of gears and speed, just to name a few attributes.
@@ -311,10 +346,10 @@ The data used for creating the plots in Python were 15 randomly seleted csv file
 For the plots created in java, I used the dataset made available by Plotly \cite{plotly}, a github repository of CSV datasets used in the Plotly API examples. 14 random CSV files were downloaded, the biggest file has 1002 instances and 9 columns, and on the average each file contains about 100 instances and 9 columns. The smallest file however is made of 33 instances and 12 columns called the mtcars file. It contain information about a variety of different car models like the number of gears, speed etc. The table \ref{table:1} contains the names of all CSV files that were used in the different languages with the different plotting programs.
 
 
-
-\begin{table}[htb]
+\begin{table}[!htbp]
 
 	\centering
+	
 \begin{adjustbox}{max width=1.1\textwidth,center}
 	
 	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|p{4cm}|}
@@ -351,96 +386,138 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 
 
 \section{Creating Plots}
-The inspiration for creating a variety of plots to capture all type of plots used in scientific papers was gotten by inspecting the dataset of Architecture proposal for data extraction of chart images using CovNet paper \cite{junior2017archi} and Viziometrics: Analyzing visual information in the scientific literature \cite{lee2018viziometrics} dataset. Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column while creating the plots.
- 
-Table \ref{table:2} describe how the plots where created in each language. The type column describes the different variety of a particular plot, for example bar charts can be of type stacked, grouped, vertical and horizontal bar charts, also scatter plots types can be a scatter plot consisting of one type of marker, one scatter plot with multiple markers and finally a scatter plot with a line showing the correlation between the plots. 
-Figure \ref{fig:fig11} shows two different types of bar charts. Figure \ref{fig:fig1} is a stacked bar chart and  Figure \ref{fig:fig2} a normal vertical bar chart.
+The motivation for creating a variety of plots to capture all type of plots used in scientific papers was acquired by inspecting the datasets of Architecture proposal for data extraction of chart images using CovNet paper \cite{junior2017archi} and Viziometrics: Analyzing visual information in the scientific literature \cite{lee2018viziometrics}. Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column while creating the plots.
+Table \ref{table:paratable} describes how the plots where created in each language. The type column describes the different variety of a particular plot, for example bar charts can be of type stacked, grouped, vertical and horizontal bar charts, also scatter plots types can be a scatter plot consisting of one type of marker, one scatter plot with multiple markers and finally a scatter plot with a line showing the correlation between the plots. 
+Figure \ref{fig:bars} shows two different types of bar charts. Figure \ref{fig:bar1} is a stacked bar chart and  Figure \ref{fig:bar2} a normal vertical bar chart.
 The Library column shows the different plotting libraries used, the parameter column describes parameters that were changed and finally the number of plots created were also added. The images below the tables are sample images that exist in our dataset of created plots for each language.
 
 	
-\begin{table}[]
+\begin{table}[!htbp]
 	\centering \def\arraystretch{1.5} \small
-	\caption {Overview of the varied parameters for creating plots in the different plotting programs}	
-	\label{table:2}
+	\caption {Overview of the varied parameters and libraries used for creating plots in the different plotting programs}	
+	\label{table:paratable}
 	\begin{adjustbox}{max width=1.1\textwidth,center}
-	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{2cm}|p{4cm}|}
-		\hline
-		\multicolumn{5}{|c|}{SCATTER PLOTS} \\
-		\hline
+				
+	\begin{tabular}{|p{2cm}|p{2cm}|p{3cm}|p{4cm}|} \hline
+				
+\multirow{10}{*} {\rotatebox{90}{\textbf{Scatter-plot}}}  &
 		
-	Language & Library & Parameters & Number of plots  & Type\\ \hline
+			Language & Library & Parameters \\ \cline{2-4}
 		
-	Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 & MarkerStyle \par 
-	['o', '*', '.', '+','x'] & 1020 &  \multirow{6}{*} {\shortstack { Unique markers, \\ With legends,\\ multiple markers \\ regplot }} \\ \cline{0-3}	   
+	& Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 & MarkerStyle \par 
+	['o', '*', '.', '+','x']  \\  \cline{2-4}	 
 		  
-	MATLAB & Default \par Plotly &  MarkerStyle \par ['o', '*','+','x','s'] & 1044  &   \\ \cline{0-3}	   
+	& MATLAB & Default \par Plotly &  MarkerStyle \par ['o', '*','+','x','s']  \\ \cline{2-4} 
 		
-	R  & Plotly \par Lattice \par Ggplot2 &  MarkerStyle \par ['o', '*', '+','x','s'] & 1644  &  \\ \cline{0-3}		
+	& R  & Plotly \par Lattice \par Ggplot2 &  MarkerStyle \par ['o', '*', '+','x','s']  \\ \cline{2-4}
 	
-	JAVA & XChart 3.5.1\par jfreechart 1.0.1 & MarkerSize (15 -18) & 1644 &  \\ \hline
-	
-
-		\multicolumn{5}{|c|}{BAR CHARTS} \\
-		\hline
+	& JAVA & XChart 3.5.1\par jfreechart 1.0.1 & MarkerSize (15 -18)  \\ \hline
 		
-		Language & Library & Parameters &  Number of plots & Types(bar)  \\ \hline
+	\multirow{10}{*} {\rotatebox{90}{\textbf{Bar-charts}}}  & Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 &   \\  \cline{2-4} 
 		
-		Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 &   &  1000 &  \multirow{6}{*} {\shortstack {Horizontal and Vertical, \\ Stacked, \\ Grouped bar charts }} \\ \cline{0-3}	 
+		& MATLAB & Default &  Width of bar(14-16) \\ \cline{2-4} 
 		
-		MATLAB & Default &  Width of bar(14-16) & 1000  &  \\ \cline{0-3}
+		& R & Default,Plotly \par R Library \par ggplot2 & space (0-3)  \\ \cline{2-4} 
 		
-		R & Default,Plotly \par R Library \par ggplot2 & space (0-3)  & 1144  & \\ \cline{0-3}
-		
-		JAVA  & XChart 3.5.1 \par jfreechart:1.0.192 \par javafx.scene & PlotOrientation \par (vertical or horizontal) \par with error bars & 1144 & \\ \hline
-		
-			\multicolumn{5}{|c|}{LINE CHARTS} \\
-			\hline
+		& JAVA  & XChart 3.5.1 \par jfreechart:1.0.192 \par javafx.scene & PlotOrientation \par (vertical or horizontal) \par with error bars \\ \hline 
 			
-			Language & Library & Parameters &  Number of plots & Types(Line with)  \\ \hline
+	\multirow{10}{*} {\rotatebox{90}{\textbf{Line-chart}}}	 & Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 & Linestyle \par ['-', '--', '-.', ':']   \\ \cline{2-4} 
 			
-			Python & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 & Linestyle \par ['-', '--', '-.', ':']   &  1000 &  \multirow{6}{*} {\shortstack { Markers, \\ Multiple Lines }} \\ \cline{0-3}	 
+		& MATLAB  & Default\par Plotly &  MarkerStyle \par ['o', '*', '.', '+','x','s'] \par markersize [8-10] \\ \cline{2-4} 
 			
-			MATLAB  & Default\par Plotly &  MarkerStyle \par ['o', '*', '.', '+','x','s'] \par markersize [8-10] & 1000 &  \\ \cline{0-3}
+		& R & Default,Plotly \par R Library \par ggplot2 & \\ \cline{2-4} 
 			
-			R & Default,Plotly \par R Library \par ggplot2 &  & 1644  & \\ \cline{0-3}
+		& JAVA & XChart 3.5.1 \par javafx \par JFreeChart & MarkerSize (12-16) \\ \hline
 			
-			JAVA & XChart 3.5.1 \par javafx \par JFreeChart & MarkerSize (12-16) & 1644 & \\ \hline
-			
-				\multicolumn{5}{|c|}{Box Plots} \\
-				\hline			
-				Language & Library & Parameters &  Number of plots & Types(Box with)  \\ \hline
+	\multirow{9}{*} {\rotatebox [origin=c]{90}{\textbf{Box-Plots}}} & Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 &  \\ \cline{2-4}  
 				
-				Python  & Matplotlib v2.1.2 \par Plotly v2.5.1 \par Seaborn v0.8.1 &   &  1000 &  \multirow{6}{*} {\shortstack { Notches, \\ Multiple Boxes }} \\ \cline{0-3}	 
+		&  MATLAB   & Default &  \\ \cline{2-4} 
 				
-				MATLAB   & Default &   & 1000  &  \\ \cline{0-3}
-				
-				R & Default,Plotly \par R Library \par ggplot2 &  & 1644  & \\ \cline{0-3}
-				
-				JAVA   & XChart 3.5.1 \par Jfree & LegendPosition (topleft,topright) & 1644 & \\ \hline
-				
+		& R & Default,Plotly \par R Library \par ggplot2  &  \\ \cline{2-4} 
+		& 	JAVA   & XChart 3.5.1 \par Jfree & LegendPosition (topleft,topright)  \\ \hline
 	\end{tabular}
-		
 \end{adjustbox}
 
 \end{table}
 
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	\caption {Overview of the number of plot and different varieties plots in the different plotting programs}	
+	\label{table:less}
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|}
+			\hline
+			\multicolumn{3}{|c|}{SCATTER PLOTS} \\
+			\hline
+			
+			Language & Number of plots  & Type\\ \hline
+			
+			Python & 1020 &  \multirow{4}{*} {\shortstack { Unique markers, \\ With legends,\\ multiple markers \\ regplot }} \\ \cline{1-2}
+			
+			MATLAB &  1044  &   \\  \cline{1-2}
+			
+			R  & 1644  &  \\	\cline{1-2}
+			
+			JAVA &  1644 &  \\ \hline
+			
+			\multicolumn{3}{|c|}{BAR CHARTS} \\	\hline
+			
+			Language &  Number of plots & Types(bar)  \\ \hline
+			
+			Python &   1000 &  \multirow{4}{*} {\shortstack {Horizontal and Vertical, \\ Stacked, \\ Grouped bar charts }} \\ \cline{1-2}	 
+			
+			MATLAB &  1000  &  \\ \cline{1-2}
+			
+			R &  1144  & \\ \cline{1-2}
+			
+			JAVA  &  1144 & \\ \hline
+			
+			\multicolumn{3}{|c|}{LINE CHARTS} \\
+			\hline
+			
+			Language & Number of plots & Types(Line with)  \\ \hline
+			
+			Python & 1000 &  \multirow{4}{*} {\shortstack { Markers, \\ Multiple Lines }} \\ \cline{1-2}	 
+			
+			MATLAB   & 1000 &  \\ \cline{1-2}
+			
+			R &  1644  & \\ \cline{1-2}
+			
+			JAVA & 1644 & \\ \hline
+			
+			\multicolumn{3}{|c|}{Box Plots} \\
+			\hline			
+			Language & Number of plots & Types(Box with)  \\ \hline
+			
+			Python  &  1000 &  \multirow{4}{*} {\shortstack { Notches, \\ Multiple Boxes }} \\ \cline{1-2}	 
+			
+			MATLAB   &  1000  &  \\ \cline{1-2}
+			
+			R & 1644  & \\ \cline{1-2}
+			
+			JAVA   & 1644 & \\ \hline
+			
+		\end{tabular}
+		
+	\end{adjustbox}
+	
+\end{table}
 
-\begin{figure}[!htbp]
-	\begin{subfigure}{.5\textwidth}
+\begin{figure}[!htb]
+	\begin{subfigure}{.6\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{scatter1}
+		\includegraphics[width=.9\linewidth]{scatter1}
 		\caption{Matplotlib scatter plot with star and circular markers }
-		\label{fig:fig1}
+		\label{fig:scatter1}
 	\end{subfigure}%
-
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.8\linewidth]{scatter2}
+		\includegraphics[width=.9\linewidth]{scatter2}
 		\caption{Java scatter plot with circular and diamond markers}
-		\label{fig:fig2}
+		\label{fig:scatter2}
 	\end{subfigure}
 	\caption{Scatter plots}
-	\label{fig:fig11}
+	\label{fig:scatters}
 \end{figure}
 
 
@@ -449,16 +526,16 @@ The Library column shows the different plotting libraries used, the parameter co
 		\centering
 		\includegraphics[width=.8\linewidth]{bar1}
 		\caption{Matlab stacked bar chart (bar width 16) }
-		\label{fig:sfig1}
+		\label{fig:bar1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{bar2}
 		\caption{R horizontal bar chart (bar width 16)}
-		\label{fig:sfig2}
+		\label{fig:bar2}
 	\end{subfigure}
 	\caption{Example Bar Charts}
-	\label{fig:fig}
+	\label{fig:bars}
 \end{figure}
 
 
@@ -467,40 +544,74 @@ The Library column shows the different plotting libraries used, the parameter co
 		\centering
 		\includegraphics[width=.8\linewidth]{line1}
 		\caption{Java line chart with diamond and circular markers }
-		\label{fig:sfig1}
+		\label{fig:line1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{line2}
 		\caption{simple Matlab line chart with Asterix marker}
-		\label{fig:sfig2}
+		\label{fig:line2}
 	\end{subfigure}
 	\caption{Example Line Charts}
-	\label{fig:fig}
+	\label{fig:figline}
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{box1}
 		\caption{Vertical multiple boxplots in python}
-		\label{fig:sfig3}
+		\label{fig:box1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
 		\includegraphics[width=.8\linewidth]{box2}
 		\caption{Vertical multiple boxplots in Matlab}
-		\label{fig:sfig3}
+		\label{fig:box2}
 	\end{subfigure}
 	\caption{Example Box Plots}
 	\label{fig:figbox}
 \end{figure}
 
 
-\section{Training, Validation and Test set}
+\subsection{Random Charts}
+In other to have the most diverse dataset, so as to achieve a robust model, we decided to pick some random chart images from Junior et al. \cite{junior2017archi} and Po-shen et al. \cite{lee2016viziometrix}. The line-charts, bar-charts and, scatter-plots were already labeled and were taken from Junior et al. work and the box-plots which we had to label, were taken from Po-shen et al. work since, the prior did not contain box-plots. The randomly picked chart images, were then added to the already created dataset for training and testing. Figure \ref{fig:random} shows sample images from the already created chart images from the paper of Po-shen et al. and Junior et al.
+
+\begin{figure}[!htbp]
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{rand1}
+		\caption{A bar-chart}
+		\label{fig:rand1}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{rand2}
+		\caption{A box-plot}
+		\label{fig:rand2}
+	\end{subfigure}
+
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{rand3}
+		\caption{A line-chart}
+		\label{fig:rand3}
+	\end{subfigure}
+	%
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{rand4}
+		\caption{Scatter-plot}
+		\label{fig:rand4}
+	\end{subfigure}
+	\caption{Example Chart images from Po-shen et al. and Junior et al.}
+    \label{fig:random}
+\end{figure}
+
+
+
+\subsection{Training, Validation and Test set}
 Figure ~\ref{fig:approach} summaries how our dataset was split into various activities. In machine learning, a model is an artifact created during the training phase, this model can be likened to a function that maps specific features to their respective labels, the model is trained with a portion of the dataset called the train set. As the model is trained, the validation set is used to decide and pick which metric out of hyper-parameters, early stopping and architecture considerations yields the best performance. This helps to adjust and optimize the model~\cite{validation}. Finally, the test-set in machine learning, is the other portion of the dataset which was not used during the training phase. The test-set checks how well the trained model performs on unseen data by giving an unbiased assessment of the model. For this work, the dataset is divided into train, validation and test set. The validation set is not shown in the figure since it forms part of the train data.
-\begin{figure}
+
+\begin{figure}[!htbp]
 \includegraphics [scale=0.5] {approach}
 \captionof{figure}{Steps involved in building the Classification model}
 \label{fig:approach}
@@ -508,10 +619,11 @@ Figure ~\ref{fig:approach} summaries how our dataset was split into various acti
 
 
 \section{The Architecture}
-As mentioned in previous sections, our model is trained with a CovNet. This architecture is inspired by the famous AlexNet CovNet architecture  \cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes, the results obtained on the test-set had a top-5 error rate of and 17.0\%, which was better than the previous state of the art. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The parameters used and why they were employed are explained into details in the rest of this chapter.
+As mentioned in previous sections, our model is trained with a CovNet. This architecture is inspired by the famous AlexNet CovNet architecture  \cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes, the results obtained on the test-set had a top-5 error rate of 17.0\%, which was better than the previous state of the art. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The preprocessing steps, the parameters used, and why they were employed are explained into details in the rest of this chapter.
 
 \begin{figure}
-\includegraphics [scale=0.4] {architecture}
+\centering
+\includegraphics [scale=0.3] {architecture}
 \captionof{figure}{Architecure of CovNet used to train our model}\label{fig:archi}
 \end{figure}
 
@@ -521,15 +633,68 @@ As mentioned above 5 of this layers are used in our architecture, and these are 
 \subsection{Dropout}
 A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or or maintained at a probability of 0.5.
 
+
+\subsection{Fully connected layers}
 The last set of layers used are the Fully connected layers. 
 The first layer takes as input the 1D feature vector generated by a flatten layer in our network. The flatten layer converts all our 2D arrays from our previous Convolutional layers into a 1D resultant vector. The output of this layer is then fed as input into the second fully connected layer. The output of the second layer is then fed into the last fully connected layer. The last layer in this set of 3 layers uses the softmax activation to give our output prediction. The output is a separate probability of our four classes and the choice with the highest probability is our chosen prediction. We used a sofmax activation as opposed to other activation functions because, it handles low invigoration
 in images (say blurry charts) of your neural net with rather uniform distribution and to high invigoration in images (say large numbers, like sharp images) with prediction probabilities between 1 and 0.
 
-\begin{equation} \label{eq:soft}
-f_j(z) = \frac{e^{z_j}}{\sum_k e^{z_k}}
-\end{equation}
 
-The equation \ref{eq:soft} is a softmax function, (z) represents a vector, so the function takes (in z) and crushes it to a probability value between zero and one \cite{softmax}.
+	
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	\label{table:2}
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		
+		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+			\hline	
+			Operation & Filter & Depth & Stride \\ \hline
+			
+			Conv1 + Relu  &  11 * 11  & 96  & 4 \\  \hline	 
+			
+			Max Pooling & 3 * 3  &  & 2 \\ \hline	   
+			
+			Conv2 + Relu & 5 * 5 & 256  &  \\ \hline	
+			
+			Max Pooling & 3 * 3 & & 2 \\ \hline
+			
+			Conv3 + Relu & 3 * 3 & 384 &  \\ \hline	
+					
+			
+			Conv4 + Relu & 3 * 3  & 384  &  \\ \hline	
+			
+		    
+		    Conv5 + Relu & 3 * 3  & 256 &  \\ \hline	
+		    
+		    Max Pooling & 3 * 3 & & 2 \\ \hline
+		    
+		    Dropout(rate 0.5) &  & & \\ \hline
+		    
+		    FC6 + Relu &  & & \\ \hline
+		    
+		    FC7 + Relu &  & & \\ \hline
+		    
+		    FC8 + Relu &  & & \\ \hline
+		   
+		\end{tabular}
+	
+	\end{adjustbox}
+
+		\caption {The following table shows different layers, parameters and computation units used.}	
+	
+	
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Experiments}
 

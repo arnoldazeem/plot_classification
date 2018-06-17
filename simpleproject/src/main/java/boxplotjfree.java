@@ -178,8 +178,14 @@ public class boxplotjfree {
                                 final NumberAxis yxis = new NumberAxis("Value");
                                 yxis.setAutoRangeIncludesZero(false);
                                 final BoxAndWhiskerRenderer renderer = new BoxAndWhiskerRenderer();
-                                renderer.setFillBox(false);
-                                renderer.setToolTipGenerator(new BoxAndWhiskerToolTipGenerator());
+                                renderer.setFillBox(true);
+                                renderer.setToolTipGenerator(new BoxAndWhiskerToolTipGenerator());                                renderer.setFillBox(true);
+                                renderer.setSeriesPaint(0, Color.WHITE);
+                                renderer.setSeriesPaint(1, Color.LIGHT_GRAY);
+                                renderer.setSeriesOutlinePaint(0, Color.BLACK);
+                                renderer.setSeriesOutlinePaint(1, Color.BLACK);
+
+
                                 final CategoryPlot plot = new CategoryPlot(dataset, xxis, yxis, renderer);
 
                                 final JFreeChart chart = new JFreeChart(
@@ -191,7 +197,7 @@ public class boxplotjfree {
                                 final ChartPanel chartPanel = new ChartPanel(chart);
                                 chartPanel.setPreferredSize(new java.awt.Dimension(640, 480));
 
-                                File outputfile = new File(xAxis.get(0) + "boxes34" + ".jpg");
+                                File outputfile = new File(xAxis.get(0) + "init" + ".jpg");
 
                                 try{
                                     ChartUtilities.saveChartAsJPEG(outputfile, chart, 640, 480);

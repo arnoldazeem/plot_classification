@@ -86,6 +86,15 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
   2018.
 \newblock [Online; accessed 12-Jun-2018].
 
+\bibitem{input}
+{Nikhil B.}
+\newblock Image data pre-processing for neural networks – becoming human:
+  Artificial intelligence magazine.
+\newblock \url{
+  https://becominghuman.ai/image-data-pre-processing-for-neural-networks-498289068258},
+  2018.
+\newblock [Online; accessed 13-Jun-2018].
+
 \bibitem{relu}
 {Balwally, A.}
 \newblock What is the role of rectified li.
@@ -170,6 +179,14 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
 \newblock Viziometrics: Analyzing visual information in the scientific
   literature.
 \newblock {\em IEEE Transactions on Big Data}, 4(1):117--129, 2018.
+
+\bibitem{lee2016viziometrix}
+Po-shen Lee, Jevin~D West, and Bill Howe.
+\newblock Viziometrix: A platform for analyzing the visual information in big
+  scholarly data.
+\newblock In {\em Proceedings of the 25th international conference companion on
+  world wide web}, pages 413--418. International World Wide Web Conferences
+  Steering Committee, 2016.
 
 \bibitem{validation}
 {Akshay Balwally,}.
