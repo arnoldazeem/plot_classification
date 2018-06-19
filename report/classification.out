@@ -4,36 +4,37 @@
 \BOOKMARK [0][-]{chapter.5}{Acknowledgements}{}% 4
 \BOOKMARK [0][-]{chapter.6}{Introduction}{}% 5
 \BOOKMARK [1][-]{section.7}{Overview}{chapter.6}% 6
-\BOOKMARK [1][-]{section.9}{Motivation}{chapter.6}% 7
-\BOOKMARK [1][-]{section.10}{Objective}{chapter.6}% 8
-\BOOKMARK [0][-]{chapter.12}{Background and Related Work}{}% 9
-\BOOKMARK [1][-]{section.13}{Model Based Approaches}{chapter.12}% 10
-\BOOKMARK [1][-]{section.14}{Machine Learning Based Approaches}{chapter.12}% 11
-\BOOKMARK [2][-]{subsubsection*.19}{The Brain}{section.14}% 12
-\BOOKMARK [2][-]{subsection.20}{Input data format}{section.14}% 13
-\BOOKMARK [2][-]{subsection.21}{Convolutional Neural Network}{section.14}% 14
-\BOOKMARK [3][-]{subsubsection*.23}{Convolutional Layer}{subsection.21}% 15
-\BOOKMARK [3][-]{subsubsection*.24}{Activation Functions}{subsection.21}% 16
-\BOOKMARK [3][-]{subsubsection*.26}{Pooling Layer}{subsection.21}% 17
-\BOOKMARK [3][-]{subsubsection*.27}{Dropout Layers}{subsection.21}% 18
-\BOOKMARK [3][-]{subsubsection*.29}{Fully Connected Layer}{subsection.21}% 19
-\BOOKMARK [3][-]{subsubsection*.31}{Training process}{subsection.21}% 20
-\BOOKMARK [3][-]{subsubsection*.32}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{subsection.21}% 21
-\BOOKMARK [3][-]{subsubsection*.35}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{subsection.21}% 22
-\BOOKMARK [3][-]{subsubsection*.38}{Chart classification by combining deep convolutional networks and deep belief networks}{subsection.21}% 23
-\BOOKMARK [0][-]{chapter.40}{Approach}{}% 24
-\BOOKMARK [1][-]{section.41}{Dataset}{chapter.40}% 25
-\BOOKMARK [2][-]{subsection.42}{Dataset for Matlab}{section.41}% 26
-\BOOKMARK [2][-]{subsection.43}{Dataset for R}{section.41}% 27
-\BOOKMARK [2][-]{subsection.44}{Dataset for Python}{section.41}% 28
-\BOOKMARK [2][-]{subsection.45}{Dataset for Java}{section.41}% 29
-\BOOKMARK [1][-]{section.47}{Creating Plots}{chapter.40}% 30
-\BOOKMARK [2][-]{subsection.54}{Random Charts}{section.47}% 31
-\BOOKMARK [2][-]{subsection.56}{Training, Validation and Test set}{section.47}% 32
-\BOOKMARK [1][-]{section.58}{The Architecture}{chapter.40}% 33
-\BOOKMARK [2][-]{subsubsection*.60}{Convolutional Layer}{section.58}% 34
-\BOOKMARK [2][-]{subsection.61}{Dropout}{section.58}% 35
-\BOOKMARK [2][-]{subsection.62}{Fully connected layers}{section.58}% 36
-\BOOKMARK [0][-]{chapter.64}{Experiments}{}% 37
-\BOOKMARK [0][-]{chapter.65}{Summary}{}% 38
-\BOOKMARK [0][-]{chapter.66}{Bibliography}{}% 39
+\BOOKMARK [1][-]{section.10}{Motivation}{chapter.6}% 7
+\BOOKMARK [1][-]{section.11}{Objective}{chapter.6}% 8
+\BOOKMARK [1][-]{section.12}{Research Significance and Contribution}{chapter.6}% 9
+\BOOKMARK [0][-]{chapter.14}{Background and Related Work}{}% 10
+\BOOKMARK [1][-]{section.15}{Model Based Approaches}{chapter.14}% 11
+\BOOKMARK [1][-]{section.16}{Machine Learning Based Approaches}{chapter.14}% 12
+\BOOKMARK [2][-]{subsubsection*.21}{The Brain}{section.16}% 13
+\BOOKMARK [2][-]{subsection.22}{Input data format}{section.16}% 14
+\BOOKMARK [2][-]{subsection.23}{Convolutional Neural Network}{section.16}% 15
+\BOOKMARK [3][-]{subsubsection*.25}{Convolutional Layer}{subsection.23}% 16
+\BOOKMARK [3][-]{subsubsection*.26}{Activation Functions}{subsection.23}% 17
+\BOOKMARK [3][-]{subsubsection*.28}{Pooling Layer}{subsection.23}% 18
+\BOOKMARK [3][-]{subsubsection*.29}{Dropout Layers}{subsection.23}% 19
+\BOOKMARK [3][-]{subsubsection*.31}{Fully Connected Layer}{subsection.23}% 20
+\BOOKMARK [3][-]{subsubsection*.33}{Training process}{subsection.23}% 21
+\BOOKMARK [3][-]{subsubsection*.34}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{subsection.23}% 22
+\BOOKMARK [3][-]{subsubsection*.37}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{subsection.23}% 23
+\BOOKMARK [3][-]{subsubsection*.40}{Chart classification by combining deep convolutional networks and deep belief networks}{subsection.23}% 24
+\BOOKMARK [0][-]{chapter.42}{Approach}{}% 25
+\BOOKMARK [1][-]{section.43}{Dataset}{chapter.42}% 26
+\BOOKMARK [2][-]{subsection.44}{Dataset for Matlab}{section.43}% 27
+\BOOKMARK [2][-]{subsection.45}{Dataset for R}{section.43}% 28
+\BOOKMARK [2][-]{subsection.46}{Dataset for Python}{section.43}% 29
+\BOOKMARK [2][-]{subsection.47}{Dataset for Java}{section.43}% 30
+\BOOKMARK [1][-]{section.49}{Creating Plots}{chapter.42}% 31
+\BOOKMARK [2][-]{subsection.56}{Random Charts}{section.49}% 32
+\BOOKMARK [2][-]{subsection.58}{Training, Validation and Test set}{section.49}% 33
+\BOOKMARK [1][-]{section.60}{The Architecture}{chapter.42}% 34
+\BOOKMARK [2][-]{subsubsection*.62}{Convolutional Layer}{section.60}% 35
+\BOOKMARK [2][-]{subsection.63}{Dropout}{section.60}% 36
+\BOOKMARK [2][-]{subsection.64}{Fully connected layers}{section.60}% 37
+\BOOKMARK [0][-]{chapter.66}{Experiments}{}% 38
+\BOOKMARK [0][-]{chapter.67}{Summary}{}% 39
+\BOOKMARK [0][-]{chapter.68}{Bibliography}{}% 40

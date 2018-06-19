@@ -1,5 +1,13 @@
 \begin{thebibliography}{10}
 
+\bibitem{boxy}
+{Matange, S.}
+\newblock Box plot legend.
+\newblock
+  \url{https://blogs.sas.com/content/graphicallyspeaking/2017/04/13/box-plot-legend/},
+  2018.
+\newblock [Graphically Speaking; accessed 18-Jun-2018].
+
 \bibitem{softmax}
 {karpathy}.
 \newblock Cs231n convolutional neural networks for visual recognition.
@@ -32,6 +40,20 @@ Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
   deep belief networks.
 \newblock In {\em Document Analysis and Recognition (ICDAR), 2015 13th
   International Conference on}, pages 801--805. IEEE, 2015.
+
+\bibitem{chartselection}
+{Few, S}.
+\newblock Visual business intelligence – abela’s folly – a thought
+  confuser.
+\newblock \url{https://www.perceptualedge.com/blog/?p=2080}, 2018.
+\newblock [Perceptualedge.com.; accessed 17-Jun-2018].
+
+\bibitem{humaneye}
+{Thermopylae Sciences + Technology}.
+\newblock Humans process visual data better.
+\newblock
+  \url{http://www.t-sciences.com/news/humans-process-visual-data-better}, 2018.
+\newblock [Thermopylae Sciences + Technology. (2018).; accessed 18-Jun-2018].
 
 \bibitem{savva2011revision}
 Manolis Savva, Nicholas Kong, Arti Chhajta, Li~Fei-Fei, Maneesh Agrawala, and

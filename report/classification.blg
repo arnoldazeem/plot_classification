@@ -8,45 +8,45 @@ Repeated entry---line 224 of file sample.bib
  :                                      ,
 I'm skipping whatever remains of this entry
 Warning--empty journal in amara2017convolutional
-You've used 27 entries,
+You've used 30 entries,
             1791 wiz_defined-function locations,
-            587 strings with 8956 characters,
-and the built_in function-call counts, 6451 in all, are:
-= -- 614
-> -- 251
+            602 strings with 9512 characters,
+and the built_in function-call counts, 6865 in all, are:
+= -- 653
+> -- 263
 < -- 9
-+ -- 97
-- -- 70
-* -- 303
-:= -- 947
-add.period$ -- 102
-call.type$ -- 27
-change.case$ -- 26
++ -- 103
+- -- 73
+* -- 306
+:= -- 1013
+add.period$ -- 114
+call.type$ -- 30
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 296
-empty$ -- 672
-format.name$ -- 70
-if$ -- 1539
+cite$ -- 31
+duplicate$ -- 311
+empty$ -- 726
+format.name$ -- 73
+if$ -- 1638
 int.to.chr$ -- 0
-int.to.str$ -- 27
+int.to.str$ -- 30
 missing$ -- 15
-newline$ -- 151
-num.names$ -- 27
-pop$ -- 148
+newline$ -- 169
+num.names$ -- 30
+pop$ -- 166
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 168
+skip$ -- 174
 stack$ -- 0
 substring$ -- 336
-swap$ -- 114
+swap$ -- 117
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 58
-width$ -- 29
-write$ -- 316
+while$ -- 61
+width$ -- 32
+write$ -- 352
 (There was 1 error message)

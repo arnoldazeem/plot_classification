@@ -1,20 +1,21 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Seletecting the approapriate chart for visualizing data \cite {srivastava2014dropout}\relax }}{7}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Overview of process to obtain raw data from scientific papers. The red outline indicates the work in this thesis.\relax }}{9}{figure.caption.11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Seletecting the approapriate chart for visualizing data \relax }}{7}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A box plot with a legend, x-axis, and y-axis from \cite {boxy} \relax }}{8}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Overview of process to obtain raw data from scientific papers. The red outline indicates the work in this thesis.\relax }}{10}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces How a computer perceives an image- source \cite {softmax}\relax }}{13}{figure.caption.22}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{15}{figure.caption.25}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{16}{figure.caption.28}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces How a computer perceives an image- source \cite {softmax}\relax }}{14}{figure.caption.24}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{16}{figure.caption.27}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{17}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Scatter plots\relax }}{25}{figure.caption.50}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Example Bar Charts\relax }}{28}{figure.caption.51}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Example Line Charts\relax }}{28}{figure.caption.52}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Example Box Plots\relax }}{28}{figure.caption.53}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Example Chart images from Po-shen et al. and Junior et al.\relax }}{29}{figure.caption.55}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Steps involved in building the Classification model\relax }}{30}{figure.caption.57}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Architecure of CovNet used to train our model\relax }}{31}{figure.caption.59}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Scatter plots\relax }}{26}{figure.caption.52}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Example Bar Charts\relax }}{29}{figure.caption.53}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Example Line Charts\relax }}{29}{figure.caption.54}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Example Box Plots\relax }}{29}{figure.caption.55}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Example Chart images from Po-shen et al. and Junior et al.\relax }}{30}{figure.caption.57}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Steps involved in building the Classification model\relax }}{31}{figure.caption.59}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Architecure of CovNet used to train our model\relax }}{32}{figure.caption.61}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

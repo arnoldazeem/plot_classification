@@ -71,53 +71,61 @@ citecolor = black]{hyperref}
 \newpage
 \chapter{Introduction}
 "A picture is worth a thousand words" even though a widely used phrase stands to be very true especially when dealing with scientific literature. This is due to the fact that information and data is easily understood when visualized, for this reason most scientific publications tend to present their data using tables, plots and pictures. Identification, extraction and interpretation of this visualized data for purposes of; validation of results by another researcher, or presentation of the data to another audience is an area in machine learning which is still found wanting.\newline\newline
-The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification.  In the other sections of this chapter the research motivation, objectives, contributions and an outline of
+The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification.  The other parts of this paper are organized in the follows: 
+In the other sections of this chapter the research motivation, objectives, contributions and an outline of
 the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6
-
-
 
 \section{Overview} 
 A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots,stars,diamonds and an asterisk in the case of a scatter plot.
-Charts are often used to visualize complex data for easy understanding and interpretation, to find patterns and trends in data. Charts can usually be read more quickly than textual data, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the helped of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts works better when we want to find trends in data and scatter plots are used when we want to find relationships in data.
-
-
+Charts are often used to visualize complex data for easy understanding and interpretation, to find patterns and trends in data. Charts can usually be read more quickly than textual data, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the help of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts works better when we want to find trends in data and scatter plots are used when we want to find relationships in data. Figure \ref{fig:chartse} which was inspired by the figure from \cite{chartselection} shows which charts we should choose depending on what we would like to describe in some acquired data. For example if we want to show a relationship between two variables in some data, we should a scatter plot as seen in the figure.\\
 
 \begin{figure}[!htb]
 	\centering
-	\includegraphics [scale=0.6] {chart}
-	\captionof{figure}{Seletecting the approapriate chart for visualizing data \cite{srivastava2014dropout}}
+	\includegraphics [scale=0.5] {chart}
+	\captionof{figure}{Seletecting the approapriate chart for visualizing data }
 	\label{fig:chartse}
 \end{figure}
 
+Charts usually appear in different forms, nonetheless there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text visible in most charts is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster \cite{humaneye}. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. The are also texts usually outside or besides the axis describing the measurements.
+Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally the title, that is the text describing the whole chart shown at the top. 
 
-When comparing the usage of texts and images in most information content 
+\begin{figure}[!htb]
+	\centering
+	\includegraphics [scale=1.0] {box_color.png}
+	\captionof{figure}{A box plot with a legend, x-axis, and y-axis from \cite{boxy} }
+	\label{fig:boxy}
+\end{figure}
 
-the brain processes visual information sixty thousand
+Despite most features being present in most charts, there are some charts that are totally different from the rest. For example a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts will mean having all the wide range of the different visual encodings and styles of these charts.
 
-Chart images are a very important part of scientific documents.
-Data is ever growing and sometimes complex, using figures and diagrams to interpret and represent this data cannot be undermined since, they provide a way to easily give insight into the research findings, which would have otherwise been more complex relying on  only textual data. For this reason, there has been a growing interest in the chart analysis area and quite a number of techniques have been developed. I spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}.
-For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends.
-In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted.
-The process of extracting data already visualized as figures can be done relatively easier manually but becomes more complicated if done automatically. This process can be divided into two main steps \cite{savva2011revision}. The first step which our work focuses on, classifying the chart and the second step which involves extracting the data from the classified chart.
-To achieve the classification step, this paper presents an approach where charts are created with real-world datasets, different plotting programs (Python, Matlab, R, and Java) and different libraries supported by these plotting programs were used together with downloaded chart images from the Internet. We then use these images as input to Convolutional Neural Network (CovNet). CovNet was used instead of primitive approaches because it has achieved ground breaking results in the area of image classification \cite{amara2017convolutional}. Our model can identify four classes of plots namely Box-plots, Line Charts, Scatter-plots and, Bar-charts.
-The other parts of this paper are organized in the follows: 
-In the next Sections, we present the motivation behind this work. Other works related to this,  our proposed method is described,
-Experimental evaluation and results are reported, and finally, the conclusion and the way to approach this work in the future.
 
 \section{Motivation}
-Complex data is better explained in scientific papers with the aid of visualizations. These plots present complex data in an easy to understand format as compared to the textual representation. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher. The extracted data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background as opposed to the audience for which the visualizations were created initially. Another reason for extracting this data is that, when comparing two plots, looking at the raw data, gives us more insight and consequently helps in better decision making as compared to just looking at the figures. Since each plot will be processed differently to extract the raw data, it is very relevant that we can distinguish one plot from another and this is the main aim of this thesis.
+Complex data is better explained in scientific documents with the aid of visualizations. These charts present complex data in an easy to understand format as compared to the textual content. 
+Chart images are a very important part of scientific documents.
+Data is ever growing and sometimes complex, and therefore using figures and diagrams to interpret and represent this data cannot be undermined. Chart images provide a way to easily give insight to  research findings, which would have otherwise been more complex relying on only textual data. The data which these visualizations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher. The extracted data can also be used to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background as opposed to the audience for which the visualizations were created initially. Another reason for extracting this data is that, when comparing two plots, looking at the raw data, gives us more insight and consequently helps in better decision making as compared to just looking at the figures. Since each plot will be processed differently to extract the raw data, it is very relevant that we can distinguish one plot from another. For this reason, there has been a growing interest in the chart analysis area and quite a number of techniques have been developed. In spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}. For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. However in the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved very good results.
 
 \section{Objective}
-The purpose of this thesis is to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? \end{quote} In this work we focus on only four plots. These plots are scatter-plots, bar-charts, line-charts, and box-plots. Figure \ref{fig:vis} shows the vision of this work, The first part of the diagram involves, extracting or obtaining  the four different types of plots mentioned earlier, after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot.
-But this thesis mainly focuses on the red dotted lines shown below in the diagram which involves, gathering a dataset of chart images, labeling them, training the model and classifying the plots. \\
+The aim of this thesis is to develop algorithms using image processing and machine learning methods for the purpose of chart image classification. Different approaches will be considered in other to choose the most favorable one.\\
+The goal of this thesis is to try to identify or recognize chart images with the highest accuracy. To achieve this goal we have to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? \end{quote} 
+To answer this question, the following objectives are set.
 
-\begin{figure}
-\includegraphics [scale=0.5] {vision}
+\begin{itemize}\itemsep3pt
+	\item obtain raw data gathered from real world occurrences.
+	\item create a dataset of chart images with the collected data. Using  different plotting programs (Python, Matlab, R, and Java) and different libraries supported by these plotting programs.
+	\item train and evaluate a machine learning model that can recognize unseen charts with high accuracy. The four classes of plots are box plots, line charts, scatter plots and, bar-charts.
+\end{itemize}
+
+\section{Research Significance and Contribution}
+Figure \ref{fig:vis} shows the significance of this work and what it will lead to. This thesis focuses mainly on four chart images. These plots are scatter-plots, bar-charts, line-charts because they are 3 of the most popular image charts and box-plots because it shows skewness and unusual observations in a dataset and this information is especially relevant when dealing with large data, which is mostly the case in machine learning. The first part of the diagram involves, obtaining  the four different types of plots mentioned earlier, after which we then label our plots and train a neural network model to be able to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot using other processes and techniques. The focus of this thesis however, is shown in the figure with red dotted lines, which entails, gathering a dataset of chart images, labeling them, training the model and classifying the plots. \\
+
+\begin{figure}[!htb]
+\includegraphics [scale=0.48] {vision}
 \captionof{figure}{Overview of process to obtain raw 
 	data from scientific papers. The red outline indicates the work in this 
 	thesis.}
 \label{fig:vis}
 \end{figure}
+
 
 \chapter{Background and Related Work}
 Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualizable and easy to understand format. As a result of this popularity, chart images have gained, different techniques have over time been used for classification of charts and these techniques have evolved over the years. The techniques have been inspired by techniques from image processing, raster to vector conversion and layout analysis. These techniques can be put into two categories; Model-Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}. In the next section, the methods and techniques used in this thesis, and techniques that inspired us to choose these techniques are explained in details.
@@ -464,7 +472,7 @@ The Library column shows the different plotting libraries used, the parameter co
 			
 			Language &  Number of plots & Types(bar)  \\ \hline
 			
-			Python &   1000 &  \multirow{4}{*} {\shortstack {Horizontal and Vertical, \\ Stacked, \\ Grouped bar charts }} \\ \cline{1-2}	 
+			Python &   1018 &  \multirow{4}{*} {\shortstack {Horizontal and Vertical, \\ Stacked, \\ Grouped bar charts \\ Error bars }} \\ \cline{1-2}	 
 			
 			MATLAB &  1000  &  \\ \cline{1-2}
 			
