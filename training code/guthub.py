@@ -12,16 +12,25 @@ from sklearn.metrics import confusion_matrix
 from datetime import timedelta
 
 # Convolutional Layer 1.
-filter_size1 = 3
-num_filters1 = 32
+filter_size1 = 11
+num_filters1 = 96
 
 # Convolutional Layer 2.
-filter_size2 = 3
-num_filters2 = 32
+filter_size2 = 5
+num_filters2 = 256
 
 # Convolutional Layer 3.
 filter_size3 = 3
-num_filters3 = 64
+num_filters3 = 384
+
+# Convolutional Layer 4.
+filter_size4 = 3
+num_filters4 = 384
+
+
+# Convolutional Layer 5.
+filter_size5 = 3
+num_filters5 = 256
 
 # Fully-connected layer.
 fc_size = 128             # Number of neurons in fully-connected layer.
@@ -30,7 +39,7 @@ fc_size = 128             # Number of neurons in fully-connected layer.
 num_channels = 3
 
 # image dimensions (only squares for now)
-img_size = 128
+img_size = 52
 
 # Size of image when flattened to a single dimension
 img_size_flat = img_size * img_size * num_channels
@@ -62,14 +71,16 @@ early_stopping = None  # use None if you don't want to implement early stoping
 
 data = dataset.read_train_sets(train_path, img_size, classes, validation_size=validation_size)
 
+data2 = dataset.read_test_sets(test_path, img_size, classes)
+
 test_images, test_ids = dataset.read_test_set(test_path, img_size)
+
 
 print("Size of:")
 print("- Training-set:\t\t{}".format(len(data.train.labels)))
-print("- Test-set:\t\t{}".format(len(test_images)))
+# print("- Test-set:\t\t{}".format(len(test_images)))
 print("- Validation-set:\t{}".format(len(data.valid.labels)))
-
-
+print("- Test-set:\t\t{}".format(len(data2.test.labels)))
 
 def plot_images(images, cls_true, cls_pred=None):
     if len(images) == 0:
@@ -115,7 +126,6 @@ images, cls_true  = data.train.images, data.train.cls
 plot_images(images=images, cls_true=cls_true)
 
 
-
 def new_weights(shape):
     return tf.Variable(tf.truncated_normal(shape, stddev=0.05))
 
@@ -149,7 +159,7 @@ def new_conv_layer(input,              # The previous layer.
     # is padded with zeroes so the size of the output is the same.
     layer = tf.nn.conv2d(input=input,
                          filter=weights,
-                         strides=[1, 1, 1, 1],
+                         strides=[1, 4, 4, 1],
                          padding='SAME')
 
     # Add the biases to the results of the convolution.
@@ -162,7 +172,7 @@ def new_conv_layer(input,              # The previous layer.
         # consider 2x2 windows and select the largest value
         # in each window. Then we move 2 pixels to the next window.
         layer = tf.nn.max_pool(value=layer,
-                               ksize=[1, 2, 2, 1],
+                               ksize=[1, 3, 3, 1],
                                strides=[1, 2, 2, 1],
                                padding='SAME')
 
@@ -179,6 +189,7 @@ def new_conv_layer(input,              # The previous layer.
     # We return both the resulting layer and the filter-weights
     # because we will plot the weights later.
     return layer, weights
+
 
 
 def flatten_layer(layer):
@@ -206,12 +217,11 @@ def flatten_layer(layer):
     return layer_flat, num_features
 
 
-
-
-def new_fc_layer(input,          # The previous layer.
-                 num_inputs,     # Num. inputs from prev. layer.
-                 num_outputs,    # Num. outputs.
-                 use_relu=True): # Use Rectified Linear Unit (ReLU)?
+def new_fc_layer(input,           # The previous layer.
+                 num_inputs,      # Num. inputs from prev. layer.
+                 num_outputs,     # Num. outputs.
+                 use_dropout=True, #use droput_here
+                 use_relu=True):  #Use Rectified Linear Unit (ReLU)?
 
     # Create new weights and biases.
     weights = new_weights(shape=[num_inputs, num_outputs])
@@ -224,6 +234,10 @@ def new_fc_layer(input,          # The previous layer.
     # Use ReLU?
     if use_relu:
         layer = tf.nn.relu(layer)
+
+    #Use dropout?
+    if use_dropout:
+        layer = tf.nn.dropout(layer, keep_prob=0.5)
 
     return layer
 
@@ -256,41 +270,59 @@ layer_conv2, weights_conv2 = \
                    use_pooling=True)
 
 
-
 layer_conv3, weights_conv3 = \
     new_conv_layer(input=layer_conv2,
                    num_input_channels=num_filters2,
                    filter_size=filter_size3,
                    num_filters=num_filters3,
+                   use_pooling=False)
+
+layer_conv4, weights_conv4 = \
+    new_conv_layer(input=layer_conv3,
+                   num_input_channels=num_filters3,
+                   filter_size=filter_size4,
+                   num_filters=num_filters4,
+                   use_pooling=False)
+
+
+layer_conv5, weights_conv3 = \
+    new_conv_layer(input=layer_conv4,
+                   num_input_channels=num_filters4,
+                   filter_size=filter_size5,
+                   num_filters=num_filters5,
                    use_pooling=True)
 
 
-
-layer_flat, num_features = flatten_layer(layer_conv3)
-
-
-
+layer_flat, num_features = flatten_layer(layer_conv5)
 
 
 layer_fc1 = new_fc_layer(input=layer_flat,
                          num_inputs=num_features,
                          num_outputs=fc_size,
+                         use_dropout=True,
                          use_relu=True)
-
 
 
 layer_fc2 = new_fc_layer(input=layer_fc1,
                          num_inputs=fc_size,
+                         num_outputs=fc_size,
+                         use_dropout=True,
+                         use_relu=True)
+
+
+
+layer_fc3 = new_fc_layer(input=layer_fc2,
+                         num_inputs=fc_size,
                          num_outputs=num_classes,
+                         use_dropout = False,
                          use_relu=False)
 
 
-y_pred = tf.nn.softmax(layer_fc2)
+y_pred = tf.nn.softmax(layer_fc3, name='y_pred')
 
-y_pred_cls = tf.argmax(y_pred, dimension=1)
+y_pred_cls = tf.argmax(y_pred, dimension=1, name='y_pred_cls')
 
-
-cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=layer_fc2,
+cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=layer_fc3,
                                                         labels=y_true)
 
 cost = tf.reduce_mean(cross_entropy)
@@ -413,13 +445,13 @@ def plot_example_errors(cls_pred, correct):
 
     # Get the images from the test-set that have been
     # incorrectly classified.
-    images = data.valid.images[incorrect]
+    images = data2.test.images[incorrect]
 
     # Get the predicted classes for those images.
     cls_pred = cls_pred[incorrect]
 
     # Get the true classes for those images.
-    cls_true = data.valid.cls[incorrect]
+    cls_true = data2.test.cls[incorrect]
 
     # Plot the first 9 images.
     plot_images(images=images[0:9],
@@ -432,7 +464,7 @@ def plot_confusion_matrix(cls_pred):
     # all images in the test-set.
 
     # Get the true classifications for the test-set.
-    cls_true = data.valid.cls
+    cls_true = data2.test.cls
 
     # Get the confusion matrix using sklearn.
     cm = confusion_matrix(y_true=cls_true,
@@ -460,7 +492,7 @@ def plot_confusion_matrix(cls_pred):
 def print_validation_accuracy(show_example_errors=False,
                               show_confusion_matrix=False):
     # Number of images in the valid-set.
-    num_test = len(data.valid.images)
+    num_test = len(data2.test.images)
 
     # Allocate an array for the predicted classes which
     # will be calculated in batches and filled into this array.
@@ -478,10 +510,10 @@ def print_validation_accuracy(show_example_errors=False,
         j = min(i + batch_size, num_test)
 
         # Get the images from the test-set between index i and j.
-        images = data.valid.images[i:j, :].reshape(-1, img_size_flat)
+        images = data2.test.images[i:j, :].reshape(-1, img_size_flat)
 
         # Get the associated labels.
-        labels = data.valid.labels[i:j, :]
+        labels = data2.test.labels[i:j, :]
 
         # Create a feed-dict with these images and labels.
         feed_dict = {x: images,
@@ -494,7 +526,7 @@ def print_validation_accuracy(show_example_errors=False,
         # end-index of the current batch.
         i = j
 
-    cls_true = np.array(data.valid.cls)
+    cls_true = np.array(data2.test.cls)
     cls_pred = np.array([classes[x] for x in cls_pred])
 
     # Create a boolean array whether each image is correctly classified.
@@ -533,11 +565,9 @@ def print_validation_accuracy(show_example_errors=False,
 
 #print_validation_accuracy(show_example_errors=True)
 
-optimize(num_iterations=100) # We performed 1000 iterations above.
+optimize(num_iterations=3000) # We performed 1000 iterations above.
 
-print_validation_accuracy(show_example_errors=True, show_confusion_matrix=True)
-
-
+#print_validation_accuracy(show_example_errors=True, show_confusion_matrix=True)
 
 
 

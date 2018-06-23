@@ -161,6 +161,25 @@ def read_train_sets(train_path, image_size, classes, validation_size):
 
 
 
+def read_test_sets(train_path, image_size, classes):
+  class DataSets(object):
+    pass
+  data_sets = DataSets()
+
+  images, labels, img_names, cls = load_train(train_path, image_size, classes)
+  images, labels, img_names, cls = shuffle(images, labels, img_names, cls)
+
+  train_images = images[:]
+  train_labels = labels[:]
+  train_img_names = img_names[:]
+  train_cls = cls[:]
+
+  data_sets.test = DataSet(train_images, train_labels, train_img_names, train_cls)
+
+
+  return data_sets
+
+
 
 def read_test_set(test_path, image_size):
   images, ids  = load_test(test_path, image_size)

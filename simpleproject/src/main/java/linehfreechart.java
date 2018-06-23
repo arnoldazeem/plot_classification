@@ -1,6 +1,7 @@
 /**
  * Created by adaboo on 4/25/18.
- */
+ *//*
+
 
 import java.io.*;
 import java.util.ArrayList;
@@ -143,8 +144,12 @@ public class linehfreechart {
                                 line_chart_dataset,PlotOrientation.VERTICAL,
                                 true,true,false);
 
-                        int width = 640;    /* Width of the image */
-                        int height = 480;   /* Height of the image */
+                        int width = 640;    */
+/* Width of the image *//*
+
+                        int height = 480;   */
+/* Height of the image *//*
+
                         File lineChart = new File( xAxis.get(0) +"jfreelin" + ".jpg");
                         ChartUtilities.saveChartAsJPEG(lineChart ,lineChartObject, width ,height);
 
@@ -165,4 +170,4 @@ public class linehfreechart {
         }
 
     }
-}
+}*/

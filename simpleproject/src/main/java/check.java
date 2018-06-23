@@ -1,3 +1,4 @@
+/*
 import org.knowm.xchart.BitmapEncoder;
 import org.knowm.xchart.QuickChart;
 import org.knowm.xchart.SwingWrapper;
@@ -11,9 +12,11 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.*;
+*/
 /**
  * Creates a simple Chart using QuickChart
- */
+ *//*
+
 public class check {
 
     public static void main(String[] args) throws Exception {
@@ -127,4 +130,4 @@ public class check {
         }
 
     }
-}
+}*/

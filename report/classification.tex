@@ -70,7 +70,7 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-"A picture is worth a thousand words" even though a widely used phrase stands to be very true especially when dealing with scientific literature. This is due to the fact that information and data is easily understood when visualized, for this reason most scientific publications tend to present their data using tables, plots and pictures. Identification, extraction and interpretation of this visualized data for purposes of; validation of results by another researcher, or presentation of the data to another audience is an area in machine learning which is still found wanting.\newline\newline
+``A picture is worth a thousand words'' even though a widely used phrase stands to be very true especially when dealing with scientific literature. This is due to the fact that information and data is easily understood when visualized, for this reason most scientific publications tend to present their data using tables, plots and pictures. Identification, extraction and interpretation of this visualized data for purposes of; validation of results by another researcher, or presentation of the data to another audience is an area in machine learning which is still found wanting.\newline\newline
 The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification.  The other parts of this paper are organized in the follows: 
 In the other sections of this chapter the research motivation, objectives, contributions and an outline of
 the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6
@@ -128,7 +128,15 @@ Figure \ref{fig:vis} shows the significance of this work and what it will lead t
 
 
 \chapter{Background and Related Work}
-Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualizable and easy to understand format. As a result of this popularity, chart images have gained, different techniques have over time been used for classification of charts and these techniques have evolved over the years. The techniques have been inspired by techniques from image processing, raster to vector conversion and layout analysis. These techniques can be put into two categories; Model-Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}. In the next section, the methods and techniques used in this thesis, and techniques that inspired us to choose these techniques are explained in details.
+
+
+
+\section{Overview}
+In this chapter the literature on classification of chart images is presented and explored. Old techniques that were previously used and how they evolved are discussed. Section 3.2 introduces the two main categories images classification has been put into, while in 3.3 and 3.4 these two categories are discussed in detail, also, CovNets which are inspired by the cat’s visual cortex and have performed really well in the field of image processing are talked about in detail. Lastly, Section 3.5 presents the important approaches and techniques employed by other researchers for chart image classification.
+
+
+\section{Background}
+Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualizable and easy to understand format. As a result of this popularity chart images have gained, different techniques have over time been used for classification of charts and these techniques have evolved over the years. The techniques have been inspired by techniques from image processing, raster to vector conversion and layout analysis. These techniques can be put into two categories; Model-Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}. In the next section, the methods and techniques used in this thesis, and techniques that inspired us to choose these techniques are explained in details.
 
 \section{Model Based Approaches}
 The following is written with inspiration from Boyle et al. work~\cite{boyle2007advances}. Numerous chart images even of the same type, are very different in sense of their context structure. This is as a result of the variability of positions of the context structure of a chart. There is exists no real standard for all charts to follow, content like; legends, axes, grids etc., have no fixed positions and sometimes are not even present in some charts. As a result of this non standardization of charts, classifying becomes a very difficult task. As a results this approach tries to uses the structure of the charts. The model-based approach is divided into two steps. Firstly, a number of predefined object classes are created with abstract models and then an image is matched with the created model. For example, a model for a 2D/3D pie chart consists of line segments (radii and circular/elliptical arcs), and these line segments are used to create the model, however, just using these line segments wont be enough, so some constraints are introduced into the model, example of constraints of a pie chart include; the center of the pie chart is where all radii meet; all 2D pie charts have radii of equal length; arcs mainly form parts of the same 2D pie chart circle, or if its a 3D then the arcs form part of the ellipse. After this a goodness-of-fit is introduced to help measure the discrepancy between the image and the conditions for the model. For example, a goodness-of-fit of a pie chart is as follows: difference in length of radii; difference in how the arcs are curved; distance between a center of a circle and that of a radii. When a chart is presented for classification, the edges are detected, thinned, linked, vectorized, extracted and compared to the various edge models created and the best match is selected. After this, the good-to-fit criteria is used to measure the difference between the edges of the model and the image. Finally, a voting is performed base on the value of the good-to-fit results. The model-based approach has some drawbacks though. The main drawback is that human intervention is needed to develop the various models. This could be a cumbersome and time consuming procedure. Due to the limitation of this approach a machine learning approach was introduced to handle some of the limited of this approach.
@@ -235,6 +243,7 @@ The process by which a CovNet performs classification is summarized below.
 	
 \end{itemize} 
 
+\section{Review of chart image Classification Techniques}
 In the rest of this chapter, three related works that performed chart image classification, with very unique methods and also achieved good results are described in details.  
 
 \subsubsection{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}
@@ -442,7 +451,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		&  MATLAB   & Default &  \\ \cline{2-4} 
 				
 		& R & Default,Plotly \par R Library \par ggplot2  &  \\ \cline{2-4} 
-		& 	JAVA   & XChart 3.5.1 \par Jfree & LegendPosition (topleft,topright)  \\ \hline
+		& 	JAVA   & XChart 3.5.1 \par Jfree \par smile & LegendPosition (topleft,topright)  \\ \hline
 	\end{tabular}
 \end{adjustbox}
 
@@ -466,7 +475,7 @@ The Library column shows the different plotting libraries used, the parameter co
 			
 			R  & 1008  &  \\	\cline{1-2}
 			
-			Java &  984 &  \\ \hline
+			Java &  1000 &  \\ \hline
 			
 			\multicolumn{3}{|c|}{Bar Charts} \\	\hline
 			

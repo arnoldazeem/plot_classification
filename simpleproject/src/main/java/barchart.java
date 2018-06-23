@@ -1,3 +1,4 @@
+/*
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -164,8 +165,12 @@ public class barchart {
                                         dataset, PlotOrientation.VERTICAL,
                                         true, true, false);
 
-                                int width = 640  ;    /* Width of the image */
-                                int height = 480;   /* Height of the image */
+                                int width = 640  ;    */
+/* Width of the image *//*
+
+                                int height = 480;   */
+/* Height of the image *//*
+
                                 File BarChart = new File( xAxis.get(0) +"simplebar" + ".jpg" );
 
                                 try{
@@ -200,4 +205,4 @@ public class barchart {
 
 
 
-}
+}*/

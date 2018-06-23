@@ -1,9 +1,11 @@
 /**
  * Created by adaboo on 4/19/18.
  */
+
 import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
 import org.knowm.xchart.style.markers.SeriesMarkers;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -88,6 +90,12 @@ public class scatterchart {
             List<Float> list = new ArrayList<Float>();
             List<Float> lister = new ArrayList<Float>();
 
+            List<Float> listet = new ArrayList<Float>();
+            List<Float> listeret = new ArrayList<Float>();
+
+            List<Float> listett = new ArrayList<Float>();
+            List<Float> listerett = new ArrayList<Float>();
+
             for (Map.Entry<Integer,ArrayList<String>> entry : some.entrySet()){
 
 
@@ -95,15 +103,13 @@ public class scatterchart {
 
                     xAxis = entry.getValue();
                     check = false;
-
-
                 }else{
 
                     System.out.println(yAxis);
                     yAxis = entry.getValue();
                     //clear the series everytime
                     //xAxis.size()
-                    for (int j = 1; j < 9 ; j++) {
+                    for (int j = 1; j < 4 ; j++) {
                         String trim = xAxis.get(j).trim();
                         String trim2 = yAxis.get(j).trim();
                         float a = Float.parseFloat(trim);
@@ -113,25 +119,56 @@ public class scatterchart {
                     }
 
 
-                    // Create Chart
-                    XYChart chart = new XYChartBuilder().width(640).height(480).title(xAxis.get(0)).xAxisTitle(xAxis.get(0)).yAxisTitle(yAxis.get(0)).build();
+                    for (int k = 5; k < 9 ; k++) {
+                        String trim = xAxis.get(k).trim();
+                        String trim2 = yAxis.get(k).trim();
+                        float a = Float.parseFloat(trim);
+                        float b = Float.parseFloat(trim2);
+                        listet.add(a);
+                        listeret.add(b);
+                    }
 
+
+
+                    for (int k = 10; k < 15 ; k++) {
+                        String trim = xAxis.get(k).trim();
+                        String trim2 = yAxis.get(k).trim();
+                        float a = Float.parseFloat(trim);
+                        float b = Float.parseFloat(trim2);
+                        listett.add(a);
+                        listerett.add(b);
+                    }
+
+
+                    // Create Chart
+                    XYChart chart = new XYChartBuilder().width(640).height(480).title("A Scatter plot with title " + xAxis.get(0)).yAxisTitle(yAxis.get(0)).build();
                     // Customize Chart
                     chart.getStyler().setDefaultSeriesRenderStyle(XYSeries.XYSeriesRenderStyle.Scatter);
-                    chart.getStyler().setChartTitleVisible(false);
-                    chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideSW);
-                    chart.getStyler().setMarkerSize(16);
+                    chart.getStyler().setChartTitleVisible(true);
+                    //chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideSW);
+                    chart.getStyler().setMarkerSize(12);
+
+
+
+                    chart.addSeries(xAxis.get(0), list ,lister);
+
+                    chart.addSeries(yAxis.get(0), lister, list);
+
+                    chart.addSeries("dummy1", listet, listeret);
+
+                    chart.addSeries("dummy2", listett, listerett);
 
                     // Series
-                    chart.addSeries(xAxis.get(0), list);
-                    XYSeries series = chart.addSeries(yAxis.get(0), lister);
+                    //chart.addSeries(xAxis.get(0), list);
 
-                    series.setMarker(SeriesMarkers.CROSS);
+                    //XYSeries series = chart.addSeries(yAxis.get(0), lister);
+
+                   // series.setMarker(SeriesMarkers.NONE);
 
                     new SwingWrapper(chart).displayChart();
 
 
-                    BitmapEncoder.saveBitmap(chart, xAxis.get(0) + "scatter01", BitmapEncoder.BitmapFormat.JPG);
+                    BitmapEncoder.saveBitmap(chart, xAxis.get(0) + "scatt11", BitmapEncoder.BitmapFormat.JPG);
 
                     xAxis = yAxis;
 

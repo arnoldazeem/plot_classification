@@ -16,21 +16,11 @@ import org.jfree.ui.RefineryUtilities;
 import org.jfree.util.Log;
 import org.jfree.util.LogContext;
 
-/**
- * Demonstration of a box-and-whisker chart using a {@link CategoryPlot}.
- *
- * @author David Browning
- */
+
+
 public class BoxPlot extends ApplicationFrame {
 
-    /** Access to logging facilities. */
-    private static final LogContext LOGGER = Log.createContext(BoxPlot.class);
 
-    /**
-     * Creates a new demo.
-     *
-     * @param title  the frame title.
-     */
     public BoxPlot(final String title) {
 
         super(title);
@@ -47,6 +37,7 @@ public class BoxPlot extends ApplicationFrame {
         renderer.setSeriesPaint(1, Color.LIGHT_GRAY);
         renderer.setSeriesOutlinePaint(0, Color.BLACK);
         renderer.setSeriesOutlinePaint(1, Color.BLACK);
+        renderer.setMeanVisible(false);
 
         final CategoryPlot plot = new CategoryPlot(dataset, xAxis, yAxis, renderer);
 
@@ -57,16 +48,14 @@ public class BoxPlot extends ApplicationFrame {
                 true
         );
         final ChartPanel chartPanel = new ChartPanel(chart);
-        chartPanel.setPreferredSize(new java.awt.Dimension(450, 270));
+        chartPanel.setPreferredSize(new java.awt.Dimension(480, 640));
         setContentPane(chartPanel);
 
     }
 
-    /**
-     * Creates a sample dataset.
-     *
-     * @return A sample dataset.
-     */
+
+
+
     private BoxAndWhiskerCategoryDataset createSampleDataset() {
 
         final int seriesCount = 3;
@@ -85,8 +74,8 @@ public class BoxPlot extends ApplicationFrame {
                     final double value2 = 11.25 + Math.random(); // concentrate values in the middle
                     list.add(new Double(value2));
                 }
-                LOGGER.debug("Adding series " + i);
-                LOGGER.debug(list.toString());
+               // LOGGER.debug("Adding series " + i);
+                //LOGGER.debug(list.toString());
                 dataset.add(list, "Series " + i, " Type " + j);
             }
 
@@ -106,11 +95,6 @@ public class BoxPlot extends ApplicationFrame {
     // * support us so that we can continue developing free software.             *
     // ****************************************************************************
 
-    /**
-     * For testing from the command line.
-     *
-     * @param args  ignored.
-     */
     public static void main(final String[] args) {
 
         //Log.getInstance().addTarget(new PrintStreamLogTarget(System.out));

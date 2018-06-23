@@ -1,3 +1,4 @@
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.ChartUtilities;
@@ -18,6 +19,7 @@ import org.jfree.data.xy.DefaultXYDataset;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.geom.Ellipse2D;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -27,10 +29,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-
-/**
- * Created by adaboo on 4/22/18.
- */
 
 
 
@@ -139,7 +137,7 @@ public class boxplotjfree {
                                     for (int k = 1; k < categoryCount; k++) {
                                         final List list = new ArrayList();
                                         // add some values...
-                                        for (int j = 1; j < 10; j++) {
+                                        for (int j = 1; j < 30; j++) {
                                             String trim = xAxis.get(j).trim();
                                             String trim2 = yAxis.get(j).trim();
 
@@ -178,26 +176,36 @@ public class boxplotjfree {
                                 final NumberAxis yxis = new NumberAxis("Value");
                                 yxis.setAutoRangeIncludesZero(false);
                                 final BoxAndWhiskerRenderer renderer = new BoxAndWhiskerRenderer();
-                                renderer.setFillBox(true);
-                                renderer.setToolTipGenerator(new BoxAndWhiskerToolTipGenerator());                                renderer.setFillBox(true);
-                                renderer.setSeriesPaint(0, Color.WHITE);
-                                renderer.setSeriesPaint(1, Color.LIGHT_GRAY);
-                                renderer.setSeriesOutlinePaint(0, Color.BLACK);
-                                renderer.setSeriesOutlinePaint(1, Color.BLACK);
+                                renderer.setFillBox(false);
+                                renderer.setMeanVisible(false);
+
+                                //renderer.setToolTipGenerator(new BoxAndWhiskerToolTipGenerator());                                renderer.setFillBox(true);
+                                //renderer.setSeriesPaint(0, Color.black);
+                                //renderer.setSeriesPaint(1, Color.black);
+                                //renderer.setSeriesOutlinePaint(0, Color.BLACK);
+                                //renderer.setSeriesOutlinePaint(1, Color.BLACK);
 
 
                                 final CategoryPlot plot = new CategoryPlot(dataset, xxis, yxis, renderer);
 
                                 final JFreeChart chart = new JFreeChart(
                                         "Box-and-Whisker Demo",
-                                        new Font("SansSerif", Font.BOLD, 14),
-                                        plot,
+                                        new Font("SansSerif", Font.BOLD, 12),plot,
                                         true
                                 );
+
+
+                                chart.setBackgroundPaint(Color.white);
+                                plot.setBackgroundPaint(Color.lightGray);
+                                plot.setDomainGridlinePaint(Color.white);
+                                plot.setDomainGridlinesVisible(false);
+                                plot.setRangeGridlinePaint(Color.white);
+                                plot.getRangeAxis().setRange(-0.5, 350.5);
+
                                 final ChartPanel chartPanel = new ChartPanel(chart);
                                 chartPanel.setPreferredSize(new java.awt.Dimension(640, 480));
 
-                                File outputfile = new File(xAxis.get(0) + "init" + ".jpg");
+                                File outputfile = new File(xAxis.get(0) + "new5" + ".jpg");
 
                                 try{
                                     ChartUtilities.saveChartAsJPEG(outputfile, chart, 640, 480);

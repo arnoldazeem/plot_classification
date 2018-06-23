@@ -26,11 +26,10 @@ import de.erichseifert.gral.plots.axes.LinearRenderer2D;
 import de.erichseifert.gral.plots.axes.LogarithmicRenderer2D;
 import de.erichseifert.gral.plots.colors.LinearGradient;
 import de.erichseifert.gral.plots.colors.ScaledContinuousColorMapper;
+import de.erichseifert.gral.plots.legends.ValueLegend;
 import de.erichseifert.gral.ui.InteractivePanel;
 import de.erichseifert.gral.util.DataUtils;
 import de.erichseifert.gral.util.GraphicsUtils;
-import org.jfree.data.category.DefaultCategoryDataset;
-import org.jfree.io.IOUtils;
 
 import javax.swing.*;
 
@@ -38,7 +37,7 @@ import javax.swing.*;
 public class boxgral extends ExamplePanel {
     /** Version id for serialization. */
     private static final long serialVersionUID = 5228891435595348789L;
-    private static final int SAMPLE_COUNT = 50;
+    private static final int SAMPLE_COUNT = 10;
     private static final Random random = new Random();
 
 
@@ -47,7 +46,7 @@ public class boxgral extends ExamplePanel {
         setPreferredSize(new Dimension(800, 600));
 
         // Create example data
-        DataTable data = new DataTable(Float.class, Float.class, Float.class,Float.class,Float.class,Float.class);
+        DataTable data = new DataTable(Float.class, Float.class,Float.class,Float.class,Float.class);
 
         File dir = new File("/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java data");
         File[] directoryListing = dir.listFiles();
@@ -139,11 +138,11 @@ public class boxgral extends ExamplePanel {
 
                     }else{
 
-                        DefaultCategoryDataset line_chart_dataset = new DefaultCategoryDataset();
+                      //  DefaultCategoryDataset line_chart_dataset = new DefaultCategoryDataset();
                         yAxis = entry.getValue();
                         //clear the series everytime
                         //xAxis.size()
-                        for (int j = 1; j < 10 ; j++) {
+                        for (int j = 24; j < 25 ; j++) {
 
                             String trim = xAxis.get(j).trim();
                             String trim2 = yAxis.get(j).trim();
@@ -163,7 +162,7 @@ public class boxgral extends ExamplePanel {
                             float e = Float.parseFloat(trim5);
                             float f = Float.parseFloat(trim6);
 
-                            data.add(a,b,c,d,e,f);
+                            data.add(a,b,c,d,e);
 
                         }
 
@@ -173,17 +172,19 @@ public class boxgral extends ExamplePanel {
                         BoxPlot plot = new BoxPlot(boxData);
 
                         // Format plot
-                        plot.setInsets(new Insets2D.Double(20.0, 60.0, 60.0, 40.0));
+                        plot.setInsets(new Insets2D.Double(80, 100, 70, 80));
+
+
 
                         plot.setBackground(Color.WHITE);
 
 
                         // Format axes
                         AxisRenderer axisRendererX = new LinearRenderer2D();
-                        AxisRenderer axisRendererY = plot.getAxisRenderer(XYPlot.AXIS_Y);
+                        AxisRenderer axisRendererY = plot.getAxisRenderer(BoxPlot.AXIS_Y);
                         axisRendererX.setLabel(new Label(yAxis.get(0)));
 
-                        plot.setAxisRenderer(XYPlot.AXIS_X, axisRendererX);
+                        plot.setAxisRenderer(BoxPlot.AXIS_X, axisRendererX);
 
 
 
@@ -193,33 +194,51 @@ public class boxgral extends ExamplePanel {
 
                          //xAxis.get(0)
 
-                        plot.getTitle().setText("A three boxplot showing data from " + titl);
+                        plot.getTitle().setText("Another  boxplot showing data from " + titl);
 
                         // Format axes
                         plot.getAxisRenderer(BoxPlot.AXIS_X).setCustomTicks(
                                 DataUtils.map(
-                                        new Double[] {1.0, 2.0, 3.0, 4.0,5.0,6.0},
-                                        new String[] {"Column 1", "Column 2", "Column 3","Column 4","Column 5","Column 6"}
+                                        new Double[] {1.0, 2.0, 3.0, 4.0, 5.0},
+                                        new String[] {"Column 1", "Column 2", "Column 3", "Column 4", "Column 5"}
                                 )
                         );
+
+
+                        plot.getAxis(BoxPlot.AXIS_X).setRange(0.0, 6.0);
+                        plot.getAxis(BoxPlot.AXIS_Y).setRange(-5.0, 300.0);
+
 
                         // Format boxes
                         Stroke stroke = new BasicStroke(2f);
                         ScaledContinuousColorMapper colors =
-                                new LinearGradient(GraphicsUtils.deriveBrighter(COLOR1), Color.WHITE);
-                        colors.setRange(1.0, 3.0);
+                                new LinearGradient(GraphicsUtils.deriveBrighter(COLOR2), Color.WHITE);
+                        colors.setRange(1.0, 5.0);
 
                         BoxWhiskerRenderer pointRenderer =
                                 (BoxWhiskerRenderer) plot.getPointRenderers(boxData).get(0);
                         pointRenderer.setWhiskerStroke(stroke);
                         pointRenderer.setBoxBorderStroke(stroke);
-                        pointRenderer.setBoxBackground(colors);
-                        pointRenderer.setBoxBorderColor(COLOR1);
-                        pointRenderer.setWhiskerColor(COLOR1);
-                        pointRenderer.setCenterBarColor(COLOR1);
+                        //pointRenderer.setBoxBackground(Color.BLACK);
+                        //pointRenderer.setBoxBorderColor(COLOR1);
+                        pointRenderer.setWhiskerColor(COLOR2);
+                        //pointRenderer.setCenterBarColor(COLOR1);
 
 
-                        //plot.setLegendVisible(true);
+                        plot.setLegendVisible(true);
+                        //plot.setLegendLocation();
+
+                        //plot.getLegend().setAlignmentX(30.0);
+                        //plot.getLegend().setAlignmentY(30.0);
+
+                       plot.setLegendDistance(0.5);
+
+                       plot.setLegendLocation(Location.EAST);
+
+
+                        ValueLegend legend = (ValueLegend) plot.getLegend();
+                        legend.setLabelColumn(0);
+
 
                         plot.getNavigator().setDirection(XYNavigationDirection.VERTICAL);
 
@@ -234,12 +253,12 @@ public class boxgral extends ExamplePanel {
 
                             DrawableWriter writer = DrawableWriterFactory.getInstance().get(mimeType);
 
-                            File file = new File(xAxis.get(0) +"legend" + ".png");
+                            File file = new File(xAxis.get(0) +"ani45" + ".png");
 
                             FileOutputStream outStream = null;
                             try {
                                 outStream = new FileOutputStream((file));
-                                plot.setBounds(10, 10, 790, 590);
+                                plot.setBounds(-20, -20, 200, 300);
                                 writer.write(plot, outStream, 800, 600);
                             } finally {
                                 outStream.flush();
@@ -279,7 +298,7 @@ public class boxgral extends ExamplePanel {
 
     @Override
     public String getDescription() {
-        return String.format("Three box-and-whisker plots created from %d random samples", SAMPLE_COUNT);
+        return String.format("A box-and-whisker plots created from %d random samples", SAMPLE_COUNT);
     }
 
     public static void main(String[] args) {

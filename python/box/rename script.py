@@ -4,11 +4,11 @@ import glob
 
 #path = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/scatter/R scatter data/*"
 
-pathjav =  "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/scatter plot/*"
+pathjav =  "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java scatter plot/*"
 
 #path2 = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/R/scatter/R scatter data/"
 
-pathjav2 = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/scatter plot/"
+pathjav2 = "/home/adaboo/Desktop/Masters/sem4/thesis/plot_classification/simpleproject/java scatter plot/"
 
 
 for i,fname in enumerate (glob.glob(pathjav)):
