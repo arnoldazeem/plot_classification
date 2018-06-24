@@ -11,6 +11,17 @@ for file = files'
    %read tablreade reads the whole file readtable
    %csvread should contain only numeric values
    F = readtable(file.name);
+   
+   str = file.name
+   
+   namess =str(1:strfind(str,'.')-1);
+   
+   display(str)
+   
+   s1 = "A grouped bar chart "
+   
+   tit  = strcat(s1,namess);
+   
   
    %header
    V = F.Properties.VariableNames;
@@ -28,17 +39,16 @@ for file = files'
         for k= 1:length(labels)-1
             
             figure
-            hold on 
+           
             
                % if k < length(labels)
                    
                     x_axi = F.(k);
                     
-                    x_axis = (x_axi(1:3,:));
+                    x_axis = (x_axi(1:6,:));
                     
-                    n_axis = (x_axi(4:6,:));
+                    n_axis = (x_axi(7:12,:));
                                         
-                
                     x_lab = labels(k);
 
                     put = k;
@@ -47,24 +57,35 @@ for file = files'
                             k = k+1;
                             y_axi = F.(k);
                             
-                            y_axis = (y_axi(1:3,:));
+                            y_axis = (y_axi(1:6,:));
                             
                             y_lab = labels(k);
                             
                            
-                           y = [x_axis; n_axis; y_axis];
+                  
+                           y = [x_axis  n_axis ];
                            
-                           bar(y);
+                           hb = barh(y);
+                                               
+                           hbc = get(hb, 'Children');
+                            
+                            set(hbc{1}, 'FaceColor', 'r');
+                            set(hbc{2}, 'FaceColor', 'b');
                           
-                                                                                                   
-                           title(file.name);
+                            
+                           legend('dummy1','dummy2');
+
+                                                    
+                           title(tit);
                            xlabel(x_lab);
                            ylabel(y_lab);
                             
-                           folder = '/home/azeem/Desktop/matlab/scatter/';                           
+                           folder = '/home/azeem/Desktop/matlab/bars/';   
+                           
                            %it as a cell had to convert to string 
-                           string = y_lab{1};                         
-                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bar/',['figure_stacked' string '.jpg']));
+                           string = y_lab{1};   
+                           
+                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bars/',['2hor_grou_bar' string '.jpg']));
                                                                                
                       end 
         end    

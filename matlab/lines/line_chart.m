@@ -33,35 +33,40 @@ for file = files'
                % if k < length(labels)
                    
                     x_axi = T.(k);
-                    x_axis = (x_axi(1:5,:));
+                    x_axis = (x_axi(1:9,:));
                     x_lab = labels(k)
                     put = k
                     
                         if  k < length(labels)            
                             k = k+1;
                             y_axi = T.(k);
-                            y_axis = (y_axi(1:5,:));
+                            y_axis = (y_axi(10:18,:));
                             y_lab = labels(k)
                               
-                            b = [1,2,3,4];                 
-                                                                                                                    
-                            pos_fill = randi(length(b));
+                            b = [1,2,3,4];    
                             
-                            filler = b(pos_fill);
-                            
+                            e = std(y_axis)*ones(size(x_axis));
+                                                      
+                            c = ['-+','-*','-.','-x','-o']; 
+                             pos_marker = randi(length(c));
+                             card2 = c(pos_marker);         
                                                                                               
-                            plot(x_axis,y_axis)  
+                            plot(x_axis,y_axis,'-o')  
+                            hold on
+                            errorbar(x_axis,y_axis,e) 
+                            
+                            
                                                  
                             title(file.name);
                             xlabel(x_lab);
                             ylabel(y_lab);
                             
-                           folder = '/home/azeem/Desktop/matlab/line_plot/';
+                           folder = '/home/azeem/Desktop/matlab/line/';
                            
                            %it as a cell had to convert to string 
                            string = y_lab{1};
                                                    
-                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/scatter/',['figure' string '.jpg']));                         
+                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/lines/',['oo_thicks' string '.jpg']));                         
                                                                 
                         end
                 %end   

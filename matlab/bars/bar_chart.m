@@ -9,12 +9,25 @@ for file = files'
    clear v_is_cell 
    %read tablreade reads the whole file readtable
    %csvread should contain only numeric values
+   display(file.name)
+   
    T = readtable(file.name);
+   
+   str = file.name
+   
+   namess =str(1:strfind(str,'.')-1);
+   
+   display(str)
+   
+   s1 = "A BAR CHART SHOWING RANDOM DATA QUALITY "
+   
+   tit  = strcat(s1,namess);
+   
    %header
    V = T.Properties.VariableNames;
     %x= a.data; % x contains your data
     
-    for i = [1:width(T)]    
+    for i = 1:width(T)    
     v_is_cell(i) = iscell(T.(V{i}));
     end
     
@@ -31,14 +44,14 @@ for file = files'
                % if k < length(labels)
                    
                     x_axi = T.(k);
-                    x_axis = (x_axi(1:20,:));
+                    x_axis = (x_axi(1:4,:));
                     x_lab = labels(k);
                     put = k;
                     
                         if  k < length(labels)            
                             k = k+1;
                             y_axi = T.(k);
-                            y_axis = (y_axi(1:20,:));
+                            y_axis = (y_axi(1:4,:));
                             y_lab = labels(k);
                             
                             %width of bar
@@ -46,16 +59,16 @@ for file = files'
                             pos_fill = randi(length(b));
                             width = b(pos_fill);
                  
-                            bar(y_axis,width)   
+                            barh(y_axis,width,'FaceColor',[0 .5 .5],'EdgeColor',[0 .9 .9],'LineWidth',1.5)   
                             
-                            title(file.name);
+                            title(s1);
                             xlabel(x_lab);
                             ylabel(y_lab);
                             
-                           folder = '/home/azeem/Desktop/matlab/scatter/';                           
+                           folder = '/home/azeem/Desktop/matlab/bars/';                           
                            %it as a cell had to convert to string 
                            string = y_lab{1};                         
-                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bar/',['figure_bar' string '.jpg']));
+                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bars/',['e_bar' string '.jpg']));
                                                                                
                         end 
         end   

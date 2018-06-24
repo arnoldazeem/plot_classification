@@ -1,0 +1,23 @@
+path_to_downloaded_folder = '/home/azeem/Desktop/matlab/scatter/MATLAB-Online-master'; % fill in with your path
+addpath(genpath(path_to_downloaded_folder))
+% OR to use the demo account, do:
+%ashishbbhayani
+%5czLDBg2FdjjsBd1JXLh
+plotly_username = 'arnoldazeem2008' % a demo username you can use
+plotly_key = 'MIRMEHz16jNDvNkGKwxL' % a demo api key you can use
+signin(plotly_username, plotly_key)  % sign in to plotly
+
+
+
+data = {...
+  struct(...
+    'y', [0, 1, 1, 2, 3, 5, 8, 13, 21], ...
+    'boxpoints', 'all', ...
+    'jitter', 0.3, ...
+    'pointpos', -1.8, ...
+    'type', 'box')...
+};
+
+
+  saveplotlyfig(data, ['boxy_chaging' string '.png'])
+                         

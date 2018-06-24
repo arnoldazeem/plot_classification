@@ -11,7 +11,19 @@ for file = files'
    %read tablreade reads the whole file readtable
    %csvread should contain only numeric values
    F = readtable(file.name);
-  
+   display(file.name)
+   
+    str = file.name
+   
+   namess =str(1:strfind(str,'.')-1);
+   
+   display(str)
+   
+   s1 = "A HORIZONTAL BAR CHART ENTITLED "
+   
+   tit  = strcat(s1,namess);
+   
+   
    %header
    V = F.Properties.VariableNames;
    %x= a.data; % x contains your data
@@ -33,7 +45,7 @@ for file = files'
                % if k < length(labels)
                    
                     x_axi = F.(k);
-                    x_axis = (x_axi(1:5,:));
+                    x_axis = (x_axi(1:15,:));
                     display(x_axis)
                     
                     x_lab = labels(k);
@@ -42,7 +54,7 @@ for file = files'
                         if  k < length(labels)            
                             k = k+1;
                             y_axi = F.(k);
-                            y_axis = (y_axi(1:5,:));
+                            y_axis = (y_axi(1:15,:));
                             y_lab = labels(k);
                             
                             %width of bar
@@ -59,14 +71,14 @@ for file = files'
                             barh(out)
                             
                                                                                                       
-                            title(file.name);
+                            title(tit);
                             xlabel(x_lab);
                             ylabel(y_lab);
                             
-                           folder = '/home/azeem/Desktop/matlab/scatter/';                           
+                           folder = '/home/azeem/Desktop/matlab/bars/';                           
                            %it as a cell had to convert to string 
                            string = y_lab{1};                         
-                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bar/',['figure_horizonal_bar' string '.jpg']));
+                           saveas(figure(put),fullfile('/home/azeem/Desktop/matlab/bars/',['figure_horizonal_bar' string '.jpg']));
                                                                                
                         end 
         end   
