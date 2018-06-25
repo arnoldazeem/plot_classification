@@ -40,5 +40,6 @@
 \contentsline {subsection}{\numberline {3.3.2}Fully connected layers}{31}{subsection.66}
 \contentsline {subsection}{\numberline {3.3.3}Preprocessing Techniques}{32}{subsection.67}
 \contentsline {chapter}{\numberline {4}Experiments}{33}{chapter.69}
-\contentsline {chapter}{\numberline {5}Summary}{34}{chapter.70}
-\contentsline {chapter}{\numberline {6}Bibliography}{35}{chapter.71}
+\contentsline {section}{\numberline {4.1}size of images was tried}{33}{section.70}
+\contentsline {chapter}{\numberline {5}Summary}{34}{chapter.71}
+\contentsline {chapter}{\numberline {6}Bibliography}{35}{chapter.72}
