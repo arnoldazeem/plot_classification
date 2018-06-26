@@ -7,46 +7,50 @@ Repeated entry---line 224 of file sample.bib
  : @inproceedings{krizhevsky2012imagenet
  :                                      ,
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 361 of file sample.bib
+ :  title = "Images "
+ :                   Normalization"",
+I'm skipping whatever remains of this entry
 Warning--empty journal in amara2017convolutional
-You've used 31 entries,
+You've used 35 entries,
             1791 wiz_defined-function locations,
-            609 strings with 9678 characters,
-and the built_in function-call counts, 7100 in all, are:
-= -- 677
-> -- 271
-< -- 9
-+ -- 106
-- -- 75
-* -- 322
-:= -- 1050
-add.period$ -- 117
-call.type$ -- 31
-change.case$ -- 30
+            625 strings with 10178 characters,
+and the built_in function-call counts, 7920 in all, are:
+= -- 750
+> -- 301
+< -- 10
++ -- 118
+- -- 83
+* -- 351
+:= -- 1167
+add.period$ -- 129
+call.type$ -- 35
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 320
-empty$ -- 749
-format.name$ -- 75
-if$ -- 1689
+cite$ -- 36
+duplicate$ -- 361
+empty$ -- 840
+format.name$ -- 83
+if$ -- 1885
 int.to.chr$ -- 0
-int.to.str$ -- 31
-missing$ -- 16
-newline$ -- 174
-num.names$ -- 31
-pop$ -- 167
+int.to.str$ -- 35
+missing$ -- 18
+newline$ -- 194
+num.names$ -- 35
+pop$ -- 187
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 178
+skip$ -- 210
 stack$ -- 0
-substring$ -- 361
-swap$ -- 118
-text.length$ -- 9
+substring$ -- 401
+swap$ -- 134
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 64
-width$ -- 33
-write$ -- 363
-(There was 1 error message)
+while$ -- 71
+width$ -- 37
+write$ -- 403
+(There were 2 error messages)

@@ -34,9 +34,10 @@
 
 \newpage
 \begin{abstract}
-Distinct visualisation techniques are used in scientific research publications to summarise large amount of data and also represent a variety of data. These visualisations help to communicate complex information and support the arguments being presented in the publication in a way that is easy to understand and follow.
-These figures tend to reveal trends, patterns or relations that might have otherwise been difficult to grasp using only text. 
-It is therefore relevant that we extract the data from these visualisations since the extracted data can be used for validating the publication or presenting the data in another form for a different audience. In this context, classifying these visualisations is the initial step since, there is a variety of visualisations and each one is processed in a specific way. It is only after classification that extraction of raw data from these visualisations can be acquired for other tasks. This thesis presents an approach whereby real world data is used to create four types of plots (scatter plots, bar charts, line charts, and box-plots) and random plots also of the same kind from the Internet are added together and used to train and evaluate a CovNet model to be able to classify these plots. 
+Chart image classification serves as an initial step towards comprehending, extracting and analysing data described with charts. 
+These charts are regularly embedded in research papers and journals and, are used to describe research findings. Data is visualized in different forms and patterns, and there exist no strict standards to follow. Chart classification consists of interpreting visual content and identifying the chart type. Previous approaches for dealing with chart classification depended on hand crafted features which is not robust since charts can be presented using variable structures.
+Therefore, to achieve this goal, this thesis proposes using CovNets, a deep learning-based approach that automates the feature acquisition step. We use a CovNet architecture inspired by the AlexNet CovNet architecture.~\cite{krizhevsky2012imagenet} for training a model for classification, 4 classes of chart images (Scatter Plot, Bar Chart, Box plot and Line Chart) are annotated with 16,000 chart images. With an accuracy of ... our proposed method is very efficient.
+
 \end{abstract}
 
 \renewcommand{\abstractname}{Acknowledgements}

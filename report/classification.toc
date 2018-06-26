@@ -11,35 +11,36 @@
 \contentsline {section}{\numberline {2.2}Background}{10}{section.14}
 \contentsline {section}{\numberline {2.3}Model Based Approaches}{10}{section.15}
 \contentsline {section}{\numberline {2.4}Machine Learning Based Approaches}{11}{section.16}
-\contentsline {subsubsection}{The Brain}{12}{subsubsection*.21}
-\contentsline {subsection}{\numberline {2.4.1}Input data format}{12}{subsection.22}
-\contentsline {subsection}{\numberline {2.4.2}Convolutional Neural Network}{13}{subsection.23}
-\contentsline {subsubsection}{Convolutional Layer}{14}{subsubsection*.25}
-\contentsline {subsubsection}{Activation Functions}{14}{subsubsection*.26}
-\contentsline {subsubsection}{Pooling Layer}{15}{subsubsection*.28}
-\contentsline {subsubsection}{Dropout Layers}{16}{subsubsection*.29}
-\contentsline {subsubsection}{Fully Connected Layer}{16}{subsubsection*.31}
-\contentsline {subsubsection}{Preprocessing Techniques}{17}{subsubsection*.33}
-\contentsline {subsubsection}{Training process}{17}{subsubsection*.34}
-\contentsline {section}{\numberline {2.5}Review of chart image Classification Techniques}{18}{section.35}
-\contentsline {subsubsection}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{18}{subsubsection*.36}
-\contentsline {subsubsection}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{19}{subsubsection*.39}
-\contentsline {subsubsection}{Chart classification by combining deep convolutional networks and deep belief networks}{20}{subsubsection*.42}
-\contentsline {chapter}{\numberline {3}Approach}{22}{chapter.44}
-\contentsline {section}{\numberline {3.1}Dataset}{22}{section.45}
-\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{23}{subsection.46}
-\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{23}{subsection.47}
-\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{24}{subsection.48}
-\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{24}{subsection.49}
-\contentsline {section}{\numberline {3.2}Creating Plots}{25}{section.51}
-\contentsline {subsection}{\numberline {3.2.1}Random Charts}{25}{subsection.58}
-\contentsline {subsection}{\numberline {3.2.2}Training, Validation and Test set}{29}{subsection.60}
-\contentsline {section}{\numberline {3.3}The Architecture}{30}{section.62}
-\contentsline {subsubsection}{Convolutional Layer}{31}{subsubsection*.64}
-\contentsline {subsection}{\numberline {3.3.1}Dropout}{31}{subsection.65}
-\contentsline {subsection}{\numberline {3.3.2}Fully connected layers}{31}{subsection.66}
-\contentsline {subsection}{\numberline {3.3.3}Preprocessing Techniques}{32}{subsection.67}
-\contentsline {chapter}{\numberline {4}Experiments}{33}{chapter.69}
-\contentsline {section}{\numberline {4.1}size of images was tried}{33}{section.70}
-\contentsline {chapter}{\numberline {5}Summary}{34}{chapter.71}
-\contentsline {chapter}{\numberline {6}Bibliography}{35}{chapter.72}
+\contentsline {subsection}{\numberline {2.4.1}The Brain}{12}{subsection.21}
+\contentsline {subsection}{\numberline {2.4.2}Input data format}{12}{subsection.22}
+\contentsline {subsection}{\numberline {2.4.3}Convolutional Neural Network}{13}{subsection.23}
+\contentsline {subsection}{\numberline {2.4.4}Convolutional Layer}{14}{subsection.25}
+\contentsline {subsection}{\numberline {2.4.5}Activation Functions}{14}{subsection.26}
+\contentsline {subsection}{\numberline {2.4.6}Pooling Layer}{15}{subsection.28}
+\contentsline {subsection}{\numberline {2.4.7}Dropout Layers}{16}{subsection.29}
+\contentsline {subsection}{\numberline {2.4.8}Fully Connected Layer}{16}{subsection.31}
+\contentsline {subsection}{\numberline {2.4.9}Image Processing Techniques}{17}{subsection.33}
+\contentsline {subsection}{\numberline {2.4.10}Validation in Machine Learning}{18}{subsection.35}
+\contentsline {subsection}{\numberline {2.4.11}Training process}{18}{subsection.36}
+\contentsline {section}{\numberline {2.5}Review of chart image Classification Techniques}{19}{section.37}
+\contentsline {subsection}{\numberline {2.5.1}Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{19}{subsection.38}
+\contentsline {subsection}{\numberline {2.5.2}Architecture proposal for data extraction of chart images using Convolutional Neural Network}{21}{subsection.41}
+\contentsline {subsection}{\numberline {2.5.3}Chart classification by combining deep convolutional networks and deep belief networks}{22}{subsection.44}
+\contentsline {chapter}{\numberline {3}Approach}{24}{chapter.46}
+\contentsline {section}{\numberline {3.1}Dataset}{24}{section.47}
+\contentsline {subsection}{\numberline {3.1.1}Dataset for Matlab}{25}{subsection.48}
+\contentsline {subsection}{\numberline {3.1.2}Dataset for R}{25}{subsection.49}
+\contentsline {subsection}{\numberline {3.1.3}Dataset for Python}{26}{subsection.50}
+\contentsline {subsection}{\numberline {3.1.4}Dataset for Java}{26}{subsection.51}
+\contentsline {section}{\numberline {3.2}Creating Plots}{27}{section.53}
+\contentsline {subsection}{\numberline {3.2.1}Random Charts}{27}{subsection.60}
+\contentsline {subsection}{\numberline {3.2.2}Training, Validation and Test set}{31}{subsection.62}
+\contentsline {section}{\numberline {3.3}The Architecture}{32}{section.64}
+\contentsline {subsubsection}{Convolutional Layer}{33}{subsubsection*.66}
+\contentsline {subsection}{\numberline {3.3.1}Dropout}{33}{subsection.67}
+\contentsline {subsection}{\numberline {3.3.2}Fully connected layers}{33}{subsection.68}
+\contentsline {subsection}{\numberline {3.3.3}Preprocessing Techniques}{34}{subsection.69}
+\contentsline {chapter}{\numberline {4}Experiments}{35}{chapter.71}
+\contentsline {section}{\numberline {4.1}size of images was tried}{35}{section.72}
+\contentsline {chapter}{\numberline {5}Summary}{36}{chapter.73}
+\contentsline {chapter}{\numberline {6}Bibliography}{37}{chapter.74}

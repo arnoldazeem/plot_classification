@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
+
 \bibitem{boxy}
 {Matange, S.}
 \newblock Box plot legend.
@@ -14,18 +20,20 @@
 \newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
 \newblock [Online; accessed 11-Jun-2018].
 
-\bibitem{krizhevsky2012imagenet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock In {\em Advances in neural information processing systems}, pages
-  1097--1105, 2012.
-
 \bibitem{srivastava2014dropout}
 Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
   Salakhutdinov.
 \newblock Dropout: A simple way to prevent neural networks from overfitting.
 \newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
   2014.
+
+\bibitem{augement}
+{Prasad Pai}.
+\newblock Data augmentation techniques in cnn using tensorflow.
+\newblock
+  \url{https://medium.com/ymedialabs-innovation/data-augmentation-techniques-in-cnn-using-tensorflow-371ae43d5be9},
+  2017.
+\newblock [Medium; accessed 26-Jun-2018].
 
 \bibitem{karthikeyani2012machine}
 V~Karthikeyani and S~Nagarajan.
@@ -134,11 +142,26 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
   2018.
 \newblock [Online; accessed 10-Jun-2018].
 
+\bibitem{jaderberg2015spatial}
+Max Jaderberg, Karen Simonyan, Andrew Zisserman, et~al.
+\newblock Spatial transformer networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  2017--2025, 2015.
+
 \bibitem{van2017learning}
 Nanne van Noord and Eric Postma.
 \newblock Learning scale-variant and scale-invariant features for deep image
   classification.
 \newblock {\em Pattern Recognition}, 61:583--592, 2017.
+
+\bibitem{taylor2017improving}
+Luke Taylor and Geoff Nitschke.
+\newblock Improving deep learning using generic data augmentation.
+\newblock {\em arXiv preprint arXiv:1708.06020}, 2017.
+
+\bibitem{normalizing}
+{pietz}.
+\newblock Images.
 
 \bibitem{cnnonline}
 ujjwalkarn.
