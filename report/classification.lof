@@ -9,13 +9,13 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{16}{figure.caption.30}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Data augmentaion technique of Rotation (at finer angles) source \cite {augement}\relax }}{18}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plots\relax }}{27}{figure.caption.56}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Example Bar Charts\relax }}{30}{figure.caption.57}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{30}{figure.caption.58}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{30}{figure.caption.59}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Example Chart images from Po-shen et al. and Junior et al.\relax }}{31}{figure.caption.61}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Steps involved in building the Classification model\relax }}{32}{figure.caption.63}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Architecure of CovNet used to train our model\relax }}{33}{figure.caption.65}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plots\relax }}{28}{figure.caption.60}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Example Bar Charts\relax }}{31}{figure.caption.61}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{31}{figure.caption.62}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{31}{figure.caption.63}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Example Chart images from Po-shen et al. and Junior et al.\relax }}{32}{figure.caption.65}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Steps involved in building the Classification model\relax }}{33}{figure.caption.67}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Architecure of CovNet used to train our model\relax }}{34}{figure.caption.69}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -10,6 +10,12 @@ import dataset
 import cv2
 from sklearn.metrics import confusion_matrix
 from datetime import timedelta
+import matplotlib.image as mpimg
+import scipy.misc
+from sklearn.metrics import f1_score
+from sklearn.metrics import precision_score
+from sklearn.metrics import precision_recall_fscore_support as score
+from sklearn.metrics import roc_curve
 
 # Convolutional Layer 1.
 filter_size1 = 11
@@ -33,13 +39,15 @@ filter_size5 = 3
 num_filters5 = 256
 
 # Fully-connected layer.
-fc_size = 128             # Number of neurons in fully-connected layer.
+#fc_size = 4096             # Number of neurons in fully-connected layer.
+fc_size = 128
 
 # Number of color channels for the images: 1 channel for gray-scale.
 num_channels = 3
 
 # image dimensions (only squares for now)
-img_size = 52
+#img_size = 227
+img_size = 128
 
 # Size of image when flattened to a single dimension
 img_size_flat = img_size * img_size * num_channels
@@ -58,9 +66,6 @@ batch_size = 32
 
 # validation split
 validation_size = .20
-
-# how long to wait after validation loss stops improving before terminating training
-early_stopping = None  # use None if you don't want to implement early stoping
 
 train_path = 'data/train/'
 test_path = 'data/test/'
@@ -82,7 +87,9 @@ print("- Training-set:\t\t{}".format(len(data.train.labels)))
 print("- Validation-set:\t{}".format(len(data.valid.labels)))
 print("- Test-set:\t\t{}".format(len(data2.test.labels)))
 
-def plot_images(images, cls_true, cls_pred=None):
+
+
+def plot_images(names,images, cls_true, cls_pred=None):
     if len(images) == 0:
         print("no images to show")
         return
@@ -94,19 +101,20 @@ def plot_images(images, cls_true, cls_pred=None):
     # Create figure with 3x3 sub-plots.
     fig, axes = plt.subplots(3, 3)
 
-    fig.subplots_adjust(hspace=0.3, wspace=0.3)
+    fig.subplots_adjust(hspace=0.6, wspace=0.6)
 
     for i, ax in enumerate(axes.flat):
 
 
         # Plot image.
-        ax.imshow(images[i].reshape(img_size, img_size, num_channels))
+        #ax.imshow(images[i].reshape(img_size, img_size, num_channels))
+        ax.imshow(scipy.misc.imresize(images[i], (img_size, img_size), interp='nearest', mode=None))
 
         # Show true and predicted classes.
         if cls_pred is None:
             xlabel = "True: {0}".format(cls_true[i])
         else:
-            xlabel = "True: {0}, Pred: {1}".format(cls_true[i], cls_pred[i])
+            xlabel = "True: {0}, Pred: {1}".format(cls_true[i] + ' ', cls_pred[i])
 
         # Show the classes as the label on the x-axis.
         ax.set_xlabel(xlabel)
@@ -117,13 +125,16 @@ def plot_images(images, cls_true, cls_pred=None):
 
     # Ensure the plot is shown correctly with multiple plots
     # in a single Notebook cell.
+
+    fig.savefig('./' + names + '.jpg')
+
     plt.show()
 
 # Get some random images and their labels from the train set.
-images, cls_true  = data.train.images, data.train.cls
 
+images, cls_true  = data.train.images, data.train.cls
 # Plot the images and labels using our helper-function above.
-plot_images(images=images, cls_true=cls_true)
+plot_images('check',images=images, cls_true=cls_true)
 
 
 def new_weights(shape):
@@ -324,7 +335,6 @@ y_pred_cls = tf.argmax(y_pred, dimension=1, name='y_pred_cls')
 
 cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=layer_fc3,
                                                         labels=y_true)
-
 cost = tf.reduce_mean(cross_entropy)
 
 optimizer = tf.train.AdamOptimizer(learning_rate=1e-4).minimize(cost)
@@ -332,7 +342,6 @@ optimizer = tf.train.AdamOptimizer(learning_rate=1e-4).minimize(cost)
 correct_prediction = tf.equal(y_pred_cls, y_true_cls)
 
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-
 
 #to store my sessions
 saver = tf.train.Saver()
@@ -355,7 +364,6 @@ def print_progress(epoch, feed_dict_train, feed_dict_validate, val_loss):
 
 # Counter for total number of iterations performed so far.
 total_iterations = 0
-
 
 
 def optimize(num_iterations):
@@ -417,7 +425,7 @@ def optimize(num_iterations):
                 if patience == early_stopping:
                     break
 
-    saver.save(session, '/home/adaboo/Desktop/Masters/sem4/thesis/github_tuto/models/plots-model')
+    saver.save(session, './models/plots-models')
 
     # Update the total number of iterations performed.
     total_iterations += num_iterations
@@ -427,7 +435,6 @@ def optimize(num_iterations):
 
     # Difference between start and end-times.
     time_dif = end_time - start_time
-
 
     # Print the time-usage.
     print("Time elapsed: " + str(timedelta(seconds=int(round(time_dif)))))
@@ -454,7 +461,7 @@ def plot_example_errors(cls_pred, correct):
     cls_true = data2.test.cls[incorrect]
 
     # Plot the first 9 images.
-    plot_images(images=images[0:9],
+    plot_images('errors', images=images[0:9],
                 cls_true=cls_true[0:9],
                 cls_pred=cls_pred[0:9])
 
@@ -486,6 +493,7 @@ def plot_confusion_matrix(cls_pred):
 
     # Ensure the plot is shown correctly with multiple plots
     # in a single Notebook cell.
+    plt.savefig('./' + 'confusion' + '.jpg')
     plt.show()
 
 
@@ -527,6 +535,7 @@ def print_validation_accuracy(show_example_errors=False,
         i = j
 
     cls_true = np.array(data2.test.cls)
+
     cls_pred = np.array([classes[x] for x in cls_pred])
 
     # Create a boolean array whether each image is correctly classified.
@@ -540,7 +549,25 @@ def print_validation_accuracy(show_example_errors=False,
     # images divided by the total number of images in the test-set.
     acc = float(correct_sum) / num_test
 
-    # Print the accuracy.
+    microavergae = f1_score(cls_true, cls_pred, average='micro')
+    maroavergae = f1_score(cls_true, cls_pred, average='macro')
+    accuracy = sum(1 for x, y in zip(cls_true, cls_pred) if x == y) / len(cls_true)
+
+    # precise = precision_score(gold, predicted, labels=None, pos_label=1,
+    # average= 'binary', sample_weight = None)
+
+    precision, recall, fscore, support = score(cls_true, cls_pred)
+
+    print('microaverage: {}'.format(microavergae))
+    print('macroaverage: {}'.format(maroavergae))
+    print('accuracy: {}'.format(accuracy))
+
+    print('precision: {}'.format(precision))
+    print('recall: {}'.format(recall))
+    print('fscore: {}'.format(fscore))
+    print('support: {}'.format(support))
+
+    #Print the accuracy.
     msg = "Accuracy on Test-Set: {0:.1%} ({1} / {2})"
     print(msg.format(acc, correct_sum, num_test))
 
@@ -565,10 +592,9 @@ def print_validation_accuracy(show_example_errors=False,
 
 #print_validation_accuracy(show_example_errors=True)
 
-optimize(num_iterations=3000) # We performed 1000 iterations above.
+optimize(num_iterations=100) # We performed 1000 iterations above.
 
-#print_validation_accuracy(show_example_errors=True, show_confusion_matrix=True)
-
+print_validation_accuracy(show_example_errors=True, show_confusion_matrix=True)
 
 
 

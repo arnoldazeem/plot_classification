@@ -44,6 +44,7 @@ citecolor = black]{hyperref}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{placeins}
+\setcounter{secnumdepth}{5}
 \begin{document}
 
 \input{title-page}
@@ -69,10 +70,9 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. This buttresses the fact that information and data is easily understood when visualised, for this reason most scientific publications tend to present their data using tables, plots and pictures. Identification, extraction and interpretation of this visualised data for purposes of validation of results by another researcher, or presentation of the data to another audience is an area in machine learning which is still found wanting.\newline\newline
-The aim of this thesis is to develop a reliable system for the purpose of recognising chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification.  The other parts of this paper are organised in the follows: 
-In the other sections of this chapter the research motivation, objectives, contributions and an outline of
-the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. Visualisation makes it possible for scientists to represent complex data not understandable with text. Analysing the visualized data for purposes of validating the results by another researcher, or presenting the data to another audience is a complex task only possible after the chart is first classified accurately. The major steps in chart image classification is to find a suitable classification algorithm, using good parameters for the chosen algorithm and gathering the right training and testing chart image samples. Choosing the right techniques can go along way to achieve good results. \\\\
+The aim of this thesis is to develop a reliable system for the purpose of recognising chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of
+the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
 
 \section{Overview} 
 A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots,stars,diamonds and an asterisk in the case of a scatter plot.
@@ -128,11 +128,8 @@ Figure \ref{fig:vis} shows the significance of this work and what it will lead t
 
 \chapter{Background and Related Work}
 
-
-
 \section{Overview}
 In this chapter the literature on classification of chart images is presented and explored. Old techniques that were previously used and how they evolved are discussed. Section 3.2 introduces the two main categories images classification has been put into, while in 3.3 and 3.4 these two categories are discussed in detail, also, CovNets which are inspired by the cat’s visual cortex and have performed really well in the field of image processing are talked about in detail. Lastly, Section 3.5 presents the important approaches and techniques employed by other researchers for chart image classification.
-
 
 \section{Background}
 Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualisable and easy to understand format. As a result of this popularity chart images have gained, different techniques have over time been used for classification of charts and these techniques have evolved over the years. The techniques have been inspired by techniques from image processing, raster to vector conversion and layout analysis. These techniques can be put into two categories, Model-Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}. In the next section, the methods and techniques used in this thesis, and techniques that inspired us to choose these techniques are explained in details.
@@ -245,8 +242,27 @@ CovNets are very powerful and have the ability to learn features with some level
 \end{itemize}
 
 \subsection{Validation in Machine Learning}
-Over-fitting is term used in machine learning when a model performs well during training but does badly during the testing phase. 
-Lets take a real world example of an athlete, when a runner trains with other runners he is better than without considering the finishing time (parameters), he might think he is the best but this does might be wrong when he partakes in a competition with other runners he had never trained with.
+The following argument is based on Ricardo Gutierrez-Osuna's lecture~\cite{validation}.
+Every machine learning algorithm has some parameters that can be tuned to adapt to a specific problem. For instance in CovNets the parameters are the number of hidden layers, weights and biases. 
+During the training process of a machine learning algorithm, these tunable parameters are given specific configurations (model), we then check the classification performance of the algorithm with these estimated configurations. Classification performance is mostly estimated by finding the error rate of the entire dataset. We therefore try to tune our parameters to classify with the least error rate. In an ideal situation where our dataset consist of all possible variants of the samples to be classified, the error rate on the entire dataset will be the true error rate, but with real world data this situation is unrealistic.The model will perform well on samples it seen but will fail on new samples, this situation is known as over-fitting. In other to overcome this limitation some validation techniques are adapted during the training phase. These techniques are presented below.
+
+\subsubsection{Holdout}
+The holdout method involves splitting the dataset into two disjoint groups. Train set used to train the model and test set used to estimate the error rate of the model. The train to test split ratio can be a 60/40 or 70/30 or 80/20 split on the dataset. One drawback of this method is that if we have a small dataset, we cant afford to set aside a portion for testing only. Another drawback could be that if the difficult patterns end up in the test set the accuracy might be misleading.
+
+\subsubsection{Cross-validation}
+In this method the data is divided into say k subsets,the holdout method explained above is then repeated k times i.e each time one of the k subsets is used for testing and the other k-1 subsets are combined and used for training. The true error rate of the model is the average error across all the k trials performed.
+
+\subsubsection{Leave-one-out cross validation}
+The leave one out technique can be likened to the cross validation method. The main different is that the k subsets are equal to the number of samples in the dataset. So therefore the model is trained on all the samples except one, and a prediction is made from that point. The true error rate in this case is also the average of all the k trials. The major drawback is that it can be computationally expensive.
+
+
+\subsubsection{Performance Evaluation}
+The following argument is based on Mohammed Sunasra's article on Medium~\cite{performance}.
+After going through the process of putting together a dataset, estimating the best parameters for a machine learning algorithm, implementing a model and getting some output prediction on the classes trained on,the next step will be to find how well our model performed using some type of metrics. There exist quiet a number of performance metrics that can be employed to evaluate a machine learning model. Some of these metrics that are used to evaluate classification problems are described below.
+
+
+
+
 
 
 \subsection{Training process}

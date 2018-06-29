@@ -163,6 +163,21 @@ Luke Taylor and Geoff Nitschke.
 {pietz}.
 \newblock Images.
 
+\bibitem{validation}
+{Akshay Balwally,}.
+\newblock What is the difference between validation set and test set?
+\newblock
+  \url{https://www.quora.com/What-is-the-difference-between-validation-set-and-test-set},
+  2016.
+\newblock [Online; accessed 7-Jun-2018].
+
+\bibitem{performance}
+{Ricardo Gutierrez-Osuna}.
+\newblock Validation.
+\newblock \url{http://research.cs.tamu.edu/prism/lectures/iss/iss_l13.pdf},
+  2017.
+\newblock [Wright State University ; accessed 27-Jun-2018].
+
 \bibitem{cnnonline}
 ujjwalkarn.
 \newblock An intuitive explanation of convolutional neural networks – the
@@ -238,13 +253,5 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
 \newblock In {\em Proceedings of the 25th international conference companion on
   world wide web}, pages 413--418. International World Wide Web Conferences
   Steering Committee, 2016.
-
-\bibitem{validation}
-{Akshay Balwally,}.
-\newblock What is the difference between validation set and test set?
-\newblock
-  \url{https://www.quora.com/What-is-the-difference-between-validation-set-and-test-set},
-  2016.
-\newblock [Online; accessed 7-Jun-2018].
 
 \end{thebibliography}

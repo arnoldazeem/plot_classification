@@ -20,26 +20,30 @@
 \BOOKMARK [2][-]{subsection.31}{Fully Connected Layer}{section.16}% 20
 \BOOKMARK [2][-]{subsection.33}{Image Processing Techniques}{section.16}% 21
 \BOOKMARK [2][-]{subsection.35}{Validation in Machine Learning}{section.16}% 22
-\BOOKMARK [2][-]{subsection.36}{Training process}{section.16}% 23
-\BOOKMARK [1][-]{section.37}{Review of chart image Classification Techniques}{chapter.12}% 24
-\BOOKMARK [2][-]{subsection.38}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.37}% 25
-\BOOKMARK [2][-]{subsection.41}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{section.37}% 26
-\BOOKMARK [2][-]{subsection.44}{Chart classification by combining deep convolutional networks and deep belief networks}{section.37}% 27
-\BOOKMARK [0][-]{chapter.46}{Approach}{}% 28
-\BOOKMARK [1][-]{section.47}{Dataset}{chapter.46}% 29
-\BOOKMARK [2][-]{subsection.48}{Dataset for Matlab}{section.47}% 30
-\BOOKMARK [2][-]{subsection.49}{Dataset for R}{section.47}% 31
-\BOOKMARK [2][-]{subsection.50}{Dataset for Python}{section.47}% 32
-\BOOKMARK [2][-]{subsection.51}{Dataset for Java}{section.47}% 33
-\BOOKMARK [1][-]{section.53}{Creating Plots}{chapter.46}% 34
-\BOOKMARK [2][-]{subsection.60}{Random Charts}{section.53}% 35
-\BOOKMARK [2][-]{subsection.62}{Training, Validation and Test set}{section.53}% 36
-\BOOKMARK [1][-]{section.64}{The Architecture}{chapter.46}% 37
-\BOOKMARK [2][-]{subsubsection*.66}{Convolutional Layer}{section.64}% 38
-\BOOKMARK [2][-]{subsection.67}{Dropout}{section.64}% 39
-\BOOKMARK [2][-]{subsection.68}{Fully connected layers}{section.64}% 40
-\BOOKMARK [2][-]{subsection.69}{Preprocessing Techniques}{section.64}% 41
-\BOOKMARK [0][-]{chapter.71}{Experiments}{}% 42
-\BOOKMARK [1][-]{section.72}{size of images was tried}{chapter.71}% 43
-\BOOKMARK [0][-]{chapter.73}{Summary}{}% 44
-\BOOKMARK [0][-]{chapter.74}{Bibliography}{}% 45
+\BOOKMARK [3][-]{subsubsection.36}{Holdout}{subsection.35}% 23
+\BOOKMARK [3][-]{subsubsection.37}{Cross-validation}{subsection.35}% 24
+\BOOKMARK [3][-]{subsubsection.38}{Leave-one-out cross validation}{subsection.35}% 25
+\BOOKMARK [3][-]{subsubsection.39}{Performance Evaluation}{subsection.35}% 26
+\BOOKMARK [2][-]{subsection.40}{Training process}{section.16}% 27
+\BOOKMARK [1][-]{section.41}{Review of chart image Classification Techniques}{chapter.12}% 28
+\BOOKMARK [2][-]{subsection.42}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.41}% 29
+\BOOKMARK [2][-]{subsection.45}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{section.41}% 30
+\BOOKMARK [2][-]{subsection.48}{Chart classification by combining deep convolutional networks and deep belief networks}{section.41}% 31
+\BOOKMARK [0][-]{chapter.50}{Approach}{}% 32
+\BOOKMARK [1][-]{section.51}{Dataset}{chapter.50}% 33
+\BOOKMARK [2][-]{subsection.52}{Dataset for Matlab}{section.51}% 34
+\BOOKMARK [2][-]{subsection.53}{Dataset for R}{section.51}% 35
+\BOOKMARK [2][-]{subsection.54}{Dataset for Python}{section.51}% 36
+\BOOKMARK [2][-]{subsection.55}{Dataset for Java}{section.51}% 37
+\BOOKMARK [1][-]{section.57}{Creating Plots}{chapter.50}% 38
+\BOOKMARK [2][-]{subsection.64}{Random Charts}{section.57}% 39
+\BOOKMARK [2][-]{subsection.66}{Training, Validation and Test set}{section.57}% 40
+\BOOKMARK [1][-]{section.68}{The Architecture}{chapter.50}% 41
+\BOOKMARK [2][-]{subsubsection.70}{Convolutional Layer}{section.68}% 42
+\BOOKMARK [2][-]{subsection.71}{Dropout}{section.68}% 43
+\BOOKMARK [2][-]{subsection.72}{Fully connected layers}{section.68}% 44
+\BOOKMARK [2][-]{subsection.73}{Preprocessing Techniques}{section.68}% 45
+\BOOKMARK [0][-]{chapter.75}{Experiments}{}% 46
+\BOOKMARK [1][-]{section.76}{size of images was tried}{chapter.75}% 47
+\BOOKMARK [0][-]{chapter.77}{Summary}{}% 48
+\BOOKMARK [0][-]{chapter.78}{Bibliography}{}% 49
