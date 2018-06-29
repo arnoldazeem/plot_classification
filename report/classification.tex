@@ -174,14 +174,11 @@ Just like how human beings learn to recognise and label objects, we need to show
 	\item Classification (Fully Connected Layer)
 \end{itemize} 
 
-
 \begin{figure}[htb!]
 	\includegraphics [scale=0.5] {cat}
 	\captionof{figure}{How a computer perceives an image- source \cite{softmax}}
 	\label{fig:cat}
 \end{figure}
-
-
 
 \subsection{Convolutional Layer}
 The Convolutional layer will be explained using the following example, let consider the image as a magical cake of height and width 48x48, and there is a cake cutter of size say 5x5. The cutter is used to cut the cake from the top left. The cutter is referred to as a filter in machine learning. The cutter in this case is also an array of numbers called weights and for the maths to work the cutter must have the same depth as our cake (5x5x3).
@@ -256,16 +253,47 @@ In this method the data is divided into say k subsets,the holdout method explain
 The leave one out technique can be likened to the cross validation method. The main different is that the k subsets are equal to the number of samples in the dataset. So therefore the model is trained on all the samples except one, and a prediction is made from that point. The true error rate in this case is also the average of all the k trials. The major drawback is that it can be computationally expensive.
 
 
-\subsubsection{Performance Evaluation}
+\subsection{Performance Evaluation}
 The following argument is based on Mohammed Sunasra's article on Medium~\cite{performance}.
 After going through the process of putting together a dataset, estimating the best parameters for a machine learning algorithm, implementing a model and getting some output prediction on the classes trained on,the next step will be to find how well our model performed using some type of metrics. There exist quiet a number of performance metrics that can be employed to evaluate a machine learning model. Some of these metrics that are used to evaluate classification problems are described below.
 
+\subsubsection{Confusion Matrix}
+The Confusion Matrix is an intuitive way used to describe the accuracy of a model. This metric is useful in problems where there exists multiple types of classes. A confusion matrix is a table that shows the number of correct and wrongly predicted values in each classification class. It gives insight into the type of errors being made by the classifier on each class.
 
 
+\begin{table}[h]
+	\centering \def\arraystretch{1.5} \small
+	\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|}
+		\hline
+		  & class 1 \par Predicted & class 2 \par Predicted \\ \hline
+		class 1 \par Actual & TP & FN \\ \hline
+		class 2 \par Actual & FP & TN \\ \hline
+			
+	\end{tabular}
+	\caption {Confusion Matrix}	
+	\label{table:confusion}
+	\end{table}
+The numbers inside the Confusion matrix can be used to calculate 
+all the performance metrics. The terms used in the table and how they are used to calculate the other metrics are explained below.
 
+\begin{itemize}
+	\item TP (True Positive): Observations predicted as positive, that are actually positive.
+	\item FP (False Positive): Observations predicted as positive, but are negative.
+	\item TN (True Negative): Observations predicted as negative, but are negative.
+	\item FN (False Negative): Observations predicted as negative, but are positive.
+\end{itemize}
 
+\subsubsection{Accuracy}
+In any classification problem, the accuracy is the number of correct predictions made overall the predictions made. Equation \ref{eq:accuracy} shows how the values in the confusion matrix are used to calculate the accuracy of a model. Accuracy is mainly used when there is an even number of samples in each class.
 
-\subsection{Training process}
+\begin{equation}
+Accuracy = \frac{TP}{TP + FP + TN + FN} \label{eq:accuracy}
+\end{equation}
+
+\subsubsection{Precision}
+Precision tells us if the portion of the sample in a particular class that were predicted as positive, were actually positive. 
+
+\subsection{Trainin4g process}
 This section is inspired by a blog written by ujjwalkarn \cite{cnnonline}. The process by which a CovNet performs classification is summarised below.
 
 \begin{itemize}
