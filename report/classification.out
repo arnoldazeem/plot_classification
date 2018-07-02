@@ -10,43 +10,49 @@
 \BOOKMARK [1][-]{section.14}{Background}{chapter.12}% 10
 \BOOKMARK [1][-]{section.15}{Model Based Approaches}{chapter.12}% 11
 \BOOKMARK [1][-]{section.16}{Machine Learning Based Approaches}{chapter.12}% 12
-\BOOKMARK [2][-]{subsection.21}{The Brain}{section.16}% 13
-\BOOKMARK [2][-]{subsection.22}{Input data format}{section.16}% 14
-\BOOKMARK [2][-]{subsection.23}{Convolutional Neural Network}{section.16}% 15
-\BOOKMARK [2][-]{subsection.25}{Convolutional Layer}{section.16}% 16
-\BOOKMARK [2][-]{subsection.26}{Activation Functions}{section.16}% 17
-\BOOKMARK [2][-]{subsection.28}{Pooling Layer}{section.16}% 18
-\BOOKMARK [2][-]{subsection.29}{Dropout Layers}{section.16}% 19
-\BOOKMARK [2][-]{subsection.31}{Fully Connected Layer}{section.16}% 20
-\BOOKMARK [2][-]{subsection.33}{Image Processing Techniques}{section.16}% 21
-\BOOKMARK [2][-]{subsection.35}{Validation in Machine Learning}{section.16}% 22
-\BOOKMARK [3][-]{subsubsection.36}{Holdout}{subsection.35}% 23
-\BOOKMARK [3][-]{subsubsection.37}{Cross-validation}{subsection.35}% 24
-\BOOKMARK [3][-]{subsubsection.38}{Leave-one-out cross validation}{subsection.35}% 25
-\BOOKMARK [2][-]{subsection.39}{Performance Evaluation}{section.16}% 26
-\BOOKMARK [3][-]{subsubsection.40}{Confusion Matrix}{subsection.39}% 27
-\BOOKMARK [3][-]{subsubsection.42}{Accuracy}{subsection.39}% 28
-\BOOKMARK [3][-]{subsubsection.44}{Precision}{subsection.39}% 29
-\BOOKMARK [2][-]{subsection.45}{Trainin4g process}{section.16}% 30
-\BOOKMARK [1][-]{section.46}{Review of chart image Classification Techniques}{chapter.12}% 31
-\BOOKMARK [2][-]{subsection.47}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.46}% 32
-\BOOKMARK [2][-]{subsection.50}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{section.46}% 33
-\BOOKMARK [2][-]{subsection.53}{Chart classification by combining deep convolutional networks and deep belief networks}{section.46}% 34
-\BOOKMARK [0][-]{chapter.55}{Approach}{}% 35
-\BOOKMARK [1][-]{section.56}{Dataset}{chapter.55}% 36
-\BOOKMARK [2][-]{subsection.57}{Dataset for Matlab}{section.56}% 37
-\BOOKMARK [2][-]{subsection.58}{Dataset for R}{section.56}% 38
-\BOOKMARK [2][-]{subsection.59}{Dataset for Python}{section.56}% 39
-\BOOKMARK [2][-]{subsection.60}{Dataset for Java}{section.56}% 40
-\BOOKMARK [1][-]{section.62}{Creating Plots}{chapter.55}% 41
-\BOOKMARK [2][-]{subsection.69}{Random Charts}{section.62}% 42
-\BOOKMARK [2][-]{subsection.71}{Training, Validation and Test set}{section.62}% 43
-\BOOKMARK [1][-]{section.73}{The Architecture}{chapter.55}% 44
-\BOOKMARK [2][-]{subsubsection.75}{Convolutional Layer}{section.73}% 45
-\BOOKMARK [2][-]{subsection.76}{Dropout}{section.73}% 46
-\BOOKMARK [2][-]{subsection.77}{Fully connected layers}{section.73}% 47
-\BOOKMARK [2][-]{subsection.78}{Preprocessing Techniques}{section.73}% 48
-\BOOKMARK [0][-]{chapter.80}{Experiments}{}% 49
-\BOOKMARK [1][-]{section.81}{size of images was tried}{chapter.80}% 50
-\BOOKMARK [0][-]{chapter.82}{Summary}{}% 51
-\BOOKMARK [0][-]{chapter.83}{Bibliography}{}% 52
+\BOOKMARK [1][-]{section.21}{Convolutional Neural Network}{chapter.12}% 13
+\BOOKMARK [2][-]{subsection.22}{The Brain}{section.21}% 14
+\BOOKMARK [2][-]{subsection.23}{Input data format}{section.21}% 15
+\BOOKMARK [2][-]{subsection.24}{Convolutional Neural Network}{section.21}% 16
+\BOOKMARK [2][-]{subsection.26}{Convolutional Layer}{section.21}% 17
+\BOOKMARK [2][-]{subsection.27}{Activation Functions}{section.21}% 18
+\BOOKMARK [2][-]{subsection.29}{Pooling Layer}{section.21}% 19
+\BOOKMARK [2][-]{subsection.30}{Dropout Layers}{section.21}% 20
+\BOOKMARK [2][-]{subsection.32}{Fully Connected Layer}{section.21}% 21
+\BOOKMARK [1][-]{section.34}{Image Processing Techniques}{chapter.12}% 22
+\BOOKMARK [1][-]{section.36}{Validation in Machine Learning}{chapter.12}% 23
+\BOOKMARK [2][-]{subsubsection.37}{Holdout}{section.36}% 24
+\BOOKMARK [3][-]{subsubsection.38}{Cross-validation}{subsubsection.37}% 25
+\BOOKMARK [3][-]{subsubsection.39}{Leave-one-out cross validation}{subsubsection.37}% 26
+\BOOKMARK [1][-]{section.40}{Performance Evaluation}{chapter.12}% 27
+\BOOKMARK [2][-]{subsubsection.41}{Confusion Matrix}{section.40}% 28
+\BOOKMARK [3][-]{subsubsection.43}{Accuracy}{subsubsection.41}% 29
+\BOOKMARK [3][-]{subsubsection.45}{Precision}{subsubsection.41}% 30
+\BOOKMARK [3][-]{subsubsection.47}{Recall}{subsubsection.41}% 31
+\BOOKMARK [3][-]{subsubsection.49}{F1 Score}{subsubsection.41}% 32
+\BOOKMARK [2][-]{subsection.52}{Training process}{section.40}% 33
+\BOOKMARK [1][-]{section.53}{Review of chart image Classification Techniques}{chapter.12}% 34
+\BOOKMARK [2][-]{subsection.54}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.53}% 35
+\BOOKMARK [2][-]{subsection.57}{Architecture proposal for data extraction of chart images using Convolutional Neural Network}{section.53}% 36
+\BOOKMARK [2][-]{subsection.60}{Chart classification by combining deep convolutional networks and deep belief networks}{section.53}% 37
+\BOOKMARK [1][-]{section.62}{Summary}{chapter.12}% 38
+\BOOKMARK [0][-]{chapter.63}{Approach}{}% 39
+\BOOKMARK [1][-]{section.64}{Overview}{chapter.63}% 40
+\BOOKMARK [1][-]{section.65}{Dataset}{chapter.63}% 41
+\BOOKMARK [2][-]{subsection.66}{Dataset for Matlab}{section.65}% 42
+\BOOKMARK [2][-]{subsection.67}{Dataset for R}{section.65}% 43
+\BOOKMARK [2][-]{subsection.68}{Dataset for Python}{section.65}% 44
+\BOOKMARK [2][-]{subsection.69}{Dataset for Java}{section.65}% 45
+\BOOKMARK [1][-]{section.71}{Creating Plots}{chapter.63}% 46
+\BOOKMARK [2][-]{subsection.78}{Random Charts}{section.71}% 47
+\BOOKMARK [1][-]{section.80}{Training, Validation and Test set}{chapter.63}% 48
+\BOOKMARK [1][-]{section.83}{The Architecture}{chapter.63}% 49
+\BOOKMARK [2][-]{subsection.85}{Convolutional Layer}{section.83}% 50
+\BOOKMARK [2][-]{subsection.86}{Dropout}{section.83}% 51
+\BOOKMARK [2][-]{subsection.87}{Fully connected layers}{section.83}% 52
+\BOOKMARK [1][-]{section.88}{Preprocessing Techniques}{chapter.63}% 53
+\BOOKMARK [0][-]{chapter.90}{Experiments}{}% 54
+\BOOKMARK [1][-]{section.91}{Overview}{chapter.90}% 55
+\BOOKMARK [1][-]{section.92}{size of images was tried}{chapter.90}% 56
+\BOOKMARK [0][-]{chapter.93}{Summary}{}% 57
+\BOOKMARK [0][-]{chapter.94}{Bibliography}{}% 58

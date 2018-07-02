@@ -144,8 +144,10 @@ involves using handcrafted features extracted from the charts for classification
 \footnote{http://www.iro.umontreal.ca/~bengioy/ift6266/H12/html/mlp\_en.html}, and  KNN Classification\footnote{
 https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/} were used to create a function that maps the set of features to a predefined label. This technique achieves good results but, the drawback is the over reliance on handcrafted features. This drawback makes it difficult when large amount of data consisting of a variable context structure is involved, and this situation is evident in most cases. Recently, however CovNets (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) \footnote{https://deeplearning4j.org/convolutionalnetwork}, a machine learning technique which removes the drawback of using handcrafted features by learning important features anywhere in the image by itself. CovNets performance on image classification keeps on improving and in recent times, results are being compared to human performance levels. CovNets were used in this work, in the next section they will be explained into details, and is inspired by an article written by Daphne Cornelisse \cite{covnet}.\newline
 
+\section{Convolutional Neural Network}
+
 \subsection{The Brain}
-The following is . As human beings we identify objects around as all the time with minimal effort. We identify objects based on what we previously leaned. We see objects, label, recognise patterns, and make predictions subconsciously everyday. How are we able to do this effortlessly? Even though the whole process starts with the eye, most of the process happens in the part of the brain called the primary visual cortex. When we see an object, light receptors send signals via the optic nerves to the visual cortex and sense is made of the perceived object by this organ. The deep neural connections in the brain plays a major role in remembering and identifying objects.
+The text in this section is inspired by an article written by Neuroscientifically Challenged \cite{brain}. As human beings we identify objects around as all the time with minimal effort. We identify objects based on what we previously leaned. We see objects, label, recognise patterns, and make predictions subconsciously everyday. How are we able to do this effortlessly? Even though the whole process starts with the eye, most of the process happens in the part of the brain called the primary visual cortex. When we see an object, light receptors send signals via the optic nerves to the visual cortex and sense is made of the perceived object by this organ. The deep neural connections in the brain plays a major role in remembering and identifying objects.
 
 \subsection{Input data format}
 This section was inspired by Nikhil B's article \cite{input}. Just like the way the human eye needs to perform some preprocessing steps before an image signal reaches the brain, an image recognition system can better identify images if some preprocessing steps were performed on the input images. Below some effective preprocessing steps that go a long way to improve image recognition are explained:
@@ -222,7 +224,7 @@ f_j(z) = \frac{e^{z_j}}{\sum_k e^{z_k}}
 
 The equation \ref{eq:soft} is a softmax function, (z) represents a vector, so the function takes (in z) and crushes it to a probability value between zero and one \cite{softmax}.
 
-\subsection{Image Processing Techniques}
+\section{Image Processing Techniques}
 CovNets are very powerful and have the ability to learn features with some level of spatial invariability, this ability however, is limited when it comes to choosing parameters in an efficient manner~\cite{jaderberg2015spatial}. To further improve robustness to spatial invariance test data, some preprocessing techniques like data augmentation are applied on the train data.\\ \\ One relevant feature of CovNet is its multi layer representation, which is responsible for the classification phase. This multi layer representation is not engineered but rather reliant on the data presented to it~\cite{van2017learning}. The multi layer representation determines the kind of features important for the classification task. To find the right multi layer representation, the network must be presented with a variety of instances of the image, so as to be able to capture the different appearance of the image. There are some parts of the image that can be varied and these parts are: the location, the viewpoint, and the size of an object or pattern. We therefore perform some preprocessing techniques in other to capture the 3 main ways images can be altered so that our model is better generalised. 
 
 \begin{itemize}
@@ -238,7 +240,7 @@ CovNets are very powerful and have the ability to learn features with some level
 
 \end{itemize}
 
-\subsection{Validation in Machine Learning}
+\section{Validation in Machine Learning}
 The following argument is based on Ricardo Gutierrez-Osuna's lecture~\cite{validation}.
 Every machine learning algorithm has some parameters that can be tuned to adapt to a specific problem. For instance in CovNets the parameters are the number of hidden layers, weights and biases. 
 During the training process of a machine learning algorithm, these tunable parameters are given specific configurations (model), we then check the classification performance of the algorithm with these estimated configurations. Classification performance is mostly estimated by finding the error rate of the entire dataset. We therefore try to tune our parameters to classify with the least error rate. In an ideal situation where our dataset consist of all possible variants of the samples to be classified, the error rate on the entire dataset will be the true error rate, but with real world data this situation is unrealistic.The model will perform well on samples it seen but will fail on new samples, this situation is known as over-fitting. In other to overcome this limitation some validation techniques are adapted during the training phase. These techniques are presented below.
@@ -253,7 +255,7 @@ In this method the data is divided into say k subsets,the holdout method explain
 The leave one out technique can be likened to the cross validation method. The main different is that the k subsets are equal to the number of samples in the dataset. So therefore the model is trained on all the samples except one, and a prediction is made from that point. The true error rate in this case is also the average of all the k trials. The major drawback is that it can be computationally expensive.
 
 
-\subsection{Performance Evaluation}
+\section{Performance Evaluation}
 The following argument is based on Mohammed Sunasra's article on Medium~\cite{performance}.
 After going through the process of putting together a dataset, estimating the best parameters for a machine learning algorithm, implementing a model and getting some output prediction on the classes trained on,the next step will be to find how well our model performed using some type of metrics. There exist quiet a number of performance metrics that can be employed to evaluate a machine learning model. Some of these metrics that are used to evaluate classification problems are described below.
 
@@ -284,16 +286,39 @@ all the performance metrics. The terms used in the table and how they are used t
 \end{itemize}
 
 \subsubsection{Accuracy}
-In any classification problem, the accuracy is the number of correct predictions made overall the predictions made. Equation \ref{eq:accuracy} shows how the values in the confusion matrix are used to calculate the accuracy of a model. Accuracy is mainly used when there is an even number of samples in each class.
+In any classification problem, the accuracy is the number of correct predictions made overall the predictions made. Equation ~\ref{eq:accuracy} shows how the values in the confusion matrix are used to calculate the accuracy of a model. Accuracy is mainly used when there is an even number of samples in each class.
 
 \begin{equation}
 Accuracy = \frac{TP}{TP + FP + TN + FN} \label{eq:accuracy}
 \end{equation}
 
-\subsubsection{Precision}
-Precision tells us if the portion of the sample in a particular class that were predicted as positive, were actually positive. 
 
-\subsection{Trainin4g process}
+\subsubsection{Precision}
+Precision tells us if the portion of the sample in a particular class that were predicted as positive, were actually positive. So it considers samples predicted as positive (TP and FP), and those that where actually positive TP. Equation~\ref{eq:precision} shows how the precision of a model is calculated.
+
+\begin{equation}
+Precision = \frac{TP}{TP + FP} \label{eq:precision}
+\end{equation}
+
+\subsubsection{Recall}
+Recall or Sensitivity tries to answer the question, of all the positive samples what portion were actually identified correctly.
+It considers the actual positives (TP and FN) and samples classified as positive (TP).
+Equation~\ref{eq:recall} shows how the precision of a model is calculated.
+
+\begin{equation}
+Precision = \frac{TP}{TP + FN} \label{eq:recall}
+\end{equation}
+
+\subsubsection{F1 Score}
+F1-score is just a way to represent both precision and recall as a single value. It is taking the harmonic mean \footnote{http://www.statisticshowto.com/harmonic-mean/} of the precision and recall of the model. Equation~\ref{eq:f1score} shows how the F1 score is calculated.
+
+\begin{equation}
+Precision = \frac{2 * Precision * Recall}{(Precision + Recall)} \label{eq:f1score}
+\end{equation}
+
+There are many other metrics used in machine learning to evaluate a model but the ones mentioned above are mostly used when it comes to classification problems.
+
+\subsection{Training process}
 This section is inspired by a blog written by ujjwalkarn \cite{cnnonline}. The process by which a CovNet performs classification is summarised below.
 
 \begin{itemize}
@@ -402,10 +427,14 @@ The training process was done with 4000 randomly selected images and the rest we
 \end{table}
 
 
+\section{Summary}
+This chapter discussed the background literature on chart image classification. The two main approaches of chart images classification were mentioned at first. In Section 2.3 and 2.4, the the model based and machine learning approaches were discussed. In Section 2.5, CovNets a machine learning approach used commonly for visual image recognition is reviewed and discussed, also some image processing techniques that improve image classification are mentioned and discussed in Section 2.6.  In Section 2.7 validation techniques to help choose the tunable parameters in a machine learning algorithm are discussed. In Section 2.8 some performance evaluation metrics that help us know how well a model is performing is presented and discussed. Towards the end of this chapter, some related works that inspired this thesis  were then discussed.
+
+
 \chapter{Approach}
-As seen in the previous chapter, different approaches and methods have been described for chart image recognition. Due to the complexity of this task, a CovNet approach is employed for our work. Reasons for selecting this approach include; automatic capturing, learning and extraction of features; parameter sharing which allows the model to learn a single set of weights once, rather than a different set of weights every time~\cite{Rodriguez} and more importantly a performance accuracy nearing human capability. In spite of all the advantages of CovNets, they are computationally expensive to apply on high-resolution images. Fortunately, current GPU capabilities with the help of good optimisation techniques can handle this issue~\cite{krizhevsky2012imagenet}. \newline\newline
-The specific contributions of this thesis are as follows: to create a dataset of chart images (scatter-plot, bar-chart,line-chart and box-plot) using real-world data. This chart image dataset tries to capture all variety of structure in the various chart images to be handled. The scripts, libraries, and parameters used in creating the chart images are readily available for the recreation of the dataset. The second contribution of this thesis involves training a CovNet model for recognising these types of chart images.\newline
-The rest of this chapter describes into details how the dataset was created, it also describes the CovNet architecture that was used for the classification and evaluation tasks.
+
+\section{Overview}
+In this chapter we present the proposed approaches used in this thesis for chart image classification. As discussed in the previous chapters, the proposed approaches involve two main steps, namely, the image processing step and classification step. How the dataset was created is discussed in section 3.2 and Section 3.3. In Section 3.4 the process which the train, validation and test data are acquired are discussed. In Section 3.5 the proposed architecture and important parameters of the CovNet is discussed. The processing techniques used for the images are discussed in Section 3.6. Lastly,the various parameters used for the training of the network is discussed.\\\\
 
 \section{Dataset}
 The following paragraph is inspired by a blog written on what to look for in training data~\cite{edi}.
@@ -521,9 +550,8 @@ The Library column shows the different plotting libraries used, the parameter co
 \end{table}
 
 \begin{table}[!htbp]
-	\centering \def\arraystretch{1.5} \small
-	\caption {Overview of the number of plot and different varieties plots in the different plotting programs}	
-	\label{table:less}
+	\centering \def\arraystretch{1.6} \small
+
 	\begin{adjustbox}{max width=1.1\textwidth,center}
 		\begin{tabular}{|p{3cm}|p{3cm}|p{4cm}|}
 			\hline
@@ -531,7 +559,6 @@ The Library column shows the different plotting libraries used, the parameter co
 			\hline
 			
 			Language & Number of plots  & Type\\ \hline
-			
 			Python & 1165 &  \multirow{4}{*} {\shortstack { Unique markers, \\ With legends,\\ multiple markers \\ regplot }} \\ \cline{1-2}
 			
 			Matlab &  1008  &   \\  \cline{1-2}
@@ -580,7 +607,8 @@ The Library column shows the different plotting libraries used, the parameter co
 		\end{tabular}
 		
 	\end{adjustbox}
-	
+		\caption {Overview of the number of plot and different varieties plots in the different plotting programs}	
+	\label{table:less}
 \end{table}
 
 \begin{figure}[!htb]
@@ -656,7 +684,7 @@ The Library column shows the different plotting libraries used, the parameter co
 
 
 \subsection{Random Charts}
-In other to have the most diverse dataset, so as to achieve a robust model, we decided to pick 120 random images for each chart type  from Junior et al. \cite{junior2017archi} and Po-shen et al. \cite{lee2016viziometrix}. The line-charts, bar-charts and, scatter-plots were already labeled and were taken from Junior et al. work and the box-plots which we had to label, were taken from Po-shen et al. work since, the prior did not contain box-plots. The randomly picked chart images, were then added to the already created dataset for training and testing. Figure \ref{fig:random} shows sample images from the already created chart images from the paper of Po-shen et al. and Junior et al.
+In other to have the most diverse dataset, so as to achieve a robust model, we decided to pick 120 random images for each chart type  from Junior et al. \cite{junior2017archi} and Po-shen et al. \cite{lee2016viziometrix}. The line-charts, bar-charts and, scatter-plots were already labeled and were taken from the research of Junior et al. and the box-plots which we had to label manually, were taken from the work of Po-shen et al. since, the prior did not contain box-plots. The randomly picked chart images, were then added to the already created dataset for training and testing. Figure \ref{fig:random} shows sample images from the already created chart images from the paper of Po-shen et al. and Junior et al.
 
 \begin{figure}[!htbp]
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -688,12 +716,38 @@ In other to have the most diverse dataset, so as to achieve a robust model, we d
 
 
 
-\subsection{Training, Validation and Test set}
+\section{Training, Validation and Test set}
+After creating the various plots. 80\% of each class was randomly chosen as train data and the rest was used as test data.
+Also 96 of the 120 random chosen charts mentioned in the previous section was randomly picked and added to their respective classes in the train set, and the rest of the 24 which forms 20\% were added to their respective test samples.
+Table \ref{table:chart summary} shows a summary of how many samples were added to each class for training and testing.
+
+
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.6} \small
+	
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		\begin{tabular}{|p{5cm}|p{5cm}|p{5cm}|}
+			\hline						
+			&Train set&Test Set  \\ \hline	 
+			Scatter plot & 3442 & 862  \\ \hline
+			Bar Chart & 3491 & 875 \\ \hline
+			Line Chart & 3497 & 876 \\ \hline
+			Box plot & 3448 &  866\\ \hline	
+			Total & 13878 &  3479 \\ \hline		
+		\end{tabular}
+		
+	\end{adjustbox}
+	\caption {Summary of the dataset used for training the classifier}	
+	\label{table:chart summary}
+\end{table}
+
+
+
 Figure ~\ref{fig:approach} summaries how our dataset was split into various activities. In machine learning, a model is an artifact created during the training phase, this model can be likened to a function that maps specific features to their respective labels, the model is trained with a portion of the dataset called the train set. As the model is trained, the validation set is used to decide and pick which metric out of hyper-parameters, early stopping and architecture considerations yields the best performance. This helps to adjust and optimise the model~\cite{validation}. Finally, the test-set in machine learning, is the other portion of the dataset which was not used during the training phase. The test-set checks how well the trained model performs on unseen data by giving an unbiased assessment of the model. For this work, the dataset is divided into train, validation and test set. The validation set is not shown in the figure since it forms part of the train data.
 
 \begin{figure}[!htbp]
 \includegraphics [scale=0.5] {approach}
-\captionof{figure}{Steps involved in building the Classification model}
+\captionof{figure}{How the train and test dataset was created}
 \label{fig:approach}
 \end{figure}
 
@@ -707,7 +761,7 @@ As mentioned in previous sections, our model is trained with a CovNet. This arch
 \captionof{figure}{Architecure of CovNet used to train our model}\label{fig:archi}
 \end{figure}
 
-\subsubsection{Convolutional Layer}
+\subsection{Convolutional Layer}
 As mentioned above 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 224 x 224 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling.
 
 \subsection{Dropout}
@@ -719,16 +773,13 @@ The last set of layers used are the Fully connected layers.
 The first layer takes as input the 1D feature vector generated by a flatten layer in our network. The flatten layer converts all our 2D arrays from our previous Convolutional layers into a 1D resultant vector. The output of this layer is then fed as input into the second fully connected layer. The output of the second layer is then fed into the last fully connected layer. The last layer in this set of 3 layers uses the softmax activation to give our output prediction. The output is a separate probability of our four classes and the choice with the highest probability is our chosen prediction. We used a sofmax activation as opposed to other activation functions because, it handles low invigoration
 in images (say blurry charts) of your neural net with rather uniform distribution and to high invigoration in images (say large numbers, like sharp images) with prediction probabilities between 1 and 0.
 
-\subsection{Preprocessing Techniques}
+\section{Preprocessing Techniques}
 Archiving high performance by any machine learning technique is reliant on the quality and quantity of the data fed into the network.
 Datasets must comprise of diverse data, this helps the network to generalise well during the testing phase. To help increase the quantity and also generate more diverse data we employ data augmenting techniques. The preprocessing techniques used in this thesis are described in the rest of this section.
 
 \begin{itemize}
 	\item  Image Resizing: The images have varying sizes and due to the presence of fully connected layer, we resize all the images to the size of 227 x 227. With this fixed image size processing in the dataset in batches is also possible.
-	
 	\item  Image Scaling: Object in the image can vary in size.
-	
-	
 \end{itemize}
 
 
@@ -778,16 +829,10 @@ Datasets must comprise of diverse data, this helps the network to generalise wel
 
 
 
-
-
-
-
-
-
-
-
-
 \chapter{Experiments}
+
+\section{Overview}
+This chapter presents the experiments performed based on the CovNet framework discussed in the previous chapter.
 
 \section{size of images was tried}
 
