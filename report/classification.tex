@@ -70,9 +70,10 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. Visualisation makes it possible for scientists to represent complex data not understandable with text. Analysing the visualized data for purposes of validating the results by another researcher, or presenting the data to another audience is a complex task only possible after the chart is first classified accurately. The major steps in chart image classification is to find a suitable classification algorithm, using good parameters for the chosen algorithm and gathering the right training and testing chart image samples. Choosing the right techniques can go along way to achieve good results. \\\\
-The aim of this thesis is to develop a reliable system for the purpose of recognising chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of
-the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. This buttresses the fact that the human brain understands visual data faster and better. It's because of this that scientists represent complex scientific findings with chart images. Even though most of these charts are easily understandable by human beings, machines on the other hand find it difficult to decode them. There is however a need for machines to be able to read, extract and analyse the visualized data automatically \cite{amara2017convolutional}. This task is nevertheless difficult for machines because of the variable structure and different appearance of charts. In spite of these difficulties, computer vision techniques have a done a good job in decoding and analysing information from charts. This extracted information then helps to develop other visualizations in situations where the paper needs to be presented to a different
+audience with a distinct background, also in events where another researcher wants to verify the work of the publisher, this extracted information is relevant. The initial step before information extraction from  the charts is identifying the type of chart. With advances in pattern recognition techniques, especially using CovNets, charts can be classified with high accuracy.\\\\
+
+The aim of this thesis is to develop a reliable system for the purpose of recognising chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
 
 \section{Overview} 
 A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots,stars,diamonds and an asterisk in the case of a scatter plot.
@@ -318,8 +319,11 @@ Precision = \frac{2 * Precision * Recall}{(Precision + Recall)} \label{eq:f1scor
 
 There are many other metrics used in machine learning to evaluate a model but the ones mentioned above are mostly used when it comes to classification problems.
 
+
+
 \subsection{Training process}
-This section is inspired by a blog written by ujjwalkarn \cite{cnnonline}. The process by which a CovNet performs classification is summarised below.
+This section is inspired by a blog written by ujjwalkarn \cite{cnnonline}. In machine learning, a model is an artifact created during the training phase, this model can be likened to a function that maps specific features to their respective labels, the model is trained with a portion of the dataset called the train set. As the model is trained, the validation set is used to decide and pick which metric out of hyper-parameters, early stopping and architecture considerations yields the best performance. This helps to adjust and optimise the model~\cite{validation}. Finally, the test-set in machine learning, is the other portion of the dataset which was not used during the training phase. The test-set checks how well the trained model performs on unseen data by giving an unbiased assessment of the model. For this work, the dataset is divided into train, validation and test set. The validation set is not shown in the figure since it forms part of the train data.
+The process by which a CovNet performs classification is summarised below.
 
 \begin{itemize}
 	\item All parameters (weights, filter, and biases) are initialised randomly.
@@ -717,9 +721,16 @@ In other to have the most diverse dataset, so as to achieve a robust model, we d
 
 
 \section{Training, Validation and Test set}
-After creating the various plots. 80\% of each class was randomly chosen as train data and the rest was used as test data.
+Figure ~\ref{fig:approach} summaries how our dataset was created and split into various portions for the training and testing stages. After creating the various plots. 80\% of each class was randomly chosen as train data and the rest was used as test data.
 Also 96 of the 120 random chosen charts mentioned in the previous section was randomly picked and added to their respective classes in the train set, and the rest of the 24 which forms 20\% were added to their respective test samples.
+For the validation phase, 20\% of the train set is split randomly for validation during the training phase. 
 Table \ref{table:chart summary} shows a summary of how many samples were added to each class for training and testing.
+
+\begin{figure}[!htbp]
+	\includegraphics [scale=0.5] {approach}
+	\captionof{figure}{How the train and test dataset was created}
+	\label{fig:approach}
+\end{figure}
 
 
 \begin{table}[!htbp]
@@ -743,29 +754,20 @@ Table \ref{table:chart summary} shows a summary of how many samples were added t
 
 
 
-Figure ~\ref{fig:approach} summaries how our dataset was split into various activities. In machine learning, a model is an artifact created during the training phase, this model can be likened to a function that maps specific features to their respective labels, the model is trained with a portion of the dataset called the train set. As the model is trained, the validation set is used to decide and pick which metric out of hyper-parameters, early stopping and architecture considerations yields the best performance. This helps to adjust and optimise the model~\cite{validation}. Finally, the test-set in machine learning, is the other portion of the dataset which was not used during the training phase. The test-set checks how well the trained model performs on unseen data by giving an unbiased assessment of the model. For this work, the dataset is divided into train, validation and test set. The validation set is not shown in the figure since it forms part of the train data.
+\section{The Architecture}
+As mentioned in previous sections, our model is trained with a CovNet. The architecture of the CovNet used is inspired by the famous AlexNet CovNet architecture~\cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes, the results obtained on the test-set had a top-5 error rate of 17.0\%, which was better than the previous state of the art. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The preprocessing steps, the parameters used, and why they were employed are explained into details in the rest of this chapter.
 
 \begin{figure}[!htbp]
-\includegraphics [scale=0.5] {approach}
-\captionof{figure}{How the train and test dataset was created}
-\label{fig:approach}
-\end{figure}
-
-
-\section{The Architecture}
-As mentioned in previous sections, our model is trained with a CovNet. This architecture is inspired by the famous AlexNet CovNet architecture  \cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes, the results obtained on the test-set had a top-5 error rate of 17.0\%, which was better than the previous state of the art. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The preprocessing steps, the parameters used, and why they were employed are explained into details in the rest of this chapter.
-
-\begin{figure}
 \centering
-\includegraphics [scale=0.3] {architecture}
-\captionof{figure}{Architecure of CovNet used to train our model}\label{fig:archi}
+\includegraphics [scale=0.5] {architectur}
+\captionof{figure}{Architecure of CovNet used to train our model source \cite{liu2015chart}}\label{fig:archi}
 \end{figure}
 
 \subsection{Convolutional Layer}
-As mentioned above 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 224 x 224 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling.
+As mentioned above 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 277 x 277 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling.
 
 \subsection{Dropout}
-A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or or maintained at a probability of 0.5.
+A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or maintained at a probability of 0.5.
 
 
 \subsection{Fully connected layers}
@@ -779,9 +781,18 @@ Datasets must comprise of diverse data, this helps the network to generalise wel
 
 \begin{itemize}
 	\item  Image Resizing: The images have varying sizes and due to the presence of fully connected layer, we resize all the images to the size of 227 x 227. With this fixed image size processing in the dataset in batches is also possible.
-	\item  Image Scaling: Object in the image can vary in size.
+	
+	\item  Padding: Padding=Same was used while training, so that the output dimensions is equal to the input.
+	
+	\item  Image Scaling: All images were rescaled by a factor of 1.0/255, to enable the network to handle the images in the same way.
+	
 \end{itemize}
 
+\subsection{Data Augmentation}
+In this thesis, no data augmentation techniques were used. This mainly because we do not expect our images to be presented in different angles and under different lighting conditions as real world images are normally presented. This is due to the fact that images are expected to be extracted with a pdf extractor and all the bounding boxes of the chart images are expected to be horizontally aligned.  
+
+\section{Training}
+The network takes 3000 epochs in five or six days to train on two GTX 580 GPUs. SGD with learning rate  0.0001, momentum 0.9 and weight decay 0.0005 is used. 
 
 \begin{table}[!htbp]
 	\centering \def\arraystretch{1.5} \small
@@ -801,40 +812,57 @@ Datasets must comprise of diverse data, this helps the network to generalise wel
 			Max Pooling & 3 * 3 & & 2 \\ \hline
 			
 			Conv3 + Relu & 3 * 3 & 384 &  \\ \hline	
-					
 			
 			Conv4 + Relu & 3 * 3  & 384  &  \\ \hline	
 			
-		    
-		    Conv5 + Relu & 3 * 3  & 256 &  \\ \hline	
-		    
-		    Max Pooling & 3 * 3 & & 2 \\ \hline
-		    
-		    Dropout(rate 0.5) &  & & \\ \hline
-		    
-		    FC6 + Relu &  & & \\ \hline
-		    
-		    FC7 + Relu &  & & \\ \hline
-		    
-		    FC8 + Relu &  & & \\ \hline
-		   
+			Conv5 + Relu & 3 * 3  & 256 &  \\ \hline	
+			
+			Max Pooling & 3 * 3 & & 2 \\ \hline
+			
+			Dropout(rate 0.5) &  & & \\ \hline
+			
 		\end{tabular}
-	
+		
 	\end{adjustbox}
-
-		\caption {The following table shows different layers, parameters and computation units used.}	
-	
-	
+	\caption {The following table shows different layers, parameters and computation units used.}	
 \end{table}
 
+\section{Experiments}
 
 
-\chapter{Experiments}
+\chapter{Experimental Results}
 
 \section{Overview}
 This chapter presents the experiments performed based on the CovNet framework discussed in the previous chapter.
 
 \section{size of images was tried}
+
+
+\begin{figure}[!htbp]
+	\includegraphics [scale=1.2] {confusion.jpg}
+	\captionof{figure}{Results obtained shown with a Heat Map}
+	\label{fig:confusion}
+\end{figure}
+
+
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	\label{table:2}
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		
+		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}||p{3cm}||p{3cm}|}
+			
+			\hline			
+			 Model & Bar chart & Line Chart& Scatter plot & Box plot& avg accuracy \\ \hline
+			 
+			 CovNet & Bar chart & Line Chart& Scatter plot & Box plot& avg accuracy \\ \hline
+			
+				
+		\end{tabular}
+		
+	\end{adjustbox}
+	\caption {The following table shows summaries accuracies.}	
+\end{table}
 
 
 \chapter{Summary}

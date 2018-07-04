@@ -35,12 +35,6 @@ Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
   2017.
 \newblock [Medium; accessed 26-Jun-2018].
 
-\bibitem{karthikeyani2012machine}
-V~Karthikeyani and S~Nagarajan.
-\newblock Machine learning classification algorithms to recognize chart types
-  in portable document format (pdf) files.
-\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
-
 \bibitem{liu2015chart}
 Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
   Mingli Song.
@@ -48,6 +42,12 @@ Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
   deep belief networks.
 \newblock In {\em Document Analysis and Recognition (ICDAR), 2015 13th
   International Conference on}, pages 801--805. IEEE, 2015.
+
+\bibitem{karthikeyani2012machine}
+V~Karthikeyani and S~Nagarajan.
+\newblock Machine learning classification algorithms to recognize chart types
+  in portable document format (pdf) files.
+\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
 
 \bibitem{humaneye}
 {Thermopylae Sciences + Technology}.
@@ -204,15 +204,6 @@ Paulo Roberto Silva~Chagas Junior, Alexandre~Abreu De~Freitas, Rafael~Daisuke
   convolutional neural network.
 \newblock In {\em Information Visualisation (IV), 2017 21st International
   Conference}, pages 318--323. IEEE, 2017.
-
-\bibitem{Rodriguez}
-{Rodriguez, J.}
-\newblock Convolutional neural networks for the rest of us part iii: Benefits
-  and motivation.
-\newblock
-  \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
-  2011.
-\newblock [Online; accessed 5-Jun-2018].
 
 \bibitem{edi}
 {Editor}.

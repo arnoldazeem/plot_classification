@@ -51,8 +51,11 @@
 \BOOKMARK [2][-]{subsection.86}{Dropout}{section.83}% 51
 \BOOKMARK [2][-]{subsection.87}{Fully connected layers}{section.83}% 52
 \BOOKMARK [1][-]{section.88}{Preprocessing Techniques}{chapter.63}% 53
-\BOOKMARK [0][-]{chapter.90}{Experiments}{}% 54
-\BOOKMARK [1][-]{section.91}{Overview}{chapter.90}% 55
-\BOOKMARK [1][-]{section.92}{size of images was tried}{chapter.90}% 56
-\BOOKMARK [0][-]{chapter.93}{Summary}{}% 57
-\BOOKMARK [0][-]{chapter.94}{Bibliography}{}% 58
+\BOOKMARK [2][-]{subsection.89}{Data Augmentation}{section.88}% 54
+\BOOKMARK [1][-]{section.90}{Training}{chapter.63}% 55
+\BOOKMARK [1][-]{section.92}{Experiments}{chapter.63}% 56
+\BOOKMARK [0][-]{chapter.93}{Experimental Results}{}% 57
+\BOOKMARK [1][-]{section.94}{Overview}{chapter.93}% 58
+\BOOKMARK [1][-]{section.95}{size of images was tried}{chapter.93}% 59
+\BOOKMARK [0][-]{chapter.98}{Summary}{}% 60
+\BOOKMARK [0][-]{chapter.99}{Bibliography}{}% 61
