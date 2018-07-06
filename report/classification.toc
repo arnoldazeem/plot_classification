@@ -48,15 +48,12 @@
 \contentsline {subsection}{\numberline {3.3.1}Random Charts}{34}{subsection.78}
 \contentsline {section}{\numberline {3.4}Training, Validation and Test set}{36}{section.80}
 \contentsline {section}{\numberline {3.5}The Architecture}{36}{section.83}
-\contentsline {subsection}{\numberline {3.5.1}Convolutional Layer}{37}{subsection.85}
-\contentsline {subsection}{\numberline {3.5.2}Dropout}{37}{subsection.86}
-\contentsline {subsection}{\numberline {3.5.3}Fully connected layers}{38}{subsection.87}
-\contentsline {section}{\numberline {3.6}Preprocessing Techniques}{38}{section.88}
-\contentsline {subsection}{\numberline {3.6.1}Data Augmentation}{38}{subsection.89}
-\contentsline {section}{\numberline {3.7}Training}{39}{section.90}
-\contentsline {section}{\numberline {3.8}Experiments}{39}{section.92}
-\contentsline {chapter}{\numberline {4}Experimental Results}{40}{chapter.93}
-\contentsline {section}{\numberline {4.1}Overview}{40}{section.94}
-\contentsline {section}{\numberline {4.2}size of images was tried}{40}{section.95}
-\contentsline {chapter}{\numberline {5}Summary}{42}{chapter.98}
-\contentsline {chapter}{\numberline {6}Bibliography}{43}{chapter.99}
+\contentsline {section}{\numberline {3.6}Preprocessing Techniques}{37}{section.85}
+\contentsline {subsection}{\numberline {3.6.1}Data Augmentation}{38}{subsection.86}
+\contentsline {section}{\numberline {3.7}Training 1}{38}{section.87}
+\contentsline {section}{\numberline {3.8}Training 2}{39}{section.89}
+\contentsline {chapter}{\numberline {4}Experimental Results}{40}{chapter.90}
+\contentsline {section}{\numberline {4.1}Overview}{40}{section.91}
+\contentsline {section}{\numberline {4.2}size of images was tried}{40}{section.92}
+\contentsline {chapter}{\numberline {5}Summary}{42}{chapter.95}
+\contentsline {chapter}{\numberline {6}Bibliography}{43}{chapter.96}
