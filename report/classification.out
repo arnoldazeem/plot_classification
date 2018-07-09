@@ -49,10 +49,11 @@
 \BOOKMARK [1][-]{section.83}{The Architecture}{chapter.63}% 49
 \BOOKMARK [1][-]{section.85}{Preprocessing Techniques}{chapter.63}% 50
 \BOOKMARK [2][-]{subsection.86}{Data Augmentation}{section.85}% 51
-\BOOKMARK [1][-]{section.87}{Training 1}{chapter.63}% 52
-\BOOKMARK [1][-]{section.89}{Training 2}{chapter.63}% 53
-\BOOKMARK [0][-]{chapter.90}{Experimental Results}{}% 54
-\BOOKMARK [1][-]{section.91}{Overview}{chapter.90}% 55
-\BOOKMARK [1][-]{section.92}{size of images was tried}{chapter.90}% 56
-\BOOKMARK [0][-]{chapter.95}{Summary}{}% 57
-\BOOKMARK [0][-]{chapter.96}{Bibliography}{}% 58
+\BOOKMARK [1][-]{section.87}{First Method}{chapter.63}% 52
+\BOOKMARK [1][-]{section.89}{Second Method}{chapter.63}% 53
+\BOOKMARK [0][-]{chapter.91}{Experimental Results}{}% 54
+\BOOKMARK [1][-]{section.92}{Overview}{chapter.91}% 55
+\BOOKMARK [1][-]{section.93}{Results of First Experiment}{chapter.91}% 56
+\BOOKMARK [1][-]{section.96}{Results of First Experiment}{chapter.91}% 57
+\BOOKMARK [0][-]{chapter.97}{Summary}{}% 58
+\BOOKMARK [0][-]{chapter.98}{Bibliography}{}% 59

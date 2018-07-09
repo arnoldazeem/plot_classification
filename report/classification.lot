@@ -1,17 +1,16 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Confusion Matrix\relax }}{21}{table.caption.42}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Details on Dataset from \cite {karthikeyani2012machine} \relax }}{24}{table.caption.55}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Confusion Matrix\relax }}{22}{table.caption.42}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Details on Dataset from \cite {karthikeyani2012machine} \relax }}{25}{table.caption.55}
 \contentsline {table}{\numberline {2.3}{\ignorespaces Number of Train and Test Dataset collected\relax }}{26}{table.caption.58}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Comparing Results of Proposed Framework from (Liu et al.~\cite {liu2015chart}) \relax }}{27}{table.caption.61}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Comparing Results of Proposed Framework from (Liu et al.~\cite {liu2015chart}) \relax }}{28}{table.caption.61}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Names of datasets used in each plotting program\relax }}{30}{table.caption.70}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Overview of the varied parameters and libraries used for creating plots in the different plotting programs\relax }}{32}{table.caption.72}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Overview of the number of plot and different varieties plots in the different plotting programs\relax }}{33}{table.caption.73}
-\contentsline {table}{\numberline {3.4}{\ignorespaces Summary of the dataset used for training the classifier\relax }}{36}{table.caption.82}
-\contentsline {table}{\numberline {3.5}{\ignorespaces The following table shows different layers, parameters and computation units used.\relax }}{39}{table.caption.88}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Names of datasets used in each plotting program\relax }}{31}{table.caption.70}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Overview of the varied parameters and libraries used for creating plots in the different plotting programs\relax }}{33}{table.caption.72}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Overview of the number of plot and different varieties plots in the different plotting programs\relax }}{34}{table.caption.73}
+\contentsline {table}{\numberline {3.4}{\ignorespaces Summary of the dataset used for training the classifier\relax }}{37}{table.caption.82}
+\contentsline {table}{\numberline {3.5}{\ignorespaces The parameters used in the AlexNet with some modifications. The order of layers is the order in which data is passed through. depth is the amount of output feature maps or neurons, filter is kernel size\relax }}{40}{table.caption.88}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces The following table shows summaries accuracies.\relax }}{40}{table.caption.94}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

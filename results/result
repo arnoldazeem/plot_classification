@@ -78,6 +78,7 @@ INFO:tensorflow:                                 tf_files/images/line plot/line5
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_286.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/python_line_plot_620.jpeg  box plot
 INFO:tensorflow:                   tf_files/images/line plot/python_line_plot_694.jpeg  scatter plot
+
 INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_463.jpg  line plot
 INFO:tensorflow:                           tf_files/images/scatter plot/scatter210.jpg  box plot
 INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_807.jpg  line plot
@@ -111,4 +112,19 @@ INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_2
 INFO:tensorflow:                           tf_files/images/scatter plot/scatter562.jpg  bar chart
 INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_440.jpg  box plot
 INFO:tensorflow:                  tf_files/images/scatter plot/java_scatter_plot_7.jpg  box plot
+
+
+
+bar chart ---
+
+box plot ----
+
+line chart----
+line chart----
+line chart----
+
+scatter plot---- 20------line plot
+scatter plot----- 6-------box plot
+scatter plot----- 2---------bar chart
+
 

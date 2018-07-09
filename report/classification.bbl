@@ -56,6 +56,11 @@ V~Karthikeyani and S~Nagarajan.
   \url{http://www.t-sciences.com/news/humans-process-visual-data-better}, 2018.
 \newblock [Thermopylae Sciences + Technology. (2018).; accessed 18-Jun-2018].
 
+\bibitem{amara2017convolutional}
+Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
+\newblock Convolutional neural network based chart image classification.
+\newblock 2017.
+
 \bibitem{chartselection}
 {Few, S}.
 \newblock Visual business intelligence – abela’s folly – a thought
@@ -76,11 +81,6 @@ V~Shiv~Naga Prasad, Behjat Siddiquie, Jennifer Golbeck, and Larry~S Davis.
 \newblock Classifying computer generated charts.
 \newblock In {\em Content-Based Multimedia Indexing, 2007. CBMI'07.
   International Workshop on}, pages 85--92. IEEE, 2007.
-
-\bibitem{amara2017convolutional}
-Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
-\newblock Convolutional neural network based chart image classification.
-\newblock 2017.
 
 \bibitem{boyle2007advances}
 Richard Boyle, Bahram Parvin, Darko Koracin, Nikos Paragios, and Syeda-Mahmood
@@ -252,5 +252,13 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
 \newblock In {\em Proceedings of the 25th international conference companion on
   world wide web}, pages 413--418. International World Wide Web Conferences
   Steering Committee, 2016.
+
+\bibitem{ILSVRC15}
+Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
+  Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein,
+  Alexander~C. Berg, and Li~Fei-Fei.
+\newblock {ImageNet Large Scale Visual Recognition Challenge}.
+\newblock {\em International Journal of Computer Vision (IJCV)},
+  115(3):211--252, 2015.
 
 \end{thebibliography}

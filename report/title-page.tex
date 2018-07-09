@@ -3,7 +3,7 @@
 	Fakultät für Informatik und Mathematik
 	\vspace{2.5cm}
     \begin{center}
-    \LARGE\textbf{{Classification  Of Visualization  In Scientific Literature}}\\
+    \LARGE\textbf{{Classification  Of Visualization In Scientific Literature}}\\
    
     \normalsize
 
@@ -31,23 +31,23 @@
     }
 
 
-
 \newpage
 \begin{abstract}
 Chart image classification serves as an initial step towards comprehending, extracting and further analysing data described with charts. These chart images are regularly embedded in scientific papers and journals to describe research findings. 
-An immediate problem is that, charts images have different forms and patterns, and there exist ancillary structures like text, legends and axis, this makes the task challenging.
+An immediate problem is that charts images have different forms and patterns, and there exist ancillary structures like text, legends, and axis, this makes the task challenging.
 Chart classification consists of extracting chart features which are then used for identifying the chart type.
-Previous approaches for dealing with chart classification depended on hand crafted features which is not robust when dealing with large amount of data with variable content structure.
-This thesis therefore, proposes using CovNets, a deep learning-based approach that automates the feature acquisition step. We use a CovNet architecture inspired by the AlexNet CovNet architecture.~\cite{krizhevsky2012imagenet} for training a model for classification, a 4 class chart image dataset consisting of 17,357 chart images. With an accuracy of 84\% our proposed method is very efficient.
+Previous approaches for dealing with chart classification depended on handcrafted features which is not robust when dealing with a large amount of data with variable content structure.
+This thesis, therefore, proposes using CovNets, a deep learning-based approach that automates the feature acquisition step. Two techniques were considered in this thesis, a CovNet model was obtained by training on only our dataset which consisted of 17,357 chart images of 4 classes, and a model that was pre-trained by Google using 1.2 million images was retrained with our dataset. With results showing an accuracy of 84\% and 96\% respectively, our proposed methods are very efficient.
 
 \end{abstract}
 
 \section*{Acknowledgement}
-I would like to thank everyone who made this master thesis possible. First of all, I greatly appreciate the help of my supervisor Prof. Christin Siefert now of University of Twente who advised me all the way during this thesis work. I specially thank her for her infinite patience. The discussions I had with her were invaluable.
-I want to say a big thanks to my second Supervisor Prof. Michael Granitzer. Besides, I am grateful to all the Passau teaching staff and students who generously
-contributed one way or another.
-My final words go to my family. I want to thank my family, for their love and support all
-these years.\\
+I would like to thank my supervisor Prof. Dr. Christin Siefert of University of Twente. When Prof Siefert was in University of Passau, anytime I had questions or trouble her door was always open for me, and even after she left to University of Twente, she continued addressing my concerns via email. She steered me in the right direction but allowed this thesis to be my own work.
+
+I would also like to thank Prof. Dr. Michael Granitzer for his support and availability through out the thesis. I would also like to thank Julian Stier and Sahib Sulka for their patience and advice throughout this thesis.
+
+Finally, I must express my very profound gratitude to my family and for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you
+
 Arnold Azeem, Passau 13/08/2018
 
 \end{titlepage}

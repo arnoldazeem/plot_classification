@@ -9,6 +9,9 @@
 \usepackage[nottoc,numbib]{tocbibind}
 \usepackage[pdftex]{graphicx}
 \usepackage[toc]{glossaries}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{hhline}
 \usepackage{amssymb, amsmath}
 \usepackage[colorlinks,
 pdfstartview = FitH,
@@ -44,7 +47,9 @@ citecolor = black]{hyperref}
 \usepackage{booktabs}
 \usepackage{tabularx}
 \usepackage{placeins}
+
 \setcounter{secnumdepth}{5}
+\usepackage{parskip}
 \begin{document}
 
 \input{title-page}
@@ -70,24 +75,24 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. This buttresses the fact that the human brain understands visual data faster and better. It's because of this that scientists represent complex scientific findings with chart images. Even though most of these charts are easily understandable by human beings, machines on the other hand find it difficult to decode them. There is however a need for machines to be able to read, extract and analyse the visualized data automatically \cite{amara2017convolutional}. This task is nevertheless difficult for machines because of the variable structure and different appearance of charts. In spite of these difficulties, computer vision techniques have a done a good job in decoding and analysing information from charts. This extracted information then helps to develop other visualizations in situations where the paper needs to be presented to a different
-audience with a distinct background, also in events where another researcher wants to verify the work of the publisher, this extracted information is relevant. The initial step before information extraction from  the charts is identifying the type of chart. With advances in pattern recognition techniques, especially using CovNets, charts can be classified with high accuracy.\\\\
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. This buttresses the fact that the human brain understands visual data faster and better as compared to the raw data. Charts on the other hand can also be read more quickly than the raw data. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts. 
 
-The aim of this thesis is to develop a reliable system for the purpose of recognising chart images by using example chart images created with real world data. Image processing and machine learning methods are the main constituents of this thesis. The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
+The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us train a model capable of classifying chart images accurately. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
+
+The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
 
 \section{Overview} 
-A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots,stars,diamonds and an asterisk in the case of a scatter plot.
-Charts are often used to visualise complex data for easy understanding and interpretation, to find patterns and trends in data. Charts can usually be read more quickly than textual data, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the help of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts works better when we want to find trends in data and scatter plots are used when we want to find relationships in data. Figure \ref{fig:chartse} which was inspired by the figure from \cite{chartselection} shows which charts we should choose depending on what we would like to describe in some acquired data. For example if we want to show a relationship between two variables in some data, we should a scatter plot as seen in the figure.\\
+A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots, stars, diamonds and an asterisk in the case of a scatter plot. Charts are often used to visualize complex data for easy understanding, interpretation, and to find patterns and trends in data. Charts can usually be read more quickly than the raw data visualized, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the help of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts work better when we want to find trends in data and scatter plots are used when we want to find relationships in data. Figure \ref{fig:chartse} which was inspired by a diagram from \cite{chartselection} shows which charts we should choose depending on what task we would like to describe. For example, if we want to show a relationship between two variables in some data, a scatter plot is the best option, as seen below.\\
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics [scale=0.5] {chart}
-	\captionof{figure}{Seletecting the approapriate chart for visualising data }
+	\captionof{figure}{How to Seletect the approapriate chart for visualizing your data }
 	\label{fig:chartse}
 \end{figure}
 
-Charts usually appear in different forms, nonetheless there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text visible in most charts is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster \cite{humaneye} as mentioned earlier. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. The are also texts usually outside or besides the axis describing the measurements.
-Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally the title, that is the text describing the whole chart shown at the top. 
+Charts usually appear in different forms, nonetheless, there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text visible in most charts is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster \cite{humaneye} as mentioned earlier. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line is the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. There are also texts usually outside or beside the axis describing the measurements.
+Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally the title, that is the text describing the whole chart is mostly shown at the top of the visual graph. 
 
 \begin{figure}[!htb]
 	\centering
@@ -96,13 +101,16 @@ Some charts include what we call a legend, the legend is usually present in situ
 	\label{fig:boxy}
 \end{figure}
 
-Despite most features being present in most charts, there are some charts that are totally different from the rest. For example a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts will mean having all the wide range of the different visual encodings and styles of these charts.
-
+Despite most features being present in most charts, there are some charts that are totally different from the rest. For example, a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts accurately will mean, considering all the wide range of the different visual encodings and styles of these charts.
 
 \section{Motivation}
-Complex data is better explained in scientific documents with the aid of visualisations. These charts present complex data in an easy to understand format as compared to the textual content. 
-Chart images are an important part of scientific documents.
-Data is ever growing and sometimes complex, and therefore using figures and diagrams to interpret and represent this data cannot be undermined. Chart images provide a way to easily give insight to  research findings, which would have otherwise been more complex relying on only textual data. The data which these visualisations contain when extracted play an important role in events where another researcher wants to verify the work of the publisher. The extracted data can also be used to develop other visualisations in situations where the paper needs to be presented to a different audience with a distinct background as opposed to the audience for which the visualisations were created initially. Another reason for extracting this data is that, when comparing two plots, looking at the raw data, gives us more insight and consequently helps in better decision making as compared to just looking at the figures. Since each plot will be processed differently to extract the raw data, it is relevant that we can distinguish one plot from another. For this reason, there has been a growing interest in the chart analysis area and quite a number of techniques have been developed. In spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}. For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. However in the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved good results.
+Complex data is better explained in scientific documents with the aid of visualisations. Charts, a category of visualizations, mostly  present complex data in an easy to understand format and shows trends and patterns in data. Chart images are an important part of scientific documents. Data is ever growing and sometimes complex, therefore, visualizing this raw data using charts is an important task. Chart images provide a way to easily give insight to research findings, which would have otherwise been more complex relying on only textual data. 
+
+It's due to this fact that scientists visualize complex scientific findings with chart images. Even though most of these charts are easily understandable by human beings, machines on the other hand, find it difficult to decode them. There is, however, a need for machines to be able to read, extract and analyze the visualized data automatically~\cite{amara2017convolutional}. This task is nevertheless difficult for machines because of the variable structure and different appearance of charts. In spite of these difficulties, computer vision techniques have done a remarkable job in the area of decoding and analysing information from charts. This extracted information then helps to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background, also in events where another researcher wants to verify the work of the publisher, this extracted information is relevant. The initial step before information extraction from the charts is identifying the type of chart. With advances in pattern recognition techniques, especially using CovNets, charts can be classified with high accuracy.
+
+The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real-world data. Image processing and machine learning methods are the main constituents of this thesis. 
+
+In spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}. For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. However in the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved good results.
 
 \section{Objective}
 The aim of this thesis is to develop algorithms using image processing and machine learning methods for the purpose of chart image classification. Different approaches will be considered in other to choose the most favorable one.\\
@@ -243,7 +251,7 @@ CovNets are very powerful and have the ability to learn features with some level
 \section{Validation in Machine Learning}
 The following argument is based on Ricardo Gutierrez-Osuna's lecture~\cite{validation}.
 Every machine learning algorithm has some parameters that can be tuned to adapt to a specific problem. For instance in CovNets the parameters are the number of hidden layers, weights and biases. 
-During the training process of a machine learning algorithm, these tunable parameters are given specific configurations (model), we then check the classification performance of the algorithm with these estimated configurations. Classification performance is mostly estimated by finding the error rate of the entire dataset. We therefore try to tune our parameters to classify with the least error rate. In an ideal situation where our dataset consist of all possible variants of the samples to be classified, the error rate on the entire dataset will be the true error rate, but with real world data this situation is unrealistic.The model will perform well on samples it seen but will fail on new samples, this situation is known as over-fitting. In other to overcome this limitation some validation techniques are adapted during the training phase. These techniques are presented below.
+During the training process of a machine learning algorithm, these tunable parameters are given specific configurations (model), we then check the classification performance of the algorithm with these estimated configurations. Classification performance is mostly estimated by finding the error rate of the entire dataset. We therefore try to tune our parameters to classify with the least error rate. In an ideal situation where our dataset consist of all possible variants of the samples to be classified, the error rate on the entire dataset will be the true error rate, but with real world data this situation is unrealistic. The model will perform well on samples it seen but will fail on new samples, this situation is known as over-fitting. In other to overcome this limitation some validation techniques are adapted during the training phase. These techniques are presented below.
 
 \subsubsection{Holdout}
 The holdout method involves splitting the dataset into two disjoint groups. Train set used to train the model and test set used to estimate the error rate of the model. The train to test split ratio can be a 60/40 or 70/30 or 80/20 split on the dataset. One drawback of this method is that if we have a small dataset, we cant afford to set aside a portion for testing only. Another drawback could be that if the difficult patterns end up in the test set the accuracy might be misleading.
@@ -381,7 +389,6 @@ Our work is inspired by De Freitas et al.~\cite{junior2017archi}, proposed a way
 \begin{table}[h]
 	\centering \def\arraystretch{1.5} \small
 	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|}
-		
 		\hline
 		Chart Type & Test & Train \\ \hline
 		Area Chart & 50 & 555 \\ \hline
@@ -399,8 +406,8 @@ Our work is inspired by De Freitas et al.~\cite{junior2017archi}, proposed a way
 	\end{tabular}
 	\caption {Number of Train and Test Dataset collected}	
 	\label{table:rela}
-	
 \end{table}
+
 For the classification, a variant of CovNet called LeNet-based CovNet model is used. The model was implemented using Tensorflow\footnote{https://www.tensorflow.org/}, LeNet-based CovNet has an architecture which is comprised of 3 convolutional layers, followed by a fully connected layer. The model is trained in a way that the dataset is divided into mini-batches, samples of fixed sizes(100) are selected and fed into the CovNet, as a result of this process the model becomes robust since it learns to generalise from the different min-batches which are fed into the model. Also, all the images are converted to JPG and resized to 224x224x3, that is, 224 pixels of height, 224 of width and 3 layers of output. The other parameters used were 1000 epochs and a learning rate of 0.003. The accuracy at the end of the training process was 70\%.
 
 \subsection{Chart classification by combining deep convolutional networks and deep belief networks}
@@ -779,7 +786,7 @@ Datasets must comprise of diverse data, this helps the network to generalise wel
 \subsection{Data Augmentation}
 In this thesis, no data augmentation techniques were used. This mainly because we do not expect our images to be presented in different angles and under different lighting conditions as real world images are normally presented. This is due to the fact that images are expected to be extracted with a pdf extractor and all the bounding boxes of the chart images are expected to be horizontally aligned.  
 
-\section{Training 1}
+\section{First Method}
 As mentioned above the network has 8 layers, 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 277 x 277 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling. The features after they are pooled are flattened to 1D vector by the flatten layer before sent to the fully connected layers. The output of this layer is then fed as input into the second fully connected layer. The output of the second layer is then fed into the last fully connected layer. The last layer in this set of 3 layers uses the softmax activation to give our output prediction. The output is a separate probability of our four classes and the choice with the highest probability is our chosen prediction. A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or maintained at a probability of 0.5. Other parameters used is a learning rate 0f 1e-4 and epoch size of 3500. Table \ref{table:para} summaries the important layers and the values assigned to them.
 
 \begin{table}[!htbp]
@@ -795,42 +802,79 @@ As mentioned above the network has 8 layers, 5 of this layers are used in our ar
 			
 			Max Pooling & 3 * 3  &  & 2 \\ \hline	   
 			
-			Conv2 + Relu & 5 * 5 & 256  &  \\ \hline	
+			Conv2 + Relu & 5 * 5 & 256  & 4 \\ \hline	
 			
 			Max Pooling & 3 * 3 & & 2 \\ \hline
 			
-			Conv3 + Relu & 3 * 3 & 384 &  \\ \hline	
+			Conv3 + Relu & 3 * 3 & 384 & 4 \\ \hline	
 			
-			Conv4 + Relu & 3 * 3  & 384  &  \\ \hline	
+			Conv4 + Relu & 3 * 3  & 384  & 4 \\ \hline	
 			
-			Conv5 + Relu & 3 * 3  & 256 &  \\ \hline	
+			Conv5 + Relu & 3 * 3  & 256 & 4 \\ \hline	
 			
 			Max Pooling & 3 * 3 & & 2 \\ \hline
 			
 			Dropout(rate 0.5) &  & & \\ \hline
 			
+			Fc6 + dropout 0.5 + ReLU & & 4,096 & \\ \hline
+			
+			Fc7 + dropout 0.5 + ReLU & &  4,096 & \\ \hline
+			
+			\multicolumn{4}{|c|}{
+				Fc8  + softmax output} \\
+			
+			\hline
+			
 		\end{tabular}
 		
 	\end{adjustbox}
-	\caption {The following table shows different layers, parameters and computation units used.}	
+	\caption {The parameters used in the AlexNet with some modifications. The order of layers is the order in which
+		data is passed through. depth is the amount of output feature maps or neurons, filter is kernel
+		size}	
 \end{table}
 
-\section{Training 2}
+\section{Second Method}
+For the second experiment, the transfer learning technique used in the work of Liu et. al~\cite{liu2015chart} was employed. We used a model pre-trained by google called the MobileNet \footnote{https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html}. MobileNet was chosen because of its small size and less computational power needed to run. The MobileNet\_0.50\_224 model was the version used for this thesis. The MobileNet model was trained with 1.2 million images with 1000 classes from the ILSVRC-2012-CLS image classification dataset~\cite{ILSVRC15}. Some of the classes in this dataset are rule, zebra, Dishwasher and dalmatian.\newline
 
-RETRAINIG 
+For the training process a retrain python script originally developed by the TensorFlow authors for the purpose of using your images to train was used. The retrain scripts downloads the MobileNet model, adds a new model and retrains the new model with the chart image dataset we created. The scripts is customizable and below are the parameters we customized.
 
-
-
-
+\begin{itemize}
+	
+	\item The validation\_percentage parameter is the part of the dataset used for validation and 20\% was used for this thesis.
+	
+	\item testing\_percentage parameter is the part of the dataset used for testing of final model and 20\% was used for this thesis.
+	
+	\item test\_batch\_size=-1 was chosen, which means all the images in reserved for testing was used.
+	
+	\item print\_misclassified\_test\_images:  was used so that the misclassified images where shown.
+	
+	\item how\_many\_training\_steps is number of epochs the nework should run and 200 was used in this thesis.
+	
+	\item learning\_rate: This is something you’ll want to play with. I found 0.0001 to work well.
+	
+	\item validation\_batch\_size: It was Set to -1, this tells the script to use all our data reserved for validation to validate on.
+\end{itemize}
 
 
 
 \chapter{Experimental Results}
 
 \section{Overview}
-This chapter presents the experiments performed based on the CovNet framework discussed in the previous chapter.
+This chapter presents the results of the experiments performed in the previous chapter. We answer the research question
+``How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? '' by presenting the results obtained after the experiments were performed. In Section 4.2 we present various metrics on the first methods used and Section 4.2 shows the results obtained in the second experiment.
 
-\section{size of images was tried}
+\section{Results of First Experiment}
+For the first experiment we choose different epochs sizes, we first started with 1000 epochs, the results obtained for 100 epochs was an accuracy of 46.8\%, out of 3478 test samples 1627 were classified correctly. The second was executed in 3000 epochs, the accuracy increased to 85.9\% that is 489 misclassified instances. Finally, the number of epochs was increased to 3500, we archived a training and validation accuracy of 93.8\% and 96.9\% respectively. An accuracy of 89.5\% was archived with only 365 misclassified samples was recorded on the test set. Figure \ref{fig:matrics} shows the precision, recall and F1 measure of the results obtained after the experiments. What is interesting about this figure is that scatter plots predicted in many cases but a lot of the predictions where actually not scatter plots. So scatter plot had the most misclassified samples. Also even though line plots were predicted correctly in less instances most of the predictions were right. Bar chart and Box plots both had good number of correctly predicted instances.
+
+\begin{figure}[!htbp]
+	\includegraphics [scale=0.78] {scores.png}
+	\captionof{figure}{A bar chart showing the precision recall and F1 scoreof our experiment}
+	\label{fig:matrics}
+\end{figure}
+
+
+Figure \ref{fig:confusion} shows a heat map derived with a confusion metrics. 0 stands for the bar chart, 1 stands for box plot, 2 for line plot and 3 for scatter plot. Again we can see that bar charts where mostly classfied correctly followed by box plot and line charts in that order and finally scatter plot were the least classified correctly.
+
 
 
 \begin{figure}[!htbp]
@@ -840,24 +884,8 @@ This chapter presents the experiments performed based on the CovNet framework di
 \end{figure}
 
 
-\begin{table}[!htbp]
-	\centering \def\arraystretch{1.5} \small
-	\label{table:2}
-	\begin{adjustbox}{max width=1.1\textwidth,center}
-		
-		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}||p{3cm}||p{3cm}|}
-			
-			\hline			
-			 Model & Bar chart & Line Chart& Scatter plot & Box plot& avg accuracy \\ \hline
-			 
-			 CovNet & Bar chart & Line Chart& Scatter plot & Box plot& avg accuracy \\ \hline
-			
-				
-		\end{tabular}
-		
-	\end{adjustbox}
-	\caption {The following table shows summaries accuracies.}	
-\end{table}
+\section{Results of First Experiment}
+The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 96.5\% with a cross entropy of 0.10.
 
 
 \chapter{Summary}
