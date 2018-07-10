@@ -75,9 +75,11 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. This buttresses the fact that the human brain understands visual data faster and better as compared to the raw data. Charts on the other hand can also be read more quickly than the raw data. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts. 
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. As human beings we have been communicating amongst each other for a much longer period of time than we have been using written words. Our brain is therefore inclined more to processing visual data faster than text.
 
-The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us train a model capable of classifying chart images accurately. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
+Due to this fact, most scientist therefore exploit the brain's ability to capture visualized content faster by representing their research findings using chart images and then embedding these images in their publications. Since data is ever growing and more visualizations are being used, there is a growing need for these graphs to be analyzed faster and automatically. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts.  
+
+The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us train a model capable of classifying chart images accurately as an initial step step towards decoding the content by a machine. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
 
 The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
 
@@ -104,7 +106,21 @@ Some charts include what we call a legend, the legend is usually present in situ
 Despite most features being present in most charts, there are some charts that are totally different from the rest. For example, a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts accurately will mean, considering all the wide range of the different visual encodings and styles of these charts.
 
 \section{Motivation}
-Complex data is better explained in scientific documents with the aid of visualisations. Charts, a category of visualizations, mostly  present complex data in an easy to understand format and shows trends and patterns in data. Chart images are an important part of scientific documents. Data is ever growing and sometimes complex, therefore, visualizing this raw data using charts is an important task. Chart images provide a way to easily give insight to research findings, which would have otherwise been more complex relying on only textual data. 
+The examples described in the introductory section have shown that chart images are very relevant for visualizing data and there is a need to classify chart images as a basis for further analysis of the charts. 
+
+
+Business use charts as an alternative to long boring reports that nobody wants to read, chart are used in presentations to give a clearer picture of research findings and how they compare to each other.
+
+Charts, a category of visualizations, mostly  present complex data in an easy to understand format and shows trends and patterns in data. 
+
+Data is ever growing and sometimes complex, therefore, visualizing this raw data using charts is an important task. Chart images provide a way to easily give insight to research findings, which would have otherwise been more complex relying on only textual data. 
+
+
+
+
+
+
+
 
 It's due to this fact that scientists visualize complex scientific findings with chart images. Even though most of these charts are easily understandable by human beings, machines on the other hand, find it difficult to decode them. There is, however, a need for machines to be able to read, extract and analyze the visualized data automatically~\cite{amara2017convolutional}. This task is nevertheless difficult for machines because of the variable structure and different appearance of charts. In spite of these difficulties, computer vision techniques have done a remarkable job in the area of decoding and analysing information from charts. This extracted information then helps to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background, also in events where another researcher wants to verify the work of the publisher, this extracted information is relevant. The initial step before information extraction from the charts is identifying the type of chart. With advances in pattern recognition techniques, especially using CovNets, charts can be classified with high accuracy.
 
@@ -884,8 +900,8 @@ Figure \ref{fig:confusion} shows a heat map derived with a confusion metrics. 0 
 \end{figure}
 
 
-\section{Results of First Experiment}
-The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 96.5\% with a cross entropy of 0.10.
+\section{Results of Second Experiment}
+The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 97.\% with a cross entropy of 0.04. Figure \ref{fig:}
 
 
 \chapter{Summary}

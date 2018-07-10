@@ -36,6 +36,7 @@
 Chart image classification serves as an initial step towards comprehending, extracting and further analysing data described with charts. These chart images are regularly embedded in scientific papers and journals to describe research findings. 
 An immediate problem is that charts images have different forms and patterns, and there exist ancillary structures like text, legends, and axis, this makes the task challenging.
 Chart classification consists of extracting chart features which are then used for identifying the chart type.
+
 Previous approaches for dealing with chart classification depended on handcrafted features which is not robust when dealing with a large amount of data with variable content structure.
 This thesis, therefore, proposes using CovNets, a deep learning-based approach that automates the feature acquisition step. Two techniques were considered in this thesis, a CovNet model was obtained by training on only our dataset which consisted of 17,357 chart images of 4 classes, and a model that was pre-trained by Google using 1.2 million images was retrained with our dataset. With results showing an accuracy of 84\% and 96\% respectively, our proposed methods are very efficient.
 

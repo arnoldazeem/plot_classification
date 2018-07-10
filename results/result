@@ -13,42 +13,56 @@ python -m scripts.retrain \
   --test_batch_size=-1 \
   --validation_batch_size=-1
 
-
-
-INFO:tensorflow:=== MISCLASSIFIED TEST IMAGES ===
+INFO:tensorflow:                      tf_files/images/bar chart/java_bar_chart_540.png  box plot
+INFO:tensorflow:                      tf_files/images/bar chart/java_bar_chart_750.png  box plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_613.jpg  scatter plot
 INFO:tensorflow:                    tf_files/images/bar chart/python_bar_chart_786.jpg  box plot
 INFO:tensorflow:                                  tf_files/images/bar chart/bar528.jpg  scatter plot
-INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_587.jpg  box plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_579.jpg  box plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_587.jpg  line plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_367.jpg  box plot
+INFO:tensorflow:                     tf_files/images/bar chart/matlab_bar_chart_84.jpg  box plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_240.jpg  box plot
+INFO:tensorflow:                    tf_files/images/bar chart/python_bar_chart_598.jpg  box plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_997.jpg  box plot
 INFO:tensorflow:                    tf_files/images/bar chart/matlab_bar_chart_591.jpg  line plot
+INFO:tensorflow:                         tf_files/images/bar chart/R_bar_chart_301.jpg  box plot
+INFO:tensorflow:                     tf_files/images/bar chart/matlab_bar_chart_63.jpg  box plot
 INFO:tensorflow:                          tf_files/images/bar chart/R_bar_chart_58.jpg  box plot
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_381.png  bar chart
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_370.png  scatter plot
+INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_228.png  line plot
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_276.png  bar chart
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_951.png  bar chart
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_918.png  bar chart
+INFO:tensorflow:                          tf_files/images/box plot/R_box_plot_1074.png  scatter plot
+INFO:tensorflow:                          tf_files/images/box plot/R_box_plot_1001.png  bar chart
+INFO:tensorflow:                             tf_files/images/box plot/R_box_plot_4.png  scatter plot
+INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_734.png  bar chart
 INFO:tensorflow:                           tf_files/images/box plot/R_box_plot_201.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_126.jpg  scatter plot
 INFO:tensorflow:                               tf_files/images/box plot/image_2733.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_427.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_256.jpg  bar chart
-INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_815.jpg  bar chart
-INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_420.jpg  bar chart
+INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_678.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_574.jpg  scatter plot
-INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_262.jpg  line plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_150.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_752.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_471.jpg  scatter plot
-INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_303.jpg  bar chart
-INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_446.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_108.jpg  bar chart
-INFO:tensorflow:                         tf_files/images/box plot/java_box_plot_57.jpg  line plot
-INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_162.jpg  line plot
+INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_162.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_729.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_399.jpg  scatter plot
-INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_654.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_602.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_648.jpg  line plot
 INFO:tensorflow:                        tf_files/images/box plot/visualization_625.jpg  scatter plot
-INFO:tensorflow:                       tf_files/images/box plot/python_box_plot_33.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_510.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_471.jpg  bar chart
 INFO:tensorflow:                        tf_files/images/box plot/java_box_plot_248.jpg  line plot
-INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_311.jpg  bar chart
 INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_202.jpg  bar chart
-INFO:tensorflow:                       tf_files/images/box plot/python_box_plot_54.jpg  line plot
+INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_879.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_811.jpg  scatter plot
+INFO:tensorflow:                       tf_files/images/box plot/python_box_plot_54.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_304.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_844.jpg  scatter plot
 INFO:tensorflow:                       tf_files/images/box plot/matlab_box_plot_89.jpg  line plot
@@ -56,75 +70,89 @@ INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_7
 INFO:tensorflow:                      tf_files/images/box plot/matlab_box_plot_853.jpg  line plot
 INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_349.jpeg  bar chart
 INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_587.jpeg  scatter plot
-INFO:tensorflow:                      tf_files/images/box plot/python_box_plot_95.jpeg  bar chart
-INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_942.jpeg  line plot
 INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_378.jpeg  bar chart
-INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_629.jpeg  bar chart
-INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_511.jpeg  bar chart
 INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_607.jpeg  bar chart
 INFO:tensorflow:                     tf_files/images/box plot/python_box_plot_734.jpeg  bar chart
-INFO:tensorflow:                                tf_files/images/line plot/line1368.jpg  bar chart
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_443.png  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_981.png  box plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_961.png  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_843.png  box plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_433.png  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_159.png  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_416.png  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_445.png  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_697.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_808.jpg  box plot
-INFO:tensorflow:                         tf_files/images/line plot/R_line_plot_886.jpg  box plot
-INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_642.jpg  bar chart
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_577.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_947.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_995.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_923.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_815.jpg  box plot
-INFO:tensorflow:                       tf_files/images/line plot/java_line_plot_45.jpg  bar chart
+INFO:tensorflow:                         tf_files/images/line plot/R_line_plot_943.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_251.jpg  bar chart
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_392.jpg  scatter plot
 INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_345.jpg  box plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_500.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_530.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_573.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_260.jpg  box plot
-INFO:tensorflow:                                 tf_files/images/line plot/line596.jpg  bar chart
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_897.jpg  box plot
+INFO:tensorflow:                         tf_files/images/line plot/R_line_plot_424.jpg  scatter plot
 INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_286.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_935.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_896.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_822.jpg  scatter plot
+INFO:tensorflow:                      tf_files/images/line plot/java_line_plot_884.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_717.jpg  scatter plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_371.jpg  box plot
+INFO:tensorflow:                   tf_files/images/line plot/matlab_line_chart_547.jpg  box plot
 INFO:tensorflow:                   tf_files/images/line plot/python_line_plot_620.jpeg  box plot
 INFO:tensorflow:                   tf_files/images/line plot/python_line_plot_694.jpeg  scatter plot
-
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_463.jpg  line plot
-INFO:tensorflow:                           tf_files/images/scatter plot/scatter210.jpg  box plot
+INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_110.png  line plot
+INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_867.png  line plot
+INFO:tensorflow:             tf_files/images/scatter plot/python_scatter_plot_1123.jpg  line plot
 INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_807.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_748.jpg  line plot
 INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_214.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_413.jpg  line plot
-INFO:tensorflow:                          tf_files/images/scatter plot/scatter1194.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_964.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_437.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_281.jpg  bar chart
-INFO:tensorflow:                tf_files/images/scatter plot/python_line_plot_1159.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_298.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_634.jpg  box plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_558.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_753.jpg  box plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_921.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_329.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_818.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_567.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_282.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_919.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/python_line_plot_1123.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_505.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_900.jpg  box plot
-INFO:tensorflow:                   tf_files/images/scatter plot/R_scatter_plot_379.jpg  line plot
-INFO:tensorflow:                          tf_files/images/scatter plot/scatter1104.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_103.jpg  line plot
-INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_144.jpg  line plot
-INFO:tensorflow:                tf_files/images/scatter plot/java_scatter_plot_556.jpg  line plot
-INFO:tensorflow:                 tf_files/images/scatter plot/python_line_plot_277.jpg  line plot
+INFO:tensorflow:                           tf_files/images/scatter plot/scatter622.jpg  line plot
+INFO:tensorflow:                           tf_files/images/scatter plot/scatter242.jpg  line plot
 INFO:tensorflow:                           tf_files/images/scatter plot/scatter562.jpg  bar chart
 INFO:tensorflow:              tf_files/images/scatter plot/matlab_scatter_plot_440.jpg  box plot
-INFO:tensorflow:                  tf_files/images/scatter plot/java_scatter_plot_7.jpg  box plot
 
 
+104 misclassified
 
-bar chart ---
+bar chart ---12 ----box
+bar chart --- 2 ---line
+bar chart --- 2 ---scatter   ----
 
-box plot ----
+box plot ----19 ---bar
+box plot ----20 ---scatter
+box plot ----5---line
 
-line chart----
-line chart----
-line chart----
+line chart----24 ---scatter
+line chart----10 ---box
+line chart----1 ----bar
 
-scatter plot---- 20------line plot
-scatter plot----- 6-------box plot
-scatter plot----- 2---------bar chart
+scatter plot---- 7------line plot
+scatter plot----- 1-------box plot
+scatter plot----- 1---------bar chart
+
+INFO:tensorflow:Looking for images in 'bar chart'
+train: tf_files/images/bar chart, Prd: 2609
+valid: tf_files/images/bar chart, Prd: 889
+test: tf_files/images/bar chart, Prd: 866
+INFO:tensorflow:Looking for images in 'box plot'
+train: tf_files/images/box plot, Prd: 2593
+valid: tf_files/images/box plot, Prd: 853
+test: tf_files/images/box plot, Prd: 866
+INFO:tensorflow:Looking for images in 'line plot'
+train: tf_files/images/line plot, Prd: 2646
+valid: tf_files/images/line plot, Prd: 838
+test: tf_files/images/line plot, Prd: 889
+INFO:tensorflow:Looking for images in 'scatter plot'
+train: tf_files/images/scatter plot, Prd: 2575
+valid: tf_files/images/scatter plot, Prd: 864
+test: tf_files/images/scatter plot, Prd: 864
+
 
 
