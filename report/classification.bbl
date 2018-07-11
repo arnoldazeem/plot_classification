@@ -1,11 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{krizhevsky2012imagenet}
-Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock In {\em Advances in neural information processing systems}, pages
-  1097--1105, 2012.
-
 \bibitem{boxy}
 {Matange, S.}
 \newblock Box plot legend.
@@ -19,6 +13,12 @@ Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Cs231n convolutional neural networks for visual recognition.
 \newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
 \newblock [Online; accessed 11-Jun-2018].
+
+\bibitem{krizhevsky2012imagenet}
+Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105, 2012.
 
 \bibitem{srivastava2014dropout}
 Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
@@ -56,17 +56,17 @@ V~Karthikeyani and S~Nagarajan.
   \url{http://www.t-sciences.com/news/humans-process-visual-data-better}, 2018.
 \newblock [Thermopylae Sciences + Technology. (2018).; accessed 18-Jun-2018].
 
-\bibitem{amara2017convolutional}
-Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
-\newblock Convolutional neural network based chart image classification.
-\newblock 2017.
-
 \bibitem{chartselection}
 {Few, S}.
 \newblock Visual business intelligence – abela’s folly – a thought
   confuser.
 \newblock \url{https://www.perceptualedge.com/blog/?p=2080}, 2018.
 \newblock [Perceptualedge.com.; accessed 17-Jun-2018].
+
+\bibitem{amara2017convolutional}
+Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
+\newblock Convolutional neural network based chart image classification.
+\newblock 2017.
 
 \bibitem{savva2011revision}
 Manolis Savva, Nicholas Kong, Arti Chhajta, Li~Fei-Fei, Maneesh Agrawala, and

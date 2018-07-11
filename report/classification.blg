@@ -3,19 +3,19 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: classification.aux
 The style file: unsrt.bst
 Database file #1: sample.bib
-Repeated entry---line 224 of file sample.bib
+Repeated entry---line 223 of file sample.bib
  : @inproceedings{krizhevsky2012imagenet
  :                                      ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 361 of file sample.bib
+I was expecting a `,' or a `}'---line 360 of file sample.bib
  :  title = "Images "
  :                   Normalization"",
 I'm skipping whatever remains of this entry
-Repeated entry---line 368 of file sample.bib
+Repeated entry---line 367 of file sample.bib
  : @misc{validation
  :                 ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 394 of file sample.bib
+Repeated entry---line 393 of file sample.bib
  : @inproceedings{lee2016viziometrix
  :                                  ,
 I'm skipping whatever remains of this entry

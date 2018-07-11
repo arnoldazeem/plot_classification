@@ -56,5 +56,5 @@
 \contentsline {section}{\numberline {4.1}Overview}{42}{section.92}
 \contentsline {section}{\numberline {4.2}Results of First Experiment}{42}{section.93}
 \contentsline {section}{\numberline {4.3}Results of Second Experiment}{45}{section.96}
-\contentsline {chapter}{\numberline {5}Summary}{46}{chapter.97}
-\contentsline {chapter}{\numberline {6}Bibliography}{47}{chapter.98}
+\contentsline {chapter}{\numberline {5}Summary}{46}{chapter.98}
+\contentsline {chapter}{\numberline {6}Bibliography}{47}{chapter.99}

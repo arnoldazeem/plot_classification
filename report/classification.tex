@@ -13,6 +13,7 @@
 \usepackage{colortbl}
 \usepackage{hhline}
 \usepackage{amssymb, amsmath}
+\usepackage{blkarray}
 \usepackage[colorlinks,
 pdfstartview = FitH,
 linkcolor = black,
@@ -50,6 +51,8 @@ citecolor = black]{hyperref}
 
 \setcounter{secnumdepth}{5}
 \usepackage{parskip}
+
+
 \begin{document}
 
 \input{title-page}
@@ -75,11 +78,11 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. As human beings we have been communicating amongst each other for a much longer period of time than we have been using written words. Our brain is therefore inclined more to processing visual data faster than text.
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. As human beings, we have been communicating amongst each other for a much longer period of time than we have been using written words. Our brain is therefore inclined more to processing visual data faster than text.
 
-Due to this fact, most scientist therefore exploit the brain's ability to capture visualized content faster by representing their research findings using chart images and then embedding these images in their publications. Since data is ever growing and more visualizations are being used, there is a growing need for these graphs to be analyzed faster and automatically. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts.  
+Due to this fact, most scientist, therefore, exploit the brain's ability to capture visualized content faster by representing their research findings using chart images and then embedding these images in their publications. Since data is ever growing and more visualizations are being used, there is a growing need for these graphs to be analyzed faster and automatically. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts.  
 
-The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us train a model capable of classifying chart images accurately as an initial step step towards decoding the content by a machine. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
+The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us to train a model capable of classifying chart images accurately as an initial step towards decoding the content by a machine. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
 
 The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
 
@@ -94,7 +97,7 @@ A basic description of a chart is a graphical representation of data, where the 
 \end{figure}
 
 Charts usually appear in different forms, nonetheless, there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text visible in most charts is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster \cite{humaneye} as mentioned earlier. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line is the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. There are also texts usually outside or beside the axis describing the measurements.
-Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally the title, that is the text describing the whole chart is mostly shown at the top of the visual graph. 
+Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally, the title that is the text describing the whole chart is mostly shown at the top of the visual graph. 
 
 \begin{figure}[!htb]
 	\centering
@@ -106,27 +109,21 @@ Some charts include what we call a legend, the legend is usually present in situ
 Despite most features being present in most charts, there are some charts that are totally different from the rest. For example, a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts accurately will mean, considering all the wide range of the different visual encodings and styles of these charts.
 
 \section{Motivation}
-The examples described in the introductory section have shown that chart images are very relevant for visualizing data and there is a need to classify chart images as a basis for further analysis of the charts. 
+The examples described in the introductory section have shown that chart images are very relevant for visualizing data and there is a need to classify chart images as a basis for further analysis of the charts. Charts contain a wealth of information that other researchers will like to extract and interpret because:
+\begin{itemize}
+	\item The information when extracted can be used by another researcher to validate the authenticity of the experiment done and the results obtained.
+	
+	\item The information of one type of chart can be decoded and presented in another form to a different audience.
+	
+	\item Comparing two chart is more effective when we have access to the raw data.
+\end{itemize} 
 
+Even though the identification, analysis, and interpretation of chart data can easily be done by a human being, machines, on the other hand, find it difficult to decode them due to the variations in their appearance and their variable structure~\cite{liu2015chart}. There is a growing need in many fields for machines to be able to perform tasks that human beings are easily doing with regards to chart analysis~\cite{amara2017convolutional}. 
 
-Business use charts as an alternative to long boring reports that nobody wants to read, chart are used in presentations to give a clearer picture of research findings and how they compare to each other.
+In spite of this growing interest, there have been little groundbreaking results achieved due to the complexity of the problem~\cite{liu2015chart}. Previous research on chart classification exploited the structural content of charts for classification. For example, Manollis Savva, et al.  ~\cite{savva2011revision} proposed a model to classify charts
+using extracted low-level features (small rectangular image regions)and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same types of low-level features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work~ \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. In the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved good results. However, the dataset size of 3377 chart images of 11 classes is a bit limited due to the complexity of the problem. 
 
-Charts, a category of visualizations, mostly  present complex data in an easy to understand format and shows trends and patterns in data. 
-
-Data is ever growing and sometimes complex, therefore, visualizing this raw data using charts is an important task. Chart images provide a way to easily give insight to research findings, which would have otherwise been more complex relying on only textual data. 
-
-
-
-
-
-
-
-
-It's due to this fact that scientists visualize complex scientific findings with chart images. Even though most of these charts are easily understandable by human beings, machines on the other hand, find it difficult to decode them. There is, however, a need for machines to be able to read, extract and analyze the visualized data automatically~\cite{amara2017convolutional}. This task is nevertheless difficult for machines because of the variable structure and different appearance of charts. In spite of these difficulties, computer vision techniques have done a remarkable job in the area of decoding and analysing information from charts. This extracted information then helps to develop other visualizations in situations where the paper needs to be presented to a different audience with a distinct background, also in events where another researcher wants to verify the work of the publisher, this extracted information is relevant. The initial step before information extraction from the charts is identifying the type of chart. With advances in pattern recognition techniques, especially using CovNets, charts can be classified with high accuracy.
-
-The aim of this thesis is to develop a reliable system for the purpose of recognizing chart images by using example chart images created with real-world data. Image processing and machine learning methods are the main constituents of this thesis. 
-
-In spite of this growing interest, there has been little groundbreaking results achieved due to different variations in appearance of plots \cite{liu2015chart}. For example, Manollis Savva, et a \cite{savva2011revision} proposed a model to classify charts using extracted low-level features and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same type of features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. However in the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved good results.
+These, and more problems addressed in Chapter 2 motivated us to find a more efficient solution, in this report, we therefore, present our attempt at a probable solution.
 
 \section{Objective}
 The aim of this thesis is to develop algorithms using image processing and machine learning methods for the purpose of chart image classification. Different approaches will be considered in other to choose the most favorable one.\\
@@ -152,7 +149,6 @@ Figure \ref{fig:vis} shows the significance of this work and what it will lead t
 
 
 \chapter{Background and Related Work}
-
 \section{Overview}
 In this chapter the literature on classification of chart images is presented and explored. Old techniques that were previously used and how they evolved are discussed. Section 3.2 introduces the two main categories images classification has been put into, while in 3.3 and 3.4 these two categories are discussed in detail, also, CovNets which are inspired by the cat’s visual cortex and have performed really well in the field of image processing are talked about in detail. Lastly, Section 3.5 presents the important approaches and techniques employed by other researchers for chart image classification.
 
@@ -875,7 +871,7 @@ For the training process a retrain python script originally developed by the Ten
 
 \chapter{Experimental Results}
 
-\section{Overview}
+ \section{Overview}
 This chapter presents the results of the experiments performed in the previous chapter. We answer the research question
 ``How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? '' by presenting the results obtained after the experiments were performed. In Section 4.2 we present various metrics on the first methods used and Section 4.2 shows the results obtained in the second experiment.
 
@@ -901,9 +897,39 @@ Figure \ref{fig:confusion} shows a heat map derived with a confusion metrics. 0 
 
 
 \section{Results of Second Experiment}
-The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 97.\% with a cross entropy of 0.04. Figure \ref{fig:}
+The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 97.\% with a cross entropy of 0.04. Figure \ref{table:confus}
+
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	\label{table:confus}
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		
+	\begin{tabular}{p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+				
+		
+	\multicolumn{6}{c} {\textbf{Predicted}} \\ \cline{2-6}
+			
+       \multirow{6}{*} {\rotatebox{90}{\textbf{Truth}}} 
+          
+           &  & 1 & 2 & 3 & 4 \\ \cline{2-6}	
+
+			& 1  &  850 \cellcolor[gray]{.8} & 12  & 2 & 2 \\  \cline{2-6}	 
+			
+			& 2 & 19  &  822 \cellcolor[gray]{.8}& 5 & 20 \\ \cline{2-6}	   
+			
+			& 3 & 1 & 10 & 854 \cellcolor[gray]{.8} & 24 \\ 
+			\cline{2-6}
+			
+			& 4 & 1 & 1 & 7 & 855\cellcolor[gray]{.8} \\ \cline{2-6}
+		
+		\end{tabular}
+		
+	\end{adjustbox}
+	\caption {Table showing confusion metrics generated with results obtained from the test data}	
+\end{table}
 
 
+	
 \chapter{Summary}
 
 \bibliographystyle{unsrt}
