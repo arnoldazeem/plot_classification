@@ -107,31 +107,10 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
 
-\bibitem{covnet}
-{Cornelisse, D.}
-\newblock An intuitive guide to convolutional neural networks. [online]
-  freecodecamp.
-\newblock \url{
-  https://medium.freecodecamp.org/an-intuitive-guide-to-convolutional-neural-networks-260c2de0a050},
-  2018.
-\newblock [Online; accessed 12-Jun-2018].
-
-\bibitem{brain}
-{Neuroscientifically Challenged}.
-\newblock Know your brain: Primary visual cortex.
-\newblock \url{
-  https://www.neuroscientificallychallenged.com/blog/know-your-brain-primary-visual-cortex},
-  2016.
-\newblock [Neuroscientifically Challenged ; accessed 02-Jul-2018].
-
-\bibitem{input}
-{Nikhil B.}
-\newblock Image data pre-processing for neural networks – becoming human:
-  Artificial intelligence magazine.
-\newblock \url{
-  https://becominghuman.ai/image-data-pre-processing-for-neural-networks-498289068258},
-  2018.
-\newblock [Online; accessed 13-Jun-2018].
+\bibitem{naturecode}
+DANIEL SHIFFMAN.
+\newblock {\em THE NATURE OF CODE}.
+\newblock Free Software Foundation, 2012.
 
 \bibitem{relu}
 {Balwally, A.}
@@ -149,6 +128,15 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
   \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
   2018.
 \newblock [Online; accessed 10-Jun-2018].
+
+\bibitem{layers}
+{Adam Geitgey}.
+\newblock Machine learning is fun! part 3: Deep learning and convolutional
+  neural networks.
+\newblock
+  \url{https://medium.com/@ageitgey/machine-learning-is-fun-part-3-deep-learning-and-convolutional-neural-networks-f40359318721},
+  2016.
+\newblock [Medium ; accessed 14-Jul-2018].
 
 \bibitem{jaderberg2015spatial}
 Max Jaderberg, Karen Simonyan, Andrew Zisserman, et~al.
@@ -185,6 +173,14 @@ Luke Taylor and Geoff Nitschke.
 \newblock \url{http://research.cs.tamu.edu/prism/lectures/iss/iss_l13.pdf},
   2017.
 \newblock [Wright State University ; accessed 27-Jun-2018].
+
+\bibitem{framework}
+{Anton Shaleynikov}.
+\newblock 10 best frameworks and libraries for ai.
+\newblock
+  \url{https://dzone.com/articles/progressive-tools10-best-frameworks-and-libraries},
+  2018.
+\newblock [Dzone; accessed 14-Jul-2018].
 
 \bibitem{cnnonline}
 ujjwalkarn.

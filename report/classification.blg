@@ -22,30 +22,30 @@ I'm skipping whatever remains of this entry
 Warning--empty journal in amara2017convolutional
 You've used 37 entries,
             1791 wiz_defined-function locations,
-            639 strings with 10793 characters,
-and the built_in function-call counts, 8418 in all, are:
-= -- 784
+            638 strings with 10606 characters,
+and the built_in function-call counts, 8426 in all, are:
+= -- 783
 > -- 343
 < -- 10
 + -- 133
 - -- 96
-* -- 391
-:= -- 1255
-add.period$ -- 136
+* -- 393
+:= -- 1256
+add.period$ -- 135
 call.type$ -- 37
-change.case$ -- 36
+change.case$ -- 35
 chr.to.int$ -- 0
 cite$ -- 38
-duplicate$ -- 375
-empty$ -- 882
+duplicate$ -- 380
+empty$ -- 883
 format.name$ -- 96
-if$ -- 1990
+if$ -- 1992
 int.to.chr$ -- 0
 int.to.str$ -- 37
-missing$ -- 19
-newline$ -- 205
+missing$ -- 21
+newline$ -- 204
 num.names$ -- 37
-pop$ -- 194
+pop$ -- 195
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
@@ -60,5 +60,5 @@ type$ -- 0
 warning$ -- 1
 while$ -- 74
 width$ -- 39
-write$ -- 426
+write$ -- 424
 (There were 4 error messages)
