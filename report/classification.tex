@@ -494,40 +494,40 @@ In another paper by Liu et al.~\cite{liu2015chart}, a new approach was proposed 
 
 
 \section{Summary}
-This chapter discussed the background literature on chart image classification. The two main approaches to chart images classification were mentioned first. In Section 2.3 and 2.4, the model-based and machine learning approaches were explained. In Section 2.5, CovNet a machine learning approach used commonly for visual image recognition is reviewed and discussed, also some additional step like image processing techniques that improve image classification are mentioned and discussed in Section 2.6.  In Section 2.7 validation techniques to help choose the tunable parameters in a machine learning algorithm are discussed. In Section 2.8 some performance evaluation metrics that help us know how well a model is performing are presented and discussed. Towards the end of this chapter, some related works that inspired this thesis were discussed.
+This chapter discussed the background literature on chart image classification. The two main approaches to chart images classification were mentioned and explained in detail. In Section 2.5, CovNet a machine learning approach used commonly for visual image recognition is reviewed and discussed, also some additional steps like image processing techniques that improve image classification are mentioned and discussed.  In Section 2.7 validation techniques to help choose the tunable parameters in a machine learning algorithm are discussed. In Section 2.8 some performance evaluation metrics that help us know how well a model is performing are presented and discussed. Towards the end of this chapter, some related works that inspired this thesis were discussed.
 
 
 \chapter{Approach}
 
 \section{Overview}
-In this chapter we present the proposed approaches used in this thesis for chart image classification. As discussed in the previous chapters, the proposed approaches involve two main steps, namely, the image processing step and classification step. How the dataset was created is discussed in section 3.2 and Section 3.3. In Section 3.4 the process which the train, validation and test data are acquired are discussed. In Section 3.5 the proposed architecture and important parameters of the CovNet is discussed. The processing techniques used for the images are discussed in Section 3.6. Lastly,the various parameters used for the training of the network is discussed.\\\\
+In this chapter, we present the proposed approaches used in this thesis for chart image classification. As discussed in the previous chapters, the proposed approaches involve two main steps, namely, the image processing step and classification step. How the dataset was created is discussed in section 3.2 and Section 3.3. In Section 3.4 the process which the train, validation and test data are acquired are discussed. In Section 3.5 the proposed architecture and important parameters of the CovNet is discussed. The processing techniques used for the images are discussed in Section 3.6. Lastly, the various parameters used for the training of the network, and how the training was done is discussed.
 
 \section{Dataset}
 The following paragraph is inspired by a blog written on what to look for in training data~\cite{edi}.
-The saying 'Garbage in Garbage out' is a valid statement when it comes to creating a dataset for machine learning. The machine learning technique will learn from whatever data fed to it. So if a dataset of good quality is fed into the algorithm, then the model created will also be of good quality. The dataset creation stage is therefore an important stage. In most approaches that worked on chart images classification, the dataset used consisted of chart images downloaded from Google and a few others were obtained from extracting chart images from pdf's. This approach we believe is limited since, we don't know the programming languages, the libraries used and parameters used in creating these charts. This missing information is relevant since it tells us how diverse our resultant dataset is. For example, how are we sure that all the charts that were downloaded from Google, were not only created in Python or Java?, and in such a case how well will a new chart created with Matlab or R be classified. For this reason the dataset comprised of image charts created with different libraries and with dissimilar programming languages. Some random chart images from other works were manually labeled and added to our created dataset. In the next sections, the various datasets and the languages used in plotting are described. To make the dataset as diverse as possible, charts created in each programing language used a different set of CSV files. 
+The aphorism 'Garbage in Garbage out' is a valid statement when it comes to creating a dataset for machine learning. The machine learning technique learns from whatever data is fed to it. So if a dataset of good quality is fed into the algorithm, then the model created will also be of good quality. The dataset creation stage is, therefore, an important stage. In most works that involved chart image classification, the dataset used consisted of chart images downloaded from Google and a few others were obtained by extracting chart images from pdfs. This approach we believe is limited since, we do not know the programming languages, the libraries used and parameters used in creating these charts. This missing information is relevant since it tells us how diverse our resultant dataset is. For example, how are we sure that all the charts that were downloaded from Google, were not only created in Python or Java?, and in such a case how well will a new chart created with Matlab or R be classified. For this reason, the dataset comprised of image charts created with different libraries and a variety of programming languages. Some random chart images from other works were manually labeled and added to our created dataset. In the next sections, the various datasets and the languages used in plotting are described. To make the dataset as diverse as possible, charts created in each programing language used a different set of CSV files (raw data). 
 
 \subsection{Dataset for Matlab}
-The Data used for creating the plots in Matlab were randomly chosen from Project Dataset \cite{projectdataset}, a free CSV data repository, DatPlot \cite{datplot} and Plotly CSV repository in github \cite{plotly}. The datasets are multidimensional and compiled from normal day to day activities like dating, what makes people happy etc, and objects like cameras and cars. On the average the datasets used contain about 500 instance and 5 different columns. The biggest dataset is called Speed dating data. It is made up of over 8,000 observations of answers to survey questions about how people rate themselves and how they rate others on several dimensions. The smallest dataset used has 33 instances and 12 columns. It contains information about cars. The number of gears and speed, just to name a few attributes.
+The Data used for creating the plots in Matlab were randomly chosen from Project Dataset~\cite{projectdataset}, a free CSV data repository, DatPlot~\cite{datplot} and Plotly CSV repository in github~\cite{plotly}. The datasets are multidimensional and compiled from normal day to day activities like dating, what makes people happy etc, and objects like cameras and cars. On the average, the datasets used contain about 500 instance and 5 different columns. The biggest dataset is called Speed dating data. It is made up of over 8,000 observations of answers to survey questions about how people rate themselves and how they rate others on several dimensions. The smallest dataset used has 33 instances and 12 columns. It contains information about cars. The number of gears and speed, just to name a few attributes.
 
 \subsection{Dataset for R}
-For the plots in R, 13 random CSV files where downloaded from an archive of datasets distributed with R called Rdatasets  \cite{rdata}. Rdatasets is a collection of dataset distributed with R. On the average there are 80 instances and 5 columns in each dataset.
-The biggest CSV file is the Australian athletes dataset. It's made of 203 instances and 14 columns and contains attributes like sex,height,weight and sports. The smallest dataset is the Canadian Women's Labour-Force Participation. This dataset has 30 rows and 7 columns. It contains information like average wages of women, percent of adult women in the workforce etc.
+For the plots in R, 13 random CSV files where downloaded from an archive of datasets distributed with R called Rdatasets~\cite{rdata}. Rdatasets is a collection of dataset distributed with R. On the average there are 80 instances and 5 columns in each dataset. The biggest CSV file is the Australian athletes' dataset. It's made of 203 instances and 14 columns and contains attributes like sex, height, weight, and sports. The smallest dataset is the Canadian Women's Labour Force Participation. This dataset has 30 rows and 7 columns. It contains information like average wages of women, percent of adult women in the workforce etc.
 
 
 \subsection{Dataset for Python}
-The data used for creating the plots in Python were 15 randomly seleted csv files also from  Rdatasets \cite{rdata}. The biggest dataset among the 15 is the Monoclonal gammapothy data, it contains natural history patients with monoclonal gammapothy of undetermined significance. The dataset is made up of 1384 observations with 10 columns, it has attributes like age, sex, time of death and last contact in months. On the average each dataset contains about 200 instances and 7 columns of multi-dimensional data. The smallest dataset however contains only 33 instances with 11 columns and is called the Nuclear Power Station Construction Data.The data relate to the construction of 32 light water reactor (LWR) plants constructed in the U.S.A in the late 1960's and early 1970's.
+The data used for creating the plots in Python were 15 randomly seleted csv files also from  Rdatasets \cite{rdata}. The biggest dataset among the 15 is the Monoclonal gammapothy data, it contains data about the natural history of patients with monoclonal gammapothy of undetermined significance. The dataset is made up of 1384 observations with 10 columns, it has attributes like age, sex, time of death and last contact in months. On the average, each dataset contains about 200 instances and 7 columns of multi-dimensional data. The smallest dataset, however, contains only 33 instances with 11 columns and is called the Nuclear Power Station Construction Data. The data in this file is made of information about the construction of 32 light water reactor (LWR) plants constructed in the U.S.A in the late 90's.
 
 \subsection{Dataset for Java}
-For the plots created in java, I used the dataset made available by Plotly \cite{plotly}, a github repository of CSV datasets used in the Plotly API examples. 14 random CSV files were downloaded, the biggest file has 1002 instances and 9 columns, and on the average each file contains about 100 instances and 9 columns. The smallest file however is made of 33 instances and 12 columns called the mtcars file. It contain information about a variety of different car models like the number of gears, speed etc. The table \ref{table:1} contains the names of all CSV files that were used in the different languages with the different plotting programs.
+For the plots created in java, I used the dataset made available by Plotly \cite{plotly}, a github repository of CSV datasets used in the Plotly API examples. 14 random CSV files were downloaded, the biggest file has 1002 instances and 9 columns, and on the average, each file contains about 100 instances and 9 columns. The smallest file, however, is made of 33 instances and 12 columns called the mtcars file. It contains information about a variety of different car models like the number of gears, speed etc. The table~\ref{table:1} contains the names of all CSV files that were used in the different languages with the different plotting programs.
 
 
 \begin{table}[!htbp]
-
 	\centering
 	
 \begin{adjustbox}{max width=1.1\textwidth,center}
 	
-	\begin{tabular}{|p{5cm}|p{3cm}|p{3cm}|p{4cm}|}
+	
+	
+	\begin{tabular}{|p{4cm}|p{3cm}|p{3cm}|p{4cm}|}
 		
 		 \hline
 		 \multicolumn{4}{|c|}{Datasets} \\
@@ -535,9 +535,9 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 				
 		Python & Matlab & R  & Java\\ \hline
 		
-		3d\_line\_sample\_data.csv \par LightFordwardFlapStall.csv  \par line\_3d\_dataset.csv \par
+		3d\_line\_sample.csv \par LightFordward.csv  \par line\_3d\_dataset.csv \par
 		longley.csv  \par loti.csv  \par lung.csv  \par nuclear.csv  \par timeseries.csv  \par
-		USJudgeRatings	\par WVSCulturalMap.csv  \par wind\_rose.csv  \par volcano.csv  \par uspop2.csvm \par tips &
+		USJudgeRatings	\par WVSCultural.csv  \par wind\_rose.csv  \par volcano.csv  \par uspop2.csvm \par tips &
 		
 		Camera.csv \par Cars.csv \par speedDating.csv \par Cereal.csv  \par happiness.csv \par TestData1.csv \par TestData2.csv  \par mpg.csv \par okcupid-religion.csv  \par spectral.csv
 		\par stockdata.csv \par subplots.csv  & 
@@ -546,14 +546,13 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 		Davis.csv \par Ericksen.csv \par Florida.csv \par Highway1.csv \par Pottery.csv \par Prestige.csv 
 		salinity.csv \par urine.csv & 
 		
-		3d-line-plot.csv \par 3d-scatter.csv \par 2011\_flight\_paths.csv \par 2011\_us\_exports.csv \par auto-mpg.csv \par candlestick\_dataset.csv \par finance-charts-apple.csv \par 
-		globe\_contours.csv\par hobbs-pearson-trials.csv \par motor\_trend\_tests.csv \par 
+		3d-line-plot.csv \par 3d-scatter.csv \par 2011\_flight\_paths.csv \par 2011\_us\_export.csv \par auto-mpg.csv \par candlestick\_data.csv \par finance-charts-apple.csv \par 
+		globe\_contours.csv\par hobbspearsontrial.csv \par motor\_trend\_test.csv \par 
 		nz\_weather.csv \par volcano.csv \par iris.csv \par mtcars.csv	\\ \hline
 		
 	\end{tabular}
 	
 \end{adjustbox}
-
 
 \caption {Names of datasets used in each plotting program}	
 \label{table:1}
@@ -561,19 +560,17 @@ For the plots created in java, I used the dataset made available by Plotly \cite
 
 
 \section{Creating Plots}
-The motivation for creating a variety of plots to capture all type of plots used in scientific papers was acquired by inspecting the datasets of Architecture proposal for data extraction of chart images using CovNet paper \cite{junior2017archi} and Viziometrics: Analysing visual information in the scientific literature \cite{lee2018viziometrics}. Scripts in various languages were written to handle the plotting and labeling process automatically. All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts reads each CSV file column by column while creating the plots.
-Table \ref{table:paratable} describes how the plots where created in each language. The type column describes the different variety of a particular plot, for example bar charts can be of type stacked, grouped, vertical and horizontal bar charts, also scatter plots types can be a scatter plot consisting of one type of marker, one scatter plot with multiple markers and finally a scatter plot with a line showing the correlation between the plots. 
-Figure \ref{fig:bars} shows two different types of bar charts. Figure \ref{fig:bar1} is a stacked bar chart and  Figure \ref{fig:bar2} a normal vertical bar chart.
-The Library column shows the different plotting libraries used, the parameter column describes parameters that were changed and finally the number of plots created were also added. The images below the tables are sample images that exist in our dataset of created plots for each language.
+The motivation for creating a variety of plots to capture all type of plots used in scientific papers was acquired by inspecting the datasets of Architecture proposal for data extraction of chart images using CovNet paper~\cite{junior2017archi} and Analysing visual information in the scientific literature~\cite{lee2018viziometrics}. Scripts in various languages were written to handle the plotting and labeling process automatically. 
 
-	
+All datasets for a particular plot (example scatter plot for python) are put into one folder. The scripts read each CSV file column by column while creating the plots. Table~\ref{table:paratable} describes how the plots were created in each language. The type column describes the different variety of a particular plot, for example, bar charts can be of type stacked, grouped, vertical and horizontal bar charts, also scatter plots types can be a scatter plot consisting of one type of marker, one scatter plot with multiple markers and finally a scatter plot with a line showing the correlation between the plots. The parameter column shows some parameters that were used to create the plots. For example, geom\_point is a parameter available in the Ggplot library in R to specify the color, shape and size of the markers in scatter plots.  Markerstyle parameter shows the type of marker used in the line or scatter plot. The LegendPosition as the name suggests indicated which part of the chart the legend should appear. In most cases, however, the default parameters of the various libraries were used to create the plots. Figure~\ref{fig:bars} shows two different types of bar charts. Figure~\ref{fig:bar1} is a stacked bar chart and figure~\ref{fig:bar2} a normal vertical bar chart. The library column shows the different plotting libraries used, the parameter column describes parameters that were changed and finally the number of plots created was also added. The images below are sample images that exist in our dataset of created plots for each language. 
+
 \begin{table}[!htbp]
-	\centering \def\arraystretch{1.5} \small
+	\centering \def\arraystretch{1.4} \small
 	\caption {Overview of the varied parameters and libraries used for creating plots in the different plotting programs}	
 	\label{table:paratable}
 	\begin{adjustbox}{max width=1.1\textwidth,center}
 				
-	\begin{tabular}{|p{2cm}|p{2cm}|p{3cm}|p{4cm}|} \hline
+	\begin{tabular}{|p{1cm}|p{2cm}|p{3cm}|p{6cm}|} \hline
 				
 \multirow{10}{*} {\rotatebox{90}{\textbf{Scatter plot}}}  &
 		
@@ -584,7 +581,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		  
 	& MATLAB & Default \par Plotly &  MarkerStyle \par ['o', '*','+','x','s']  \\ \cline{2-4} 
 		
-	& R  & Plotly \par Lattice \par Ggplot2 &  MarkerStyle \par ['o', '*', '+','x','s'] \par geom\_point(shape(1,2,16), size  (3-4)) \\ \cline{2-4}
+	& R  & Plotly \par Lattice \par Ggplot2 &  MarkerStyle \par ['o', '*', '+','x','s'] \par geom\_point(shape(1,2,16), size (3-4)) \\ \cline{2-4}
 	
 	& JAVA & XChart 3.5.1\par jfreechart 1.0.1 & MarkerSize (15 -18)  \\ \hline
 		
@@ -673,24 +670,24 @@ The Library column shows the different plotting libraries used, the parameter co
 		\end{tabular}
 		
 	\end{adjustbox}
-		\caption {Overview of the number of plot and different varieties plots in the different plotting programs}	
+		\caption {Overview of the number of plots and different varieties plots in the different plotting programs}	
 	\label{table:less}
 \end{table}
 
 \begin{figure}[!htb]
 	\begin{subfigure}{.6\textwidth}
 		\centering
-		\includegraphics[width=.9\linewidth]{scatter1}
-		\caption{Matplotlib scatter plot with star and circular markers }
+		\includegraphics[width=.8\linewidth]{scatter11}
+		\caption{Python scatter plot with circular markers }
 		\label{fig:scatter1}
 	\end{subfigure}%
 	\begin{subfigure}{.5\textwidth}
 		\centering
-		\includegraphics[width=.9\linewidth]{scatter2}
+		\includegraphics[width=.8\linewidth]{scatter1}
 		\caption{Java scatter plot with circular and diamond markers}
 		\label{fig:scatter2}
 	\end{subfigure}
-	\caption{Scatter plots}
+	\caption{Sample scatter plots in our dataset}
 	\label{fig:scatters}
 \end{figure}
 
@@ -708,7 +705,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		\caption{R horizontal bar chart (bar width 16)}
 		\label{fig:bar2}
 	\end{subfigure}
-	\caption{Example Bar Charts}
+	\caption{Sample Bar Charts in our dataset}
 	\label{fig:bars}
 \end{figure}
 
@@ -726,7 +723,7 @@ The Library column shows the different plotting libraries used, the parameter co
 		\caption{simple Matlab line chart with Asterix marker}
 		\label{fig:line2}
 	\end{subfigure}
-	\caption{Example Line Charts}
+	\caption{Sample Line Charts in our dataset}
 	\label{fig:figline}
 \end{figure}
 
@@ -744,13 +741,13 @@ The Library column shows the different plotting libraries used, the parameter co
 		\caption{Vertical multiple boxplots in Matlab}
 		\label{fig:box2}
 	\end{subfigure}
-	\caption{Example Box Plots}
+	\caption{Sample Box Plots in our dataset}
 	\label{fig:figbox}
 \end{figure}
 
 
 \subsection{Random Charts}
-In other to have the most diverse dataset, so as to achieve a robust model, we decided to pick 120 random images for each chart type  from Junior et al. \cite{junior2017archi} and Po-shen et al. \cite{lee2016viziometrix}. The line-charts, bar-charts and, scatter-plots were already labeled and were taken from the research of Junior et al. and the box-plots which we had to label manually, were taken from the work of Po-shen et al. since, the prior did not contain box-plots. The randomly picked chart images, were then added to the already created dataset for training and testing. Figure \ref{fig:random} shows sample images from the already created chart images from the paper of Po-shen et al. and Junior et al.
+In other to have the most diverse dataset, so as to achieve a robust model, we decided to pick 120 random images for each chart type  from Junior et al. \cite{junior2017archi} and Po-shen et al. \cite{lee2016viziometrix}. The line charts, bar charts, and scatter plots were already labeled. These plots were sampled from the research of Junior et al. and the box-plots which we had to label manually, were taken from the work of Po-shen et al. since, the prior did not contain box-plots. The randomly picked chart images, were then added to the already created dataset for training and testing. Figure~\ref{fig:random} shows sample images from the already created chart images from the paper of Po-shen et al. and Junior et al.
 
 \begin{figure}[!htbp]
 	\begin{subfigure}[b]{0.5\textwidth}
@@ -780,8 +777,6 @@ In other to have the most diverse dataset, so as to achieve a robust model, we d
     \label{fig:random}
 \end{figure}
 
-
-
 \section{Training, Validation and Test set}
 Figure ~\ref{fig:approach} summaries how our dataset was created and split into various portions for the training and testing stages. After creating the various plots. 80\% of each class was randomly chosen as train data and the rest was used as test data.
 Also 96 of the 120 random chosen charts mentioned in the previous section was randomly picked and added to their respective classes in the train set, and the rest of the 24 which forms 20\% were added to their respective test samples.
@@ -810,32 +805,75 @@ Table \ref{table:chart summary} shows a summary of how many samples were added t
 		\end{tabular}
 		
 	\end{adjustbox}
-	\caption {Summary of the dataset used for training the classifier}	
+	\caption {Summary of the dataset used for training and testing}	
 	\label{table:chart summary}
 \end{table}
 
 
 
 \section{The Architecture}
-As mentioned in previous sections, our model is trained with a CovNet. The architecture of the CovNet used is inspired by the famous AlexNet CovNet architecture~\cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes, the results obtained on the test-set had a top-5 error rate of 17.0\%, which was better than the previous state of the art. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The preprocessing steps, the parameters used, and why they were employed are explained into details in the rest of this chapter.
+As mentioned in previous sections, in our first experiment, our model is trained with a CovNet. The architecture of the CovNet used is inspired by the famous AlexNet CovNet architecture~\cite{krizhevsky2012imagenet}. The AlexNet architecture was used in the famous ImageNet LSVRC-2010 contest to classify 1.2 million into 1000 classes. Our CovNet architecture just like the AlexNet architecture contains 8 learned layers, these 8 layers are made up of five Convolutional layers and 3 fully connected layers. A Relu is used after some Convolutional layers and fully connected layers. Another parameter employed in our architecture is a dropout, a dropout is applied in the first and second fully connected layers of our network and finally, max pooling is applied in some of the layers. A summary of our CovNet architecture used to train our model is shown in Figure~\ref{fig:archi}. The preprocessing steps, the parameters used, and why they were employed are explained in details in the rest of this chapter.
 
 \begin{figure}[!htbp]
 \centering
-\includegraphics [scale=0.5] {architectur}
+\includegraphics [scale= 0.5] {architectur.png}
 \captionof{figure}{Architecure of CovNet used to train our model source \cite{liu2015chart}}\label{fig:archi}
 \end{figure}
 
+In our second experiment we retrained a model called MobileNets. The following argument is based on the work of Howard et al.~\cite{howard2017mobilenets}.
+MobileNet is built on depthwise separable convolutions. This means it factorizes a standard convolution into a depthwise convolution and pointwise (1x1) convolution. Table~\ref{table:mobilenet1} shows the architectural structure used to train the MobileNet model. Dw means depthwise and s1 and s2 stand for number of stride.
+
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	
+	\begin{adjustbox}{max width=1.1\textwidth,center}
+		
+		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|}
+			\hline	
+			Type / Stride & Filter Shape & Input Size \\ \hline
+			
+			Conv / s2 & 3 × 3 × 3 × 32 & 224 × 224 × 3 \\ \hline
+			Conv dw / s1  &3 × 3 × 32 dw & 112 × 112 × 32 \\ \hline
+			Conv / s1  & 1 × 1 × 32 × 64 & 112 × 112 × 32 \\ \hline
+			Conv dw / s2 & 3 × 3 × 64 dw & 112 × 112 × 64 \\ \hline
+			Conv / s1 & 1 × 1 × 64 × 128 & 56 × 56 × 64 \\ \hline
+			Conv dw / & s1 3 × 3 × 128 dw & 56 × 56 × 128 \\ \hline
+			Conv / s1 & 1 × 1 × 128 × 128 & 56 × 56 × 128 \\ \hline
+			Conv dw / s2 & 3 × 3 × 128 dw & 56 × 56 × 128 \\ \hline
+			Conv / s1 & 1 × 1 × 128 × 256 & 28 × 28 × 128 \\ \hline
+			Conv dw / s1 & 3 × 3 × 256 dw & 28 × 28 × 256 \\ \hline
+			Conv / s1 & 1 × 1 × 256 × 256 & 28 × 28 × 256 \\ \hline
+			Conv dw / s2 & 3 × 3 × 256 dw & 28 × 28 × 256 \\ \hline
+			Conv / s1 & 1 × 1 × 256 × 512 & 14 × 14 × 256 \\ \hline
+			5×Conv dw / s1 & 3 × 3 × 512 dw & 14 × 14 × 512 \\ \hline
+			Conv / s1 & 1 × 1 × 512 × 512 & 14 × 14 × 512 \\ \hline
+			Conv dw / s2 & 3 × 3 × 512 dw &  14 × 14 × 512 \\ \hline
+			Conv / s1 & 1 × 1 × 512 × 1024 & 7 × 7 × 512 \\ \hline
+			Conv dw / s2 & 3 × 3 × 1024 dw & 7 × 7 × 1024 \\ \hline
+			Conv / s1 & 1 × 1 × 1024 × 1024 & 7 × 7 × 1024 \\ \hline
+			Avg Pool / s1  & Pool 7 × 7 & 7 × 7 × 1024 \\ \hline
+			
+			FC / s1 & 1024 × 1000 & 1 × 1 × 1024 \\ \hline
+			Softmax / s1  & Classifier & 1 × 1 × 1000 \\ \hline
+			
+		\end{tabular}
+		
+	\end{adjustbox}
+	\caption {Body Architecture of MobileNet}	
+	\label{table:mobilenet1}
+\end{table}
+
+
+
 \section{Preprocessing Techniques}
-Archiving high performance by any machine learning technique is reliant on the quality and quantity of the data fed into the network.
-Datasets must comprise of diverse data, this helps the network to generalise well during the testing phase. To help increase the quantity and also generate more diverse data we employ data augmenting techniques. The preprocessing techniques used in this thesis are described in the rest of this section.
+Archiving high performance by any machine learning technique is reliant on the quality and quantity of the data fed into the network. Datasets must comprise of diverse data, this helps the network to generalize well during the testing phase. To help increase the quantity and also generate more diverse data we employ some image preprocessing techniques. The preprocessing techniques used in this thesis are described in the rest of this section.
 
 \begin{itemize}
-	\item  Image Resizing: The images have varying sizes and due to the presence of fully connected layer, we resize all the images to the size of 227 x 227. With this fixed image size processing in the dataset in batches is also possible.
+	\item  Image Resizing: The images have varying sizes and due to the presence of a fully connected layer, we resize all the images to the size of 227 x 227. With this fixed image size processing in the dataset in batches is also possible.
 	
-	\item  Padding: Padding=Same was used while training, so that the output dimensions is equal to the input.
+	\item  Padding: Padding was set to SAME in the convolutional layer, which means all images are padded with zeros so that the output dimensions are equal.
 	
 	\item  Image Scaling: All images were rescaled by a factor of 1.0/255, to enable the network to handle the images in the same way.
-	
 \end{itemize}
 
 \subsection{Data Augmentation}

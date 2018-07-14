@@ -10,19 +10,19 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{19}{figure.caption.31}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Data augmentaion technique of Rotation (at finer angles) source \cite {augement}\relax }}{21}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Scatter plots\relax }}{36}{figure.caption.81}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Example Bar Charts\relax }}{39}{figure.caption.82}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Example Line Charts\relax }}{39}{figure.caption.83}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Example Box Plots\relax }}{39}{figure.caption.84}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sample scatter plots in our dataset\relax }}{36}{figure.caption.81}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Sample Bar Charts in our dataset\relax }}{39}{figure.caption.82}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Sample Line Charts in our dataset\relax }}{39}{figure.caption.83}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Sample Box Plots in our dataset\relax }}{39}{figure.caption.84}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Example Chart images from Po-shen et al. and Junior et al.\relax }}{40}{figure.caption.86}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces How the train and test dataset was created\relax }}{41}{figure.caption.88}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Architecure of CovNet used to train our model source \cite {liu2015chart}\relax }}{42}{figure.caption.91}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{47}{figure.caption.102}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Results obtained shown with a Heat Map\relax }}{48}{figure.caption.103}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample scatter plots with a best fit line created in python with the Plotly library\relax }}{50}{figure.caption.107}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{51}{figure.caption.108}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{51}{figure.caption.109}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{52}{figure.caption.110}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{49}{figure.caption.103}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results obtained shown with a Heat Map\relax }}{50}{figure.caption.104}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample scatter plots with a best fit line created in python with the Plotly library\relax }}{52}{figure.caption.108}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{53}{figure.caption.109}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{53}{figure.caption.110}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{54}{figure.caption.111}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

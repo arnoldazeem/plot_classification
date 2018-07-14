@@ -249,6 +249,13 @@ Po-shen Lee, Jevin~D West, and Bill Howe.
   world wide web}, pages 413--418. International World Wide Web Conferences
   Steering Committee, 2016.
 
+\bibitem{howard2017mobilenets}
+Andrew~G Howard, Menglong Zhu, Bo~Chen, Dmitry Kalenichenko, Weijun Wang,
+  Tobias Weyand, Marco Andreetto, and Hartwig Adam.
+\newblock Mobilenets: Efficient convolutional neural networks for mobile vision
+  applications.
+\newblock {\em arXiv preprint arXiv:1704.04861}, 2017.
+
 \bibitem{ILSVRC15}
 Olga Russakovsky, Jia Deng, Hao Su, Jonathan Krause, Sanjeev Satheesh, Sean Ma,
   Zhiheng Huang, Andrej Karpathy, Aditya Khosla, Michael Bernstein,

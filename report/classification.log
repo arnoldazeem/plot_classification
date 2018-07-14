@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.1)  13 JUL 2018 19:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.6.1)  14 JUL 2018 18:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1661,7 +1661,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
 [6
 
 ]
-<chart.png, id=488, 804.00375pt x 703.62875pt>
+<chart.png, id=490, 804.00375pt x 703.62875pt>
 File: chart.png Graphic file (type png)
 <use chart.png>
 Package pdftex.def Info: chart.png  used on input line 94.
@@ -1672,7 +1672,7 @@ Overfull \hbox (3.66231pt too wide) in paragraph at lines 94--95
  []
 
 [7 <./chart.png>]
-<box_color.png, id=499, 361.35pt x 216.81pt>
+<box_color.png, id=501, 361.35pt x 216.81pt>
 File: box_color.png Graphic file (type png)
 <use box_color.png>
 Package pdftex.def Info: box_color.png  used on input line 104.
@@ -1683,7 +1683,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
  []
 
 [10]
-<vision.png, id=527, 848.16875pt x 388.45125pt>
+<vision.png, id=529, 848.16875pt x 388.45125pt>
 File: vision.png Graphic file (type png)
 <use vision.png>
 Package pdftex.def Info: vision.png  used on input line 143.
@@ -1698,7 +1698,7 @@ Chapter 2.
 [12
 
 ] [13] [14]
-<neural.png, id=572, 599.23875pt x 325.215pt>
+<neural.png, id=574, 599.23875pt x 325.215pt>
 File: neural.png Graphic file (type png)
 <use neural.png>
 Package pdftex.def Info: neural.png  used on input line 178.
@@ -1709,25 +1709,25 @@ Overfull \hbox (21.12567pt too wide) in paragraph at lines 178--179
  []
 
 [15 <./neural.png>]
-<cat.png, id=579, 673.51625pt x 389.455pt>
+<cat.png, id=581, 673.51625pt x 389.455pt>
 File: cat.png Graphic file (type png)
 <use cat.png>
 Package pdftex.def Info: cat.png  used on input line 196.
 (pdftex.def)             Requested size: 336.7573pt x 194.72702pt.
  [16 <./cat.png (PNG copy)>] [17]
-<relu.png, id=597, 420.57124pt x 335.2525pt>
+<relu.png, id=599, 420.57124pt x 335.2525pt>
 File: relu.png Graphic file (type png)
 <use relu.png>
 Package pdftex.def Info: relu.png  used on input line 209.
 (pdftex.def)             Requested size: 378.51062pt x 301.72446pt.
  [18 <./relu.png>]
-<dropout.jpeg, id=607, 616.3025pt x 329.23pt>
+<dropout.jpeg, id=609, 616.3025pt x 329.23pt>
 File: dropout.jpeg Graphic file (type jpg)
 <use dropout.jpeg>
 Package pdftex.def Info: dropout.jpeg  used on input line 222.
 (pdftex.def)             Requested size: 369.78435pt x 197.53952pt.
  [19 <./dropout.jpeg>] [20]
-<augmentation.png, id=633, 961.5925pt x 601.24625pt>
+<augmentation.png, id=635, 961.5925pt x 601.24625pt>
 File: augmentation.png Graphic file (type png)
 <use augmentation.png>
 Package pdftex.def Info: augmentation.png  used on input line 252.
@@ -1787,16 +1787,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 480--480
 
 [32]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
-
- []
-
 [33
 
 ] [34]
@@ -1820,234 +1810,215 @@ Overfull \hbox (1.83284pt too wide) in paragraph at lines 549--549
  []
 
 
-Overfull \hbox (8.09795pt too wide) in paragraph at lines 549--549
-[]\T1/cmr/m/n/12 candlestick_dataset.csv 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 549--549
 []\T1/cmr/m/n/12 finance-charts-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 550--550
-[]\T1/cmr/m/n/12 hobbs-pearson-
- []
-
-
-Overfull \hbox (5.48753pt too wide) in paragraph at lines 550--550
-[]\T1/cmr/m/n/12 motor_trend_tests.csv 
+Overfull \hbox (0.85396pt too wide) in paragraph at lines 550--550
+[]\T1/cmr/m/n/12 motor_trend_test.csv 
  []
 
 [35]
-Overfull \hbox (14.79207pt too wide) in paragraph at lines 587--587
-[]\T1/cmr/m/n/10.95 geom_point(shape(1,2,16),
- []
+
+LaTeX Warning: Float too large for page by 0.64235pt on input line 613.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--612
-[]|\T1/cmr/m/n/10.95 LegendPosition
- []
-
-
-LaTeX Warning: Float too large for page by 23.76392pt on input line 616.
-
-
-Overfull \hbox (0.517pt too wide) in paragraph at lines 640--640
+Overfull \hbox (0.517pt too wide) in paragraph at lines 637--637
 []|[]| 
  []
 
-<scatter1.jpg, id=759, 462.528pt x 346.896pt>
+<scatter11.jpg, id=761, 462.528pt x 346.896pt>
+File: scatter11.jpg Graphic file (type jpg)
+<use scatter11.jpg>
+Package pdftex.def Info: scatter11.jpg  used on input line 680.
+(pdftex.def)             Requested size: 191.20518pt x 143.40337pt.
+<scatter1.jpg, id=762, 462.528pt x 346.896pt>
 File: scatter1.jpg Graphic file (type jpg)
 <use scatter1.jpg>
-Package pdftex.def Info: scatter1.jpg  used on input line 683.
-(pdftex.def)             Requested size: 215.10356pt x 161.33144pt.
-<scatter2.jpg, id=760, 642.4pt x 481.8pt>
-File: scatter2.jpg Graphic file (type jpg)
-<use scatter2.jpg>
-Package pdftex.def Info: scatter2.jpg  used on input line 689.
-(pdftex.def)             Requested size: 179.25114pt x 134.43991pt.
+Package pdftex.def Info: scatter1.jpg  used on input line 686.
+(pdftex.def)             Requested size: 159.33604pt x 119.50456pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 681--693
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 678--690
 []$[]$$[]$ 
  []
 
-<bar1.jpg, id=761, 462.528pt x 346.896pt>
+<bar1.jpg, id=763, 462.528pt x 346.896pt>
 File: bar1.jpg Graphic file (type jpg)
 <use bar1.jpg>
-Package pdftex.def Info: bar1.jpg  used on input line 701.
+Package pdftex.def Info: bar1.jpg  used on input line 698.
 (pdftex.def)             Requested size: 159.33604pt x 119.50456pt.
-<bar2.jpg, id=762, 481.8pt x 481.8pt>
+<bar2.jpg, id=764, 481.8pt x 481.8pt>
 File: bar2.jpg Graphic file (type jpg)
 <use bar2.jpg>
-Package pdftex.def Info: bar2.jpg  used on input line 707.
+Package pdftex.def Info: bar2.jpg  used on input line 704.
 (pdftex.def)             Requested size: 159.33604pt x 159.33266pt.
-<line1.jpg, id=763, 642.4pt x 481.8pt>
+<line1.jpg, id=765, 642.4pt x 481.8pt>
 File: line1.jpg Graphic file (type jpg)
 <use line1.jpg>
-Package pdftex.def Info: line1.jpg  used on input line 719.
+Package pdftex.def Info: line1.jpg  used on input line 716.
 (pdftex.def)             Requested size: 159.33604pt x 119.50133pt.
-<line2.jpg, id=764, 878.28125pt x 658.46pt>
+<line2.jpg, id=766, 878.28125pt x 658.46pt>
 File: line2.jpg Graphic file (type jpg)
 <use line2.jpg>
-Package pdftex.def Info: line2.jpg  used on input line 725.
+Package pdftex.def Info: line2.jpg  used on input line 722.
 (pdftex.def)             Requested size: 159.33604pt x 119.45207pt.
-<box1.jpg, id=765, 398.2077pt x 333.1647pt>
+<box1.jpg, id=767, 398.2077pt x 333.1647pt>
 File: box1.jpg Graphic file (type jpg)
 <use box1.jpg>
-Package pdftex.def Info: box1.jpg  used on input line 737.
+Package pdftex.def Info: box1.jpg  used on input line 734.
 (pdftex.def)             Requested size: 159.33604pt x 133.30927pt.
-<box2.jpg, id=766, 562.1pt x 421.575pt>
+<box2.jpg, id=768, 562.1pt x 421.575pt>
 File: box2.jpg Graphic file (type jpg)
 <use box2.jpg>
-Package pdftex.def Info: box2.jpg  used on input line 743.
+Package pdftex.def Info: box2.jpg  used on input line 740.
 (pdftex.def)             Requested size: 159.33604pt x 119.50041pt.
-[36 <./scatter1.jpg> <./scatter2.jpg>] [37] [38] [39 <./bar1.jpg> <./bar2.jpg> 
-<./line1.jpg> <./line2.jpg> <./box1.jpg> <./box2.jpg>]
-<rand1.jpg, id=788, 232.87pt x 217.81375pt>
+[36 <./scatter11.jpg> <./scatter1.jpg>] [37] [38] [39 <./bar1.jpg> <./bar2.jpg>
+ <./line1.jpg> <./line2.jpg> <./box1.jpg> <./box2.jpg>]
+<rand1.jpg, id=790, 232.87pt x 217.81375pt>
 File: rand1.jpg Graphic file (type jpg)
 <use rand1.jpg>
-Package pdftex.def Info: rand1.jpg  used on input line 757.
+Package pdftex.def Info: rand1.jpg  used on input line 754.
 (pdftex.def)             Requested size: 199.1693pt x 186.29915pt.
-<rand2.jpg, id=789, 115.632pt x 88.07304pt>
+<rand2.jpg, id=791, 115.632pt x 88.07304pt>
 File: rand2.jpg Graphic file (type jpg)
 <use rand2.jpg>
-Package pdftex.def Info: rand2.jpg  used on input line 763.
+Package pdftex.def Info: rand2.jpg  used on input line 760.
 (pdftex.def)             Requested size: 199.1693pt x 151.70842pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 756--767
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 753--764
 [][] [] 
  []
 
-<rand3.jpg, id=790, 246.9225pt x 205.76875pt>
+<rand3.jpg, id=792, 246.9225pt x 205.76875pt>
 File: rand3.jpg Graphic file (type jpg)
 <use rand3.jpg>
-Package pdftex.def Info: rand3.jpg  used on input line 769.
+Package pdftex.def Info: rand3.jpg  used on input line 766.
 (pdftex.def)             Requested size: 199.1693pt x 165.97159pt.
-<rand4.jpg, id=791, 214.8025pt x 173.64874pt>
+<rand4.jpg, id=793, 214.8025pt x 173.64874pt>
 File: rand4.jpg Graphic file (type jpg)
 <use rand4.jpg>
-Package pdftex.def Info: rand4.jpg  used on input line 775.
+Package pdftex.def Info: rand4.jpg  used on input line 772.
 (pdftex.def)             Requested size: 199.1693pt x 161.01207pt.
 
-Overfull \hbox (2.61049pt too wide) in paragraph at lines 768--779
+Overfull \hbox (2.61049pt too wide) in paragraph at lines 765--776
 [][] [] 
  []
 
 [40 <./rand1.jpg> <./rand2.jpg> <./rand3.jpg> <./rand4.jpg>]
-<approach.png, id=800, 713.66624pt x 432.61626pt>
+<approach.png, id=802, 713.66624pt x 432.61626pt>
 File: approach.png Graphic file (type png)
 <use approach.png>
-Package pdftex.def Info: approach.png  used on input line 792.
+Package pdftex.def Info: approach.png  used on input line 787.
 (pdftex.def)             Requested size: 356.83224pt x 216.3076pt.
  [41 <./approach.png>]
-<architectur.png, id=808, 838.13126pt x 282.05376pt>
+<architectur.png, id=810, 838.13126pt x 282.05376pt>
 File: architectur.png Graphic file (type png)
 <use architectur.png>
-Package pdftex.def Info: architectur.png  used on input line 824.
+Package pdftex.def Info: architectur.png  used on input line 819.
 (pdftex.def)             Requested size: 419.0646pt x 141.02652pt.
 
-Overfull \hbox (20.72601pt too wide) in paragraph at lines 824--825
+Overfull \hbox (20.72601pt too wide) in paragraph at lines 819--820
  [][] 
  []
 
-[42 <./architectur.png>]
+[42 <./architectur.png>] [43]
 
-Package caption Warning: \label without proper reference on input line 849.
+Package caption Warning: \label without proper reference on input line 887.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `table:para' on page 43 undefined on input line 845.
+LaTeX Warning: Reference `table:para' on page 44 undefined on input line 883.
 
-[43]
-Underfull \hbox (badness 10000) in paragraph at lines 892--893
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 
  []
 
-[44] [45]
+[45] [46] [47]
 Chapter 4.
-<scores.png, id=835, 511.9125pt x 376.40625pt>
+<scores.png, id=850, 511.9125pt x 376.40625pt>
 File: scores.png Graphic file (type png)
 <use scores.png>
-Package pdftex.def Info: scores.png  used on input line 928.
+Package pdftex.def Info: scores.png  used on input line 966.
 (pdftex.def)             Requested size: 399.29015pt x 293.59569pt.
 
-Overfull \hbox (0.95155pt too wide) in paragraph at lines 928--929
+Overfull \hbox (0.95155pt too wide) in paragraph at lines 966--967
 [][] 
  []
 
-[46
+[48
 
 ]
-<confusion.jpg, id=842, 346.896pt x 346.896pt>
+<confusion.jpg, id=857, 346.896pt x 346.896pt>
 File: confusion.jpg Graphic file (type jpg)
 <use confusion.jpg>
-Package pdftex.def Info: confusion.jpg  used on input line 937.
+Package pdftex.def Info: confusion.jpg  used on input line 975.
 (pdftex.def)             Requested size: 416.2731pt x 416.2731pt.
 
-Overfull \hbox (17.93451pt too wide) in paragraph at lines 937--938
+Overfull \hbox (17.93451pt too wide) in paragraph at lines 975--976
 [][] 
  []
 
-[47 <./scores.png (PNG copy)>] [48 <./confusion.jpg>] [49]
-<mis3.jpg, id=859, 462.528pt x 346.896pt>
+[49 <./scores.png (PNG copy)>] [50 <./confusion.jpg>] [51]
+<mis3.jpg, id=873, 462.528pt x 346.896pt>
 File: mis3.jpg Graphic file (type jpg)
 <use mis3.jpg>
-Package pdftex.def Info: mis3.jpg  used on input line 983.
+Package pdftex.def Info: mis3.jpg  used on input line 1021.
 (pdftex.def)             Requested size: 191.20518pt x 143.40337pt.
-<mis2.jpg, id=860, 462.528pt x 346.896pt>
+<mis2.jpg, id=874, 462.528pt x 346.896pt>
 File: mis2.jpg Graphic file (type jpg)
 <use mis2.jpg>
-Package pdftex.def Info: mis2.jpg  used on input line 989.
+Package pdftex.def Info: mis2.jpg  used on input line 1027.
 (pdftex.def)             Requested size: 199.1693pt x 149.37938pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 981--993
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 1019--1031
 []$[]$$[]$ 
  []
 
 File: scores.png Graphic file (type png)
 <use scores.png>
-Package pdftex.def Info: scores.png  used on input line 998.
+Package pdftex.def Info: scores.png  used on input line 1036.
 (pdftex.def)             Requested size: 399.29015pt x 293.59569pt.
 
-Overfull \hbox (0.95155pt too wide) in paragraph at lines 998--999
+Overfull \hbox (0.95155pt too wide) in paragraph at lines 1036--1037
 [][] 
  []
 
-<missyscatter.png, id=862, 1076.02pt x 827.09pt>
+<missyscatter.png, id=876, 1076.02pt x 827.09pt>
 File: missyscatter.png Graphic file (type png)
 <use missyscatter.png>
-Package pdftex.def Info: missyscatter.png  used on input line 1010.
+Package pdftex.def Info: missyscatter.png  used on input line 1048.
 (pdftex.def)             Requested size: 191.20518pt x 146.9641pt.
-<missyscatter2.png, id=863, 702.625pt x 501.875pt>
+<missyscatter2.png, id=877, 702.625pt x 501.875pt>
 File: missyscatter2.png Graphic file (type png)
 <use missyscatter2.png>
-Package pdftex.def Info: missyscatter2.png  used on input line 1016.
+Package pdftex.def Info: missyscatter2.png  used on input line 1054.
 (pdftex.def)             Requested size: 199.1693pt x 142.26239pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 1008--1020
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 1046--1058
 []$[]$$[]$ 
  []
 
-<missybar.png, id=864, 1076.02pt x 827.09pt>
+<missybar.png, id=878, 1076.02pt x 827.09pt>
 File: missybar.png Graphic file (type png)
 <use missybar.png>
-Package pdftex.def Info: missybar.png  used on input line 1029.
+Package pdftex.def Info: missybar.png  used on input line 1067.
 (pdftex.def)             Requested size: 191.20518pt x 146.9641pt.
-<missyline.jpg, id=865, 894.34125pt x 647.41875pt>
+<missyline.jpg, id=879, 894.34125pt x 647.41875pt>
 File: missyline.jpg Graphic file (type jpg)
 <use missyline.jpg>
-Package pdftex.def Info: missyline.jpg  used on input line 1035.
+Package pdftex.def Info: missyline.jpg  used on input line 1073.
 (pdftex.def)             Requested size: 199.1693pt x 144.1811pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 1027--1039
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 1065--1077
 []$[]$$[]$ 
  []
 
-[50 <./mis3.jpg> <./mis2.jpg>] [51 <./missyscatter.png> <./missyscatter2.png>]
-[52 <./missybar.png> <./missyline.jpg>]
+[52 <./mis3.jpg> <./mis2.jpg>] [53 <./missyscatter.png> <./missyscatter2.png>]
+[54 <./missybar.png> <./missyline.jpg>]
 Chapter 5.
-(./classification.bbl [53
+(./classification.bbl [55
 
 ]
 Chapter 6.
@@ -2082,7 +2053,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--58
 iences . com / news /
  []
 
-[54
+[56
 
 ]
 Overfull \hbox (54.3702pt too wide) in paragraph at lines 116--122
@@ -2096,7 +2067,7 @@ Overfull \hbox (215.881pt too wide) in paragraph at lines 124--131
 []part-[]iii-[]benefits-[]and-[]motivation-[]d84cd72f5670$[][]\T1/cmr/m/n/12 ,
  []
 
-[55]
+[57]
 Overfull \hbox (196.86052pt too wide) in paragraph at lines 133--140
 \T1/cmtt/m/n/12 machine-[]learning-[]is-[]fun-[]part-[]3-[]deep-[]learning-[]an
 d-[]convolutional-[]neural-[]networks-[]f40359318721$[][]\T1/cmr/m/n/12 ,
@@ -2148,7 +2119,7 @@ Underfull \hbox (badness 1314) in paragraph at lines 195--203
 tas,
  []
 
-[56]
+[58]
 Overfull \hbox (302.30989pt too wide) in paragraph at lines 205--211
 \T1/cmtt/m/n/12 @jrodthoughts / convolutional-[]neural-[]networks-[]for-[]the-[
 ]rest-[]of-[]us-[]part-[]iii-[]benefits-[]and-[]motivation-[]d84cd72f5670$[][]\
@@ -2161,15 +2132,15 @@ Underfull \hbox (badness 1931) in paragraph at lines 232--237
 : / / vincentarelbundock .
  []
 
-) [57]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1048.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1048.
+) [59]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1086.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1086.
  (./classification.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1048.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1048.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1086.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1086.
 
 Package rerunfilecheck Info: File `classification.out' has not changed.
-(rerunfilecheck)             Checksum: 21DD386BFC15F143896EA2EE2148845A;4627.
+(rerunfilecheck)             Checksum: 94E27B5518E8CD53136E7D2FC635E9F9;4632.
 
 
 LaTeX Warning: There were undefined references.
@@ -2179,14 +2150,14 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 25695 strings out of 492982
- 445651 string characters out of 6134897
- 613880 words of memory out of 5000000
- 28424 multiletter control sequences out of 15000+600000
- 25127 words of font info for 66 fonts, out of 8000000 for 9000
+ 25705 strings out of 492982
+ 445818 string characters out of 6134897
+ 615024 words of memory out of 5000000
+ 28429 multiletter control sequences out of 15000+600000
+ 25468 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,16n,77p,2447b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.97} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.98} has been referenced but does not ex
 ist, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.66} has been referenced but does not exis
@@ -2225,10 +2196,10 @@ re/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1
 /public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfr
 m1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/shar
 e/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on classification.pdf (60 pages, 1907901 bytes).
+Output written on classification.pdf (62 pages, 1910010 bytes).
 PDF statistics:
- 1055 PDF objects out of 1200 (max. 8388607)
- 916 compressed objects within 10 object streams
- 210 named destinations out of 1000 (max. 500000)
+ 1072 PDF objects out of 1200 (max. 8388607)
+ 931 compressed objects within 10 object streams
+ 214 named destinations out of 1000 (max. 500000)
  699 words of extra memory for PDF output out of 10000 (max. 10000000)
 
