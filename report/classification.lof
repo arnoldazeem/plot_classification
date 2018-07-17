@@ -1,16 +1,16 @@
 \babel@toc {english}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces How to Seletect the approapriate chart for visualizing your data \relax }}{7}{figure.caption.6}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces How to Select the approapriate chart for visualizing your data \relax }}{7}{figure.caption.6}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces A box plot with a legend, x-axis, and y-axis from \cite {boxy} \relax }}{8}{figure.caption.7}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Overview of process to obtain raw data from scientific papers. The red outline indicates the work in this thesis.\relax }}{11}{figure.caption.11}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Overview of the process to obtain raw data from scientific papers\relax }}{11}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces How a neural network look like\relax }}{15}{figure.caption.23}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces How a neural network looks like\relax }}{15}{figure.caption.23}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces How a computer perceives an image-source \cite {softmax}\relax }}{16}{figure.caption.25}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces ReLU unit compared to the tanh unit from Krizhevsky et al. paper \cite {krizhevsky2012imagenet}\relax }}{18}{figure.caption.28}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Left: shows a standard neural net. Right: shows a neural network where dropout has been applied on. Crossed units are dropped units. figure from Krizhevsky et al. paper \cite {srivastava2014dropout}\relax }}{19}{figure.caption.31}
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Data augmentaion technique of Rotation (at finer angles) source \cite {augement}\relax }}{21}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Sample scatter plots in our dataset\relax }}{36}{figure.caption.81}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Sample scatter plots in the dataset\relax }}{36}{figure.caption.81}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Sample Bar Charts in our dataset\relax }}{39}{figure.caption.82}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Sample Line Charts in our dataset\relax }}{39}{figure.caption.83}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Sample Box Plots in our dataset\relax }}{39}{figure.caption.84}
@@ -18,11 +18,12 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces How the train and test dataset was created\relax }}{41}{figure.caption.88}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Architecure of CovNet used to train our model source \cite {liu2015chart}\relax }}{42}{figure.caption.91}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{49}{figure.caption.103}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Results obtained shown with a Heat Map\relax }}{50}{figure.caption.104}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Sample scatter plots with a best fit line created in python with the Plotly library\relax }}{52}{figure.caption.108}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A bar chart showing the precision recall and F1 scoreof our experiment\relax }}{53}{figure.caption.109}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{53}{figure.caption.110}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{54}{figure.caption.111}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A bar chart showing the precision recall and F1 score of the experiment\relax }}{49}{figure.caption.104}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Results obtained shown with a Heat Map\relax }}{50}{figure.caption.105}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces A bar chart showing the precision recall and F1 score of our fine-tuned model\relax }}{52}{figure.caption.108}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Sample scatter plots with a best fit line created in python with the Plotly library\relax }}{53}{figure.caption.111}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Sample plots that were misclassified in the first experiment\relax }}{54}{figure.caption.112}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{54}{figure.caption.113}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Sample plots misclassified in the second experiment\relax }}{54}{figure.caption.114}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

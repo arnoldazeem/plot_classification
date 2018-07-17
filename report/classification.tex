@@ -78,35 +78,35 @@ citecolor = black]{hyperref}
 
 \newpage
 \chapter{Introduction}
-``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual'' \cite{humaneye}. As human beings, we have been communicating amongst each other for a much longer period of time than we have been using written words. Our brain is therefore inclined more to processing visual data faster than text.
+``The human brain processes images 60,000 times faster than text, and 90 percent of information transmitted to the brain is visual''~\cite{humaneye}. As human beings, we have been communicating amongst each other for a much longer period of time than we have been using written words. Our brain is, therefore, inclined more to processing visual data faster than text.
 
-Due to this fact, most scientist, therefore, exploit the brain's ability to capture visualized content faster by representing their research findings using chart images and then embedding these images in their publications. Since data is ever growing and more visualizations are being used, there is a growing need for these graphs to be analyzed faster and automatically. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts.  
+Due to this fact, most scientists exploit the brain's ability to capture visualized content faster by representing their research findings using chart images and then embedding these images in their publications. Since data is ever growing and more visualizations are being used, there is a growing need for these graphs to be analyzed faster and automatically. Identifying or classifying these charts serves as a foundation for further analysis of the content of these charts.  
 
-The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us to train a model capable of classifying chart images accurately as an initial step towards decoding the content by a machine. The structure of this thesis comprises of chart creation, image processing, and machine learning techniques.
+The aim of this thesis is to develop a reliable dataset consisting of chart images which will enable us to train a model capable of classifying chart images accurately as an initial step towards decoding the content by a machine. The structure of this thesis comprises three main sections: chart creation, image processing, and machine learning techniques.
 
-The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented. Finally, the structure of the rest of this thesis is illustrated in Section 1.6.
+The initial section in this chapter gives an overview of chart image classification and the complications and difficulties faced in chart image classification. In the other sections of this chapter the research motivation, objectives, contributions and an outline of the proposed framework in this thesis is presented.
 
 \section{Overview} 
-A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots, stars, diamonds and an asterisk in the case of a scatter plot. Charts are often used to visualize complex data for easy understanding, interpretation, and to find patterns and trends in data. Charts can usually be read more quickly than the raw data visualized, they are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the help of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts work better when we want to find trends in data and scatter plots are used when we want to find relationships in data. Figure \ref{fig:chartse} which was inspired by a diagram from \cite{chartselection} shows which charts we should choose depending on what task we would like to describe. For example, if we want to show a relationship between two variables in some data, a scatter plot is the best option, as seen below.\\
+A basic description of a chart is a graphical representation of data, where the data is represented by some type of symbols. These symbols could be rectangles in the case of histograms or bar charts,  slices that make a circle in the case of a pie chart, and dots, stars, diamonds and an asterisk in the case of a scatter plot. Charts are often used to visualize complex data for easy understanding, interpretation, and to find patterns and trends in data. Charts can usually be read more quickly than the raw data visualized. They are used in almost every field especially in science, marketing, and maths. Charts are mostly created with the help of a computer but can also be created by hand. There are a variety of charts and therefore, to present your data in the right way, the right type of chart must be employed. For example bar charts are best used when comparing data, line charts work better when we want to find trends in data and scatter plots are used when we want to find relationships in data. Figure~\ref{fig:chartse}, which was inspired by a diagram from an article written by Few S.(2018)~\cite{chartselection}, shows which charts should be chosen depending on what task we would like to describe. For example, if we want to show a relationship between two variables in some data, a scatter plot is the best option, as seen below.
 
 \begin{figure}[!htb]
 	\centering
 	\includegraphics [scale=0.5] {chart}
-	\captionof{figure}{How to Seletect the approapriate chart for visualizing your data }
+	\captionof{figure}{How to Select the approapriate chart for visualizing your data }
 	\label{fig:chartse}
 \end{figure}
 
-Charts usually appear in different forms, nonetheless, there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text, visible in most charts is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster \cite{humaneye} as mentioned earlier. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line is the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. There are also texts usually outside or beside the axis describing the measurements.
-Some charts include what we call a legend, the legend is usually present in situations where there are multiple variables to be described. Figure \ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally, the title that is the text describing the whole chart is mostly shown at the top of the visual graph. 
+Charts usually appear in different forms. Nonetheless, there are some features that are mostly present in every chart. Charts are mostly graphical with a little bit of text used to annotate the data. One important use of text, visible in most charts, is to give the chart a title. The title describes what the graphic represents and is usually situated above the main graphical part. Text is used less because the brain processes visual information sixty thousand faster~\cite{humaneye} as mentioned earlier. Most graphs have one line at the side and another usually at the bottom. These lines if used are called axes of the graph. The one at the bottom is called the x-axis, and the other line is the y-axis. Each graph usually indicates numerical or periodic sequence shown by periodic graduations. There are also texts usually outside or beside the axis describing the measurements.
+Some charts include what we call a legend, which is usually present in situations where there are multiple variables to be described. Figure~\ref{fig:boxy} shows a typical chart that has the features mentioned above. The legend showing the two variables female and male represented in the chart, the label on the left side annotating the cholesterol levels with the different measurements of the cholesterol shown on the y-axis, and to the bottom categorical measurements shown on the x-axis. Finally, the title that is the text describing the whole chart is mostly shown at the top of the visual graph. 
 
 \begin{figure}[!htb]
 	\centering
+		\captionof{figure}{A box plot with a legend, x-axis, and y-axis from \cite{boxy} }
 	\includegraphics [scale=1.0] {box_color.png}
-	\captionof{figure}{A box plot with a legend, x-axis, and y-axis from \cite{boxy} }
 	\label{fig:boxy}
 \end{figure}
 
-Despite most features being present in most charts, there are some charts that are totally different from the rest. For example, a pie chart does not have an x-axis or y-axis, also the designers of a particular chart have a choice of visual encoding and styling, this results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts accurately will mean, considering all the wide range of the different visual encodings and styles of these charts.
+Despite most features being present in most charts, there are some charts that are totally different from the rest. For example, a pie chart does not have an x-axis or y-axis. Also, the designers of a particular chart have a choice of visual encoding and styling. This results in a wide variety of charts, even in charts of the same type. To be able to identify the different types of charts accurately will mean considering all the wide range of the different visual encodings and styles of these charts.
 
 \section{Motivation}
 The examples described in the introductory section have shown that chart images are very relevant for visualizing data and there is a need to classify chart images as a basis for further analysis of the charts. Charts contain a wealth of information that other researchers will like to extract and interpret because:
@@ -115,36 +115,36 @@ The examples described in the introductory section have shown that chart images 
 	
 	\item The information of one type of chart can be decoded and presented in another form to a different audience.
 	
-	\item Comparing two chart is more effective when we have access to the raw data.
+	\item Comparing two charts is more effective when we have access to the raw data.
 \end{itemize} 
 
-Even though the identification, analysis, and interpretation of chart data can easily be done by a human being, machines, on the other hand, find it difficult to decode them due to the variations in their appearance and their variable structure~\cite{liu2015chart}. There is a growing need in many fields for machines to be able to perform tasks that human beings are easily doing with regards to chart analysis~\cite{amara2017convolutional}. 
+Even though the identification, analysis, and interpretation of chart data can easily be done by a human being. Machines, on the other hand, find it difficult to decode them due to the variations in their appearance and their variable structure~\cite{liu2015chart}. There is a growing need in many fields for machines to be able to perform tasks that human beings are easily doing with regards to chart analysis~\cite{amara2017convolutional}. 
 
-In spite of this growing interest, there have been little groundbreaking results achieved due to the complexity of the problem~\cite{liu2015chart}. Previous research on chart classification exploited the structural content of charts for classification. For example, Manollis Savva, et al.  ~\cite{savva2011revision} proposed a model to classify charts
-using extracted low-level features (small rectangular image regions)and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same types of low-level features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work~ \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. In the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet (this abbreviation stands for Convolutional Neural Networks and will be used a lot through this work) which combines both feature extraction and classification was used and this technique achieved good results. However, the dataset size of 3377 chart images of 11 classes is a bit limited due to the complexity of the problem. 
+In spite of this growing interest, there have been little groundbreaking results achieved due to the complexity of the problem~\cite{liu2015chart}. Previous research on chart classification exploited the structural content of charts for classification. For example, Manollis Savva, et al.~\cite{savva2011revision} proposed a model to classify charts using extracted low-level features (small rectangular image regions)and textual features. After extracting the features, a  Support Vector Machines (SVMs) classifier is used for the classification step. This method was limited since most charts contain the same types of low-level features like axes, grid lines, and legends. In V. Shiv Naga Prasad's work~ \cite{prasad2007classifying} classification was based on using features based on the shape and spatial relationships of their primitives. This work was limited due to the inconstancy in which data in most charts can be depicted. In the paper of Alex Krizhevsky et al.~\cite{krizhevsky2012imagenet} a deep CovNet which combines both feature extraction and classification was used and this technique achieved good results. However, the dataset size of 3377 chart images of 11 classes is a bit limited due to the complexity of the problem. 
 
-These, and more problems addressed in Chapter 2 motivated us to find a more efficient solution, in this report, we therefore, present our attempt at a probable solution.
+These problems and others addressed in Chapter 2 was the motivation for the search of a more efficient solution. This report is therefore an attempt to look for a more efficient solution.
 
 \section{Objective}
-The aim of this thesis is to develop algorithms using image processing and machine learning methods for the purpose of chart image classification. Different approaches will be considered in other to choose the most favorable one.\\
-The goal of this thesis is to try to identify or recognise chart images with the highest accuracy. To achieve this goal we have to answer the question: \begin{quote} How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? \end{quote} 
-To answer this question, the following objectives are set.
+The aim of this thesis is to develop algorithms using image processing and machine learning methods for the purpose of chart image classification. Different approaches will be considered in order to choose the most favorable one.
+
+The goal of this thesis is to try to identify or recognise chart images with the highest accuracy. To achieve this goal this thesis seeks to answer the following question: \begin{quote} How well can we classify the four different types of plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in scientific literature? \end{quote} 
+To answer this question, the following objectives are set:
 
 \begin{itemize}\itemsep3pt
-	\item obtain raw data gathered from real world occurrences.
-	\item create a dataset of chart images with the collected data. Using  different plotting programs (Python, Matlab, R, and Java) and different libraries supported by these plotting programs.
-	\item train and evaluate a machine learning model that can recognise unseen charts with high accuracy. The four classes of plots are box plots, line charts, scatter plots and, bar-charts.
+	\item To obtain raw data gathered from real world occurrences.
+	\item To create a dataset of chart images with the collected data, using  different plotting programs (Python, Matlab, R, and Java) and different libraries supported by these plotting programs.
+	\item To train and evaluate a machine learning model that can recognise unseen charts with high accuracy.
 \end{itemize}
 
 \section{Research Significance and Contribution}
-Figure \ref{fig:vis} shows the significance of this work and what it will lead to. This thesis focuses mainly on four chart images. These plots are scatter plots, bar charts, line charts and box plots. The first three were selected because, they are the most popular image charts and box-plots because it shows skewness and unusual observations in a dataset, and this information is especially relevant when dealing with large data, which is mostly the case in machine learning. The first part of Figure \ref{fig:vis} involves, obtaining  the four different types of plots mentioned earlier, after which we then label our plots and train a neural network model to classify with high accuracy any of the four plots if shown to our model, then finally the raw data can be extracted from the detected plot using other processes and techniques. The focus of this thesis however, is shown in the figure with red dotted lines, which entails, gathering a dataset of chart images, labeling them, training a model that can classify the plots. \\
+Figure~\ref{fig:vis} shows the significance of this work and what it will lead to. This thesis focuses mainly on four chart images. These plots are scatter plots, bar charts, line charts and box plots. The first three were selected because they are the most popular image charts. Box plots were also chosen because it shows skewness and unusual observations in a dataset. This information is especially relevant when dealing with large data, which is mostly the case in machine learning. The first part of Figure~\ref{fig:vis} involves obtaining the four different types of plots mentioned earlier, after which we then label our plots and train a neural network model to classify with high accuracy any of the four plots if shown to the model. Then finally, the raw data can be extracted from the detected plot using other processes and techniques. The focus of this thesis, however, is shown in the figure with red dotted lines, which entail gathering a dataset of chart images, labeling them and training a model that can classify the plots. 
 
 \begin{figure}[!htb]
-\includegraphics [scale=0.48] {vision}
-\captionof{figure}{Overview of process to obtain raw 
-	data from scientific papers. The red outline indicates the work in this 
-	thesis.}
+
+\captionof{figure}{Overview of the process to obtain raw 
+	data from scientific papers}
 \label{fig:vis}
+\includegraphics [scale=0.48] {vision}
 \end{figure}
 
 
@@ -153,7 +153,7 @@ Figure \ref{fig:vis} shows the significance of this work and what it will lead t
 In this chapter, the literature on the classification of chart images is presented and explored. Old techniques that were previously used and how they evolved are discussed. Section 3.2 introduces the two main categories of image classification, while in 3.3 and 3.4 the two categories are discussed in detail, also, CovNets which are inspired by the cat’s visual cortex and have performed really well in the field of image processing is talked about in detail. Lastly, Section 3.5 presents the important approaches and techniques employed by other researchers for chart image classification.
 
 \section{Background}
-Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualizable and easy to understand format. As a result of this popularity, chart images have gained, different techniques have over time been used for classifying these chart images, these methods have over the past few years evolved. The techniques in recent years have been inspired by the field of image processing which employs raster to vector conversion and layout analysis of the images amongst others. These techniques can be put into two main categories, Model-Based Approaches and Machine Learning Based Approaches ~\cite{amara2017convolutional}. 
+Classification involving charts images has been a topic of huge interest in recent times. This is due to the fact that, most scientific publications if not all, are embedded with these charts as a way of conveying complex research findings in more visualizable and easy to understand format. As a result of this popularity, chart images have gained, different techniques have over time been used for classifying these chart images, these methods have over the past few years evolved. The techniques in recent years have been inspired by the field of image processing which employs raster to vector conversion and layout analysis of the images amongst others. These techniques can be put into two main categories, Model-Based Approaches and Machine Learning Based Approaches~\cite{amara2017convolutional}. 
 
 In the next section, the approach used in this thesis, and the works that inspired us to choose these techniques are explained in details.
 
@@ -176,7 +176,7 @@ Figure~\ref{fig:neural} is a representation of a typical neural network. In the 
 
 \begin{figure}[!htbp]
 	\includegraphics [scale=0.7] {neural.png}
-	\captionof{figure}{How a neural network look like}
+	\captionof{figure}{How a neural network looks like}
 	\label{fig:neural}
 \end{figure}
 
@@ -687,7 +687,7 @@ All datasets for a particular plot (example scatter plot for python) are put int
 		\caption{Java scatter plot with circular and diamond markers}
 		\label{fig:scatter2}
 	\end{subfigure}
-	\caption{Sample scatter plots in our dataset}
+	\caption{Sample scatter plots in the dataset}
 	\label{fig:scatters}
 \end{figure}
 
@@ -880,11 +880,15 @@ Archiving high performance by any machine learning technique is reliant on the q
 In this thesis, no data augmentation techniques were used. This mainly because we do not expect our images to be presented in different angles and under different lighting conditions as real world images are normally presented. This is due to the fact that images are expected to be extracted with a pdf extractor and all the bounding boxes of the chart images are expected to be horizontally aligned.  
 
 \section{First Method}
-As mentioned above the network has 8 layers, 5 of this layers are used in our architecture, and these are responsible for extracting the  features of the chart images. Our input image size used is 277 x 277 x 3  since its an RGB image, this is fed into our first Convolutional layer, this filters the image with a stride of 4 pixels. The second Convolutional layer takes as its input the output of the first Convolutional layer, between this two layers max-pooling is performed to reduce the size of the image. The third and fourth Convolutional layers, unlike the previous two have no max-pooling applied between them. The final Convolutional layer then takes as input the output of the previous layer and performs a max-pooling. The features after they are pooled are flattened to 1D vector by the flatten layer before sent to the fully connected layers. The output of this layer is then fed as input into the second fully connected layer. The output of the second layer is then fed into the last fully connected layer. The last layer in this set of 3 layers uses the softmax activation to give our output prediction. The output is a separate probability of our four classes and the choice with the highest probability is our chosen prediction. A dropout was used in the first and second Fully connected layers in our architecture. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05 or maintained at a probability of 0.5. Other parameters used is a learning rate 0f 1e-4 and epoch size of 3500. Table \ref{table:para} summaries the important layers and the values assigned to them.
+The first experiment was trained using the Tensorflow framework.
+The dataset are all read in with OpenCV~\footnote{http://opencv-python-tutroals.readthedocs.io/en/latest/py\_tutorials/py\_gui/py\_image\_display/py\_image\_display.html} and resized to 277 x 277 x 3  since they are RGB image.
+The CovNet model used is the AlexNet model with some modifications. 
+
+For the training process used, we defined the building blocks of the network as follows. The layer weights and biases are initialized randomly. We chose a batch size of 32 to train our data for computational simplicity. In tensorflow \textbf{tf.nn.conv2d} function can be used to build the convolutional layer. It takes as input the images, weights, and biases. We then apply a max-pooling to the convolution to reduce the dimensions. After that a Relu is used as our activation function, we just take the output of the max-pooling and apply Relu on it. This convolution layer is repeated 5 times each learning different features. The features after they are learned are reshape to 1D vector by the flatten layer before being sent to the fully connected layers. This layer also takes as input random weights and biases and performs the standard z=wx+b operation here. We set dropout probability to 0.5 in our network, this means nodes are dropped out with a probability of 1-05. We add a condition that applies a Relu on first two of the three fully connected layers. We then define a cost function to choose our optimum weights. There is a simple function in tensorflow \textbf{softmax\_cross\_entropy\_with\_logits} which takes the output of the fully connected layer and the real labels to find these weights. With a learning rate of 0.0001 to minimize cost we then optimize our model. We then call a softmax when we have the lowest cost to get the probability of each class. The detailed layer parameters and layer order are shown in Table~\ref{table:para}. 
+
 
 \begin{table}[!htbp]
 	\centering \def\arraystretch{1.5} \small
-	\label{table:para}
 	\begin{adjustbox}{max width=1.1\textwidth,center}
 		
 		\begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
@@ -915,21 +919,21 @@ As mentioned above the network has 8 layers, 5 of this layers are used in our ar
 			
 			\multicolumn{4}{|c|}{
 				Fc8  + softmax output} \\
-			
 			\hline
-			
-		\end{tabular}
-		
+		\end{tabular}	
 	\end{adjustbox}
 	\caption {The parameters used in the AlexNet with some modifications. The order of layers is the order in which
 		data is passed through. depth is the amount of output feature maps or neurons, filter is kernel
 		size}	
+	\label{table:para}
 \end{table}
 
-\section{Second Method}
-For the second experiment, the transfer learning technique used in the work of Liu et. al~\cite{liu2015chart} was employed. We used a model pre-trained by google called the MobileNet \footnote{https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html}. MobileNet was chosen because of its small size and less computational power needed to run. The MobileNet\_0.50\_224 model was the version used for this thesis. The MobileNet model was trained with 1.2 million images with 1000 classes from the ILSVRC-2012-CLS image classification dataset~\cite{ILSVRC15}. Some of the classes in this dataset are rule, zebra, Dishwasher and dalmatian.\newline
 
-For the training process a retrain python script originally developed by the TensorFlow authors for the purpose of using your images to train was used. The retrain scripts downloads the MobileNet model, adds a new model and retrains the new model with the chart image dataset we created. The scripts is customizable and below are the parameters we customized.
+
+\section{Second Method}
+For the second experiment, the transfer learning technique used in the work of Liu et. al~\cite{liu2015chart} was employed. We used a model pre-trained by Google called the MobileNet \footnote{https://ai.googleblog.com/2017/06/mobilenets-open-source-models-for.html}. MobileNet was chosen because of its small size and less computational power needed to run. The MobileNet\_0.50\_224 model was the version used for this thesis. The MobileNet model was trained with 1.2 million images with 1000 classes from the ILSVRC-2012-CLS image classification dataset~\cite{ILSVRC15}. Some of the classes in this dataset are rule, zebra, Dishwasher, and dalmatian.
+
+For the training process, a retrain python script originally developed by the TensorFlow authors for the purpose of using your images to train was used. The retrain scripts downloads the MobileNet model, adds a new model and retrains the new model with the chart image dataset we created. The scripts is customizable and below are the parameters we customized.
 
 \begin{itemize}
 	
@@ -941,7 +945,7 @@ For the training process a retrain python script originally developed by the Ten
 	
 	\item print\_misclassified\_test\_images:  was used so that the misclassified images where shown.
 	
-	\item how\_many\_training\_steps is number of epochs the nework should run and 200 was used in this thesis.
+	\item how\_many\_training\_steps is the number of epochs the network should run and 200 was used in this thesis.
 	
 	\item learning\_rate: This is something you’ll want to play with. I found 0.0001 to work well.
 	
@@ -949,7 +953,7 @@ For the training process a retrain python script originally developed by the Ten
 \end{itemize}
 
 \section{Summary}
-In this chapter we discussed our approach to classifying chart images. How our dataset was created and which raw data samples were used to create our chart images was discussed initially. In section 3.4 we discussed how the full dataset was split into train, validation and test sets for the experiments to be performed. We then talked about our modification of the AlexNet architecture used for our model training. Afterwards, the preprocessing techniques used on the dataset was explained and finally the two methods employed for classifying our model was explained in section 3.7 and 3.8.
+In this chapter we discussed our approach to classifying chart images. How our dataset was created and which raw data samples were used to create our chart images was discussed initially. In section 3.4 we discussed how the full dataset was split into train, validation and test sets for the experiments to be performed. We then talked about our modification of the AlexNet architecture used for our model training. Afterwards, the preprocessing techniques used on the dataset was explained and finally the two experiments chosen to help answer our research question were explained in details.
 
 
 \chapter{Experimental Results}
@@ -959,17 +963,14 @@ This chapter presents the results of the experiments performed in the previous c
 ``How Well Can We Classify the Four Different Types of Plots (Line-Charts, Bar-Charts, Scatter-plots, and Box-plots) in Scientific Literature? '' by presenting the results obtained after the experiments were performed. In Section 4.2 we present various metrics on the first methods used and Section 4.3 shows the results obtained in the second experiment.
 
 \section{Results of First Experiment}
-For the first experiment we choose different epochs sizes in other to archive good results without over-fitting. We first started with 1000 epochs, the results obtained for 1000 epochs was an accuracy of 46.8\%, out of 3478 test samples 1627 were classified correctly. We then trained our model with an epoch size of 3000, the accuracy increased to 85.9\% with 489 misclassified instances. Since our model was still not over-fitting the epoch size was increased to 3500. The accuracy of our model for training and validation was 93.8\% and 96.9\% respectively. An accuracy of 89.5\% was archived with only 365 misclassified samples was recorded on the test set. These values mean our model performs and also generalizes well.
-Figure \ref{fig:matrics} shows the precision, recall and F1 measure of the results obtained after the experiments. What is interesting about this figure is that scatter plots predicted in many cases but a lot of the predictions where actually not scatter plots. So scatter plots had the most misclassified samples. Also even though line plots were predicted correctly in less instances most of the predictions were right. Bar chart and Box plots both had good number of correctly predicted instances.
+We trained with different epoch sizes and realized after 4500 epochs there was no significant increase in accuracy. After testing on 3478 images we achieved an accuracy of 88.4\%.  88.4\% was considered a good score since we had a wider variety of chats for each chart type, therefore, more complex dataset as compared to the work Amara et al.~\cite{amara2017convolutional} that got a score of 89\%. Since we needed to gain more insight into the data to know the strengths and weakness of our model we computed the confusion matrix and used the scores to compute other metrics like precision, recall and f1 score. Figure~\ref{fig:matrics} shows the precision, recall and F1 measure of the results obtained after the experiments. What is interesting is the huge difference in scores between the precision and recall of the Line charts. From the confusion matrix, we saw that it was due to the fact that most of the line charts were misclassified as scatter plots. The other charts, however, had pretty good scores on these metrics. We then visualized the results of the confusion matrix with a heat map. Figure~\ref{fig:confusion} shows a heat map derived with the confusion matrix. 0 stands for the bar chart, 1 stands for box plot, 2 for line plot and 3 for scatter plot. Again we can see that bar charts where mostly classified correctly followed by box plot and line charts in that order and finally scatter plot were the least classified correctly. Another interesting observation was that most line charts were misclassified as box plots.
 
 \begin{figure}[!htbp]
-	\includegraphics [scale=0.78] {scores.png}
-	\captionof{figure}{A bar chart showing the precision recall and F1 scoreof our experiment}
+	\includegraphics [scale=0.78] {mat3.png}
+	\captionof{figure}{A bar chart showing the precision recall and F1 score of the experiment}
 	\label{fig:matrics}
 \end{figure}
 
-Figure \ref{fig:confusion} shows a heat map derived with a confusion metrics. 0 stands for the bar chart, 1 stands for box plot, 2 for line plot and 3 for scatter plot. Again we can see that bar charts where mostly classified correctly followed by box plot and line charts in that order and finally scatter plot were the least classified correctly. Some interesting observations were that most of the line charts were misclassified as scatter plots, a lot of scatter plots were misclassified as line charts  
-and lastly, most box plots were misclassified as line charts.
 
 \begin{figure}[!htbp]
 	\includegraphics [scale=1.2] {confusion.jpg}
@@ -979,8 +980,8 @@ and lastly, most box plots were misclassified as line charts.
 
 
 \section{Results of Second Experiment}
-The second method which involved using the pre-trained ImageNet model and retraining it with our dataset executed with just 200 epochs got a accuracy of 97\% with a cross entropy of 0.04. For retraining, 60\% of the whole dataset was training, 20\% for validation and 20\% was for testing. Table~\ref{table:confus}
-shows the confusion matrix generated with the various score obtained after testing our model on 3485 random samples.
+The second method which involved using the pre-trained ImageNet model and retraining it with our created chart image dataset executed with just 200 epochs and got an accuracy of 97\% with a cross entropy of 0.04. For retraining, 60\% of the whole dataset was split for training, 20\% for validation and 20\% was for testing. Table~\ref{table:confus}
+shows the confusion matrix generated with the various scores obtained after testing our model on 3485 random samples.
 \begin{table}[!htbp]
 	\centering \def\arraystretch{1.5} \small
 	\begin{adjustbox}{max width=1.1\textwidth,center}
@@ -1005,16 +1006,50 @@ shows the confusion matrix generated with the various score obtained after testi
 		\end{tabular}
 		
 	\end{adjustbox}
-	\caption {Table showing confusion metrics generated with results obtained from the test data}
+	\caption {Confusion matrix generated with results obtained from the test data}
 	\label{table:confus}	
 \end{table}
 
-From the confusion matrix, we observe that box plots were the least classified correctly with most of the predictions on box plots being misclassified as Scatter plots and Bar charts. Another interesting observation is that most of the misclassified sample of Bar charts were classified as Box plots. 
+We used the scores from the confusion matrix to calculate the precision, recall and f1 score of the model. Figure~\ref{fig:missy2} shows the visualized scores of the precision, recall, and f1 score to better understand our results. At a glance, it can be observed that the difference between the precision and recall of the scatter plot is relatively huge. Scatter plot classification had a higher recall but a lower precision which is more relevant for the future step of data extraction. Box plots and Line charts, however, had a higher precision which is better in relation to our thesis.
+
+\begin{figure}[!htbp]
+	\includegraphics [scale=0.8] {mat2.png}
+	\captionof{figure}{A bar chart showing the precision recall and F1 score of our fine-tuned model}
+	\label{fig:missy2}
+\end{figure}
+
+From the confusion matrix, we observe that box plots were the least classified correctly with most of the predictions on box plots being misclassified as Scatter plots and Bar charts. Another interesting observation is that most of the misclassified samples of Bar charts were classified as Box plots. 
 
 \section{Discussion}
-Our results show that the AlexNet modified architecture of the CovNet used for the training and testing of our model works well, this is based on the good results gained in the first experiment, also the idea that we can transfer the knowledge learned from training a model on a huge dataset of a somewhat similar problem to our problem can improve our results stands to be true based on our accuracy moving from 89\% to 97\% when we retrained the ImageNet model with our chart dataset. I believe the results of this thesis was successful despite the difficulty of the task, from the results shown on the confusion matrix which led to us studying the misclassified samples we realized that in the first experiment 235 scatter plots were misclassified as line charts, the reason for this is that we had created quiet a number of line charts which had a regression line and these had a striking resemblance to a type of line chart with markers and a line showing the relationship between these markers. Also there were some scatter plots which were positive and negatively correlated with all markers appearing in a straight line and this could have been as well considered as a line chart by our classifier. Figure~\ref{fig:miss} shows sample scatter plots which resemble line charts. The class with the second most misclassified samples was unsurprisingly line charts being classified as scatter plots. As discussed previous some variants of line charts are very much like scatter plots and this explains the high number of misclassified line chart instances. There also quiet a number of box plots misclassified as line charts this can be attributed to the fact that box plots are made of lines and markers (outliers) which resemble a type of line chart with markers and a line connecting these markers. A number of box plots were misclassified as bar charts because box plots and bar charts are somehow similar in their appearance.
-Figure~\ref{fig:missy} shows 9 randomly chosen misclassified charts after our model was tested.
+Our results show that fine-tuning on the pre-trained model achieved better results. We believe the reason for the better results was because the pre-trained model learned edges, curves, and sharp corners from the huge dataset given to it. These learned weights were then transferred to our task. Table~\ref{table:parar} shows how our experiment compares to the work of Amara et al.~\cite{amara2017convolutional}. As shown in the table our second experiment performed best and the score of the first experiment was not too far off that of Amara et al. work. We, therefore, believe we gained better results because of the transferred knowledge gained from the pre-trained model.
 
+\begin{table}[!htbp]
+	\centering \def\arraystretch{1.5} \small
+	\begin{adjustbox}{max width=1.0\textwidth,center}
+		
+\begin{tabular}{|p{3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+			\hline	
+			
+			Model & \multicolumn{2}{c|}{Bar chart} & \multicolumn{2}{|c|}{Box chart} & \multicolumn{2}{c|}{Line chart} & \multicolumn{2}{|c|}{Scatter plot}  \\ \hline
+			
+			 & P & R  & P & R & P & R & P & R  \\ \hline
+			
+			LeNet \cite{amara2017convolutional} &  &  & 96.20\% & 77.50\% & 92.10\% & 87.10\% & 97.00\% & 95.50\%  \\ \hline
+				
+			CovNet &  97.30\% &  99.0\% & 97.30\% & 94.50\% & 75.60\% & 93.40\% & 91.50\% & 70.6  \\ \hline
+			
+			
+			MobileNet+\par fine-tuned &  97.6\% &  98.2\% & 97.30\% & 94.90\% & 98.60\% & 96.10\% & 94.90\% & 99.0\%  \\ \hline
+				
+					
+		\end{tabular}	
+	\end{adjustbox}
+	\caption {Comparison of results of experiments with other  methods}	
+	\label{table:parar}
+\end{table}
+
+From the results shown in our first experiment line charts had a bad precision score as compared to the other charts, also, from the confusion matrix of the first experiment we saw that this was as a result of scatter plots being misclassified as line chart and vice versa. We believe this was because of the similarity between the visual appearance of some variants of line charts and scatter plots. Our dataset contained quite a number of scatter plots which had a regression line and these had a striking resemblance to a type of line chart with markers and a line connecting these markers to show their relationship.
+Also, there were some scatter plots which were positive and negatively correlated with all the markers appearing in a straight line and this could have been as well considered as a line chart by our classifier. Figure~\ref{fig:miss} shows sample scatter plots which resemble line charts and would be difficult for a computer to different. There also quiet a number of box plots misclassified as line charts this can be attributed to the fact that box plots are made of lines and markers (outliers) which resemble a type of line chart with markers and a line connecting these markers. A number of box plots were misclassified as bar charts, we believe this also because box plots and bar charts are somehow similar in their appearance.  Figure~\ref{fig:missy} shows 9 randomly chosen misclassified charts after our model was tested.
 \begin{figure}[!htb]
 	\begin{subfigure}{.6\textwidth}
 		\centering
@@ -1033,14 +1068,12 @@ Figure~\ref{fig:missy} shows 9 randomly chosen misclassified charts after our mo
 \end{figure}
 
 \begin{figure}[!htbp]
-	\includegraphics [scale=0.78] {scores.png}
-	\captionof{figure}{A bar chart showing the precision recall and F1 scoreof our experiment}
+	\includegraphics [scale=0.78] {error.jpg}
+	\captionof{figure}{Sample plots that were misclassified in the first experiment}
 	\label{fig:missy}
 \end{figure}
 
-The hypothesis we came up with from the results in the first experiment are affirmed from the results achieved in the second experiment. In the second experiment results show that line charts were mostly misclassified as scatter plots as in the case of the first experiment. 
-
-The results from the second experiment that were surprisingly different from the first experiment  were the high number of box plots misclassified as scatter plots. We attribute this to the fact that box plots contain outliers (markers) which scatter plots also contain therefore the issue. Figure \ref{fig:missrand} shows a few samples and what they were misclassified as in the second experiment. 
+In the second experiment results show that line charts were mostly misclassified as scatter plots as in the case of the first experiment. Also we had a relatively high number of box plots misclassified as scatter plots. Figure~\ref{fig:missrand} shows a few samples and what they were misclassified in the second experiment. 
 
 \begin{figure}[!htb]
 	\begin{subfigure}{.6\textwidth}
@@ -1059,8 +1092,6 @@ The results from the second experiment that were surprisingly different from the
 	\label{fig:missrand}
 \end{figure}
 
-
-
 \begin{figure}[!htb]
 	\begin{subfigure}{.6\textwidth}
 		\centering
@@ -1078,7 +1109,9 @@ The results from the second experiment that were surprisingly different from the
 	\label{fig:missrand2}
 \end{figure}
 
-\chapter{Summary}
+\section{Summary}
+
+\chapter{Conclusion}
 
 \bibliographystyle{unsrt}
 \bibliography{sample}

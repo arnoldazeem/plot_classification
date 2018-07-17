@@ -20,7 +20,7 @@
  	
  
     \begin{tabular}{ll}
-    	Name: & Arnold Azeem \\
+    	Name: & Arnold Adaboo Azeem \\
     	Matrikelnummer: & 79176 \\
     	Fachbereich: & Informatik\\
     	Studiengang: & Master Informatik\\
@@ -35,17 +35,19 @@
 \begin{abstract}
 Chart image classification serves as an initial step towards comprehending, extracting and further analysing raw data visualized using charts. These chart images are regularly embedded in scientific papers and journals to describe research findings. The biggest challenge in chart classification lies with charts having different forms, patterns and ancillary structures like text, legends, and axis. Chart classification consists of extracting chart features which are then used for training a model to identify the chart type.
 
-Previous approaches for dealing with chart classification depended on handcrafted features which is not robust especially when dealing with a large amount of data with variable content structure. This thesis, therefore, proposes using CovNets, a deep learning-based approach that automates the feature acquisition step. Two techniques were considered in this thesis, the first is a CovNet model obtained by training on only our dataset which consisted of 17,357 chart images of 4 classes, and the other a model that was pre-trained by Google using 1.2 million images was retrained with our dataset. With results showing an accuracy of 84\% and 96\% respectively, our proposed methods are very efficient.
+Previous approaches for dealing with chart classification depended on handcrafted features which is not robust especially when dealing with a large amount of data with variable content structure. This thesis, therefore, proposes using Convolutional Neural Networks(CovNets), a deep learning-based approach that automates the feature acquisition step. We present a modified version of the AlexNet~\cite{krizhevsky2012imagenet} CovNet architecture for chart image classification. 
+
+Two techniques were considered in this thesis, the first is a CovNet model obtained by training on only the dataset we created, this dataset consisted of 17,357 chart images of 4 classes, and the retraining with the created dataset of a model that was pre-trained by Google using 1.2 million images. With results showing an accuracy of 88\% and 97\%, respectively, the proposed methods in this thesis proved to be very efficient.
 
 \end{abstract}
 
 \section*{Acknowledgement}
-I would like to thank my supervisor Prof. Dr. Christin Siefert of University of Twente. When Professor Siefert was in University of Passau, anytime I had questions or trouble her door was always open for me, and even after she left to University of Twente, She continued addressing my concerns via email. She steered me in the right direction but allowed this thesis to be my own work.
+I would like to thank my supervisor Prof. Dr. Christin Siefert of University of Twente. When Professor Siefert was in University of Passau, anytime I had questions or trouble her door was always open for me, and even after she left to University of Twente, she continued addressing my concerns via email. She steered me in the right direction but allowed this thesis to be my own work.
 
-I would also like to thank Prof. Dr. Michael Granitzer for his support and availability through out the thesis. I would also like to thank Julian Stier and Sahib Sulka for their patience and advice throughout this thesis.
+I would also like to thank Prof. Dr. Michael Granitzer for his support and availability through out the writing of this thesis. I would also like to thank Julian Stier and Sahib Sulka for their patience and advice throughout this the writing of this thesis.
 
-Finally, I must express my very profound gratitude to my family and for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you
+Finally, I must express my very profound gratitude to my family for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you
 
-Arnold Azeem, Passau 13/08/2018
+Arnold Adaboo Azeem, Passau 13/08/2018
 
 \end{titlepage}
