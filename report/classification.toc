@@ -10,60 +10,60 @@
 \contentsline {section}{\numberline {2.1}Overview}{12}{section.13}
 \contentsline {section}{\numberline {2.2}Background}{12}{section.14}
 \contentsline {section}{\numberline {2.3}Model Based Approaches}{13}{section.15}
-\contentsline {section}{\numberline {2.4}Machine Learning Based Approaches}{13}{section.16}
-\contentsline {section}{\numberline {2.5}Convolutional Neural Network}{14}{section.21}
-\contentsline {subsection}{\numberline {2.5.1}Artificial Neural Networks}{14}{subsection.22}
+\contentsline {section}{\numberline {2.4}Machine Learning Based Approaches}{14}{section.16}
+\contentsline {section}{\numberline {2.5}Convolutional Neural Networks}{15}{section.21}
+\contentsline {subsection}{\numberline {2.5.1}Artificial Neural Networks}{15}{subsection.22}
 \contentsline {subsection}{\numberline {2.5.2}Convolutional Neural Network}{15}{subsection.24}
 \contentsline {subsection}{\numberline {2.5.3}Convolutional Layer}{17}{subsection.26}
 \contentsline {subsection}{\numberline {2.5.4}Activation Functions}{17}{subsection.27}
 \contentsline {subsection}{\numberline {2.5.5}Pooling Layer}{18}{subsection.29}
-\contentsline {subsection}{\numberline {2.5.6}Dropout Layers}{19}{subsection.30}
+\contentsline {subsection}{\numberline {2.5.6}Dropout Layers}{18}{subsection.30}
 \contentsline {subsection}{\numberline {2.5.7}Fully Connected Layer}{19}{subsection.32}
 \contentsline {section}{\numberline {2.6}Adding more steps}{20}{section.34}
-\contentsline {subsection}{\numberline {2.6.1}Image Processing Techniques}{20}{subsection.35}
+\contentsline {subsection}{\numberline {2.6.1}Image Processing Techniques}{21}{subsection.35}
 \contentsline {section}{\numberline {2.7}Validation in Machine Learning}{22}{section.37}
-\contentsline {subsubsection}{\numberline {2.7.0.1}Holdout}{22}{subsubsection.38}
-\contentsline {subsubsection}{\numberline {2.7.0.2}Cross-validation}{22}{subsubsection.39}
-\contentsline {subsubsection}{\numberline {2.7.0.3}Leave-one-out cross validation}{23}{subsubsection.40}
+\contentsline {subsection}{\numberline {2.7.1}Holdout}{23}{subsection.38}
+\contentsline {subsection}{\numberline {2.7.2}Cross-validation}{23}{subsection.39}
+\contentsline {subsection}{\numberline {2.7.3}Leave-one-out cross validation}{23}{subsection.40}
 \contentsline {section}{\numberline {2.8}Performance Evaluation}{23}{section.41}
-\contentsline {subsubsection}{\numberline {2.8.0.1}Confusion Matrix}{23}{subsubsection.42}
-\contentsline {subsubsection}{\numberline {2.8.0.2}Accuracy}{24}{subsubsection.44}
-\contentsline {subsubsection}{\numberline {2.8.0.3}Precision}{24}{subsubsection.46}
-\contentsline {subsubsection}{\numberline {2.8.0.4}Recall}{24}{subsubsection.48}
-\contentsline {subsubsection}{\numberline {2.8.0.5}F1 Score}{25}{subsubsection.50}
-\contentsline {subsection}{\numberline {2.8.1}Deep Learning Frameworks}{25}{subsection.53}
-\contentsline {subsubsection}{\numberline {2.8.1.1}Theano}{25}{subsubsection.54}
-\contentsline {subsubsection}{\numberline {2.8.1.2}TensorFlow}{26}{subsubsection.55}
-\contentsline {subsubsection}{\numberline {2.8.1.3}Caffe}{26}{subsubsection.56}
-\contentsline {subsubsection}{\numberline {2.8.1.4}Torch}{26}{subsubsection.57}
-\contentsline {subsection}{\numberline {2.8.2}Training process}{27}{subsection.58}
-\contentsline {section}{\numberline {2.9}Review of chart image Classification Techniques}{28}{section.59}
-\contentsline {subsection}{\numberline {2.9.1}ImageNet Classification with Deep Convolutional Neural Networks}{28}{subsection.60}
-\contentsline {subsection}{\numberline {2.9.2}Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{28}{subsection.61}
-\contentsline {subsection}{\numberline {2.9.3}Architecture proposal for data extraction of chart images using Convolutional Neural Network}{30}{subsection.64}
-\contentsline {subsection}{\numberline {2.9.4}Chart classification by combining deep convolutional networks and deep belief networks}{31}{subsection.67}
-\contentsline {section}{\numberline {2.10}Summary}{32}{section.69}
-\contentsline {chapter}{\numberline {3}Approach}{33}{chapter.70}
-\contentsline {section}{\numberline {3.1}Overview}{33}{section.71}
-\contentsline {section}{\numberline {3.2}Dataset}{33}{section.72}
-\contentsline {subsection}{\numberline {3.2.1}Dataset for Matlab}{34}{subsection.73}
-\contentsline {subsection}{\numberline {3.2.2}Dataset for R}{34}{subsection.74}
-\contentsline {subsection}{\numberline {3.2.3}Dataset for Python}{34}{subsection.75}
-\contentsline {subsection}{\numberline {3.2.4}Dataset for Java}{35}{subsection.76}
-\contentsline {section}{\numberline {3.3}Creating Plots}{36}{section.78}
-\contentsline {subsection}{\numberline {3.3.1}Random Charts}{40}{subsection.85}
-\contentsline {section}{\numberline {3.4}Training, Validation and Test set}{41}{section.87}
-\contentsline {section}{\numberline {3.5}The Architecture}{41}{section.90}
-\contentsline {section}{\numberline {3.6}Preprocessing Techniques}{44}{section.93}
-\contentsline {subsection}{\numberline {3.6.1}Data Augmentation}{44}{subsection.94}
-\contentsline {section}{\numberline {3.7}First Method}{44}{section.95}
-\contentsline {section}{\numberline {3.8}Second Method}{46}{section.98}
-\contentsline {section}{\numberline {3.9}Summary}{46}{section.100}
-\contentsline {chapter}{\numberline {4}Experimental Results}{48}{chapter.101}
-\contentsline {section}{\numberline {4.1}Overview}{48}{section.102}
-\contentsline {section}{\numberline {4.2}Results of First Experiment}{48}{section.103}
-\contentsline {section}{\numberline {4.3}Results of Second Experiment}{51}{section.106}
-\contentsline {section}{\numberline {4.4}Discussion}{52}{section.109}
-\contentsline {section}{\numberline {4.5}Summary}{55}{section.115}
-\contentsline {chapter}{\numberline {5}Conclusion}{56}{chapter.116}
-\contentsline {chapter}{\numberline {6}Bibliography}{57}{chapter.117}
+\contentsline {subsection}{\numberline {2.8.1}Confusion Matrix}{24}{subsection.42}
+\contentsline {subsection}{\numberline {2.8.2}Accuracy}{24}{subsection.44}
+\contentsline {subsection}{\numberline {2.8.3}Precision}{25}{subsection.46}
+\contentsline {subsection}{\numberline {2.8.4}Recall}{25}{subsection.48}
+\contentsline {subsection}{\numberline {2.8.5}F1 Score}{25}{subsection.50}
+\contentsline {section}{\numberline {2.9}Deep Learning Frameworks}{25}{section.53}
+\contentsline {subsection}{\numberline {2.9.1}Theano}{26}{subsection.54}
+\contentsline {subsubsection}{\numberline {2.9.1.1}TensorFlow}{26}{subsubsection.55}
+\contentsline {subsubsection}{\numberline {2.9.1.2}Caffe}{27}{subsubsection.56}
+\contentsline {subsection}{\numberline {2.9.2}Torch}{27}{subsection.57}
+\contentsline {subsection}{\numberline {2.9.3}Training process}{27}{subsection.58}
+\contentsline {section}{\numberline {2.10}Review of chart image Classification Techniques}{28}{section.59}
+\contentsline {subsection}{\numberline {2.10.1}ImageNet Classification with Deep Convolutional Neural Networks}{28}{subsection.60}
+\contentsline {subsection}{\numberline {2.10.2}Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format(PDF) Files}{29}{subsection.61}
+\contentsline {subsection}{\numberline {2.10.3}Architecture proposal for data extraction of chart images using Convolutional Neural Network}{30}{subsection.64}
+\contentsline {subsection}{\numberline {2.10.4}Chart classification by combining deep convolutional networks and deep belief networks}{32}{subsection.67}
+\contentsline {section}{\numberline {2.11}Summary}{33}{section.69}
+\contentsline {chapter}{\numberline {3}Approach}{34}{chapter.70}
+\contentsline {section}{\numberline {3.1}Overview}{34}{section.71}
+\contentsline {section}{\numberline {3.2}Dataset}{34}{section.72}
+\contentsline {subsection}{\numberline {3.2.1}Dataset for Matlab}{35}{subsection.73}
+\contentsline {subsection}{\numberline {3.2.2}Dataset for R}{35}{subsection.74}
+\contentsline {subsection}{\numberline {3.2.3}Dataset for Python}{35}{subsection.75}
+\contentsline {subsection}{\numberline {3.2.4}Dataset for Java}{36}{subsection.76}
+\contentsline {section}{\numberline {3.3}Creating Plots}{37}{section.78}
+\contentsline {subsection}{\numberline {3.3.1}Random Charts}{41}{subsection.85}
+\contentsline {section}{\numberline {3.4}Training, Validation and Test set}{42}{section.87}
+\contentsline {section}{\numberline {3.5}The Architecture}{42}{section.90}
+\contentsline {section}{\numberline {3.6}Preprocessing Techniques}{45}{section.93}
+\contentsline {subsection}{\numberline {3.6.1}Data Augmentation}{45}{subsection.94}
+\contentsline {section}{\numberline {3.7}First Method}{45}{section.95}
+\contentsline {section}{\numberline {3.8}Second Method}{47}{section.98}
+\contentsline {section}{\numberline {3.9}Summary}{47}{section.100}
+\contentsline {chapter}{\numberline {4}Experimental Results}{49}{chapter.101}
+\contentsline {section}{\numberline {4.1}Overview}{49}{section.102}
+\contentsline {section}{\numberline {4.2}Results of First Experiment}{49}{section.103}
+\contentsline {section}{\numberline {4.3}Results of Second Experiment}{52}{section.106}
+\contentsline {section}{\numberline {4.4}Discussion}{53}{section.109}
+\contentsline {section}{\numberline {4.5}Summary}{56}{section.115}
+\contentsline {chapter}{\numberline {5}Conclusion}{57}{chapter.116}
+\contentsline {chapter}{\numberline {6}Bibliography}{58}{chapter.117}

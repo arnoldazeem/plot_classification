@@ -10,7 +10,7 @@
 \BOOKMARK [1][-]{section.14}{Background}{chapter.12}% 10
 \BOOKMARK [1][-]{section.15}{Model Based Approaches}{chapter.12}% 11
 \BOOKMARK [1][-]{section.16}{Machine Learning Based Approaches}{chapter.12}% 12
-\BOOKMARK [1][-]{section.21}{Convolutional Neural Network}{chapter.12}% 13
+\BOOKMARK [1][-]{section.21}{Convolutional Neural Networks}{chapter.12}% 13
 \BOOKMARK [2][-]{subsection.22}{Artificial Neural Networks}{section.21}% 14
 \BOOKMARK [2][-]{subsection.24}{Convolutional Neural Network}{section.21}% 15
 \BOOKMARK [2][-]{subsection.26}{Convolutional Layer}{section.21}% 16
@@ -21,21 +21,21 @@
 \BOOKMARK [1][-]{section.34}{Adding more steps}{chapter.12}% 21
 \BOOKMARK [2][-]{subsection.35}{Image Processing Techniques}{section.34}% 22
 \BOOKMARK [1][-]{section.37}{Validation in Machine Learning}{chapter.12}% 23
-\BOOKMARK [2][-]{subsubsection.38}{Holdout}{section.37}% 24
-\BOOKMARK [3][-]{subsubsection.39}{Cross-validation}{subsubsection.38}% 25
-\BOOKMARK [3][-]{subsubsection.40}{Leave-one-out cross validation}{subsubsection.38}% 26
+\BOOKMARK [2][-]{subsection.38}{Holdout}{section.37}% 24
+\BOOKMARK [2][-]{subsection.39}{Cross-validation}{section.37}% 25
+\BOOKMARK [2][-]{subsection.40}{Leave-one-out cross validation}{section.37}% 26
 \BOOKMARK [1][-]{section.41}{Performance Evaluation}{chapter.12}% 27
-\BOOKMARK [2][-]{subsubsection.42}{Confusion Matrix}{section.41}% 28
-\BOOKMARK [3][-]{subsubsection.44}{Accuracy}{subsubsection.42}% 29
-\BOOKMARK [3][-]{subsubsection.46}{Precision}{subsubsection.42}% 30
-\BOOKMARK [3][-]{subsubsection.48}{Recall}{subsubsection.42}% 31
-\BOOKMARK [3][-]{subsubsection.50}{F1 Score}{subsubsection.42}% 32
-\BOOKMARK [2][-]{subsection.53}{Deep Learning Frameworks}{section.41}% 33
-\BOOKMARK [3][-]{subsubsection.54}{Theano}{subsection.53}% 34
-\BOOKMARK [3][-]{subsubsection.55}{TensorFlow}{subsection.53}% 35
-\BOOKMARK [3][-]{subsubsection.56}{Caffe}{subsection.53}% 36
-\BOOKMARK [3][-]{subsubsection.57}{Torch}{subsection.53}% 37
-\BOOKMARK [2][-]{subsection.58}{Training process}{section.41}% 38
+\BOOKMARK [2][-]{subsection.42}{Confusion Matrix}{section.41}% 28
+\BOOKMARK [2][-]{subsection.44}{Accuracy}{section.41}% 29
+\BOOKMARK [2][-]{subsection.46}{Precision}{section.41}% 30
+\BOOKMARK [2][-]{subsection.48}{Recall}{section.41}% 31
+\BOOKMARK [2][-]{subsection.50}{F1 Score}{section.41}% 32
+\BOOKMARK [1][-]{section.53}{Deep Learning Frameworks}{chapter.12}% 33
+\BOOKMARK [2][-]{subsection.54}{Theano}{section.53}% 34
+\BOOKMARK [3][-]{subsubsection.55}{TensorFlow}{subsection.54}% 35
+\BOOKMARK [3][-]{subsubsection.56}{Caffe}{subsection.54}% 36
+\BOOKMARK [2][-]{subsection.57}{Torch}{section.53}% 37
+\BOOKMARK [2][-]{subsection.58}{Training process}{section.53}% 38
 \BOOKMARK [1][-]{section.59}{Review of chart image Classification Techniques}{chapter.12}% 39
 \BOOKMARK [2][-]{subsection.60}{ImageNet Classification with Deep Convolutional Neural Networks}{section.59}% 40
 \BOOKMARK [2][-]{subsection.61}{Machine Learning Classification Algorithms to Recognize Chart Types in Portable Document Format\(PDF\) Files}{section.59}% 41

@@ -1,53 +1,10 @@
 \begin{thebibliography}{10}
 
-\bibitem{boxy}
-{Matange, S.}
-\newblock Box plot legend.
-\newblock
-  \url{https://blogs.sas.com/content/graphicallyspeaking/2017/04/13/box-plot-legend/},
-  2018.
-\newblock [Graphically Speaking; accessed 18-Jun-2018].
-
-\bibitem{softmax}
-{karpathy}.
-\newblock Cs231n convolutional neural networks for visual recognition.
-\newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
-\newblock [Online; accessed 11-Jun-2018].
-
 \bibitem{krizhevsky2012imagenet}
 Alex Krizhevsky, Ilya Sutskever, and Geoffrey~E Hinton.
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock In {\em Advances in neural information processing systems}, pages
   1097--1105, 2012.
-
-\bibitem{srivastava2014dropout}
-Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
-  Salakhutdinov.
-\newblock Dropout: A simple way to prevent neural networks from overfitting.
-\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
-  2014.
-
-\bibitem{augement}
-{Prasad Pai}.
-\newblock Data augmentation techniques in cnn using tensorflow.
-\newblock
-  \url{https://medium.com/ymedialabs-innovation/data-augmentation-techniques-in-cnn-using-tensorflow-371ae43d5be9},
-  2017.
-\newblock [Medium; accessed 26-Jun-2018].
-
-\bibitem{liu2015chart}
-Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
-  Mingli Song.
-\newblock Chart classification by combining deep convolutional networks and
-  deep belief networks.
-\newblock In {\em Document Analysis and Recognition (ICDAR), 2015 13th
-  International Conference on}, pages 801--805. IEEE, 2015.
-
-\bibitem{karthikeyani2012machine}
-V~Karthikeyani and S~Nagarajan.
-\newblock Machine learning classification algorithms to recognize chart types
-  in portable document format (pdf) files.
-\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
 
 \bibitem{humaneye}
 {Thermopylae Sciences + Technology}.
@@ -62,6 +19,22 @@ V~Karthikeyani and S~Nagarajan.
   confuser.
 \newblock \url{https://www.perceptualedge.com/blog/?p=2080}, 2018.
 \newblock [Perceptualedge.com.; accessed 17-Jun-2018].
+
+\bibitem{boxy}
+{Matange, S.}
+\newblock Box plot legend.
+\newblock
+  \url{https://blogs.sas.com/content/graphicallyspeaking/2017/04/13/box-plot-legend/},
+  2018.
+\newblock [Graphically Speaking; accessed 18-Jun-2018].
+
+\bibitem{liu2015chart}
+Xiao Liu, Binbin Tang, Zhenyang Wang, Xianghua Xu, Shiliang Pu, Dapeng Tao, and
+  Mingli Song.
+\newblock Chart classification by combining deep convolutional networks and
+  deep belief networks.
+\newblock In {\em Document Analysis and Recognition (ICDAR), 2015 13th
+  International Conference on}, pages 801--805. IEEE, 2015.
 
 \bibitem{amara2017convolutional}
 Jihen Amara, Pawandeep Kaur, Michael Owonibi, and Bassem Bouaziz.
@@ -107,10 +80,22 @@ Akihiro Inokuchi, Takashi Washio, and Hiroshi Motoda.
 \newblock In {\em European Conference on Principles of Data Mining and
   Knowledge Discovery}, pages 13--23. Springer, 2000.
 
+\bibitem{karthikeyani2012machine}
+V~Karthikeyani and S~Nagarajan.
+\newblock Machine learning classification algorithms to recognize chart types
+  in portable document format (pdf) files.
+\newblock {\em International Journal of Computer Applications}, 39(2), 2012.
+
 \bibitem{naturecode}
 DANIEL SHIFFMAN.
 \newblock {\em THE NATURE OF CODE}.
 \newblock Free Software Foundation, 2012.
+
+\bibitem{softmax}
+{karpathy}.
+\newblock Cs231n convolutional neural networks for visual recognition.
+\newblock \url{http://cs231n.github.io/linear-classify/#softmax}, 2018.
+\newblock [Online; accessed 11-Jun-2018].
 
 \bibitem{relu}
 {Balwally, A.}
@@ -128,6 +113,13 @@ DANIEL SHIFFMAN.
   \url{https://medium.com/@jrodthoughts/convolutional-neural-networks-for-the-rest-of-us-part-iii-benefits-and-motivation-d84cd72f5670},
   2018.
 \newblock [Online; accessed 10-Jun-2018].
+
+\bibitem{srivastava2014dropout}
+Nitish Srivastava, Geoffrey Hinton, Alex Krizhevsky, Ilya Sutskever, and Ruslan
+  Salakhutdinov.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
+  2014.
 
 \bibitem{layers}
 {Adam Geitgey}.
@@ -154,6 +146,14 @@ Nanne van Noord and Eric Postma.
 Luke Taylor and Geoff Nitschke.
 \newblock Improving deep learning using generic data augmentation.
 \newblock {\em arXiv preprint arXiv:1708.06020}, 2017.
+
+\bibitem{augement}
+{Prasad Pai}.
+\newblock Data augmentation techniques in cnn using tensorflow.
+\newblock
+  \url{https://medium.com/ymedialabs-innovation/data-augmentation-techniques-in-cnn-using-tensorflow-371ae43d5be9},
+  2017.
+\newblock [Medium; accessed 26-Jun-2018].
 
 \bibitem{normalizing}
 {pietz}.
